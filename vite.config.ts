@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/kits-camaras/", // Nombre del repositorio
+  base: "/kits_camaras/", // Nombre del repositorio
 });
