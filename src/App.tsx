@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/kits/kit_4_DS-2CE56D0T-IRPF(C)/kits_8_DS-2CE56D0T-IRPF(C).tsx";
-import About from "./pages/kits/kit_4_DS-2CE56D0T-IRPF(C).tsx";
+import Home from "./pages/kits/kits_8_DS-2CE56D0T-IRPF(C)/kits_8_DS-2CE56D0T-IRPF(C).tsx";
+import About from "./pages/kits/kit_4_DS-2CE56D0T-IRPF(C)/kit_4_DS-2CE56D0T-IRPF(C).tsx";
 
 const App: React.FC = () => {
   return (
