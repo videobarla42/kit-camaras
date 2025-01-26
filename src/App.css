@@ -54,23 +54,6 @@
   font-size: 24px;
   color: white; /* Cambia el color de las flechas */
 }
-/* Ajustes para el carrusel */
-.slick-slide img {
-  width: 100%;
-  height: auto;
-}
-
-/* Estilos opcionales para mejorar la visualización */
-.slick-dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-}
 
 .slick-dots li button:before {
   color: #fff; /* Cambia el color de los puntos */
