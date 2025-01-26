@@ -1,22 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Header.css'; // Importa los estilos CSS específicos para el header
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  links: { to: string; text: string }[]; // Prop para los enlaces del header
+  extraMessage?: string; // Prop opcional para el mensaje adicional
+}
+
+const Header: React.FC<HeaderProps> = ({ links, extraMessage }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar si el menú está abierto
+
+  // Función para alternar el menú desplegable
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <header style={{ textAlign: 'center', padding: '20px', backgroundColor: '#f8f9fa', borderBottom: '1px solid #ddd' }}>
-      {/* Título "Pago contra entrega" */}
-      <h1 style={{ marginBottom: '20px', fontSize: '24px', color: '#333' }}>Pago contra entrega</h1>
-
-      {/* Menú de navegación */}
+    <header className="header">
       <nav>
-        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', justifyContent: 'center', gap: '20px' }}>
-          <li>
-            <Link to="/" style={{ textDecoration: 'none', color: '#007bff', fontSize: '18px' }}>Inicio</Link>
-          </li>
-          <li>
-            <Link to="/kit_4" style={{ textDecoration: 'none', color: '#007bff', fontSize: '18px' }}>Acerca de</Link>
-          </li>
+        {/* Botón de hamburguesa para abrir/cerrar el menú */}
+        <button className="hamburger" onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        {/* Menú desplegable */}
+        <ul className={`navList ${isMenuOpen ? 'open' : ''}`}>
+          {links.map((link, index) => (
+            <li key={index} className="navItem">
+              <Link to={link.to} className="link" onClick={toggleMenu}>
+                {link.text}
+              </Link>
+            </li>
+          ))}
         </ul>
+
+        {/* Mostrar el mensaje adicional si está definido */}
+        {extraMessage && <div className="extraMessage">{extraMessage}</div>}
       </nav>
     </header>
   );

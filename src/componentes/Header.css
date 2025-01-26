@@ -1,0 +1,101 @@
+/* Estilos para el header flotante */
+.header {
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Color de fondo del header */
+    color: #fff; /* Color del texto */
+    padding: clamp(8px, 2vw, 20px) clamp(10px, 5vw, 20px); /* Espaciado interno responsivo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para efecto flotante */
+    z-index: 1000; /* Asegura que el header esté por encima del contenido */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Estilos para el botón de hamburguesa */
+  .hamburger {
+    display: none; /* Ocultar en pantallas grandes */
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  /* Estilos para la lista de navegación */
+  .navList {
+    list-style: none; /* Quita los estilos de lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Coloca los elementos en línea */
+    gap: clamp(10px, 3vw, 20px); /* Espacio entre elementos del menú (responsivo) */
+    align-items: center; /* Centra verticalmente los elementos */
+  }
+  
+  /* Estilos para los elementos de la lista */
+  .navItem {
+    margin: 0;
+  }
+  
+  /* Estilos para los enlaces */
+  .link {
+    color: #fff; /* Color del texto del enlace */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    font-size: clamp(14px, 2vw, 16px); /* Tamaño de fuente responsivo */
+  }
+  
+  /* Estilos para el mensaje adicional */
+  .extraMessage {
+    margin-left: clamp(20px, 5vw, 50px); /* Espacio responsivo entre el botón de hamburguesa y el mensaje */
+    text-align: right; /* Alinea el mensaje al lado derecho */
+    font-size: clamp(24px, 6vw, 34px); /* Tamaño de fuente responsivo */
+    color: #fff; /* Color del texto */
+    background-color: transparent; /* Quita el fondo verde */
+    padding: 0; /* Elimina el padding */
+    border-radius: 0; /* Elimina los bordes redondeados */
+    align-self: center; /* Centra verticalmente el mensaje */
+  }
+  
+  /* Estilos para pantallas pequeñas (menú desplegable) */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex; /* Mostrar el botón de hamburguesa en pantallas pequeñas */
+    }
+  
+    .navList {
+      display: none; /* Ocultar el menú en pantallas pequeñas */
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Ajusta según la altura del header */
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px 0;
+    }
+  
+    .navList.open {
+      display: flex; /* Mostrar el menú cuando está abierto */
+    }
+  
+    .navItem {
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .extraMessage {
+      margin-left: clamp(50px, 5vw, 60px); /* Espacio responsivo entre el botón de hamburguesa y el mensaje */
+      text-align: right; /* Alinea el mensaje al lado derecho */
+      font-size: clamp(30px, 6vw, 34px); /* Tamaño de fuente responsivo en móviles */
+      margin-top: -50px; /* Sube el mensaje un poco más */
+    }
+  }

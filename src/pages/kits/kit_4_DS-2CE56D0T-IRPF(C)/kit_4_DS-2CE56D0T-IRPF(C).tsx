@@ -1,8 +1,8 @@
 import React from 'react';
 import Carrusel from '@/componentes/Carrusel';
 import BotonCompra from '@/componentes/BotonCompra';
-import HeroHeader from '@/componentes/HeroHeader'; // Importar el componente HeroHeader
-import Header from '@/componentes/Header'; // Importar el componente Header
+import HeroHeader from '@/componentes/HeroHeader';
+import Header from '@/componentes/Header'; // Importa el componente Header
 
 // Importar imágenes locales
 import imagen1 from '@/assets/1.png';
@@ -17,6 +17,12 @@ import imagen9 from '@/assets/9.png';
 import headerImage from '@/assets/1.png'; // Imagen estática para el header
 
 const kit_4_DS_2CE56D0T_IRPF_C: React.FC = () => {
+  // Define los enlaces del header
+  const headerLinks = [
+    { to: '/', text: 'Inicio' },
+    { to: '/kit_4', text: 'Acerca de' },
+  ];
+
   // Array de objetos, cada uno representa un carrusel con título, descripción e imágenes
   const carruseles = [
     {
@@ -43,8 +49,8 @@ const kit_4_DS_2CE56D0T_IRPF_C: React.FC = () => {
 
   return (
     <div>
-      {/* Componente Header */}
-      <Header />
+      {/* Header flotante con mensaje adicional */}
+      <Header links={headerLinks} extraMessage="Pago Contraentrega + Envio Gratis!" />
 
       {/* Componente HeroHeader */}
       <HeroHeader
