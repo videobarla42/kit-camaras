@@ -1,23 +1,53 @@
+/* Variables CSS globales */
+:root {
+  --font-size-small: clamp(12px, 2vw, 14px);
+  --font-size-medium: clamp(14px, 3vw, 16px);
+  --font-size-large: clamp(18px, 4vw, 24px);
+  --font-size-xlarge: clamp(24px, 6vw, 32px);
+  --spacing-small: clamp(8px, 2vw, 12px);
+  --spacing-medium: clamp(12px, 3vw, 16px);
+  --spacing-large: clamp(16px, 4vw, 24px);
+  --color-primary: #646cff;
+  --color-secondary: #61dafb;
+  --color-text: #888;
+  --color-background: #ffffff;
+}
+
+/* Estilos base */
+body {
+  font-family: Arial, sans-serif;
+  font-size: var(--font-size-medium);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: var(--spacing-large);
   text-align: center;
 }
 
+/* Estilos para el logo */
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: clamp(4em, 10vw, 6em); /* Altura responsiva */
+  padding: var(--spacing-medium);
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em var(--color-primary));
 }
 
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em var(--color-secondary));
+}
+
+/* Animación del logo */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -27,16 +57,37 @@
   }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Estilos para las tarjetas */
+.card {
+  padding: var(--spacing-large);
+  background-color: #f9f9f9;
+  border-radius: clamp(8px, 2vw, 12px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--spacing-medium);
+}
+
+/* Estilos para el texto "Read the docs" */
+.read-the-docs {
+  color: var(--color-text);
+  font-size: var(--font-size-small);
+}
+
 /* Ajustes para el carrusel */
 .slick-slide img {
   width: 100%;
   height: auto;
+  border-radius: clamp(8px, 2vw, 12px);
 }
 
-/* Estilos opcionales para mejorar la visualización */
 .slick-dots {
   position: absolute;
-  bottom: 10px;
+  bottom: clamp(10px, 2vw, 20px);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -46,38 +97,20 @@
 }
 
 .slick-dots li button:before {
-  color: #fff; /* Cambia el color de los puntos */
+  color: #fff; /* Color de los puntos */
+  font-size: var(--font-size-small);
 }
 
 .slick-prev, .slick-next {
   z-index: 1;
-  font-size: 24px;
-  color: white; /* Cambia el color de las flechas */
+  font-size: var(--font-size-large);
+  color: white; /* Color de las flechas */
 }
 
-.slick-dots li button:before {
-  color: #fff; /* Cambia el color de los puntos */
+.slick-prev {
+  left: clamp(10px, 2vw, 20px);
 }
 
-.slick-prev, .slick-next {
-  z-index: 1;
-  font-size: 24px;
-  color: white; /* Cambia el color de las flechas */
-}
-
-
-
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.slick-next {
+  right: clamp(10px, 2vw, 20px);
 }

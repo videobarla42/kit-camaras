@@ -1,4 +1,5 @@
 import React from 'react';
+import './HeroHeader.css'; // Importa los estilos CSS
 
 // Definimos las props del HeroHeader
 interface HeroHeaderProps {
@@ -9,19 +10,19 @@ interface HeroHeaderProps {
 
 const HeroHeader: React.FC<HeroHeaderProps> = ({ imagen, titulo, descripcion }) => {
   return (
-    <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+    <div className="hero-header">
       {/* Título */}
-      <h1>{titulo}</h1>
+      <h1 className="hero-title">{titulo}</h1>
 
       {/* Imagen estática */}
       <img
         src={imagen}
         alt="Header"
-        style={{ width: '100%', maxWidth: '800px', borderRadius: '15px', margin: '20px 0' }}
+        className="hero-image"
       />
 
       {/* Descripción */}
-      <p>{descripcion}</p>
+      <p className="hero-description">{descripcion}</p>
     </div>
   );
 };

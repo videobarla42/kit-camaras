@@ -1,0 +1,83 @@
+/* Contenedor principal del HeroHeader */
+.hero-header {
+    text-align: center;
+    margin-top: clamp(50px, 10vw, 70px); /* Margen superior responsivo */
+    margin-bottom: clamp(40px, 8vw, 60px); /* Margen inferior responsivo */
+    padding: 0 clamp(10px, 5vw, 20px); /* Padding lateral responsivo */
+  }
+  
+  /* Estilos para el título */
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3.5rem); /* Tamaño de fuente responsivo */
+    color: #2c3e50; /* Color más oscuro y moderno */
+    margin-bottom: clamp(15px, 3vw, 25px); /* Espacio inferior responsivo */
+    font-weight: 700; /* Texto en negrita */
+    line-height: clamp(1.2, 1.5, 1.8); /* Espaciado entre líneas responsivo */
+  }
+  
+  /* Estilos para la imagen */
+  .hero-image {
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    max-width: 800px; /* Ancho máximo */
+    border-radius: clamp(10px, 2vw, 15px); /* Bordes redondeados responsivos */
+    margin: clamp(15px, 3vw, 25px) 0; /* Margen superior e inferior responsivo */
+    box-shadow: 0 clamp(4px, 1vw, 6px) clamp(8px, 2vw, 12px) rgba(0, 0, 0, 0.15); /* Sombra responsiva */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave al hacer hover */
+  }
+  
+  .hero-image:hover {
+    transform: scale(1.02); /* Efecto de zoom suave al pasar el mouse */
+    box-shadow: 0 clamp(6px, 1.5vw, 8px) clamp(12px, 3vw, 16px) rgba(0, 0, 0, 0.2); /* Sombra responsiva al hacer hover */
+  }
+  
+  /* Estilos para la descripción */
+  .hero-description {
+    font-size: clamp(1rem, 4vw, 1.25rem); /* Tamaño de fuente responsivo */
+    color: #555; /* Color de texto más suave */
+    line-height: clamp(1.5, 1.8, 2); /* Espaciado entre líneas responsivo */
+    max-width: clamp(300px, 80vw, 800px); /* Ancho máximo responsivo */
+    margin: 0 auto; /* Centra el texto */
+    padding: 0 clamp(10px, 3vw, 15px); /* Padding lateral responsivo */
+  }
+  
+  /* Efecto de hover para el título */
+  .hero-title:hover {
+    color: #1abc9c; /* Cambia el color al pasar el mouse */
+    transition: color 0.3s ease; /* Transición suave */
+  }
+  
+  /* Estilos responsivos adicionales */
+@media (max-width: 768px) {
+    .hero-header {
+      margin-top: clamp(80px, 10vw, 70px); /* Margen superior más ajustado y responsivo */
+      margin-bottom: clamp(20px, 6vw, 40px); /* Margen inferior más ajustado y responsivo */
+      padding: 0 clamp(10px, 5vw, 20px); /* Padding lateral responsivo */
+      width: 92%; /* Ocupa todo el ancho de la pantalla */
+      max-width: none; /* Elimina cualquier límite de ancho */    
+    }
+  
+    .hero-title {
+      font-size: clamp(2rem, 7vw, 2.5rem); /* Tamaño de fuente más equilibrado */
+      margin-bottom: clamp(10px, 3vw, 20px); /* Espacio inferior responsivo */
+      line-height: clamp(1.2, 1.4, 1.6); /* Espaciado entre líneas responsivo */
+      margin: 0; /* Elimina márgenes automáticos */
+      text-align: left; /* Alinea el texto a la izquierda */
+    }
+  
+    .hero-description {
+      font-size: clamp(0.9rem, 4vw, 1.1rem); /* Tamaño de fuente más legible */
+      line-height: clamp(1.5, 1.7, 1.9); /* Espaciado entre líneas responsivo */
+      max-width: clamp(280px, 90vw, 800px); /* Ancho máximo más ajustado */
+      padding: 0 clamp(5px, 3vw, 15px); /* Padding lateral responsivo */
+    }
+  
+    .hero-image {
+      margin: clamp(10px, 3vw, 20px) 0; /* Margen superior e inferior más ajustado */
+      border-radius: clamp(8px, 2vw, 15px); /* Bordes redondeados responsivos */
+      box-shadow: 0 clamp(3px, 1vw, 6px) clamp(6px, 2vw, 12px) rgba(0, 0, 0, 0.15); /* Sombra responsiva */
+    }
+  
+    .hero-image:hover {
+      box-shadow: 0 clamp(4px, 1.5vw, 8px) clamp(8px, 3vw, 16px) rgba(0, 0, 0, 0.2); /* Sombra responsiva al hacer hover */
+    }
+  }
