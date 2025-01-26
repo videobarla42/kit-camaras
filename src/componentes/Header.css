@@ -80,8 +80,6 @@
   }
 
   .navList {
-    display: flex; /* Mostrar el menú en pantallas pequeñas */
-    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
@@ -92,6 +90,8 @@
     transform: translateX(-100%); /* Oculta el menú fuera de la pantalla */
     transition: transform 0.3s ease-in-out;
     z-index: 1000; /* Asegura que el menú esté por encima del contenido */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
   }
 
   .navList.open {
@@ -108,17 +108,5 @@
     text-align: center; /* Centra el mensaje en móviles */
     font-size: clamp(24px, 6vw, 30px); /* Tamaño de fuente responsivo en móviles */
     margin-top: 2px; /* Espacio superior */
-  }
-
-  /* Estilos para el botón de cierre (opcional) */
-  .closeButton {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
   }
 }
