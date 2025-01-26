@@ -1,11 +1,164 @@
-.carousel-container {
-    width: 80%;
-    margin: 0 auto;
+/* Contenedor principal del carrusel */
+.carrusel-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Ajusta el ancho máximo según tu diseño */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  background-color: #f0f0f0; /* Fondo de respaldo para bordes redondeados */
+}
+
+/* Contenedor de las imágenes */
+.carrusel-slider {
+  position: relative;
+  height: 400px; /* Ajusta la altura según tus necesidades */
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+/* Estilo de cada slide */
+.carrusel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  will-change: opacity, transform; /* Mejora el rendimiento de las animaciones */
+}
+
+/* Estilo de la imagen dentro del slide */
+.carrusel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  user-select: none; /* Evita que el usuario seleccione la imagen */
+  cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+/* Estilo para el slide activo */
+.carrusel-slide.active {
+  opacity: 1;
+  transform: scale(1.03); /* Efecto de zoom más sutil */
+}
+
+/* Botones de navegación */
+.carrusel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  z-index: 10;
+  opacity: 0.8; /* Botones ligeramente transparentes */
+}
+
+.carrusel-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.15);
+  opacity: 1; /* Mayor opacidad al hacer hover */
+}
+
+.carrusel-button.prev {
+  left: 20px;
+}
+
+.carrusel-button.next {
+  right: 20px;
+}
+
+/* Modal para pantalla completa */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ajusta la imagen sin recortarla */
+}
+
+/* Botones de navegación del modal */
+.modal-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  z-index: 10;
+  opacity: 0.8; /* Botones ligeramente transparentes */
+}
+
+.modal-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.15);
+  opacity: 1; /* Mayor opacidad al hacer hover */
+}
+
+.modal-button.prev {
+  left: 20px;
+}
+
+.modal-button.next {
+  right: 20px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .carrusel-container {
+    max-width: 90%;
   }
-  
-  .slick-slide img {
-    display: block;
-    width: 100%;
-    height: auto;
+
+  .carrusel-slider {
+    height: 300px; /* Altura reducida para tablets */
   }
-  
+
+  .carrusel-button {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carrusel-slider {
+    height: 200px; /* Altura reducida para móviles */
+  }
+
+  .carrusel-button {
+    font-size: 18px;
+    padding: 8px;
+  }
+}

@@ -1,21 +1,15 @@
 import React, { useState } from 'react';
+import './Carrusel.css';
 
-// Importamos las imágenes
-import imagen1 from '../assets/1.png';
-import imagen2 from '../assets/2.png';
-import imagen3 from '../assets/3.png';
-import imagen4 from '../assets/4.png';
+// Definimos el tipo de las props
+interface CarruselProps {
+  images: string[]; // Array de URLs o rutas de las imágenes
+}
 
-const Carrusel = () => {
+const Carrusel: React.FC<CarruselProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Array de imágenes
-  const images = [
-    imagen1,
-    imagen2,
-    imagen3,
-    // imagen4
-  ];
+  const [isModalOpen, setIsModalOpen] = useState(false); // Estado para controlar el modal
+  const [modalIndex, setModalIndex] = useState(0); // Índice de la imagen en el modal
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 
@@ -29,46 +23,114 @@ const Carrusel = () => {
     );
   };
 
+  // Función para abrir el modal con la imagen seleccionada
+  const openModal = (index: number) => {
+    setModalIndex(index); // Establecer el índice de la imagen seleccionada
+    setIsModalOpen(true);
+  };
+
+  // Función para cerrar el modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  // Función para navegar a la siguiente imagen en el modal
+  const nextModalSlide = () => {
+    setModalIndex((prevIndex) => 
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  // Función para navegar a la imagen anterior en el modal
+  const prevModalSlide = () => {
+    setModalIndex((prevIndex) => 
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Función para determinar la clase de cada slide
+  const getSlideClass = (index: number): string => {
+    if (index === currentIndex) {
+      return 'active'; // Slide central
+    } else if (index === (currentIndex - 1 + images.length) % images.length) {
+      return 'left'; // Slide izquierdo
+    } else if (index === (currentIndex + 1) % images.length) {
+      return 'right'; // Slide derecho
+    } else {
+      return ''; // Ocultar otros slides
+    }
+  };
+
   return (
-    <div className="relative w-full max-w-4xl mx-auto">
-      <div className="relative h-96 overflow-hidden rounded-lg">
-        {/* Imagen actual */}
-        <div className="relative w-full h-full">
-          <img
-            src={images[currentIndex]}
-            alt={`Slide ${currentIndex + 1}`}
-            className="w-full h-full object-cover transition-transform duration-500"
-          />
-        </div>
-
-        {/* Botones de navegación */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full hover:bg-black/75 transition-colors z-10"
-        >
-          <span className="text-white text-2xl">&larr;</span>
-        </button>
-        
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full hover:bg-black/75 transition-colors z-10"
-        >
-          <span className="text-white text-2xl">&rarr;</span>
-        </button>
-
-        {/* Indicadores */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentIndex ? 'bg-white' : 'bg-white/50'
-              }`}
+    <div className="carrusel-container">
+      <div className="carrusel-slider">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`carrusel-slide ${getSlideClass(index)}`}
+          >
+            <img
+              src={image}
+              alt={`Slide ${index + 1}`}
+              onClick={() => openModal(index)} // Abrir modal al hacer clic
+              style={{ cursor: 'pointer' }} // Cambiar el cursor a pointer
             />
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
+
+      {/* Botones de navegación */}
+      <button
+        onClick={prevSlide}
+        className="carrusel-button prev"
+      >
+        &larr;
+      </button>
+      
+      <button
+        onClick={nextSlide}
+        className="carrusel-button next"
+      >
+        &rarr;
+      </button>
+
+      {/* Modal para mostrar la imagen en pantalla completa */}
+      {isModalOpen && (
+        <div
+          className="modal-overlay"
+          onClick={closeModal} // Cerrar modal al hacer clic fuera de la imagen
+        >
+          <div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()} // Evitar que el modal se cierre al hacer clic en la imagen
+          >
+            <img
+              src={images[modalIndex]}
+              alt="Imagen en pantalla completa"
+            />
+            {/* Botón para la imagen anterior */}
+            <button
+              className="modal-button prev"
+              onClick={(e) => {
+                e.stopPropagation(); // Evitar que el modal se cierre
+                prevModalSlide();
+              }}
+            >
+              &larr;
+            </button>
+            {/* Botón para la siguiente imagen */}
+            <button
+              className="modal-button next"
+              onClick={(e) => {
+                e.stopPropagation(); // Evitar que el modal se cierre
+                nextModalSlide();
+              }}
+            >
+              &rarr;
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
