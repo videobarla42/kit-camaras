@@ -58,7 +58,7 @@
   /* Estilos responsivos adicionales */
 @media (max-width: 768px) {
     .hero-header {
-      margin-top: clamp(80px, 10vw, 70px); /* Margen superior más ajustado y responsivo */
+      margin-top: clamp(120px, 10vw, 70px); /* Margen superior más ajustado y responsivo */
       margin-bottom: clamp(20px, 6vw, 40px); /* Margen inferior más ajustado y responsivo */
       padding: 0 clamp(10px, 5vw, 20px); /* Padding lateral responsivo */
       width: 92%; /* Ocupa todo el ancho de la pantalla */
@@ -66,11 +66,12 @@
     }
   
     .hero-title {
-      font-size: clamp(2rem, 7vw, 2.5rem); /* Tamaño de fuente más equilibrado */
+      font-size: clamp(1.5rem, 7vw, 2.5rem); /* Tamaño de fuente más equilibrado */
       margin-bottom: clamp(10px, 3vw, 20px); /* Espacio inferior responsivo */
       line-height: clamp(1.2, 1.4, 1.6); /* Espaciado entre líneas responsivo */
       margin: 0; /* Elimina márgenes automáticos */
       text-align: left; /* Alinea el texto a la izquierda */
+      color: white;
     }
   
     .hero-description {

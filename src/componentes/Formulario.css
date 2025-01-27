@@ -1,0 +1,122 @@
+/* Estilos para el overlay del formulario */
+.formulario-overlay {
+  position: absolute;
+  top: auto; /* Ajusta según sea necesario */
+  left: auto; /* Ajusta según sea necesario */
+  width: auto; /* Ajusta para limitar el tamaño */
+  height: auto; /* Ajusta para limitar el tamaño */
+  background-color: rgba(0, 0, 0, 0.5); /* Opcional */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+/* Estilos para el contenido del formulario */
+.formulario-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+/* Estilos para el botón de cerrar */
+.cerrar-formulario {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.cerrar-formulario:hover {
+  color: #000;
+}
+
+/* Estilos para el título y el icono */
+.titulo-con-icono h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.titulo-con-icono p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los inputs del formulario */
+.formulario-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.formulario-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Estilos para los botones de confirmar, WhatsApp y llamar */
+.formulario-botones {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.confirmar,
+.whatsapp-button,
+.llamar-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirmar {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.confirmar:hover {
+  background-color: #218838;
+}
+
+.whatsapp-button {
+  background-color: #25d366;
+  color: #fff;
+}
+
+.whatsapp-button:hover {
+  background-color: #1da851;
+}
+
+.llamar-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.llamar-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para los horarios de entrega */
+.horarios-entrega {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}

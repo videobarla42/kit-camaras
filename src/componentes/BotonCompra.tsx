@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './BotonCompra.css'; // Importa el archivo CSS
 import { createClient } from '@supabase/supabase-js';
+import ModalCompra from './ModalCompra'; // Importa el nuevo componente ModalCompra
 
 // Initialize the Supabase client
 const supabaseUrl = 'https://lkwdiodhcjapfqxnbuxy.supabase.co'; // Replace with your Supabase URL
@@ -90,73 +91,21 @@ const BotonCompra: React.FC<BotonCompraProps> = ({ texto = 'Comprar' }) => {
 
       {/* Modal de compra */}
       {modalAbierto && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            {/* Botón de cierre (X) */}
-            <button className="cerrar-modal" onClick={cerrarModal}>
-              &times;
-            </button>
-
-            {/* Título */}
-            <div className="titulo-con-icono">
-              <h2>Confirmar Compra, kit de 4 cámaras con inteligencia artificial</h2>
-              <p>
-                Por favor, complete el formulario para hacer llegar el pedido a su domicilio.
-                Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de \$780,000. ¡Domicilio gratis!
-                Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!
-              </p>
-            </div>
-
-            <input
-              type="text"
-              placeholder="Nombre"
-              value={nombre}
-              onChange={(e) => setNombre(e.target.value)}
-              className="modal-input"
-            />
-            <input
-              type="text"
-              placeholder="Teléfono"
-              value={telefono}
-              onChange={(e) => setTelefono(e.target.value)}
-              className="modal-input"
-            />
-            <input
-              type="text"
-              placeholder="Dirección"
-              value={direccion}
-              onChange={(e) => setDireccion(e.target.value)}
-              className="modal-input"
-            />
-            <input
-              type="text"
-              placeholder="Ciudad y Barrio"
-              value={ciudadYBarrio}
-              onChange={(e) => setCiudadYBarrio(e.target.value)}
-              className="modal-input"
-            />
-
-            <div className="modal-botones">
-              <button className="confirmar" onClick={confirmarCompra}>
-                Confirmar Compra
-              </button>
-            </div>
-
-            <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
-              <button className="whatsapp-button" onClick={abrirWhatsApp}>
-                WhatsApp
-              </button>
-              <button className="llamar-button" onClick={hacerLlamada}>
-                Llamar
-              </button>
-            </div>
-
-            {/* Horarios de entrega */}
-            <div className="horarios-entrega">
-              <p>{horariosEntrega}</p>
-            </div>
-          </div>
-        </div>
+        <ModalCompra
+          onClose={cerrarModal}
+          onConfirm={confirmarCompra}
+          nombre={nombre}
+          setNombre={setNombre}
+          telefono={telefono}
+          setTelefono={setTelefono}
+          direccion={direccion}
+          setDireccion={setDireccion}
+          ciudadYBarrio={ciudadYBarrio}
+          setCiudadYBarrio={setCiudadYBarrio}
+          abrirWhatsApp={abrirWhatsApp}
+          hacerLlamada={hacerLlamada}
+          horariosEntrega={horariosEntrega}
+        />
       )}
     </div>
   );
