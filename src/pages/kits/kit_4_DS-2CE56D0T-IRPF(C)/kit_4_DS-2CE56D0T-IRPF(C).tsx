@@ -203,7 +203,7 @@ const Kit4Camaras: React.FC = () => {
 
       <Banner
         key="banner0"
-        texto="Contenido del kit de cámaras"
+        texto="Descripcion del kit de cámaras"
         backgroundColor="#8B0000"
         textColor="#FFFFFF"
         fontSize="2rem"
