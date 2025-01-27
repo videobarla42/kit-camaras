@@ -13,75 +13,75 @@
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center; /* Centra el contenido verticalmente */
     min-height: 80px; /* Altura mínima para mejor visualización */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    transition: background-color 0.3s ease; /* Transición suave solo para el color de fondo */
     font-size: clamp(1.2rem, 4vw, 2rem); /* Tamaño de fuente responsivo */
     padding: 15px 30px; /* Padding predeterminado */
-  }
-  
-  /* Efecto hover para interactividad */
-  .banner-container:hover {
-    transform: translateY(-2px); /* Levanta ligeramente el banner */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hacer hover */
-  }
-  
-  /* Estilos para el texto del banner */
-  .banner-container p {
+}
+
+/* Efecto hover sin movimiento */
+.banner-container:hover {
+    /* Se eliminó transform: translateY(-2px); */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Mantén la sombra original */
+}
+
+/* Estilos para el texto del banner */
+.banner-container p {
     margin: 0; /* Elimina el margen predeterminado del párrafo */
     padding: 0; /* Elimina el padding predeterminado del párrafo */
     font-size: inherit; /* Hereda el tamaño de fuente del contenedor */
     color: inherit; /* Hereda el color del texto del contenedor */
     line-height: clamp(1.2, 4vw, 1.5); /* Espaciado entre líneas responsivo */
-  }
-  
-  /* Reset básico para body y html */
-  body, html {
+}
+
+/* Reset básico para body y html */
+body, html {
     margin: 0;
     padding: 0;
     width: 100%;
     overflow-x: hidden; /* Evita el desbordamiento horizontal */
     font-family: Arial, sans-serif; /* Fuente predeterminada */
     line-height: 1.5; /* Espaciado entre líneas */
-  }
-  
-  /* Estilos para pantallas extragrandes (más de 1200px) */
-  @media (min-width: 1201px) {
+}
+
+/* Estilos para pantallas extragrandes (más de 1200px) */
+@media (min-width: 1201px) {
     .banner-container {
-      font-size: clamp(1.5rem, 5vw, 3rem); /* Tamaño de fuente más grande */
-      padding: 20px 40px; /* Padding más amplio */
-      min-height: 100px; /* Altura mínima aumentada */
+        font-size: clamp(1.5rem, 5vw, 3rem); /* Tamaño de fuente más grande */
+        padding: 20px 40px; /* Padding más amplio */
+        min-height: 100px; /* Altura mínima aumentada */
     }
-  }
-  
-  /* Estilos responsivos mejorados */
-  @media (max-width: 1200px) {
+}
+
+/* Estilos responsivos mejorados */
+@media (max-width: 1200px) {
     .banner-container {
-      font-size: clamp(1.1rem, 3.5vw, 1.8rem); /* Tamaño de fuente más pequeño */
-      padding: 12px 25px; /* Padding reducido */
+        font-size: clamp(1.1rem, 3.5vw, 1.8rem); /* Tamaño de fuente más pequeño */
+        padding: 12px 25px; /* Padding reducido */
     }
-  }
-  
-  @media (max-width: 992px) {
+}
+
+@media (max-width: 992px) {
     .banner-container {
-      font-size: clamp(1rem, 3vw, 1.6rem); /* Tamaño de fuente más pequeño */
-      padding: 10px 20px; /* Padding reducido */
+        font-size: clamp(1rem, 3vw, 1.6rem); /* Tamaño de fuente más pequeño */
+        padding: 10px 20px; /* Padding reducido */
     }
-  }
-  
-  /* Estilos responsivos mejorados para pantallas pequeñas */
+}
+
+/* Estilos responsivos mejorados para pantallas pequeñas */
 @media (max-width: 768px) {
     .banner-container {
-      min-height: 60px; /* Altura mínima reducida en dispositivos móviles */
-      font-size: clamp(0.95rem, 3vw, 1.5rem); /* Tamaño de fuente más pequeño pero legible */
-      padding: 10px 20px; /* Padding reducido pero equilibrado */
-      line-height: 1.4; /* Espaciado entre líneas mejorado */
+        min-height: 60px; /* Altura mínima reducida en dispositivos móviles */
+        font-size: clamp(0.95rem, 3vw, 1.5rem); /* Tamaño de fuente más pequeño pero legible */
+        padding: 10px 20px; /* Padding reducido pero equilibrado */
+        line-height: 1.4; /* Espaciado entre líneas mejorado */
     }
-  }
-  
-  @media (max-width: 576px) {
+}
+
+@media (max-width: 576px) {
     .banner-container {
-      min-height: 50px; /* Altura mínima reducida en pantallas muy pequeñas */
-      font-size: clamp(0.85rem, 2.8vw, 1.3rem); /* Tamaño de fuente más pequeño pero legible */
-      padding: 8px 15px; /* Padding reducido pero equilibrado */
-      line-height: 1.3; /* Espaciado entre líneas mejorado */
+        min-height: 50px; /* Altura mínima reducida en pantallas muy pequeñas */
+        font-size: clamp(0.85rem, 2.8vw, 1.3rem); /* Tamaño de fuente más pequeño pero legible */
+        padding: 8px 15px; /* Padding reducido pero equilibrado */
+        line-height: 1.3; /* Espaciado entre líneas mejorado */
     }
-  }
+}

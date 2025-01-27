@@ -25,7 +25,7 @@ const horariosEntrega = `
   Sábados: de 8:00 a.m. a 1:00 p.m.
   Domingos y festivos no hacemos entregas.
 
-  Recibimos pagos en efectivo, Nequi o Bancolombia.
+ Aceptamos pagos en efectivo, Nequi o Bancolombia. No manejamos ni solicitamos información de tarjetas de crédito.
 `;
 
 const BotonCompra: React.FC<BotonCompraProps> = ({ texto = 'Comprar' }) => {

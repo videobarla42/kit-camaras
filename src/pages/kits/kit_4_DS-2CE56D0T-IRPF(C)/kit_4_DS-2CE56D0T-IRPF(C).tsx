@@ -109,56 +109,56 @@ const Kit4Camaras: React.FC = () => {
   const banners = [
     <Banner
       key="banner1"
-      texto="Oferta especial: 50% de descuento"
-      backgroundColor="#FF5722"
+      texto="Garantía de 1 año para cámaras de seguridad y videograbador DVR"
+      backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
     />,
     <Banner
       key="banner2"
-      texto="Oferta especial: 50% de descuento"
-      backgroundColor="#FF5722"
+      texto="Garantia de 3 años para disco duro WD Purpura"
+      backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
     />,
     <Banner
       key="banner3"
-      texto="Oferta especial: 50% de descuento"
-      backgroundColor="#FF5722"
+      texto="Accesorios del kit de cámaras"
+      backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
     />,
     <Banner
       key="banner4"
-      texto="Oferta especial: 50% de descuento"
-      backgroundColor="#FF5722"
+      texto="accesorios del kit no tienen garantia."
+      backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
     />,
     <Banner
       key="banner5"
-      texto="Oferta especial: 50% de descuento"
-      backgroundColor="#FF5722"
+      texto="domicilios sin costo!"
+      backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
     />,
     <Banner
       key="banner6"
-      texto="Oferta especial: 50% de descuento"
-      backgroundColor="#FF5722"
+      texto="Entrega inmediata para Bucaramanga y su área metropolitana."
+      backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
     />,
     <Banner
       key="banner7"
-      texto="Oferta especial: 50% de descuento"
-      backgroundColor="#FF5722"
+      texto="¡Páguelo en la puerta de su casa!"
+      backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
@@ -203,8 +203,8 @@ const Kit4Camaras: React.FC = () => {
 
       <Banner
         key="banner0"
-        texto="Oferta especial: 50% de descuento"
-        backgroundColor="#FF5722"
+        texto="Contenido del kit de cámaras"
+        backgroundColor="#8B0000"
         textColor="#FFFFFF"
         fontSize="2rem"
         padding="15px 30px"

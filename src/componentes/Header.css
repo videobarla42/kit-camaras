@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: hwb(253 2% 0%); /* Color de fondo del header */
+  background-color: hsl(240, 100%, 61%); /* Azul brillante puro */
   color: #fff; /* Color del texto */
   padding: clamp(8px, 2vw, 20px) clamp(10px, 5vw, 20px); /* Espaciado interno responsivo */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para efecto flotante */
