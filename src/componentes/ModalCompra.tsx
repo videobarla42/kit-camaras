@@ -1,4 +1,5 @@
 import React from 'react';
+import './ModalCompra.css'; // Asegúrate de que la ruta sea correcta
 
 interface ModalCompraProps {
   onClose: () => void;
@@ -39,9 +40,9 @@ const ModalCompra: React.FC<ModalCompraProps> = ({
         </button>
 
         <div className="titulo-con-icono">
-          <h2>Confirmar Compra, kit de 4 cámaras con inteligencia artificial</h2>
+          <h2>Confirma la Compra del kit de 4 cámaras con inteligencia artificial</h2>
           <p>
-            Por favor, complete el formulario para hacer llegar el pedido a su domicilio.
+            complete el formulario para hacer llegar el pedido a su domicilio.
             Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de \$780,000. ¡Domicilio gratis!
             Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!
           </p>

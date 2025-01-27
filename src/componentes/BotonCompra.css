@@ -194,6 +194,7 @@
 /* Título */
 .titulo-con-icono {
     margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+    color: #e0e0e0;
 }
 
 .titulo-con-icono h2 {
@@ -256,5 +257,11 @@
     /* Estilos para el título en móviles */
     .titulo-con-icono h2 {
         font-size: 18px; /* Reducir el tamaño del texto en móviles */
+        color: hsl(0, 100%, 99%);
     }
+    .titulo-con-icono {
+        margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+        color: #e0e0e0;
+    }
+    
 }
