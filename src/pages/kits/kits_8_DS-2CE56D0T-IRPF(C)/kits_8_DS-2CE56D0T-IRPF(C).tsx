@@ -189,7 +189,7 @@ const Kits8Camaras: React.FC = () => {
             <BotonCompra
               texto={carrusel.botonTexto}
               onClick={abrirModal}
-              color="#28a745"
+              color="#007bff"
               tamaño="mediano"
             />
           </div>
@@ -227,7 +227,7 @@ const Kits8Camaras: React.FC = () => {
         <BotonCompra
           texto="Compra el Kit de Cámaras!"
           onClick={abrirModal}
-          color="#28a745"
+          color="#007bff"
           tamaño="mediano"
         />
       </HeroHeader>
