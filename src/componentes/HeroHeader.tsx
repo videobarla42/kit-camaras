@@ -7,6 +7,7 @@ interface HeroHeaderProps {
   titulo: string; // Título del header
   descripcion: string; // Descripción del header
   subtitulo: string; // Subtítulo del header
+  precio?: string; // Propiedad opcional para el precio
   children?: ReactNode; // Añade children como una propiedad opcional
 }
 
@@ -15,10 +16,9 @@ const HeroHeader: React.FC<HeroHeaderProps> = ({
   titulo,
   descripcion,
   subtitulo,
+  precio = "780,000", // Valor por defecto para el precio
   children, // Añade children aquí
 }) => {
-  const precio = "780,000"; // Precio en pesos colombianos
-
   return (
     <div className="hero-header">
       {/* Título */}
@@ -38,7 +38,7 @@ const HeroHeader: React.FC<HeroHeaderProps> = ({
       <p className="hero-description">{descripcion}</p>
 
       {/* Precio */}
-      <p className="hero-precio">Precio: ${precio} COP</p>
+      {precio && <p className="hero-precio">Precio: ${precio} COP</p>}
 
       {/* Renderiza children aquí */}
       {children}

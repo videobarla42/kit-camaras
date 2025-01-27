@@ -8,16 +8,20 @@ import Banner from '@/componentes/Banner';
 import Formulario from '@/componentes/Formulario';
 
 // Importar imágenes locales en formato .webp
-import imagen1 from '@/assets/1.webp';
-import imagen2 from '@/assets/2.webp';
-import imagen3 from '@/assets/3.webp';
-import imagen4 from '@/assets/4.webp';
-import imagen5 from '@/assets/5.webp';
-import imagen6 from '@/assets/6.webp';
-import imagen7 from '@/assets/7.webp';
-import imagen8 from '@/assets/8.webp';
-import imagen9 from '@/assets/9.webp';
-import imagen10 from '@/assets/10.webp';
+import imagen28 from '@/assets/28.webp';
+import imagen29 from '@/assets/29.webp';
+import imagen30 from '@/assets/30.webp';
+import imagen31 from '@/assets/31.webp';
+import imagen26 from '@/assets/26.webp';
+import imagen33 from '@/assets/33.webp';
+import imagen34 from '@/assets/34.webp';
+import imagen35 from '@/assets/35.webp';
+import imagen32 from '@/assets/32.webp';
+import imagen19 from '@/assets/19.webp';
+import imagen20 from '@/assets/20.webp';
+import imagen21 from '@/assets/21.webp';
+import imagen22 from '@/assets/22.webp';
+import imagen23 from '@/assets/23.webp';
 import imagen11 from '@/assets/11.webp';
 import imagen12 from '@/assets/12.webp';
 import imagen13 from '@/assets/13.webp';
@@ -26,15 +30,7 @@ import imagen15 from '@/assets/15.webp';
 import imagen16 from '@/assets/16.webp';
 import imagen17 from '@/assets/17.webp';
 import imagen18 from '@/assets/18.webp';
-import imagen19 from '@/assets/19.webp';
-import imagen20 from '@/assets/20.webp';
-import imagen21 from '@/assets/21.webp';
-import imagen22 from '@/assets/22.webp';
-import imagen23 from '@/assets/23.webp';
-import imagen24 from '@/assets/24.webp';
-import imagen25 from '@/assets/25.webp';
-import imagen26 from '@/assets/26.webp';
-import headerImage from '@/assets/1.webp'; // También actualizada a .webp
+import headerImage from '@/assets/28.webp'; // También actualizada a .webp
 
 const kits_8_DS_2CE56D0T_IRPF_C: React.FC = () => {
   const [modalAbierto, setModalAbierto] = useState(false);
@@ -62,39 +58,39 @@ const kits_8_DS_2CE56D0T_IRPF_C: React.FC = () => {
   // Array de carruseles
   const carruseles = [
     {
-      title: '1 Video Grabador DVR de 4 Canales, 4 MPX Lite + IA',
-      description: 'DVR AcuSense mini de 4 canales Y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
-      images: [imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8],
+      title: '1 Video Grabador DVR de 8 Canales, 4 MPX Lite + IA',
+      description: 'DVR AcuSense mini de 8 canales Y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
+      images: [imagen29, imagen30, imagen31],
       botonTexto: 'Domicilio Gratis!'
     },
     {
-      title: '4 Camaras de 2 Mpx y 20 MTS de Alcance',
-      description: '4 Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
-      images: [imagen9, imagen10, imagen11, imagen12, imagen13, imagen14, imagen15, imagen16, imagen17],
+      title: '8 Camaras de 2 Mpx y 20 MTS de Alcance',
+      description: '8 Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
+      images: [imagen32, imagen11,imagen12,imagen13,imagen14,imagen15,imagen16,imagen17,imagen18],
       botonTexto: 'Page en casa!'
     },
     {
-      title: '1 Disco duro para videovigilancia WD Purple - 1 TB',
-      description: 'Disco duro WD Purple 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
-      images: [imagen18, imagen19, imagen20, imagen21, imagen22],
+      title: '1 Disco duro para videovigilancia seagate skyhawk - 1 TB',
+      description: 'Disco duro seagate skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
+      images: [imagen19, imagen20, imagen21, imagen22, imagen23],
       botonTexto: 'Obtener el Kit!'
     },
     {
-      title: '4 Fuentes De Energia 12v - 1amp',
-      description: 'fuente de alimentación de AC 110- 240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con led indicador de funcionamiento, el articulo puede ser ligeramente distinto al de la foto.',
-      images: [imagen23],
+      title: '8 Fuentes De Energia 12v - 1amp',
+      description: '8 fuentes de alimentación de AC 110- 240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con led indicador de funcionamiento, el articulo puede ser ligeramente distinto al de la foto.',
+      images: [imagen33],
       botonTexto: 'Compra Con el Kit!'
     },
     {
-      title: '4 pares de Video Baluns 12v - 1amp',
-      description: '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
-      images: [imagen24],
+      title: '8 pares de Video Baluns 12v - 1amp',
+      description: '8 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
+      images: [imagen34],
       botonTexto: 'Obtenlo Ahora!'
     },
     {
-      title: '4 pares de Borneras',
-      description: '4 pares de borneras electricas para la conexión y distribución de energia de las camaras.',
-      images: [imagen25],
+      title: '8 pares de Borneras',
+      description: '8 pares de borneras electricas para la conexión y distribución de energia de las camaras.',
+      images: [imagen35],
       botonTexto: 'Ahorre el Domicilio!'
     },
     {
@@ -119,7 +115,7 @@ const kits_8_DS_2CE56D0T_IRPF_C: React.FC = () => {
     // Agregar el resto de los banners
     <Banner
       key="banner2"
-      texto="Garantia de 3 años para disco duro WD Purpura"
+      texto="Garantia de 2 años para disco duro WD Purpura"
       backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -152,7 +148,7 @@ const kits_8_DS_2CE56D0T_IRPF_C: React.FC = () => {
         imagen={headerImage}
         titulo="solo para Bucaramanga y el área metropolitana"
         subtitulo="tecnologia acusense deteccion humanos y vehiculos!"
-        descripcion="kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabacion a 4 mpx lite, ideales para todo tipo de negocio, casa u oficina."
+        descripcion="kit de 8 cámaras Full HD 1080p (2mpx) de HIKVISION con grabacion a 4 mpx lite, ideales para todo tipo de negocio, casa u oficina."
       >
         <BotonCompra
           texto="Compra el Kit de Cámaras!"
@@ -193,12 +189,14 @@ const kits_8_DS_2CE56D0T_IRPF_C: React.FC = () => {
         </React.Fragment>
       ))}
 
-      <HeroHeader
-        imagen={headerImage}
-        titulo=""
-        subtitulo=""
-        descripcion=""
-      />
+<HeroHeader
+  imagen={headerImage}
+  titulo="Producto X"
+  subtitulo="La mejor opción"
+  descripcion="Este producto tiene muchas características excelentes."
+  precio="1,200,000" // Pasamos un precio aquí
+/>
+
 
       <Formulario
         onClose={cerrarModal}

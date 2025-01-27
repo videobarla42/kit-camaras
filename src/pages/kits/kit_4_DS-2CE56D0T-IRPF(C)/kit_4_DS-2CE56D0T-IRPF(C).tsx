@@ -34,6 +34,27 @@ import imagen23 from '@/assets/23.webp';
 import imagen24 from '@/assets/24.webp';
 import imagen25 from '@/assets/25.webp';
 import imagen26 from '@/assets/26.webp';
+import imagen27 from '@/assets/27.webp';
+import imagen28 from '@/assets/28.webp';
+import imagen29 from '@/assets/29.webp';
+import imagen30 from '@/assets/30.webp';
+import imagen31 from '@/assets/31.webp';
+import imagen32 from '@/assets/32.webp';
+import imagen33 from '@/assets/33.webp';
+import imagen34 from '@/assets/34.webp';
+import imagen35 from '@/assets/35.webp';
+import imagen36 from '@/assets/36.webp';
+import imagen37 from '@/assets/37.webp';
+import imagen38 from '@/assets/38.webp';
+import imagen39 from '@/assets/39.webp';
+import imagen40 from '@/assets/40.webp';
+import imagen41 from '@/assets/41.webp';
+import imagen42 from '@/assets/42.webp';
+import imagen43 from '@/assets/43.webp';
+import imagen44 from '@/assets/44.webp';
+import imagen45 from '@/assets/45.webp';
+import imagen46 from '@/assets/46.webp';
+
 import headerImage from '@/assets/1.webp';
 
 const Kit4Camaras: React.FC = () => {
@@ -64,43 +85,43 @@ const Kit4Camaras: React.FC = () => {
     {
       title: '1 Video Grabador DVR de 4 Canales, 4 MPX Lite + IA',
       description: 'DVR AcuSense mini de 4 canales Y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
-      images: [imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8],
+      images: [imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9],
       botonTexto: 'Domicilio Gratis!'
     },
     {
       title: '4 Camaras de 2 Mpx y 20 MTS de Alcance',
       description: '4 Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
-      images: [imagen9, imagen10, imagen11, imagen12, imagen13, imagen14, imagen15, imagen16, imagen17],
+      images: [imagen10, imagen11, imagen12, imagen13, imagen14, imagen15, imagen16, imagen17, imagen18],
       botonTexto: 'Page en casa!'
     },
     {
-      title: '1 Disco duro para videovigilancia WD Purple - 1 TB',
-      description: 'Disco duro WD Purple 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
-      images: [imagen18, imagen19, imagen20, imagen21, imagen22],
+      title: '1 Disco duro para videovigilancia seagate skyhawk - 1 TB',
+      description: 'Disco duro seagate skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
+      images: [imagen19, imagen20, imagen21, imagen22, imagen23],
       botonTexto: 'Obtener el Kit!'
     },
     {
       title: '4 Fuentes De Energia 12v - 1amp',
       description: 'fuente de alimentación de AC 110- 240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con led indicador de funcionamiento, el articulo puede ser ligeramente distinto al de la foto.',
-      images: [imagen23],
+      images: [imagen24],
       botonTexto: 'Compra Con el Kit!'
     },
     {
       title: '4 pares de Video Baluns 12v - 1amp',
       description: '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
-      images: [imagen24],
+      images: [imagen25],
       botonTexto: 'Obtenlo Ahora!'
     },
     {
       title: '4 pares de Borneras',
       description: '4 pares de borneras electricas para la conexión y distribución de energia de las camaras.',
-      images: [imagen25],
+      images: [imagen26],
       botonTexto: 'Ahorre el Domicilio!'
     },
     {
       title: '100 mts de cable utp',
       description: 'cable utp cat 5e en aleacion para interior inluidos en el kit.',
-      images: [imagen26],
+      images: [imagen27],
       botonTexto: 'Pidelo en Casa!'
     },
   ];
@@ -117,7 +138,7 @@ const Kit4Camaras: React.FC = () => {
     />,
     <Banner
       key="banner2"
-      texto="Garantia de 3 años para disco duro WD Purpura"
+      texto="Garantia de 2 años para disco seagate skyhawk de 1 TB"
       backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -230,14 +251,14 @@ const Kit4Camaras: React.FC = () => {
   </React.Fragment>
 ))}
 
-      <HeroHeader
-        imagen={headerImage}
-        titulo=""
-        subtitulo=""
-        descripcion=""
-      >
-      
-      </HeroHeader>
+<HeroHeader
+  imagen={headerImage}
+  titulo="Producto X"
+  subtitulo="La mejor opción"
+  descripcion="Este producto tiene muchas características excelentes."
+  precio="700,000" // Pasamos un precio aquí
+/>
+
 
       <Formulario
         onClose={cerrarModal}
