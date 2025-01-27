@@ -3,18 +3,20 @@ import './ModalCompra.css'; // Asegúrate de que la ruta sea correcta
 
 interface ModalCompraProps {
   onClose: () => void;
-  onConfirm: () => void;
+  onConfirm: () => Promise<void>;
   nombre: string;
-  setNombre: (value: string) => void;
+  setNombre: React.Dispatch<React.SetStateAction<string>>;
   telefono: string;
-  setTelefono: (value: string) => void;
+  setTelefono: React.Dispatch<React.SetStateAction<string>>;
   direccion: string;
-  setDireccion: (value: string) => void;
+  setDireccion: React.Dispatch<React.SetStateAction<string>>;
   ciudadYBarrio: string;
-  setCiudadYBarrio: (value: string) => void;
+  setCiudadYBarrio: React.Dispatch<React.SetStateAction<string>>;
   abrirWhatsApp: () => void;
   hacerLlamada: () => void;
   horariosEntrega: string;
+  tituloModal: string;
+  descripcionModal: string; // Nueva propiedad para el texto personalizado
 }
 
 const ModalCompra: React.FC<ModalCompraProps> = ({
@@ -31,6 +33,8 @@ const ModalCompra: React.FC<ModalCompraProps> = ({
   abrirWhatsApp,
   hacerLlamada,
   horariosEntrega,
+  tituloModal,
+  descripcionModal, // Usar la nueva propiedad
 }) => {
   return (
     <div className="modal-overlay">
@@ -40,12 +44,8 @@ const ModalCompra: React.FC<ModalCompraProps> = ({
         </button>
 
         <div className="titulo-con-icono">
-          <h2>Confirma la Compra del kit de 4 cámaras con inteligencia artificial</h2>
-          <p>
-            complete el formulario para hacer llegar el pedido a su domicilio.
-            Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de \$780,000. ¡Domicilio gratis!
-            Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!
-          </p>
+          <h2>{tituloModal}</h2>
+          <p>{descripcionModal}</p> {/* Mostrar el texto personalizado */}
         </div>
 
         <input

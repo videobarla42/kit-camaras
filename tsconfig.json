@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",  // Permite importar desde la carpeta src de forma absoluta
+    "baseUrl": "./src",  // Asegúrate de que baseUrl sea './src'
     "paths": {
-      "@/*": ["*"]  // Configura '@' para apuntar a la carpeta 'src'
-
+      "@/*": ["*"]  // Alias para importar desde la carpeta src
     },
     "target": "es5",
     "lib": ["dom", "es2015"],
@@ -15,7 +14,7 @@
     "allowImportingTsExtensions": true,
     "jsx": "react",
     "skipLibCheck": true,
-    "noEmit": true  // Esto asegura que no se emitan archivos cuando se compile
+    "noEmit": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

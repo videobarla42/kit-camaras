@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
+import useModalCompra from '@/componentes/useModalCompra';
 import Carrusel from '@/componentes/Carrusel';
 import BotonCompra from '@/componentes/BotonCompra';
 import HeroHeader from '@/componentes/HeroHeader';
 import Header from '@/componentes/Header';
-import Beneficios from '@/componentes/Beneficios.tsx';
+import Beneficios from '@/componentes/Beneficios';
 import Banner from '@/componentes/Banner';
+import ModalCompra from '@/componentes/ModalCompra';
 import Formulario from '@/componentes/Formulario';
 
-// Importar imágenes locales en formato .webp
+
+// Importar imágenes
 import imagen28 from '@/assets/28.webp';
 import imagen29 from '@/assets/29.webp';
 import imagen30 from '@/assets/30.webp';
@@ -30,24 +33,37 @@ import imagen15 from '@/assets/15.webp';
 import imagen16 from '@/assets/16.webp';
 import imagen17 from '@/assets/17.webp';
 import imagen18 from '@/assets/18.webp';
-import headerImage from '@/assets/28.webp'; // También actualizada a .webp
+import headerImage from '@/assets/28.webp'; // Ensure the correct path
 
-const kits_8_DS_2CE56D0T_IRPF_C: React.FC = () => {
-  const [modalAbierto, setModalAbierto] = useState(false);
 
-  // Estados para el formulario
-  const [nombre, setNombre] = useState('');
-  const [telefono, setTelefono] = useState('');
-  const [direccion, setDireccion] = useState('');
-  const [ciudadYBarrio, setCiudadYBarrio] = useState('');
+const Kits8Camaras: React.FC = () => {
+  const {
+    modalAbierto,
+    abrirModal: abrirModalBase,
+    cerrarModal,
+    confirmarCompra,
+    nombre,
+    setNombre,
+    telefono,
+    setTelefono,
+    direccion,
+    setDireccion,
+    ciudadYBarrio,
+    setCiudadYBarrio,
+  } = useModalCompra();
 
-  const abrirModal = () => {
-    console.log('Abriendo modal...');
-    setModalAbierto(true);
+  const [carruselSeleccionado, setCarruselSeleccionado] = React.useState<any>(null);
+
+  const abrirWhatsApp = () => {
+    const phone = '3046615865';
+    const message = 'Hola, estoy interesado en el kit de 8 cámaras.';
+    const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
-  const cerrarModal = () => {
-    setModalAbierto(false);
+  const hacerLlamada = () => {
+    const phoneUri = 'tel:+573046615865';
+    window.location.href = phoneUri;
   };
 
   const headerLinks = [
@@ -55,7 +71,6 @@ const kits_8_DS_2CE56D0T_IRPF_C: React.FC = () => {
     { to: '/kit_4', text: 'Kit De 4 Camaras' },
   ];
 
-  // Array de carruseles
   const carruseles = [
     {
       title: '1 Video Grabador DVR de 8 Canales, 4 MPX Lite + IA',
@@ -66,7 +81,7 @@ const kits_8_DS_2CE56D0T_IRPF_C: React.FC = () => {
     {
       title: '8 Camaras de 2 Mpx y 20 MTS de Alcance',
       description: '8 Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
-      images: [imagen32, imagen11,imagen12,imagen13,imagen14,imagen15,imagen16,imagen17,imagen18],
+      images: [imagen32, imagen11, imagen12, imagen13, imagen14, imagen15, imagen16, imagen17, imagen18],
       botonTexto: 'Page en casa!'
     },
     {
@@ -101,7 +116,6 @@ const kits_8_DS_2CE56D0T_IRPF_C: React.FC = () => {
     },
   ];
 
-  // Array de banners
   const banners = [
     <Banner
       key="banner1"
@@ -111,8 +125,6 @@ const kits_8_DS_2CE56D0T_IRPF_C: React.FC = () => {
       fontSize="2rem"
       padding="15px 30px"
     />,
-
-    // Agregar el resto de los banners
     <Banner
       key="banner2"
       texto="Garantia de 2 años para disco duro WD Purpura"
@@ -121,34 +133,32 @@ const kits_8_DS_2CE56D0T_IRPF_C: React.FC = () => {
       fontSize="2rem"
       padding="15px 30px"
     />,
-    // Continúa con los demás banners
   ];
 
-  const handleConfirmarCompra = () => {
-    console.log('Datos de la compra:', { nombre, telefono, direccion, ciudadYBarrio });
-    alert('Compra confirmada y datos guardados');
+  const abrirModal = (index?: number) => {
+    if (typeof index === 'number') {
+      setCarruselSeleccionado(carruseles[index]);
+    }
+    abrirModalBase();
   };
 
-  const abrirWhatsApp = () => {
-    console.log('Abrir WhatsApp');
-    // Aquí puedes agregar la lógica para abrir WhatsApp
-  };
+  const horariosEntrega = 'Horarios de entrega: Lunes a Viernes de 8:00 AM a 6:00 PM';
 
-  const hacerLlamada = () => {
-    console.log('Llamar');
-    // Aquí puedes agregar la lógica para hacer una llamada
-  };
-
-  const horariosEntrega = 'Horarios de entrega: Lunes a Viernes de 9:00 AM a 6:00 PM';
+  const descripcionModal = `
+    Por favor, complete el formulario para hacer llegar el pedido a su domicilio.
+    Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,200,000. ¡Domicilio gratis!
+    Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!
+  `;
 
   return (
     <div>
       <Header links={headerLinks} extraMessage="Pago Contraentrega + Envio Gratis!" />
       <HeroHeader
         imagen={headerImage}
-        titulo="solo para Bucaramanga y el área metropolitana"
-        subtitulo="tecnologia acusense deteccion humanos y vehiculos!"
-        descripcion="kit de 8 cámaras Full HD 1080p (2mpx) de HIKVISION con grabacion a 4 mpx lite, ideales para todo tipo de negocio, casa u oficina."
+        titulo="Solo para Bucaramanga y el área metropolitana"
+        subtitulo="Tecnología avanzada: detección de humanos y vehículos"
+        descripcion="Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
+        precio="780,000"
       >
         <BotonCompra
           texto="Compra el Kit de Cámaras!"
@@ -175,7 +185,6 @@ const kits_8_DS_2CE56D0T_IRPF_C: React.FC = () => {
           <div style={{ marginBottom: '40px', textAlign: 'center' }}>
             <h2>{carrusel.title}</h2>
             <Carrusel images={carrusel.images} />
-            {/* Mover el texto descriptivo antes del botón */}
             <p>{carrusel.description}</p>
             <BotonCompra
               texto={carrusel.botonTexto}
@@ -184,23 +193,47 @@ const kits_8_DS_2CE56D0T_IRPF_C: React.FC = () => {
               tamaño="mediano"
             />
           </div>
-          {/* Mostrar un banner después de cada carrusel, excepto el último */}
           {index < banners.length && banners[index]}
         </React.Fragment>
       ))}
 
+      {modalAbierto && (
+        <ModalCompra
+          onClose={cerrarModal}
+          onConfirm={confirmarCompra} 
+          nombre={nombre}
+          setNombre={setNombre}
+          telefono={telefono}
+          setTelefono={setTelefono}
+          direccion={direccion}
+          setDireccion={setDireccion}
+          ciudadYBarrio={ciudadYBarrio}
+          setCiudadYBarrio={setCiudadYBarrio}
+          abrirWhatsApp={abrirWhatsApp}
+          hacerLlamada={hacerLlamada}
+          horariosEntrega={horariosEntrega}
+          tituloModal="Confirmar Compra"
+          descripcionModal={descripcionModal}
+        />
+      )}
+
 <HeroHeader
-  imagen={headerImage}
-  titulo="Producto X"
-  subtitulo="La mejor opción"
-  descripcion="Este producto tiene muchas características excelentes."
-  precio="1,200,000" // Pasamos un precio aquí
-/>
-
-
+        imagen={headerImage}
+        titulo="Solo para Bucaramanga y el área metropolitana"
+        subtitulo="Tecnología avanzada: detección de humanos y vehículos"
+        descripcion="Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
+        precio="780,000"
+      >
+        <BotonCompra
+          texto="Compra el Kit de Cámaras!"
+          onClick={abrirModal}
+          color="#28a745"
+          tamaño="mediano"
+        />
+      </HeroHeader>
       <Formulario
         onClose={cerrarModal}
-        onConfirm={handleConfirmarCompra}
+        onConfirm={confirmarCompra}
         nombre={nombre}
         setNombre={setNombre}
         telefono={telefono}
@@ -217,4 +250,4 @@ const kits_8_DS_2CE56D0T_IRPF_C: React.FC = () => {
   );
 };
 
-export default kits_8_DS_2CE56D0T_IRPF_C;
+export default Kits8Camaras;

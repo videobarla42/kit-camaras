@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import Carrusel from '@/componentes/Carrusel';
-import BotonCompra from '@/componentes/BotonCompra';
-import HeroHeader from '@/componentes/HeroHeader';
+import ModalCompra from '@/componentes/ModalCompra';
 import Header from '@/componentes/Header';
-import Beneficios from '@/componentes/Beneficios.tsx';
+import HeroHeader from '@/componentes/HeroHeader';
+import BotonCompra from '@/componentes/BotonCompra';
+import Beneficios from '@/componentes/Beneficios';
+import Carrusel from '@/componentes/Carrusel';
 import Banner from '@/componentes/Banner';
 import Formulario from '@/componentes/Formulario';
+
 
 // Importar imágenes locales en formato .webp
 import imagen1 from '@/assets/1.webp';
@@ -54,13 +56,10 @@ import imagen43 from '@/assets/43.webp';
 import imagen44 from '@/assets/44.webp';
 import imagen45 from '@/assets/45.webp';
 import imagen46 from '@/assets/46.webp';
-
 import headerImage from '@/assets/1.webp';
 
 const Kit4Camaras: React.FC = () => {
   const [modalAbierto, setModalAbierto] = useState(false);
-
-  // Estados para el formulario
   const [nombre, setNombre] = useState('');
   const [telefono, setTelefono] = useState('');
   const [direccion, setDireccion] = useState('');
@@ -75,12 +74,33 @@ const Kit4Camaras: React.FC = () => {
     setModalAbierto(false);
   };
 
+  const handleConfirmarCompra = async () => {
+    try {
+      console.log('Datos de la compra:', { nombre, telefono, direccion, ciudadYBarrio });
+      alert('Compra confirmada y datos guardados');
+      cerrarModal();
+    } catch (error) {
+      console.error('Error al confirmar la compra:', error);
+    }
+  };
+
+  const abrirWhatsApp = () => {
+    const phone = '3046615865';
+    const message = 'Hola, estoy interesado en el kit de 4 cámaras.';
+    const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const hacerLlamada = () => {
+    const phoneUri = 'tel:+573046615865';
+    window.location.href = phoneUri;
+  };
+
   const headerLinks = [
     { to: '/', text: 'Kit De 8 Camaras' },
     { to: '/kit_4', text: 'Kit De 4 Camaras' },
   ];
 
-  // Array de carruseles
   const carruseles = [
     {
       title: '1 Video Grabador DVR de 4 Canales, 4 MPX Lite + IA',
@@ -126,7 +146,6 @@ const Kit4Camaras: React.FC = () => {
     },
   ];
 
-  // Array de banners
   const banners = [
     <Banner
       key="banner1"
@@ -186,31 +205,50 @@ const Kit4Camaras: React.FC = () => {
     />,
   ];
 
-  const handleConfirmarCompra = () => {
-    console.log('Datos de la compra:', { nombre, telefono, direccion, ciudadYBarrio });
-    alert('Compra confirmada y datos guardados');
-  };
+  const horariosEntrega = `Horarios de entrega: Lunes a Viernes de 8:00 AM a 6:00 PM`;
 
-  const abrirWhatsApp = () => {
-    console.log('Abrir WhatsApp');
-    // Aquí puedes agregar la lógica para abrir WhatsApp
-  };
+  const descripcionModal = `
+    Por favor, complete el formulario para hacer llegar el pedido a su domicilio.
+    Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de \$780,000. ¡Domicilio gratis!
+    Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!
+  `;
 
-  const hacerLlamada = () => {
-    console.log('Llamar');
-    // Aquí puedes agregar la lógica para hacer una llamada
-  };
-
-  const horariosEntrega = 'Horarios de entrega: Lunes a Viernes de 9:00 AM a 6:00 PM';
+  const fields = [
+    {
+      label: 'Nombre',
+      value: nombre,
+      onChange: setNombre,
+      placeholder: 'Nombre',
+    },
+    {
+      label: 'Teléfono',
+      value: telefono,
+      onChange: setTelefono,
+      placeholder: 'Teléfono',
+    },
+    {
+      label: 'Dirección',
+      value: direccion,
+      onChange: setDireccion,
+      placeholder: 'Dirección',
+    },
+    {
+      label: 'Ciudad y Barrio',
+      value: ciudadYBarrio,
+      onChange: setCiudadYBarrio,
+      placeholder: 'Ciudad y Barrio',
+    },
+  ];
 
   return (
     <div>
       <Header links={headerLinks} extraMessage="Pago Contraentrega + Envio Gratis!" />
       <HeroHeader
         imagen={headerImage}
-        titulo="solo para Bucaramanga y el área metropolitana"
-        subtitulo="tecnologia acusense deteccion humanos y vehiculos!"
-        descripcion="kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabacion a 4 mpx lite, ideales para todo tipo de negocio, casa u oficina."
+        titulo="Solo para Bucaramanga y el área metropolitana"
+        subtitulo="Tecnología avanzada: detección de humanos y vehículos"
+        descripcion="Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
+        precio="780,000"
       >
         <BotonCompra
           texto="Compra el Kit de Cámaras!"
@@ -233,33 +271,55 @@ const Kit4Camaras: React.FC = () => {
 
       {/* Renderizar carruseles y banners intercalados */}
       {carruseles.map((carrusel, index) => (
-  <React.Fragment key={index}>
-    <div style={{ marginBottom: '40px', textAlign: 'center' }}>
-      <h2>{carrusel.title}</h2>
-      <Carrusel images={carrusel.images} />
-      {/* Mover el texto descriptivo antes del botón */}
-      <p>{carrusel.description}</p>
-      <BotonCompra
-        texto={carrusel.botonTexto}
-        onClick={abrirModal}
-        color="#28a745"
-        tamaño="mediano"
-      />
-    </div>
-    {/* Mostrar un banner después de cada carrusel, excepto el último */}
-    {index < banners.length && banners[index]}
-  </React.Fragment>
-))}
+        <React.Fragment key={index}>
+          <div style={{ marginBottom: '40px', textAlign: 'center' }}>
+            <h2>{carrusel.title}</h2>
+            <Carrusel images={carrusel.images} />
+            <p>{carrusel.description}</p>
+            <BotonCompra
+              texto={carrusel.botonTexto}
+              onClick={abrirModal}
+              color="#28a745"
+              tamaño="mediano"
+            />
+          </div>
+          {index < banners.length && banners[index]}
+        </React.Fragment>
+      ))}
 
-<HeroHeader
-  imagen={headerImage}
-  titulo="Producto X"
-  subtitulo="La mejor opción"
-  descripcion="Este producto tiene muchas características excelentes."
-  precio="700,000" // Pasamos un precio aquí
-/>
-
-
+      {modalAbierto && (
+        <ModalCompra
+          onClose={cerrarModal}
+          onConfirm={handleConfirmarCompra}
+          nombre={nombre}
+          setNombre={setNombre}
+          telefono={telefono}
+          setTelefono={setTelefono}
+          direccion={direccion}
+          setDireccion={setDireccion}
+          ciudadYBarrio={ciudadYBarrio}
+          setCiudadYBarrio={setCiudadYBarrio}
+          abrirWhatsApp={abrirWhatsApp}
+          hacerLlamada={hacerLlamada}
+          horariosEntrega={horariosEntrega}
+          tituloModal="Confirmar Compra"
+          descripcionModal={descripcionModal}
+        />
+      )}
+      <HeroHeader
+        imagen={headerImage}
+        titulo="Solo para Bucaramanga y el área metropolitana"
+        subtitulo="Tecnología avanzada: detección de humanos y vehículos"
+        descripcion="Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
+        precio="780,000"
+      >
+        <BotonCompra
+          texto="Compra el Kit de Cámaras!"
+          onClick={abrirModal}
+          color="#28a745"
+          tamaño="mediano"
+        />
+      </HeroHeader>
       <Formulario
         onClose={cerrarModal}
         onConfirm={handleConfirmarCompra}
