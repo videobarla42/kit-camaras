@@ -1,5 +1,3 @@
-/* BotonCompra.css */
-
 /* Variables CSS globales */
 :root {
     --color-primary: #646cff;
@@ -11,10 +9,36 @@
     --color-input-background: #1e1e1e; /* Fondo oscuro para inputs */
     --color-input-border: #444; /* Borde oscuro para inputs */
     --color-placeholder: #888; /* Color del placeholder */
+}
+
+/* Animación de vibración suave */
+@keyframes vibrar {
+  0%, 100% {
+    transform: translateX(0);
   }
-  
-  /* Estilos base */
-  .boton-compra {
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+}
+
+/* Animación de luz brillante que pasa de lado a lado */
+@keyframes luzBrillante {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Estilos base */
+.boton-compra {
     background-color: var(--color-primary);
     color: white;
     padding: 12px 24px;
@@ -22,10 +46,55 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-  }
-  
-  /* Fondo oscuro del modal */
-  .modal-overlay {
+    margin-top: 20px; /* Agrega un margen superior para despegar el botón */
+    position: relative; /* Necesario para posicionar el efecto de luz brillante */
+    overflow: hidden; /* Evita que la animación de luz brillante se desborde */
+}
+
+/* Efecto de luz brillante */
+.boton-compra::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.5),
+        transparent
+    );
+    background-size: 200% 100%;
+    animation: luzBrillante 2s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Animación de vibración y luz brillante al cargar la página */
+.boton-compra.cargado {
+    animation: vibrar 0.5s ease-in-out, luzBrillante 2s linear infinite;
+}
+
+/* Mostrar el efecto de luz brillante al cargar la página */
+.boton-compra.cargado::after {
+    opacity: 1;
+}
+
+/* Mostrar el efecto de luz brillante al hacer hover */
+.boton-compra:hover::after {
+    opacity: 1;
+}
+
+/* Efecto de vibración al hacer hover */
+.boton-compra:hover {
+    animation: vibrar 0.5s ease-in-out infinite;
+}
+
+/* Resto de tus estilos... */
+
+/* Fondo oscuro del modal */
+.modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -36,10 +105,10 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-  }
-  
-  /* Contenedor del modal */
-  .modal-content {
+}
+
+/* Contenedor del modal */
+.modal-content {
     background-color: var(--color-background);
     padding: 20px;
     border-radius: 10px;
@@ -49,10 +118,10 @@
     overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido es muy largo */
     position: relative; /* Necesario para posicionar la "X" */
     color: var(--color-text); /* Texto claro */
-  }
-  
-  /* Estilos para los inputs */
-  .modal-input {
+}
+
+/* Estilos para los inputs */
+.modal-input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -60,54 +129,54 @@
     border-radius: 5px;
     background-color: var(--color-input-background); /* Fondo oscuro */
     color: var(--color-text); /* Texto claro */
-  }
-  
-  .modal-input::placeholder {
+}
+
+.modal-input::placeholder {
     color: var(--color-placeholder); /* Color del placeholder */
-  }
-  
-  /* Contenedor de botones */
-  .modal-botones {
+}
+
+/* Contenedor de botones */
+.modal-botones {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-  }
-  
-  /* Botón de confirmar */
-  .modal-botones button {
+}
+
+/* Botón de confirmar */
+.modal-botones button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .modal-botones .confirmar {
+}
+
+.modal-botones .confirmar {
     background-color: #28a745; /* Verde para el botón de confirmar */
     color: white;
-  }
-  
-  /* Botón de WhatsApp */
-  .whatsapp-button {
+}
+
+/* Botón de WhatsApp */
+.whatsapp-button {
     background-color: #25D366; /* Verde de WhatsApp */
     color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  /* Botón de llamar */
-  .llamar-button {
+}
+
+/* Botón de llamar */
+.llamar-button {
     background-color: #FF3B30; /* Rojo para el botón de llamar */
     color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  /* Botón de cierre (X) */
-  .cerrar-modal {
+}
+
+/* Botón de cierre (X) */
+.cerrar-modal {
     position: absolute;
     top: 10px;
     right: 10px; /* Cambiado de left a right */
@@ -116,76 +185,76 @@
     font-size: 24px;
     cursor: pointer;
     color: var(--color-text); /* Color claro para la "X" */
-  }
-  
-  .cerrar-modal:hover {
+}
+
+.cerrar-modal:hover {
     color: #ffffff; /* Color más claro al hacer hover */
-  }
-  
-  /* Título */
-  .titulo-con-icono {
+}
+
+/* Título */
+.titulo-con-icono {
     margin-bottom: 20px; /* Espacio entre el título y el párrafo */
-  }
-  
-  .titulo-con-icono h2 {
+}
+
+.titulo-con-icono h2 {
     margin: 0; /* Elimina el margen predeterminado del h2 */
-  }
-  
-  .titulo-con-icono p {
+}
+
+.titulo-con-icono p {
     margin: 10px 0 0; /* Espacio entre el título y el párrafo */
-  }
-  
-  /* Horarios de entrega */
-  .horarios-entrega {
+}
+
+/* Horarios de entrega */
+.horarios-entrega {
     margin-top: 20px;
     color: var(--color-text); /* Texto claro */
     font-size: 14px;
     white-space: pre-line; /* Mantiene los saltos de línea */
-  }
-  
-  /* Media Queries para pantallas de celulares (hasta 768px) */
-  @media (max-width: 768px) {
+}
+
+/* Media Queries para pantallas de celulares (hasta 768px) */
+@media (max-width: 768px) {
     .boton-compra {
-      padding: 10px 20px; /* Reducir el padding para pantallas pequeñas */
-      font-size: 14px; /* Reducir el tamaño de la fuente */
+        padding: 5px 10px; /* Aumentar el padding para hacer el botón más grande */
+        font-size: 29px; /* Aumentar el tamaño de la fuente */
     }
-  
+
     .modal-content {
-      padding: 15px; /* Reducir el padding del modal */
+        padding: 15px; /* Reducir el padding del modal */
     }
-  
+
     .modal-input {
-      padding: 8px; /* Reducir el padding de los inputs */
-      margin: 8px 0; /* Reducir el margen de los inputs */
+        padding: 8px; /* Reducir el padding de los inputs */
+        margin: 8px 0; /* Reducir el margen de los inputs */
     }
-  
+
     .modal-botones {
-      flex-direction: column; /* Cambiar a disposición vertical en móviles */
-      gap: 10px; /* Espacio entre botones */
+        flex-direction: column; /* Cambiar a disposición vertical en móviles */
+        gap: 10px; /* Espacio entre botones */
     }
-  
+
     .modal-botones button {
-      width: 100%; /* Hacer que los botones ocupen el ancho completo */
+        width: 100%; /* Hacer que los botones ocupen el ancho completo */
     }
-  
+
     .whatsapp-button,
     .llamar-button {
-      width: 100%; /* Hacer que los botones ocupen el ancho completo */
-      margin-bottom: 10px; /* Espacio entre botones */
+        width: 100%; /* Hacer que los botones ocupen el ancho completo */
+        margin-bottom: 10px; /* Espacio entre botones */
     }
-  
+
     .cerrar-modal {
-      font-size: 30px; /* Reducir el tamaño de la "X" en móviles */
-      top: 1px;
-      right: 1px; /* Cambiado de left a right */
+        font-size: 30px; /* Reducir el tamaño de la "X" en móviles */
+        top: 1px;
+        right: 1px; /* Cambiado de left a right */
     }
-  
+
     .horarios-entrega {
-      font-size: 12px; /* Reducir el tamaño de la fuente en móviles */
+        font-size: 12px; /* Reducir el tamaño de la fuente en móviles */
     }
-  
+
     /* Estilos para el título en móviles */
     .titulo-con-icono h2 {
-      font-size: 18px; /* Reducir el tamaño del texto en móviles */
+        font-size: 18px; /* Reducir el tamaño del texto en móviles */
     }
-  }
+}

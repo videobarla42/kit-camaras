@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'; // Importa useEffect
 import './BotonCompra.css'; // Importa el archivo CSS
 import { createClient } from '@supabase/supabase-js';
 import ModalCompra from './ModalCompra'; // Importa el nuevo componente ModalCompra
@@ -34,6 +34,18 @@ const BotonCompra: React.FC<BotonCompraProps> = ({ texto = 'Comprar' }) => {
   const [telefono, setTelefono] = useState('');
   const [direccion, setDireccion] = useState('');
   const [ciudadYBarrio, setCiudadYBarrio] = useState(''); // Nuevo estado para ciudad y barrio
+
+  // Efecto para activar la animación después de 2 segundos
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const botonCompra = document.querySelector('.boton-compra');
+      if (botonCompra) {
+        botonCompra.classList.add('animar');
+      }
+    }, 2000); // 2000 milisegundos = 2 segundos
+
+    return () => clearTimeout(timer); // Limpia el timer si el componente se desmonta
+  }, []); // El array vacío asegura que el efecto solo se ejecute una vez
 
   const abrirModal = () => {
     setModalAbierto(true);

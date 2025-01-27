@@ -192,7 +192,7 @@ const Kit4Camaras: React.FC = () => {
         descripcion="kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabacion a 4 mpx lite, ideales para todo tipo de negocio, casa u oficina."
       >
         <BotonCompra
-          texto="Comprar Kit de 4 Cámaras"
+          texto="Compra el Kit de Cámaras!"
           onClick={abrirModal}
           color="#28a745"
           tamaño="mediano"
