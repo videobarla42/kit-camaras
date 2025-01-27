@@ -1,14 +1,14 @@
 /* Variables CSS globales */
 :root {
     --color-primary: #646cff;
-    --color-text: #e0e0e0; /* Texto claro sobre fondo oscuro */
-    --color-background: #121212; /* Fondo oscuro */
-    --color-input-background: #1e1e1e; /* Fondo oscuro para inputs */
-    --color-input-border: #444; /* Borde oscuro para inputs */
-    --color-placeholder: #888; /* Color del placeholder */
+    --color-text: #e0e0e0;
+    --color-background: #121212;
+    --color-input-background: #1e1e1e;
+    --color-input-border: #444;
+    --color-placeholder: #888;
   }
   
-  /* Animación de vibración suave */
+  /* Animación de vibración */
   @keyframes vibrar {
     0%, 100% {
       transform: translateX(0);
@@ -24,7 +24,7 @@
     }
   }
   
-  /* Animación de luz brillante que pasa de lado a lado */
+  /* Animación de luz brillante */
   @keyframes luzBrillante {
     0% {
       background-position: -100% 0;
@@ -32,6 +32,15 @@
     100% {
       background-position: 200% 0;
     }
+  }
+  
+  /* Contenedor flex para centrar el botón */
+  .contenedor-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--color-background);
   }
   
   /* Estilos base del botón */
@@ -42,10 +51,9 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px; /* Margen superior para despegar el botón */
-    position: relative; /* Necesario para posicionar el efecto de luz brillante */
-    overflow: hidden; /* Evita que la animación de luz brillante se desborde */
+    font-size: clamp(18px, 4vw, 24px); /* Ajustable entre dispositivos */
+    position: relative;
+    overflow: hidden;
     transition: background-color 0.3s ease;
   }
   
@@ -69,40 +77,14 @@
     transition: opacity 0.3s ease;
   }
   
-  /* Animación de vibración y luz brillante al cargar la página */
-  .boton-compra.cargado {
-    animation: vibrar 0.5s ease-in-out, luzBrillante 2s linear infinite;
-  }
-  
-  /* Mostrar el efecto de luz brillante al cargar la página */
-  .boton-compra.cargado::after {
-    opacity: 1;
-  }
-  
-  /* Mostrar el efecto de luz brillante al hacer hover */
+  /* Efectos al cargar y hover */
+  .boton-compra.cargado::after,
   .boton-compra:hover::after {
     opacity: 1;
   }
   
-  /* Efecto de vibración al hacer hover */
   .boton-compra:hover {
     animation: vibrar 0.5s ease-in-out infinite;
-  }
-  
-  /* Estilos para tamaños */
-  .boton-compra.pequeño {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-  
-  .boton-compra.mediano {
-    padding: 12px 24px;
-    font-size: 16px;
-  }
-  
-  .boton-compra.grande {
-    padding: 16px 32px;
-    font-size: 18px;
   }
   
   /* Estilo para botón deshabilitado */
@@ -112,28 +94,25 @@
   }
   
   .boton-compra:disabled::after {
-    display: none; /* Oculta el efecto de brillo cuando el botón está deshabilitado */
+    display: none;
   }
   
-  /* Media Queries para pantallas de celulares (hasta 768px) */
-  @media (max-width: 768px) {
+  /* Media Queries para móviles */
+/* Media Queries para móviles */
+@media (max-width: 768px) {
     .boton-compra {
-      padding: 10px 20px; /* Ajuste de padding para móviles */
-      font-size: 14px; /* Ajuste de tamaño de fuente para móviles */
+      padding: 12px 16px; /* Espaciado más compacto para pantallas pequeñas */
+      font-size: clamp(24px, 14vw, 38px); /* Tamaño del texto reducido */
+      border-radius: 8px; /* Bordes más redondeados para una apariencia moderna */
     }
   
-    .boton-compra.pequeño {
-      padding: 6px 12px;
-      font-size: 12px;
+    .contenedor-boton {
+      padding: 20px; /* Espacio adicional alrededor del botón */
     }
   
-    .boton-compra.mediano {
-      padding: 10px 20px;
-      font-size: 14px;
-    }
-  
-    .boton-compra.grande {
-      padding: 14px 28px;
-      font-size: 16px;
+    .boton-compra::after {
+      background-size: 300% 100%; /* Luz brillante más amplia para que destaque mejor en móviles */
     }
   }
+  
+  
