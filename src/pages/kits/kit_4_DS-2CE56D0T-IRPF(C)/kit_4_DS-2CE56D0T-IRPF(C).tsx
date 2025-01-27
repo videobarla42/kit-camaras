@@ -34,7 +34,7 @@ import imagen23 from '@/assets/23.webp';
 import imagen24 from '@/assets/24.webp';
 import imagen25 from '@/assets/25.webp';
 import imagen26 from '@/assets/26.webp';
-import headerImage from '@/assets/1.webp'; // También actualizada a .webp
+import headerImage from '@/assets/1.webp';
 
 const Kit4Camaras: React.FC = () => {
   const [modalAbierto, setModalAbierto] = useState(false);

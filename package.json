@@ -3,7 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "https://S24seguridadelectronica1.github.io/kits_camaras",
+    "homepage": "https://www.s24seguridadelectronica.com",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
