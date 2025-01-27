@@ -12,10 +12,10 @@ const App: React.FC = () => {
         <nav>
           <ul className="navList">
             <li className="navItem">
-              <Link to="/" className="link">Inicio</Link> {/* Ruta para el inicio */}
+              <Link to="/" className="link">kit de 8 camaras</Link> {/* Ruta para el inicio */}
             </li>
             <li className="navItem">
-              <Link to="/kit_4" className="link">Acerca de</Link> {/* Ruta corregida para 'Acerca de' */}
+              <Link to="/kit_4" className="link">kit de 4 camaras</Link> {/* Ruta corregida para 'Acerca de' */}
             </li>
           </ul>
         </nav>

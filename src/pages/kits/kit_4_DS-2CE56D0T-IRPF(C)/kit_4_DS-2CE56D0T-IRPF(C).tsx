@@ -55,8 +55,8 @@ const Kit4Camaras: React.FC = () => {
   };
 
   const headerLinks = [
-    { to: '/', text: 'Inicio' },
-    { to: '/kit_4', text: 'Acerca de' },
+    { to: '/', text: 'Kit De 8 Camaras' },
+    { to: '/kit_4', text: 'Kit De 4 Camaras' },
   ];
 
   // Array de carruseles
