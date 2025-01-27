@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1px; /* Espacio entre elementos */
 }
 
 /* Estilos para el botón de hamburguesa */
@@ -65,13 +66,16 @@
 /* Estilos para el mensaje adicional */
 .extraMessage {
   margin-left: clamp(20px, 5vw, 50px); /* Espacio responsivo entre el botón de hamburguesa y el mensaje */
-  text-align: right; /* Alinea el mensaje al lado derecho */
-  font-size: clamp(24px, 6vw, 34px); /* Tamaño de fuente responsivo */
+  font-size: clamp(16px, 4vw, 24px); /* Tamaño de fuente responsivo */
   color: #fff; /* Color del texto */
-  background-color: transparent; /* Quita el fondo verde */
+  background-color: transparent; /* Quita el fondo */
   padding: 0; /* Elimina el padding */
   border-radius: 0; /* Elimina los bordes redondeados */
   align-self: center; /* Centra verticalmente el mensaje */
+  flex-grow: 1; /* Permite que el mensaje ocupe el espacio necesario */
+  text-align: center; /* Centra el texto horizontalmente */
+  white-space: nowrap; /* Evita los saltos de línea */
+  overflow: visible; /* Asegura que el texto siempre sea visible */
 }
 
 /* Estilos para pantallas pequeñas (menú desplegable) */
@@ -106,9 +110,10 @@
 
   .extraMessage {
     margin-left: 0; /* Ajusta el margen en móviles */
-    text-align: center; /* Centra el mensaje en móviles */
-    font-size: clamp(24px, 6vw, 30px); /* Tamaño de fuente responsivo en móviles */
-    margin-top: 2px; /* Espacio superior */
+    text-align: left; /* Centra el mensaje en móviles */
+    font-size: clamp(23px, 4vw, 20px); /* Tamaño de fuente responsivo en móviles */
+    margin-top: 0px; /* Espacio superior */
+    white-space: nowrap; /* Evita los saltos de línea */
   }
 }
 

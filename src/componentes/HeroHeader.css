@@ -3,7 +3,7 @@
     text-align: center;
     margin-top: clamp(50px, 10vw, 70px); /* Margen superior responsivo */
     margin-bottom: clamp(40px, 8vw, 60px); /* Margen inferior responsivo */
-    padding: 0 clamp(10px, 5vw, 20px); /* Padding lateral responsivo */
+    padding: 0 clamp(1px, 5vw, 20px); /* Padding lateral responsivo */
   }
   
   /* Estilos para el título */
@@ -15,6 +15,22 @@
     line-height: clamp(1.2, 1.5, 1.8); /* Espaciado entre líneas responsivo */
   }
   
+  .hero-subtitulo {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #f5ecec;
+    margin: 0px 0;
+    font-style: italic; /* Le da un toque de estilo */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    line-height: clamp(1.2, 1.5, 1.8); /* Espaciado entre líneas responsivo */
+    width: 100%; /* Toma el 100% del ancho disponible */
+    text-align: center; /* Centra el texto */
+    box-sizing: border-box; /* Asegura que el padding y margen no afecten el ancho */
+    padding: 0 0px; /* Añade un pequeño espacio a los lados */
+  }
+  
+
+
   /* Estilos para la imagen */
   .hero-image {
     width: 100%; /* Ocupa el 100% del ancho disponible */
@@ -32,9 +48,9 @@
   
   /* Estilos para la descripción */
   .hero-description {
-    font-size: clamp(1rem, 4vw, 1.25rem); /* Tamaño de fuente responsivo */
-    color: #555; /* Color de texto más suave */
-    line-height: clamp(1.5, 1.8, 2); /* Espaciado entre líneas responsivo */
+    font-size: clamp(10rem, 4vw, 1.25rem); /* Tamaño de fuente responsivo */
+    color: #e2cdcd; /* Color de texto más suave */
+    line-height: clamp(2.5, 1.8, 2); /* Espaciado entre líneas responsivo */
     max-width: clamp(300px, 80vw, 800px); /* Ancho máximo responsivo */
     margin: 0 auto; /* Centra el texto */
     padding: 0 clamp(10px, 3vw, 15px); /* Padding lateral responsivo */
@@ -58,7 +74,7 @@
   /* Estilos responsivos adicionales */
 @media (max-width: 768px) {
     .hero-header {
-      margin-top: clamp(120px, 10vw, 70px); /* Margen superior más ajustado y responsivo */
+      margin-top: clamp(90px, 10vw, 70px); /* Margen superior más ajustado y responsivo */
       margin-bottom: clamp(20px, 6vw, 40px); /* Margen inferior más ajustado y responsivo */
       padding: 0 clamp(10px, 5vw, 20px); /* Padding lateral responsivo */
       width: 92%; /* Ocupa todo el ancho de la pantalla */
@@ -76,9 +92,10 @@
   
     .hero-description {
       font-size: clamp(0.9rem, 4vw, 1.1rem); /* Tamaño de fuente más legible */
-      line-height: clamp(1.5, 1.7, 1.9); /* Espaciado entre líneas responsivo */
+      line-height: clamp(1.5, 1.2, 1.4); /* Espaciado entre líneas responsivo */
       max-width: clamp(280px, 90vw, 800px); /* Ancho máximo más ajustado */
       padding: 0 clamp(5px, 3vw, 15px); /* Padding lateral responsivo */
+      margin-top: 10px;
     }
   
     .hero-image {
@@ -86,7 +103,15 @@
       border-radius: clamp(8px, 2vw, 15px); /* Bordes redondeados responsivos */
       box-shadow: 0 clamp(3px, 1vw, 6px) clamp(6px, 2vw, 12px) rgba(0, 0, 0, 0.15); /* Sombra responsiva */
     }
+
+    .hero-precio {
+      font-size: 2em; /* Tamaño de la fuente */
+      font-weight: bold; /* Texto en negrita */
+      color: hsl(93, 61%, 50%); /* Color verde para resaltar el precio */
+      margin-top: 10px; /* Espacio arriba del precio */
+    }
   
+
     .hero-image:hover {
       box-shadow: 0 clamp(4px, 1.5vw, 8px) clamp(8px, 3vw, 16px) rgba(0, 0, 0, 0.2); /* Sombra responsiva al hacer hover */
     }
