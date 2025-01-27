@@ -62,46 +62,46 @@ const Kit4Camaras: React.FC = () => {
   // Array de carruseles
   const carruseles = [
     {
-      title: 'DVR iDS-7104HQHI-M1/S 4 Mpx Lite',
-      description: 'DVR AcuSense mini 1U H.265 de 4 canales 1080P con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
+      title: '1 Video Grabador DVR de 4 Canales, 4 MPX Lite + IA',
+      description: 'DVR AcuSense mini de 4 canales Y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
       images: [imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8],
-      botonTexto: 'Comprar DVR AcuSense'
+      botonTexto: 'Domicilio Gratis!'
     },
     {
-      title: '4 Camaras de 2 Mpx X 1 Año de Garantia',
+      title: '4 Camaras de 2 Mpx y 20 MTS de Alcance',
       description: '4 Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
       images: [imagen9, imagen10, imagen11, imagen12, imagen13, imagen14, imagen15, imagen16, imagen17],
-      botonTexto: 'Comprar Sistema Completo'
+      botonTexto: 'Page en casa!'
     },
     {
-      title: 'Disco duro para videovigilancia WD Purple - 1 TB',
+      title: '1 Disco duro para videovigilancia WD Purple - 1 TB',
       description: 'Disco duro WD Purple 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
       images: [imagen18, imagen19, imagen20, imagen21, imagen22],
-      botonTexto: 'Comprar Cámaras Adicionales'
+      botonTexto: 'Obtener el Kit!'
     },
     {
       title: '4 Fuentes De Energia 12v - 1amp',
       description: 'fuente de alimentación de AC 110- 240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con led indicador de funcionamiento, el articulo puede ser ligeramente distinto al de la foto.',
       images: [imagen23],
-      botonTexto: 'Comprar Cámaras Adicionales'
+      botonTexto: 'Compra Con el Kit!'
     },
     {
       title: '4 pares de Video Baluns 12v - 1amp',
       description: '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
       images: [imagen24],
-      botonTexto: 'Comprar Cámaras Adicionales'
+      botonTexto: 'Obtenlo Ahora!'
     },
     {
       title: '4 pares de Borneras',
       description: '4 pares de borneras electricas para la conexión y distribución de energia de las camaras.',
       images: [imagen25],
-      botonTexto: 'Comprar Cámaras Adicionales'
+      botonTexto: 'Ahorre el Domicilio!'
     },
     {
       title: '100 mts de cable utp',
       description: 'cable utp cat 5e en aleacion para interior inluidos en el kit.',
       images: [imagen26],
-      botonTexto: 'Comprar Cámaras Adicionales'
+      botonTexto: 'Pidelo en Casa!'
     },
   ];
 
