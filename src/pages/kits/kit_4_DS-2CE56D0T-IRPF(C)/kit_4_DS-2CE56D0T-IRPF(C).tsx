@@ -157,7 +157,7 @@ const Kit4Camaras: React.FC = () => {
     />,
     <Banner
       key="banner7"
-      texto="¡Páguelo en la puerta de su casa!"
+      texto="¡Entrega Inmediata!"
       backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -212,22 +212,23 @@ const Kit4Camaras: React.FC = () => {
 
       {/* Renderizar carruseles y banners intercalados */}
       {carruseles.map((carrusel, index) => (
-        <React.Fragment key={index}>
-          <div style={{ marginBottom: '40px', textAlign: 'center' }}>
-            <h2>{carrusel.title}</h2>
-            <Carrusel images={carrusel.images} />
-            <BotonCompra
-              texto={carrusel.botonTexto}
-              onClick={abrirModal}
-              color="#28a745"
-              tamaño="mediano"
-            />
-            <p>{carrusel.description}</p>
-          </div>
-          {/* Mostrar un banner después de cada carrusel, excepto el último */}
-          {index < banners.length && banners[index]}
-        </React.Fragment>
-      ))}
+  <React.Fragment key={index}>
+    <div style={{ marginBottom: '40px', textAlign: 'center' }}>
+      <h2>{carrusel.title}</h2>
+      <Carrusel images={carrusel.images} />
+      {/* Mover el texto descriptivo antes del botón */}
+      <p>{carrusel.description}</p>
+      <BotonCompra
+        texto={carrusel.botonTexto}
+        onClick={abrirModal}
+        color="#28a745"
+        tamaño="mediano"
+      />
+    </div>
+    {/* Mostrar un banner después de cada carrusel, excepto el último */}
+    {index < banners.length && banners[index]}
+  </React.Fragment>
+))}
 
       <HeroHeader
         imagen={headerImage}
