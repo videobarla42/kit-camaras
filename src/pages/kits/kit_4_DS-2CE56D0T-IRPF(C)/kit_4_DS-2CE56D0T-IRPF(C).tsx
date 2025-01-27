@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Carrusel from '@/componentes/Carrusel';
 import BotonCompra from '@/componentes/BotonCompra';
 import HeroHeader from '@/componentes/HeroHeader';
-import Header from '@/componentes/Header'; // Importa el componente Header
+import Header from '@/componentes/Header';
 
 // Importar imágenes locales
 import imagen1 from '@/assets/1.png';
@@ -14,69 +14,82 @@ import imagen6 from '@/assets/6.png';
 import imagen7 from '@/assets/7.png';
 import imagen8 from '@/assets/8.png';
 import imagen9 from '@/assets/9.png';
-import headerImage from '@/assets/1.png'; // Imagen estática para el header
+import headerImage from '@/assets/1.png';
 
-const kit_4_DS_2CE56D0T_IRPF_C: React.FC = () => {
-  // Define los enlaces del header
+const Kit4Camaras: React.FC = () => {
+  const [modalAbierto, setModalAbierto] = useState(false);
+
+  const abrirModal = () => {
+    console.log('Abriendo modal...'); // Verifica si esta función se ejecuta
+    setModalAbierto(true);
+  };
+
+  const cerrarModal = () => {
+    setModalAbierto(false);
+  };
+
   const headerLinks = [
     { to: '/', text: 'Inicio' },
     { to: '/kit_4', text: 'Acerca de' },
   ];
 
-  // Array de objetos, cada uno representa un carrusel con título, descripción e imágenes
   const carruseles = [
     {
       title: 'Carrusel 1',
       description: 'Este es el primer carrusel con imágenes de cámaras.',
-      images: [imagen1, imagen2, imagen3], // Imágenes locales
+      images: [imagen1, imagen2, imagen3],
     },
     {
       title: 'Carrusel 2',
       description: 'Este es el segundo carrusel con más imágenes de cámaras.',
-      images: [imagen4, imagen5, imagen6], // Imágenes locales
+      images: [imagen4, imagen5, imagen6],
     },
     {
       title: 'Carrusel 3',
       description: 'Este es el tercer carrusel con imágenes adicionales.',
-      images: [imagen7, imagen8, imagen9], // Imágenes locales
+      images: [imagen7, imagen8, imagen9],
     },
   ];
 
-  // Función que se ejecuta al hacer clic en el botón de compra
-  const handleCompra = (titulo: string) => {
-    alert(`Has comprado el producto: ${titulo}`);
+  const handleConfirmarCompra = (data: {
+    nombre: string;
+    telefono: string;
+    direccion: string;
+    barrio: string;
+    ciudad: string;
+  }) => {
+    console.log('Datos de la compra:', data);
+    alert('Compra confirmada y datos guardados');
   };
 
   return (
     <div>
-      {/* Header flotante con mensaje adicional */}
       <Header links={headerLinks} extraMessage="Pago Contraentrega + Envio Gratis!" />
-
-      {/* Componente HeroHeader */}
       <HeroHeader
-        imagen={headerImage} // Ruta de la imagen estática
+        imagen={headerImage}
         titulo="Acerca de los Kits de Cámaras"
+        subtitulo="Subtítulo del Kit de Cámaras" // Agrega el subtítulo
         descripcion="Información sobre los Kits de Cámaras."
-      />
+      >
+        {/* Agrega el botón de compra aquí */}
+        <BotonCompra
+          texto="Comprar ahora"
+          onClick={abrirModal}
+          color="#28a745"
+          tamaño="mediano"
+        />
+      </HeroHeader>
 
-      {/* Mapeamos el array de carruseles */}
       {carruseles.map((carrusel, index) => (
         <div key={index} style={{ marginBottom: '40px', textAlign: 'center' }}>
-          {/* Título del carrusel */}
           <h2>{carrusel.title}</h2>
-
-          {/* Componente Carrusel con las imágenes */}
           <Carrusel images={carrusel.images} />
-
-          {/* Botón de compra */}
           <BotonCompra
             texto="Comprar ahora"
-            onClick={() => handleCompra(carrusel.title)}
-            color="#28a745" // Verde
+            onClick={abrirModal} // Usa la función abrirModal
+            color="#28a745"
             tamaño="mediano"
           />
-
-          {/* Descripción del carrusel */}
           <p>{carrusel.description}</p>
         </div>
       ))}
@@ -84,4 +97,4 @@ const kit_4_DS_2CE56D0T_IRPF_C: React.FC = () => {
   );
 };
 
-export default kit_4_DS_2CE56D0T_IRPF_C;
+export default Kit4Camaras;

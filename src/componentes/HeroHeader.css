@@ -45,7 +45,16 @@
     color: #1abc9c; /* Cambia el color al pasar el mouse */
     transition: color 0.3s ease; /* Transición suave */
   }
+
+  .hero-precio {
+    font-size: 1.2em; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    color: #28a745; /* Color verde para resaltar el precio */
+    margin-top: 10px; /* Espacio arriba del precio */
+  }
   
+
+
   /* Estilos responsivos adicionales */
 @media (max-width: 768px) {
     .hero-header {

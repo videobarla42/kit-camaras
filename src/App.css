@@ -9,8 +9,10 @@
   --spacing-large: clamp(16px, 4vw, 24px);
   --color-primary: #646cff;
   --color-secondary: #61dafb;
-  --color-text: #888;
-  --color-background: #ffffff;
+  --color-text: #e0e0e0; /* Texto claro sobre fondo oscuro */
+  --color-background: #121212; /* Fondo oscuro */
+  --color-card-background: #1e1e1e; /* Fondo de tarjetas oscuro */
+  --color-shadow: rgba(0, 0, 0, 0.5); /* Sombra oscura */
 }
 
 /* Estilos base */
@@ -66,9 +68,9 @@ body {
 /* Estilos para las tarjetas */
 .card {
   padding: var(--spacing-large);
-  background-color: #f9f9f9;
+  background-color: var(--color-card-background); /* Fondo oscuro para tarjetas */
   border-radius: clamp(8px, 2vw, 12px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--color-shadow); /* Sombra oscura */
   margin-bottom: var(--spacing-medium);
 }
 
@@ -97,14 +99,14 @@ body {
 }
 
 .slick-dots li button:before {
-  color: #fff; /* Color de los puntos */
+  color: var(--color-text); /* Color de los puntos */
   font-size: var(--font-size-small);
 }
 
 .slick-prev, .slick-next {
   z-index: 1;
   font-size: var(--font-size-large);
-  color: white; /* Color de las flechas */
+  color: var(--color-text); /* Color de las flechas */
 }
 
 .slick-prev {
