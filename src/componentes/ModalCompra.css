@@ -1,182 +1,189 @@
 /* Estilos para el fondo oscuro del modal */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto; /* Permite scroll en el overlay si es necesario */
+}
+
+/* Estilos para el contenido del modal */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh; /* Limita la altura del modal */
+  overflow-y: auto; /* Permite scroll dentro del modal si el contenido es largo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Estilos para el botón de cerrar */
+.cerrar-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.cerrar-modal:hover {
+  color: #000;
+}
+
+/* Estilos para el título y el párrafo */
+.titulo-con-icono h2 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.titulo-con-icono p {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los inputs */
+.modal-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.modal-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Estilos para los botones de confirmar, WhatsApp y llamar */
+.modal-botones {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.modal-botones button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirmar {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.confirmar:hover {
+  background-color: #218838;
+}
+
+.whatsapp-button {
+  background-color: #25d366;
+  color: #fff;
+}
+
+.whatsapp-button:hover {
+  background-color: #1da851;
+}
+
+.llamar-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.llamar-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para los horarios de entrega */
+.horarios-entrega {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Estilos específicos para móviles (max-width: 768px) */
+@media (max-width: 768px) {
+  :root {
+    --font-size-small: clamp(0.8em, 4vw, 0.9em);
+    --font-size-medium: clamp(0.9em, 4vw, 1em);
+    --font-size-large: clamp(1.2em, 6vw, 1.5em);
+    --padding-small: clamp(8px, 3vw, 10px);
+    --padding-medium: clamp(10px, 4vw, 15px);
+    --gap-small: 8px;
+    --gap-medium: 10px;
   }
-  
-  /* Estilos para el contenido del modal */
+
   .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
+    padding: var(--padding-medium);
+    width: clamp(280px, 90%, 400px);
+    gap: var(--gap-medium);
   }
-  
-  /* Estilos para el botón de cerrar */
+
   .cerrar-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
+    font-size: clamp(50px, 6vw, 24px);
+    margin-top: -50px;
+    margin-right: -60px;
   }
-  
-  .cerrar-modal:hover {
-    color: #000;
-  }
-  
-  /* Estilos para el título y el párrafo */
+
   .titulo-con-icono h2 {
-    margin-bottom: 15px;
-    font-size: 1.5em;
-    color: #333;
+    font-size: var(--font-size-large); /* Tamaño de fuente responsivo */
+    margin-bottom: clamp(10px, 3vw, 15px); /* Espaciado inferior responsivo */
+    margin-top: clamp(10px, 3vw, 15px); /* Espaciado superior responsivo */
+    display: flex; /* Activar flexbox */
+    align-items: center; /* Alinear verticalmente (útil si hay un ícono) */
+    gap: clamp(8px, 2vw, 12px); /* Espacio entre el ícono y el texto (si aplica) */
+    line-height: 1.2; /* Reduce el espacio entre líneas de texto */
   }
-  
+
   .titulo-con-icono p {
-    font-size: 0.9em;
-    color: #666;
+    font-size: var(--font-size-small);
     margin-bottom: 20px;
   }
-  
-  /* Estilos para los inputs */
-  .modal-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-  }
-  
-  .modal-input:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  
-  /* Estilos para los botones de confirmar, WhatsApp y llamar */
-  .modal-botones {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .modal-botones button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .confirmar {
-    background-color: #28a745;
-    color: #fff;
-  }
-  
-  .confirmar:hover {
-    background-color: #218838;
-  }
-  
-  .whatsapp-button {
-    background-color: #25d366;
-    color: #fff;
-  }
-  
-  .whatsapp-button:hover {
-    background-color: #1da851;
-  }
-  
-  .llamar-button {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .llamar-button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Estilos para los horarios de entrega */
-  .horarios-entrega {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 0.9em;
-    color: #666;
-  }
-  
- /* Estilos específicos para móviles (max-width: 768px) */
-@media (max-width: 768px) {
-    :root {
-      --font-size-small: clamp(0.8em, 4vw, 0.9em);
-      --font-size-medium: clamp(0.9em, 4vw, 1em);
-      --font-size-large: clamp(1.2em, 6vw, 1.5em);
-      --padding-small: clamp(8px, 3vw, 10px);
-      --padding-medium: clamp(10px, 4vw, 15px);
-      --gap-small: 8px;
-      --gap-medium: 10px;
-    }
-  
-    .modal-content {
-      padding: var(--padding-medium);
-      width: clamp(280px, 90%, 400px);
-      gap: var(--gap-medium);
-    }
-  
-    .cerrar-modal {
-      font-size: clamp(50px, 6vw, 24px);
-      margin-top: -50px;
-      margin-right: -60px;
-    }
-  
-    .titulo-con-icono h2 {
-        font-size: var(--font-size-large); /* Tamaño de fuente responsivo */
-        margin-bottom: clamp(10px, 3vw, 15px); /* Espaciado inferior responsivo */
-        margin-top: clamp(10px, 3vw, 15px); /* Espaciado superior responsivo */
-        display: flex; /* Activar flexbox */
-        align-items: center; /* Alinear verticalmente (útil si hay un ícono) */
-        gap: clamp(8px, 2vw, 12px); /* Espacio entre el ícono y el texto (si aplica) */
-        line-height: 1.2; /* Reduce el espacio entre líneas de texto */
 
-      }
-  
-    .titulo-con-icono p {
-      font-size: var(--font-size-small);
-      margin-bottom: 20px;
-    }
-  
-    .modal-input {
-      padding: var(--padding-small);
-      font-size: var(--font-size-medium);
-      margin-bottom: 15px;
-    }
-  
-    .modal-botones {
-      flex-direction: column;
-      gap: var(--gap-small);
-      margin-top: 20px;
-    }
-  
-    .modal-botones button {
-      padding: var(--padding-small) var(--padding-medium);
-      font-size: var(--font-size-medium);
-    }
-  
-    .horarios-entrega {
-      font-size: var(--font-size-small);
-      margin-top: 20px;
-    }
+  .modal-input {
+    padding: var(--padding-small);
+    font-size: var(--font-size-medium);
+    margin-bottom: 15px;
   }
+
+  .modal-botones {
+    flex-direction: column;
+    gap: var(--gap-small);
+    margin-top: 20px;
+  }
+
+  .modal-botones button {
+    padding: var(--padding-small) var(--padding-medium);
+    font-size: var(--font-size-medium);
+  }
+
+  .horarios-entrega {
+    font-size: var(--font-size-small);
+    margin-top: 20px;
+  }
+}
+
+/* Estilos para deshabilitar el scroll del body cuando el modal está abierto */
+body.modal-open {
+  overflow: hidden;
+}

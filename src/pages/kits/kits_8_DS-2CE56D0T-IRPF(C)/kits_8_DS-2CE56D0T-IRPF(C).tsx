@@ -127,7 +127,47 @@ const Kits8Camaras: React.FC = () => {
     />,
     <Banner
       key="banner2"
-      texto="Garantia de 2 años para disco duro WD Purpura"
+      texto="Garantia de 2 años para disco seagate skyhawk de 1 TB"
+      backgroundColor="#8B0000"
+      textColor="#FFFFFF"
+      fontSize="2rem"
+      padding="15px 30px"
+    />,
+    <Banner
+      key="banner3"
+      texto="Accesorios del kit de cámaras"
+      backgroundColor="#8B0000"
+      textColor="#FFFFFF"
+      fontSize="2rem"
+      padding="15px 30px"
+    />,
+    <Banner
+      key="banner4"
+      texto="accesorios del kit no tienen garantia."
+      backgroundColor="#8B0000"
+      textColor="#FFFFFF"
+      fontSize="2rem"
+      padding="15px 30px"
+    />,
+    <Banner
+      key="banner5"
+      texto="domicilios sin costo!"
+      backgroundColor="#8B0000"
+      textColor="#FFFFFF"
+      fontSize="2rem"
+      padding="15px 30px"
+    />,
+    <Banner
+      key="banner6"
+      texto="Entrega inmediata para Bucaramanga y su área metropolitana."
+      backgroundColor="#8B0000"
+      textColor="#FFFFFF"
+      fontSize="2rem"
+      padding="15px 30px"
+    />,
+    <Banner
+      key="banner7"
+      texto="¡Entrega Inmediata!"
       backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -142,12 +182,16 @@ const Kits8Camaras: React.FC = () => {
     abrirModalBase();
   };
 
-  const horariosEntrega = 'Horarios de entrega: Lunes a Viernes de 8:00 AM a 6:00 PM';
+  const horariosEntrega = `Horarios de entrega:  De lunes a viernes: de 8:00 a.m. a 6:00 p.m. (jornada continua).
+  Sábados: de 8:00 a.m. a 1:00 p.m.
+  Domingos y festivos no hacemos entregas.
+
+  Aceptamos pagos en efectivo, Nequi o Bancolombia.`;
 
   const descripcionModal = `
-    Por favor, complete el formulario para hacer llegar el pedido a su domicilio.
-    Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,200,000. ¡Domicilio gratis!
-    Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!
+    complete el formulario para hacer llegar el pedido a su domicilio.
+    Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,099,800 COP. ¡Domicilio gratis!
+    Realizamos una llamada confirmación para verificar la dirección y disponibilidad de los equipos. ¡Entrega inmediata!
   `;
 
   return (
@@ -172,7 +216,7 @@ const Kits8Camaras: React.FC = () => {
 
       <Banner
         key="banner0"
-        texto="Descripcion del kit de cámaras"
+        texto="Descripcion del kit!"
         backgroundColor="#8B0000"
         textColor="#FFFFFF"
         fontSize="2rem"
@@ -212,25 +256,20 @@ const Kits8Camaras: React.FC = () => {
           abrirWhatsApp={abrirWhatsApp}
           hacerLlamada={hacerLlamada}
           horariosEntrega={horariosEntrega}
-          tituloModal="Confirmar Compra"
+          tituloModal="Confirme la Compra del kit de 8 cámaras"
           descripcionModal={descripcionModal}
         />
       )}
 
 <HeroHeader
         imagen={headerImage}
-        titulo="Solo para Bucaramanga y el área metropolitana"
-        subtitulo="Tecnología avanzada: detección de humanos y vehículos"
-        descripcion="Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
-        precio="780,000"
+        titulo=""
+        subtitulo=""
+        descripcion=""
+        precio="1,099,800 COP"
       >
-        <BotonCompra
-          texto="Compra el Kit de Cámaras!"
-          onClick={abrirModal}
-          color="#007bff"
-          tamaño="mediano"
-        />
-      </HeroHeader>
+    </HeroHeader>
+      
       <Formulario
         onClose={cerrarModal}
         onConfirm={confirmarCompra}

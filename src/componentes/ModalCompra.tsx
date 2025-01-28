@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react'; // Importa useEffect
 import './ModalCompra.css'; // Asegúrate de que la ruta sea correcta
 
 interface ModalCompraProps {
@@ -36,6 +36,14 @@ const ModalCompra: React.FC<ModalCompraProps> = ({
   tituloModal,
   descripcionModal, // Usar la nueva propiedad
 }) => {
+  // Agrega el useEffect para manejar el scroll del body
+  useEffect(() => {
+    document.body.classList.add('modal-open'); // Agrega la clase al body cuando el modal se abre
+    return () => {
+      document.body.classList.remove('modal-open'); // Remueve la clase al cerrar el modal
+    };
+  }, []); // El array vacío asegura que esto solo se ejecute al montar y desmontar el componente
+
   return (
     <div className="modal-overlay">
       <div className="modal-content">

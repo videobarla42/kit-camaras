@@ -12,7 +12,6 @@
   z-index: 1000;
 }
 
-
 /* Estilos para el contenido del formulario */
 .formulario-content {
   background-color: #fff;
@@ -69,16 +68,12 @@
 }
 
 /* Estilos para los botones de confirmar, WhatsApp y llamar */
-.formulario-botones {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
 .confirmar,
 .whatsapp-button,
 .llamar-button {
+  width: 100%;
   padding: 10px 20px;
+  margin-bottom: 10px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -119,4 +114,15 @@
   text-align: center;
   font-size: 14px;
   color: #666;
+}
+
+/* Estilos para el footer del formulario */
+.formulario-footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  border-top: 1px solid #ddd;
 }

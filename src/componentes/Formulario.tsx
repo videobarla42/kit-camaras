@@ -43,7 +43,7 @@ const Formulario: React.FC<FormularioProps> = ({
           <h2>Confirmar Compra, kit de 4 cámaras con inteligencia artificial</h2>
           <p>
             Por favor, complete el formulario para hacer llegar el pedido a su domicilio.
-            Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de \$780,000. ¡Domicilio gratis!
+            Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $780,000. ¡Domicilio gratis!
             Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!
           </p>
         </div>
@@ -77,24 +77,27 @@ const Formulario: React.FC<FormularioProps> = ({
           className="formulario-input"
         />
 
-        <div className="formulario-botones">
-          <button className="confirmar" onClick={onConfirm}>
-            Confirmar Compra
-          </button>
-        </div>
+        <button className="confirmar" onClick={onConfirm}>
+          Confirmar Compra
+        </button>
 
-        <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
-          <button className="whatsapp-button" onClick={abrirWhatsApp}>
-            WhatsApp
-          </button>
-          <button className="llamar-button" onClick={hacerLlamada}>
-            Llamar
-          </button>
-        </div>
+        <button className="whatsapp-button" onClick={abrirWhatsApp}>
+          WhatsApp
+        </button>
+
+        <button className="llamar-button" onClick={hacerLlamada}>
+          Llamar
+        </button>
 
         <div className="horarios-entrega">
           <p>{horariosEntrega}</p>
         </div>
+
+        {/* Footer */}
+        <footer className="formulario-footer">
+          <p>© 2025 S24seguridad-electronica - Todos los derechos reservados.</p>
+          <p>Contacto: s24hseguridad@gmail.com | Teléfono: +57 3046615865</p>
+        </footer>
       </div>
     </div>
   );

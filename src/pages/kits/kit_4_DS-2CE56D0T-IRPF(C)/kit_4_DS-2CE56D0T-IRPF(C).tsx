@@ -205,12 +205,16 @@ const Kit4Camaras: React.FC = () => {
     />,
   ];
 
-  const horariosEntrega = `Horarios de entrega: Lunes a Viernes de 8:00 AM a 6:00 PM`;
+  const horariosEntrega = `Horarios de entrega:  De lunes a viernes: de 8:00 a.m. a 6:00 p.m. (jornada continua).
+  Sábados: de 8:00 a.m. a 1:00 p.m.
+  Domingos y festivos no hacemos entregas.
+
+  Aceptamos pagos en efectivo, Nequi o Bancolombia.`;
 
   const descripcionModal = `
-    Por favor, complete el formulario para hacer llegar el pedido a su domicilio.
+    complete el formulario para hacer llegar el pedido a su domicilio.
     Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de \$780,000. ¡Domicilio gratis!
-    Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!
+    Realizamos llamada de confirmación para verificar la dirección y disponibilidad de los equipos. ¡Entrega inmediata!
   `;
 
   const fields = [
@@ -302,23 +306,18 @@ const Kit4Camaras: React.FC = () => {
           abrirWhatsApp={abrirWhatsApp}
           hacerLlamada={hacerLlamada}
           horariosEntrega={horariosEntrega}
-          tituloModal="Confirmar Compra"
+          tituloModal="Confirme la Compra del kit de 4 cámaras"
           descripcionModal={descripcionModal}
         />
       )}
       <HeroHeader
         imagen={headerImage}
-        titulo="Solo para Bucaramanga y el área metropolitana"
-        subtitulo="Tecnología avanzada: detección de humanos y vehículos"
-        descripcion="Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
-        precio="780,000"
+        titulo=""
+        subtitulo=""
+        descripcion=""
+        precio="780,000 COP"
       >
-        <BotonCompra
-          texto="Compra el Kit de Cámaras!"
-          onClick={abrirModal}
-          color="#007bff"
-          tamaño="mediano"
-        />
+
       </HeroHeader>
       <Formulario
         onClose={cerrarModal}
