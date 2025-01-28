@@ -118,25 +118,25 @@ const Kit4Camaras: React.FC = () => {
       title: '1 Disco duro para videovigilancia seagate skyhawk - 1 TB',
       description: 'Disco duro seagate skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
       images: [imagen19, imagen20, imagen21, imagen22, imagen23],
-      botonTexto: 'Obtener el Kit!'
+      botonTexto: 'Obten el Kit!'
     },
     {
       title: '4 Fuentes De Energia 12v - 1amp',
       description: 'fuente de alimentación de AC 110- 240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con led indicador de funcionamiento, el articulo puede ser ligeramente distinto al de la foto.',
       images: [imagen24],
-      botonTexto: 'Compra Con el Kit!'
+      botonTexto: 'Comprar!'
     },
     {
       title: '4 pares de Video Baluns 12v - 1amp',
       description: '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
       images: [imagen25],
-      botonTexto: 'Obtenlo Ahora!'
+      botonTexto: 'Domicilio Gratis!'
     },
     {
       title: '4 pares de Borneras',
       description: '4 pares de borneras electricas para la conexión y distribución de energia de las camaras.',
       images: [imagen26],
-      botonTexto: 'Ahorre el Domicilio!'
+      botonTexto: 'Obtener!'
     },
     {
       title: '100 mts de cable utp',
