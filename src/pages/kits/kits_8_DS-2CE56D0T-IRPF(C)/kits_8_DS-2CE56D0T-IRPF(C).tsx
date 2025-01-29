@@ -313,7 +313,7 @@ const Kits8Camaras: React.FC = () => {
       {JSON.stringify({
         "@context": "https://schema.org/",
         "@type": "Product",
-        "name": "Kit de 16 Cámaras de Seguridad HIKVISION",
+        "name": "Kit de 8 Cámaras de Seguridad HIKVISION",
         "image": [
           imagen26,
           imagen28,
@@ -349,7 +349,7 @@ const Kits8Camaras: React.FC = () => {
         },
         "offers": {
           "@type": "Offer",
-          "price": "1990000",
+          "price": "1175000",
           "priceCurrency": "COP",
           "availability": "https://schema.org/InStock",
           "seller": {

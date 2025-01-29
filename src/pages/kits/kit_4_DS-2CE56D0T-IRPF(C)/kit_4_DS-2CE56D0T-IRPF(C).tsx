@@ -357,7 +357,7 @@ const Kit4Camaras: React.FC = () => {
           "availability": "https://schema.org/InStock",
           "seller": {
             "@type": "Organization",
-            "name": "Tu Empresa"
+            "name": "S24 seguridad electronica"
           }
         }
       })}
