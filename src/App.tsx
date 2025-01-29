@@ -12,13 +12,13 @@ const App: React.FC = () => {
         <nav>
           <ul className="navList">
             <li className="navItem">
-              <Link to="/" className="link">kit de 8 camaras</Link>
+              <Link to="/" className="link">Comprar Kit de 4 Cámaras de Seguridad HIKVISION</Link>
             </li>
             <li className="navItem">
-              <Link to="/kit_4" className="link">kit de 4 camaras</Link>
+            <Link to="/kit_4-camaras-seguridad" className="link">Comprar Kit de 4 Cámaras de Seguridad HIKVISION</Link>
             </li>
             <li className="navItem">
-              <Link to="/kit_16" className="link">kit de 4 camaras</Link>
+            <Link to="/kit_16-camaras-seguridad" className="link">Comprar Kit de 16 Cámaras de Seguridad HIKVISION</Link>
             </li>
           </ul>
         </nav>
@@ -27,8 +27,8 @@ const App: React.FC = () => {
       <div className="content">
         <Routes>
           <Route path="/" element={<Kits_8_DS_2CE56D0T_IRPF_C />} />
-          <Route path="/kit_4" element={<Kit_4_DS_2CE56D0T_IRPF_C />} />
-          <Route path="/kit_16" element={<Kit_16_DS_2CE56D0T_IRPF_C />} />
+          <Route path="/kit_4-camaras-seguridad" element={<Kit_4_DS_2CE56D0T_IRPF_C />} />
+          <Route path="/kit_16-camaras-seguridad" element={<Kit_16_DS_2CE56D0T_IRPF_C />} />
         </Routes>
       </div>
     </div>

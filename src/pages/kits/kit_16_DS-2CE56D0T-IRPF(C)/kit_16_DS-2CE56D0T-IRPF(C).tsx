@@ -9,7 +9,6 @@ import Banner from '@/componentes/Banner';
 import ModalCompra from '@/componentes/ModalCompra';
 import Formulario from '@/componentes/Formulario';
 
-
 // Importar imágenes
 import imagen36 from '@/assets/36.webp';
 import imagen26 from '@/assets/26.webp';
@@ -34,8 +33,7 @@ import imagen20 from '@/assets/20.webp';
 import imagen21 from '@/assets/21.webp';
 import imagen22 from '@/assets/22.webp';
 import imagen23 from '@/assets/23.webp';
-import headerImage from '@/assets/36.webp'; // Ensure the correct path
-
+import headerImage from '@/assets/36.webp'; // Asegúrate de que la ruta sea correcta
 
 const Kits16Camaras: React.FC = () => {
   const {
@@ -57,7 +55,7 @@ const Kits16Camaras: React.FC = () => {
 
   const abrirWhatsApp = () => {
     const phone = '3046615865';
-    const message = 'Hola, estoy interesado en el kit de 8 cámaras.';
+    const message = 'Hola, estoy interesado en el kit de 16 cámaras.';
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -67,54 +65,82 @@ const Kits16Camaras: React.FC = () => {
     window.location.href = phoneUri;
   };
 
-
   const headerLinks = [
-    { to: '/', text: 'Kit De 8 Camaras' },
-    { to: '/kit_4', text: 'Kit De 4 Camaras' },
-    { to: '/kit_16', text: 'Kit De 16 Camaras' },
+    { to: '/', text: 'Kit De 8 Camaras de seguridad HIKVISION' },
+    { to: '/kit_4-camaras-seguridad', text: 'Kit De 4 Camaras de seguridad HIKVISION' },
+    { to: '/kit_16-camaras-seguridad', text: 'Kit De 16 Camaras de seguridad HIKVISION' },
   ];
 
   const carruseles = [
     {
       title: '1 Video Grabador DVR de 16 Canales, 4 MPX Lite + IA',
       description: 'DVR AcuSense mini de 16 canales Y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
-      images: [imagen37, imagen38, imagen39, imagen46],
+      images: [
+        { src: imagen37, alt: 'Video Grabador DVR de 16 Canales HIKVISION' },
+        { src: imagen38, alt: 'DVR AcuSense mini de 16 canales HIKVISION' },
+        { src: imagen39, alt: 'DVR con detección de movimiento avanzada' },
+        { src: imagen46, alt: 'DVR con compresión H.265 Pro+' },
+      ],
       botonTexto: 'Domicilio Gratis!'
     },
     {
-      title: '16 Camaras de 2 Mpx y 20 MTS de Alcance',
+      title: '16 Cámaras de 2 Mpx y 20 MTS de Alcance',
       description: 'Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
-      images: [imagen41, imagen11, imagen12, imagen13, imagen14, imagen15, imagen16, imagen17, imagen18],
+      images: [
+        { src: imagen41, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
+        { src: imagen11, alt: 'Cámara de seguridad HIKVISION' },
+        { src: imagen12, alt: 'Cámara con visión nocturna HIKVISION' },
+        { src: imagen13, alt: 'Cámara Domo TURBOHD 1080p' },
+        { src: imagen14, alt: 'Cámara de seguridad con lente de 2.8 mm' },
+        { src: imagen15, alt: 'Cámara con visión nocturna EXIR' },
+        { src: imagen16, alt: 'Cámara de seguridad para exteriores' },
+        { src: imagen17, alt: 'Cámara Domo HIKVISION' },
+        { src: imagen18, alt: 'Cámara de seguridad con visión nocturna' },
+      ],
       botonTexto: 'Page en casa!'
     },
     {
       title: '1 Disco duro Ideal para videovigilancia',
-      description: 'Disco duro seagate skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
-      images: [imagen19, imagen20, imagen21, imagen22, imagen23],
+      description: 'Disco duro Seagate Skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
+      images: [
+        { src: imagen19, alt: 'Disco duro Seagate Skyhawk 1 TB' },
+        { src: imagen20, alt: 'Disco duro para videovigilancia' },
+        { src: imagen21, alt: 'Disco duro con tecnología AllFrame' },
+        { src: imagen22, alt: 'Disco duro Seagate Skyhawk' },
+        { src: imagen23, alt: 'Disco duro para grabación 24/7' },
+      ],
       botonTexto: 'Obten el Kit!'
     },
     {
-      title: '16 Fuentes De Energia',
-      description: '16 fuentes de alimentación de AC 110- 240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con led indicador de funcionamiento, el articulo puede ser ligeramente distinto al de la foto.',
-      images: [imagen42],
+      title: '16 Fuentes De Energía',
+      description: '16 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento. El artículo puede ser ligeramente distinto al de la foto.',
+      images: [
+        { src: imagen42, alt: 'Fuente de alimentación para cámaras de seguridad' },
+      ],
       botonTexto: 'Comprar!'
     },
     {
       title: '16 pares de Video Baluns',
       description: '16 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
-      images: [imagen43],
+      images: [
+        { src: imagen43, alt: 'Video Balun para transmisión de señales de video' },
+      ],
       botonTexto: 'Domicilio Gratis!'
     },
     {
       title: '16 pares de Borneras',
-      description: '16 pares de borneras electricas para la conexión y distribución de energia de las camaras.',
-      images: [imagen44],
+      description: '16 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
+      images: [
+        { src: imagen44, alt: 'Borneras eléctricas para cámaras de seguridad' },
+      ],
       botonTexto: 'Obtener!'
     },
     {
-      title: '200 mts de cable utp',
-      description: 'cable utp cat 5e en aleacion para interior inluidos en el kit.',
-      images: [imagen26],
+      title: '200 mts de cable UTP',
+      description: 'Cable UTP Cat 5e en aleación para interior incluidos en el kit.',
+      images: [
+        { src: imagen26, alt: 'Cable UTP Cat 5e para cámaras de seguridad' },
+      ],
       botonTexto: 'Pidelo Ahora!'
     },
   ];
@@ -130,7 +156,7 @@ const Kits16Camaras: React.FC = () => {
     />,
     <Banner
       key="banner2"
-      texto="Garantia de 2 años para disco seagate skyhawk de 1 TB"
+      texto="Garantía de 2 años para disco Seagate Skyhawk de 1 TB"
       backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -146,7 +172,7 @@ const Kits16Camaras: React.FC = () => {
     />,
     <Banner
       key="banner4"
-      texto="accesorios del kit no tienen garantia."
+      texto="Los accesorios del kit no tienen garantía."
       backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -154,7 +180,7 @@ const Kits16Camaras: React.FC = () => {
     />,
     <Banner
       key="banner5"
-      texto="domicilios sin costo!"
+      texto="Domicilios sin costo!"
       backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -185,27 +211,28 @@ const Kits16Camaras: React.FC = () => {
     abrirModalBase();
   };
 
-  const horariosEntrega = `Horarios de entrega:  De lunes a viernes: de 8:00 a.m. a 6:00 p.m. (jornada continua).
+  const horariosEntrega = `Horarios de entrega: De lunes a viernes: de 8:00 a.m. a 6:00 p.m. (jornada continua).
   Sábados: de 8:00 a.m. a 1:00 p.m.
   Domingos y festivos no hacemos entregas.
 
   Aceptamos pagos en efectivo, Nequi o Bancolombia.`;
 
-  const descripcionModal = `
-    complete el formulario para hacer llegar el pedido a su domicilio.
-    Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,990.000 COP. ¡Domicilio gratis!
-    Realizamos una llamada confirmación para verificar la dirección y disponibilidad de los equipos. ¡Entrega inmediata!
-  `;
+  const descripcionModal = `Complete el formulario para hacer llegar el pedido a su domicilio.
+  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,990,000 COP. ¡Domicilio gratis!
+  Realizamos una llamada de confirmación para verificar la dirección y disponibilidad de los equipos. ¡Entrega inmediata!`;
 
   return (
     <div>
-      <Header links={headerLinks} extraMessage="Pago Contraentrega + Envio Gratis!" />
+      {/* Encabezado */}
+      <Header links={headerLinks} extraMessage="Pago Contraentrega + Envío Gratis!" />
+
+      {/* Hero Header */}
       <HeroHeader
         imagen={headerImage}
         titulo="Solo para Bucaramanga y el área metropolitana"
         subtitulo="Tecnología avanzada: detección de humanos y vehículos"
         descripcion="Kit de 16 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
-        precio="1,990.000"
+        precio="1,990,000"
       >
         <BotonCompra
           texto="Compra el Kit de Cámaras!"
@@ -215,39 +242,42 @@ const Kits16Camaras: React.FC = () => {
         />
       </HeroHeader>
 
+      {/* Beneficios */}
       <Beneficios />
 
+      {/* Banner de Descripción del Kit */}
       <Banner
         key="banner0"
-        texto="Descripcion del kit!"
+        texto="Descripción del kit!"
         backgroundColor="#8B0000"
         textColor="#FFFFFF"
         fontSize="2rem"
         padding="15px 30px"
       />
 
-      {/* Renderizar carruseles y banners intercalados */}
+      {/* Carruseles y Banners Intercalados */}
       {carruseles.map((carrusel, index) => (
         <React.Fragment key={index}>
-          <div style={{ marginBottom: '40px', textAlign: 'center' }}>
+          <section style={{ marginBottom: '40px', textAlign: 'center' }}>
             <h2>{carrusel.title}</h2>
             <Carrusel images={carrusel.images} />
             <p>{carrusel.description}</p>
             <BotonCompra
               texto={carrusel.botonTexto}
-              onClick={abrirModal}
+              onClick={() => abrirModal(index)}
               color="#007bff"
               tamaño="mediano"
             />
-          </div>
+          </section>
           {index < banners.length && banners[index]}
         </React.Fragment>
       ))}
 
+      {/* Modal de Compra */}
       {modalAbierto && (
         <ModalCompra
           onClose={cerrarModal}
-          onConfirm={confirmarCompra} 
+          onConfirm={confirmarCompra}
           nombre={nombre}
           setNombre={setNombre}
           telefono={telefono}
@@ -259,26 +289,81 @@ const Kits16Camaras: React.FC = () => {
           abrirWhatsApp={abrirWhatsApp}
           hacerLlamada={hacerLlamada}
           horariosEntrega={horariosEntrega}
-          tituloModal="Confirme la Compra del kit de 8 cámaras"
+          tituloModal="Confirme La Compra Del Kit De 16 Cámaras"
           descripcionModal={descripcionModal}
         />
       )}
 
-<HeroHeader
+       <HeroHeader
         imagen={headerImage}
         titulo=""
         subtitulo=""
         descripcion=""
-        precio="1,990.000"
+        precio="1,990,000"
       >
-    </HeroHeader>
-      
-    <Formulario
-      titulo="Confirme la Compra del kit de 16 cámaras"
-      descripcion="Complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,990.000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
-      precio="$1,990.000"
-    />
 
+      </HeroHeader>
+
+      {/* Formulario de Confirmación */}
+      <Formulario
+        titulo="Confirmar Compra, kit de 16 cámaras con inteligencia artificial"
+        descripcion="Complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,990,000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
+        precio="$1,990,000"
+      />
+
+      
+   {/* Schema Markup */}
+   <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Kit de 16 Cámaras de Seguridad HIKVISION",
+        "image": [
+          imagen26,
+          imagen36,
+          imagen37,
+          imagen38,
+          imagen39,
+          imagen41,
+          imagen46,
+          imagen42,
+          imagen43,
+          imagen44,
+          imagen11,
+          imagen12,
+          imagen13,
+          imagen14,
+          imagen15,
+          imagen16,
+          imagen17,
+          imagen18,
+          imagen19,
+          imagen20,
+          imagen21,
+          imagen22,
+          imagen23,
+          imagen19,
+          imagen20,
+          imagen21,
+        ],
+      
+        "description": "Kit de 16 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina.",
+        "brand": {
+          "@type": "Brand",
+          "name": "HIKVISION"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "1990000",
+          "priceCurrency": "COP",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "S24 seguridad electronica"
+          }
+        }
+      })}
+    </script>
     </div>
   );
 };
