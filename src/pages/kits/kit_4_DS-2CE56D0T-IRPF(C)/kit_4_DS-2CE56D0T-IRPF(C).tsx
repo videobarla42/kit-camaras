@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import useModalCompra from '@/componentes/useModalCompra';
-import Carrusel from '@/componentes/Carrusel';
-import BotonCompra from '@/componentes/BotonCompra';
-import HeroHeader from '@/componentes/HeroHeader';
-import Header from '@/componentes/Header';
-import Beneficios from '@/componentes/Beneficios';
-import Banner from '@/componentes/Banner';
-import ModalCompra from '@/componentes/ModalCompra';
-import Formulario from '@/componentes/Formulario';
+
+// Lazy load de componentes
+const Carrusel = lazy(() => import('@/componentes/Carrusel'));
+const BotonCompra = lazy(() => import('@/componentes/BotonCompra'));
+const HeroHeader = lazy(() => import('@/componentes/HeroHeader'));
+const Header = lazy(() => import('@/componentes/Header'));
+const Beneficios = lazy(() => import('@/componentes/Beneficios'));
+const Banner = lazy(() => import('@/componentes/Banner'));
+const ModalCompra = lazy(() => import('@/componentes/ModalCompra'));
+const Formulario = lazy(() => import('@/componentes/Formulario'));
 
 // Importar imágenes
 import imagen1 from '@/assets/1.webp';
@@ -231,120 +233,138 @@ const Kit4Camaras: React.FC = () => {
 
   return (
     <div>
-      <Header links={headerLinks} extraMessage="Pago Contraentrega + Envío Gratis!" />
-      
-      <HeroHeader
-        imagen={headerImage}
-        titulo="Solo para Bucaramanga y el área metropolitana"
-        subtitulo="Tecnología avanzada: detección de humanos y vehículos"
-        descripcion="Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
-        precio="780,000"
-      >
-        <BotonCompra
-          texto="Compra el Kit de Cámaras!"
-          onClick={abrirModal}
-          color="#28a745"
-          tamaño="mediano"
+      <Suspense fallback={<div>Cargando...</div>}>
+        <Header links={headerLinks} extraMessage="Pago Contraentrega + Envío Gratis!" />
+      </Suspense>
+
+      <Suspense fallback={<div>Cargando...</div>}>
+        <HeroHeader
+          imagen={headerImage}
+          titulo="Solo para Bucaramanga y el área metropolitana"
+          subtitulo="Tecnología avanzada: detección de humanos y vehículos"
+          descripcion="Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
+          precio="780,000"
+        >
+          <BotonCompra
+            texto="Compra el Kit de Cámaras!"
+            onClick={abrirModal}
+            color="#28a745"
+            tamaño="mediano"
+          />
+        </HeroHeader>
+      </Suspense>
+
+      <Suspense fallback={<div>Cargando...</div>}>
+        <Beneficios />
+      </Suspense>
+
+      <Suspense fallback={<div>Cargando...</div>}>
+        <Banner
+          key="banner0"
+          texto="Descripción del kit!"
+          backgroundColor="#8B0000"
+          textColor="#FFFFFF"
+          fontSize="2rem"
+          padding="15px 30px"
         />
-      </HeroHeader>
-
-      <Beneficios />
-
-      <Banner
-        key="banner0"
-        texto="Descripción del kit!"
-        backgroundColor="#8B0000"
-        textColor="#FFFFFF"
-        fontSize="2rem"
-        padding="15px 30px"
-      />
+      </Suspense>
 
       {carruseles.map((carrusel, index) => (
         <React.Fragment key={index}>
           <section style={{ marginBottom: '40px', textAlign: 'center' }}>
             <h2>{carrusel.title}</h2>
-            <Carrusel images={carrusel.images} />
+            <Suspense fallback={<div>Cargando...</div>}>
+              <Carrusel images={carrusel.images} />
+            </Suspense>
             <p>{carrusel.description}</p>
-            <BotonCompra
-              texto={carrusel.botonTexto}
-              onClick={() => abrirModal(index)}
-              color="#007bff"
-              tamaño="mediano"
-            />
+            <Suspense fallback={<div>Cargando...</div>}>
+              <BotonCompra
+                texto={carrusel.botonTexto}
+                onClick={() => abrirModal(index)}
+                color="#007bff"
+                tamaño="mediano"
+              />
+            </Suspense>
           </section>
           {index < banners.length && banners[index]}
         </React.Fragment>
       ))}
 
       {modalAbierto && (
-        <ModalCompra
-          onClose={cerrarModal}
-          onConfirm={confirmarCompra}
-          nombre={nombre}
-          setNombre={setNombre}
-          telefono={telefono}
-          setTelefono={setTelefono}
-          direccion={direccion}
-          setDireccion={setDireccion}
-          ciudadYBarrio={ciudadYBarrio}
-          setCiudadYBarrio={setCiudadYBarrio}
-          abrirWhatsApp={abrirWhatsApp}
-          hacerLlamada={hacerLlamada}
-          horariosEntrega={horariosEntrega}
-          tituloModal="Confirme la Compra del Kit de 4 Cámaras"
-          descripcionModal={descripcionModal}
-        />
+        <Suspense fallback={<div>Cargando...</div>}>
+          <ModalCompra
+            onClose={cerrarModal}
+            onConfirm={confirmarCompra}
+            nombre={nombre}
+            setNombre={setNombre}
+            telefono={telefono}
+            setTelefono={setTelefono}
+            direccion={direccion}
+            setDireccion={setDireccion}
+            ciudadYBarrio={ciudadYBarrio}
+            setCiudadYBarrio={setCiudadYBarrio}
+            abrirWhatsApp={abrirWhatsApp}
+            hacerLlamada={hacerLlamada}
+            horariosEntrega={horariosEntrega}
+            tituloModal="Confirme la Compra del Kit de 4 Cámaras"
+            descripcionModal={descripcionModal}
+          />
+        </Suspense>
       )}
-      <HeroHeader
-        imagen={headerImage}
-        titulo=""
-        subtitulo=""
-        descripcion=""
-        precio="780,000"
-      >
 
-      </HeroHeader>
-      <Formulario
-      titulo="Confirme la Compra del kit de 4 cámaras"
-      descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $780,000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
-      precio="$780,000"
-    />
+      <Suspense fallback={<div>Cargando...</div>}>
+        <HeroHeader
+          imagen={headerImage}
+          titulo=""
+          subtitulo=""
+          descripcion=""
+          precio="780,000"
+        />
+      </Suspense>
 
-    {/* Schema Markup */}
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        "name": "Kit de 4 Cámaras de Seguridad HIKVISION",
-        "image": [
-          imagen1,
-          imagen2,
-          imagen3,
-          imagen4,
-          imagen5,
-          imagen6,
-          imagen7,
-          imagen8,
-          imagen9,
-          imagen10,
-          imagen11,
-          imagen12,
-          imagen13,
-          imagen14,
-          imagen15,
-          imagen16,
-          imagen17,
-          imagen18,
-          imagen19,
-          imagen20,
-          imagen21,
-          imagen22,
-          imagen23,
-          imagen24,
-          imagen25,
-          imagen26,
-          imagen27
-        ],
+      <Suspense fallback={<div>Cargando...</div>}>
+        <Formulario
+          titulo="Confirme la Compra del kit de 4 cámaras"
+          descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $780,000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
+          precio="$780,000"
+        />
+      </Suspense>
+
+      {/* Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          "name": "Kit de 4 Cámaras de Seguridad HIKVISION",
+          "image": [
+            imagen1,
+            imagen2,
+            imagen3,
+            imagen4,
+            imagen5,
+            imagen6,
+            imagen7,
+            imagen8,
+            imagen9,
+            imagen10,
+            imagen11,
+            imagen12,
+            imagen13,
+            imagen14,
+            imagen15,
+            imagen16,
+            imagen17,
+            imagen18,
+            imagen19,
+            imagen20,
+            imagen21,
+            imagen22,
+            imagen23,
+            imagen24,
+            imagen25,
+            imagen26,
+            imagen27
+          ],
         "description": "Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina.",
         "brand": {
           "@type": "Brand",
