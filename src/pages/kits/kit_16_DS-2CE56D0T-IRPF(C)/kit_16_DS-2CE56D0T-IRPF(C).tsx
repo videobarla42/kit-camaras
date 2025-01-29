@@ -11,20 +11,13 @@ import Formulario from '@/componentes/Formulario';
 
 
 // Importar imágenes
-import imagen28 from '@/assets/36.webp';
-import imagen29 from '@/assets/37.webp';
-import imagen30 from '@/assets/30.webp';
-import imagen31 from '@/assets/31.webp';
+import imagen36 from '@/assets/36.webp';
 import imagen26 from '@/assets/26.webp';
-import imagen33 from '@/assets/33.webp';
-import imagen34 from '@/assets/34.webp';
-import imagen35 from '@/assets/35.webp';
-import imagen32 from '@/assets/32.webp';
-import imagen19 from '@/assets/19.webp';
-import imagen20 from '@/assets/20.webp';
-import imagen21 from '@/assets/21.webp';
-import imagen22 from '@/assets/22.webp';
-import imagen23 from '@/assets/23.webp';
+import imagen37 from '@/assets/37.webp';
+import imagen38 from '@/assets/38.webp';
+import imagen39 from '@/assets/39.webp';
+import imagen46 from '@/assets/46.webp';
+import imagen41 from '@/assets/41.webp';
 import imagen11 from '@/assets/11.webp';
 import imagen12 from '@/assets/12.webp';
 import imagen13 from '@/assets/13.webp';
@@ -33,6 +26,14 @@ import imagen15 from '@/assets/15.webp';
 import imagen16 from '@/assets/16.webp';
 import imagen17 from '@/assets/17.webp';
 import imagen18 from '@/assets/18.webp';
+import imagen42 from '@/assets/42.webp';
+import imagen43 from '@/assets/43.webp';
+import imagen44 from '@/assets/44.webp';
+import imagen19 from '@/assets/19.webp';
+import imagen20 from '@/assets/20.webp';
+import imagen21 from '@/assets/21.webp';
+import imagen22 from '@/assets/22.webp';
+import imagen23 from '@/assets/23.webp';
 import headerImage from '@/assets/36.webp'; // Ensure the correct path
 
 
@@ -77,13 +78,13 @@ const Kits16Camaras: React.FC = () => {
     {
       title: '1 Video Grabador DVR de 16 Canales, 4 MPX Lite + IA',
       description: 'DVR AcuSense mini de 16 canales Y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
-      images: [imagen29, imagen30, imagen31],
+      images: [imagen37, imagen38, imagen39, imagen46],
       botonTexto: 'Domicilio Gratis!'
     },
     {
       title: '16 Camaras de 2 Mpx y 20 MTS de Alcance',
       description: 'Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
-      images: [imagen32, imagen11, imagen12, imagen13, imagen14, imagen15, imagen16, imagen17, imagen18],
+      images: [imagen41, imagen11, imagen12, imagen13, imagen14, imagen15, imagen16, imagen17, imagen18],
       botonTexto: 'Page en casa!'
     },
     {
@@ -93,21 +94,21 @@ const Kits16Camaras: React.FC = () => {
       botonTexto: 'Obten el Kit!'
     },
     {
-      title: '16 Fuentes De Energia 12v - 1amp',
+      title: '16 Fuentes De Energia',
       description: '16 fuentes de alimentación de AC 110- 240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con led indicador de funcionamiento, el articulo puede ser ligeramente distinto al de la foto.',
-      images: [imagen33],
+      images: [imagen42],
       botonTexto: 'Comprar!'
     },
     {
       title: '16 pares de Video Baluns',
       description: '16 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
-      images: [imagen34],
+      images: [imagen43],
       botonTexto: 'Domicilio Gratis!'
     },
     {
       title: '16 pares de Borneras',
       description: '16 pares de borneras electricas para la conexión y distribución de energia de las camaras.',
-      images: [imagen35],
+      images: [imagen44],
       botonTexto: 'Obtener!'
     },
     {
@@ -203,7 +204,7 @@ const Kits16Camaras: React.FC = () => {
         imagen={headerImage}
         titulo="Solo para Bucaramanga y el área metropolitana"
         subtitulo="Tecnología avanzada: detección de humanos y vehículos"
-        descripcion="Kit de 8 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
+        descripcion="Kit de 16 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
         precio="1,990.000"
       >
         <BotonCompra

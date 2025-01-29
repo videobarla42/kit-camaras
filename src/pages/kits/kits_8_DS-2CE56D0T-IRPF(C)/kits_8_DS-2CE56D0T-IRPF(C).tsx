@@ -92,7 +92,7 @@ const Kits8Camaras: React.FC = () => {
       botonTexto: 'Obten el Kit!'
     },
     {
-      title: '8 Fuentes De Energia 12v - 1amp',
+      title: '8 Fuentes De Energia',
       description: '8 fuentes de alimentación de AC 110- 240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con led indicador de funcionamiento, el articulo puede ser ligeramente distinto al de la foto.',
       images: [imagen33],
       botonTexto: 'Comprar!'

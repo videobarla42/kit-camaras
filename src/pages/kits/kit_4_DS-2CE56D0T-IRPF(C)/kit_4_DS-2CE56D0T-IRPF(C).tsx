@@ -122,7 +122,7 @@ const Kit4Camaras: React.FC = () => {
       botonTexto: 'Obten el Kit!'
     },
     {
-      title: '4 Fuentes De Energia 12v - 1amp',
+      title: '4 Fuentes De Energia',
       description: 'fuente de alimentación de AC 110- 240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con led indicador de funcionamiento, el articulo puede ser ligeramente distinto al de la foto.',
       images: [imagen24],
       botonTexto: 'Comprar!'
