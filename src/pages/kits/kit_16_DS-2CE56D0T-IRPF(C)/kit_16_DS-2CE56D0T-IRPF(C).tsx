@@ -1,15 +1,13 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import useModalCompra from '@/componentes/useModalCompra';
-
-// Lazy load de componentes
-const Carrusel = lazy(() => import('@/componentes/Carrusel'));
-const BotonCompra = lazy(() => import('@/componentes/BotonCompra'));
-const HeroHeader = lazy(() => import('@/componentes/HeroHeader'));
-const Header = lazy(() => import('@/componentes/Header'));
-const Beneficios = lazy(() => import('@/componentes/Beneficios'));
-const Banner = lazy(() => import('@/componentes/Banner'));
-const ModalCompra = lazy(() => import('@/componentes/ModalCompra'));
-const Formulario = lazy(() => import('@/componentes/Formulario'));
+import Carrusel from '@/componentes/Carrusel';
+import BotonCompra from '@/componentes/BotonCompra';
+import HeroHeader from '@/componentes/HeroHeader';
+import Header from '@/componentes/Header';
+import Beneficios from '@/componentes/Beneficios';
+import Banner from '@/componentes/Banner';
+import ModalCompra from '@/componentes/ModalCompra';
+import Formulario from '@/componentes/Formulario';
 
 // Importar imágenes
 import imagen36 from '@/assets/36.webp';
@@ -74,17 +72,7 @@ const Kits16Camaras: React.FC = () => {
   ];
 
 
-  interface ImagenProps {
-      src: string;
-      alt: string;
-    }
-    const Imagen: React.FC<ImagenProps> = ({ src, alt }) => {
-      return (
-        <Suspense fallback={<div>Cargando imagen...</div>}>
-          <img src={src} alt={alt} />
-        </Suspense>
-      );
-    };
+  
 
 
   const carruseles = [
@@ -160,26 +148,6 @@ const Kits16Camaras: React.FC = () => {
       botonTexto: 'Pidelo Ahora!'
     },
   ];
-
-  function Carruseles() {
-    return (
-      <div>
-        {carruseles.map((carrusel, index) => (
-          <div key={index}>
-            <h2>{carrusel.title}</h2>
-            <p>{carrusel.description}</p>
-            <div>
-              {carrusel.images.map((image, idx) => (
-                <Imagen key={idx} src={image.src} alt={image.alt} />
-              ))}
-            </div>
-            <button>{carrusel.botonTexto}</button>
-          </div>
-        ))}
-      </div>
-    );
-  }
-
 
   const banners = [
     <Banner

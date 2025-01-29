@@ -17,10 +17,10 @@ const App: React.FC = () => {
               <Link to="/" className="link">Kits de Cámaras de Seguridad HIKVISION</Link>
             </li>
             <li className="navItem">
-              <Link to="/kit_4-camaras-seguridad" className="link"></Link>
+              <Link to="/kit_4-camaras-seguridad" className="link">S24</Link>
             </li>
             <li className="navItem">
-              <Link to="/kit_16-camaras-seguridad" className="link"></Link>
+              <Link to="/kit_16-camaras-seguridad" className="link">www.s24seguridadelectronica.com</Link>
             </li>
           </ul>
         </nav>
