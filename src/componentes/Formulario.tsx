@@ -39,7 +39,11 @@ const Formulario: React.FC<FormularioProps> = ({
   };
 
   // Horarios de entrega
-  const horariosEntrega = 'Horarios de entrega: Lunes a Viernes de 9:00 AM a 6:00 PM';
+  const horariosEntrega = `Horarios de entrega: De lunes a viernes: de 8:00 a.m. a 6:00 p.m. (jornada continua).
+  Sábados: de 8:00 a.m. a 1:00 p.m.
+  Domingos y festivos no hacemos entregas.
+
+  Aceptamos pagos en efectivo, Nequi o Bancolombia.`;
 
   return (
     <div className="formulario-overlay">

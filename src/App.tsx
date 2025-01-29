@@ -14,13 +14,13 @@ const App: React.FC = () => {
         <nav>
           <ul className="navList">
             <li className="navItem">
-              <Link to="/" className="link">Comprar Kit de 8 Cámaras de Seguridad HIKVISION</Link>
+              <Link to="/" className="link">Kits de Cámaras de Seguridad HIKVISION</Link>
             </li>
             <li className="navItem">
-              <Link to="/kit_4-camaras-seguridad" className="link">Comprar Kit de 4 Cámaras de Seguridad HIKVISION</Link>
+              <Link to="/kit_4-camaras-seguridad" className="link"></Link>
             </li>
             <li className="navItem">
-              <Link to="/kit_16-camaras-seguridad" className="link">Comprar Kit de 16 Cámaras de Seguridad HIKVISION</Link>
+              <Link to="/kit_16-camaras-seguridad" className="link"></Link>
             </li>
           </ul>
         </nav>

@@ -77,6 +77,18 @@ const Kit4Camaras: React.FC = () => {
     { to: '/kit_16-camaras-seguridad', text: 'Kit De 16 Camaras de seguridad HIKVISION' },
   ];
 
+  interface ImagenProps {
+    src: string;
+    alt: string;
+  }
+  const Imagen: React.FC<ImagenProps> = ({ src, alt }) => {
+    return (
+      <Suspense fallback={<div>Cargando imagen...</div>}>
+        <img src={src} alt={alt} />
+      </Suspense>
+    );
+  };
+
   const carruseles = [
     {
       title: '1 Video Grabador DVR de 4 Canales, 4 MPX Lite + IA',
@@ -154,6 +166,26 @@ const Kit4Camaras: React.FC = () => {
       botonTexto: 'Pídalo Ahora!'
     }
   ];
+
+  function Carruseles() {
+    return (
+      <div>
+        {carruseles.map((carrusel, index) => (
+          <div key={index}>
+            <h2>{carrusel.title}</h2>
+            <p>{carrusel.description}</p>
+            <div>
+              {carrusel.images.map((image, idx) => (
+                <Imagen key={idx} src={image.src} alt={image.alt} />
+              ))}
+            </div>
+            <button>{carrusel.botonTexto}</button>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
 
   const banners = [
     <Banner
