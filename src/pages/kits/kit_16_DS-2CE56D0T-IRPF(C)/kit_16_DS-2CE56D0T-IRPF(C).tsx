@@ -11,8 +11,8 @@ import Formulario from '@/componentes/Formulario';
 
 
 // Importar imágenes
-import imagen28 from '@/assets/28.webp';
-import imagen29 from '@/assets/29.webp';
+import imagen28 from '@/assets/36.webp';
+import imagen29 from '@/assets/37.webp';
 import imagen30 from '@/assets/30.webp';
 import imagen31 from '@/assets/31.webp';
 import imagen26 from '@/assets/26.webp';
@@ -33,10 +33,10 @@ import imagen15 from '@/assets/15.webp';
 import imagen16 from '@/assets/16.webp';
 import imagen17 from '@/assets/17.webp';
 import imagen18 from '@/assets/18.webp';
-import headerImage from '@/assets/28.webp'; // Ensure the correct path
+import headerImage from '@/assets/36.webp'; // Ensure the correct path
 
 
-const Kits8Camaras: React.FC = () => {
+const Kits16Camaras: React.FC = () => {
   const {
     modalAbierto,
     abrirModal: abrirModalBase,
@@ -66,6 +66,7 @@ const Kits8Camaras: React.FC = () => {
     window.location.href = phoneUri;
   };
 
+
   const headerLinks = [
     { to: '/', text: 'Kit De 8 Camaras' },
     { to: '/kit_4', text: 'Kit De 4 Camaras' },
@@ -74,44 +75,44 @@ const Kits8Camaras: React.FC = () => {
 
   const carruseles = [
     {
-      title: '1 Video Grabador DVR de 8 Canales, 4 MPX Lite + IA',
-      description: 'DVR AcuSense de 16 canales, 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
+      title: '1 Video Grabador DVR de 16 Canales, 4 MPX Lite + IA',
+      description: 'DVR AcuSense mini de 16 canales Y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
       images: [imagen29, imagen30, imagen31],
       botonTexto: 'Domicilio Gratis!'
     },
     {
-      title: '8 Camaras de 2 Mpx y 20 MTS de Alcance',
-      description: '8 Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
+      title: '16 Camaras de 2 Mpx y 20 MTS de Alcance',
+      description: 'Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
       images: [imagen32, imagen11, imagen12, imagen13, imagen14, imagen15, imagen16, imagen17, imagen18],
       botonTexto: 'Page en casa!'
     },
     {
-      title: '1 Disco duro ideal para videovigilancia',
+      title: '1 Disco duro Ideal para videovigilancia',
       description: 'Disco duro seagate skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
       images: [imagen19, imagen20, imagen21, imagen22, imagen23],
       botonTexto: 'Obten el Kit!'
     },
     {
-      title: '8 Fuentes De Energia 12v - 1amp',
-      description: '8 fuentes de alimentación de AC 110- 240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con led indicador de funcionamiento, el articulo puede ser ligeramente distinto al de la foto.',
+      title: '16 Fuentes De Energia 12v - 1amp',
+      description: '16 fuentes de alimentación de AC 110- 240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con led indicador de funcionamiento, el articulo puede ser ligeramente distinto al de la foto.',
       images: [imagen33],
       botonTexto: 'Comprar!'
     },
     {
-      title: '8 pares de Video Baluns',
-      description: '8 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
+      title: '16 pares de Video Baluns',
+      description: '16 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
       images: [imagen34],
       botonTexto: 'Domicilio Gratis!'
     },
     {
-      title: '8 pares de Borneras',
-      description: '8 pares de borneras electricas para la conexión y distribución de energia de las camaras.',
+      title: '16 pares de Borneras',
+      description: '16 pares de borneras electricas para la conexión y distribución de energia de las camaras.',
       images: [imagen35],
       botonTexto: 'Obtener!'
     },
     {
-      title: '100 mts de cable utp',
-      description: 'cable utp cat 5e para interior inluidos en el kit.',
+      title: '200 mts de cable utp',
+      description: 'cable utp cat 5e en aleacion para interior inluidos en el kit.',
       images: [imagen26],
       botonTexto: 'Pidelo Ahora!'
     },
@@ -191,7 +192,7 @@ const Kits8Camaras: React.FC = () => {
 
   const descripcionModal = `
     complete el formulario para hacer llegar el pedido a su domicilio.
-    Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,175,000 COP. ¡Domicilio gratis!
+    Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,990.000 COP. ¡Domicilio gratis!
     Realizamos una llamada confirmación para verificar la dirección y disponibilidad de los equipos. ¡Entrega inmediata!
   `;
 
@@ -203,7 +204,7 @@ const Kits8Camaras: React.FC = () => {
         titulo="Solo para Bucaramanga y el área metropolitana"
         subtitulo="Tecnología avanzada: detección de humanos y vehículos"
         descripcion="Kit de 8 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
-        precio="1,175,000"
+        precio="1,990.000"
       >
         <BotonCompra
           texto="Compra el Kit de Cámaras!"
@@ -257,7 +258,7 @@ const Kits8Camaras: React.FC = () => {
           abrirWhatsApp={abrirWhatsApp}
           hacerLlamada={hacerLlamada}
           horariosEntrega={horariosEntrega}
-          tituloModal="Confirme La Compra Del Kit De 8 Cámaras"
+          tituloModal="Confirme la Compra del kit de 8 cámaras"
           descripcionModal={descripcionModal}
         />
       )}
@@ -267,18 +268,18 @@ const Kits8Camaras: React.FC = () => {
         titulo=""
         subtitulo=""
         descripcion=""
-        precio="1,175,000"
+        precio="1,990.000"
       >
     </HeroHeader>
       
     <Formulario
-      titulo="Confirmar Compra, kit de 4 cámaras con inteligencia artificial"
-      descripcion="complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,175.000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
-      precio="$1,175.000"
+      titulo="Confirme la Compra del kit de 16 cámaras"
+      descripcion="Complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,990.000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
+      precio="$1,990.000"
     />
 
     </div>
   );
 };
 
-export default Kits8Camaras;
+export default Kits16Camaras;

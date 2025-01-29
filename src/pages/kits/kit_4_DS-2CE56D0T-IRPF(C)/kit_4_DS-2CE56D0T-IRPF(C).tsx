@@ -99,6 +99,7 @@ const Kit4Camaras: React.FC = () => {
   const headerLinks = [
     { to: '/', text: 'Kit De 8 Camaras' },
     { to: '/kit_4', text: 'Kit De 4 Camaras' },
+    { to: '/kit_16', text: 'Kit De 16 Camaras' },
   ];
 
   const carruseles = [
@@ -115,7 +116,7 @@ const Kit4Camaras: React.FC = () => {
       botonTexto: 'Page en casa!'
     },
     {
-      title: '1 Disco duro para videovigilancia seagate skyhawk - 1 TB',
+      title: '1 Disco duro Ideal para videovigilancia',
       description: 'Disco duro seagate skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
       images: [imagen19, imagen20, imagen21, imagen22, imagen23],
       botonTexto: 'Obten el Kit!'
@@ -127,7 +128,7 @@ const Kit4Camaras: React.FC = () => {
       botonTexto: 'Comprar!'
     },
     {
-      title: '4 pares de Video Baluns 12v - 1amp',
+      title: '4 pares de Video Baluns',
       description: '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
       images: [imagen25],
       botonTexto: 'Domicilio Gratis!'
@@ -320,20 +321,10 @@ const Kit4Camaras: React.FC = () => {
 
       </HeroHeader>
       <Formulario
-        onClose={cerrarModal}
-        onConfirm={handleConfirmarCompra}
-        nombre={nombre}
-        setNombre={setNombre}
-        telefono={telefono}
-        setTelefono={setTelefono}
-        direccion={direccion}
-        setDireccion={setDireccion}
-        ciudadYBarrio={ciudadYBarrio}
-        setCiudadYBarrio={setCiudadYBarrio}
-        abrirWhatsApp={abrirWhatsApp}
-        hacerLlamada={hacerLlamada}
-        horariosEntrega={horariosEntrega}
-      />
+      titulo="Confirme la Compra del kit de 4 cámaras"
+      descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $780,000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
+      precio="$780,000"
+    />
     </div>
   );
 };
