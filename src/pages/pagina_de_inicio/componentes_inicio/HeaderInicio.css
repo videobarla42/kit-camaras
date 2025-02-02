@@ -1,0 +1,111 @@
+.header-inicio {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.texto-container {
+  max-width: 350px; /* Reduce el ancho máximo del texto si es necesario */
+}
+
+.titulo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.descripcion {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.imagenes-container {
+  display: flex;
+  justify-content: flex-start; /* Asegura que las imágenes estén alineadas más cerca entre sí */
+  align-items: center;
+  position: relative;
+  width: 400px; /* Ajusta el ancho total de las imágenes */
+  height: 400px;
+}
+
+.phone-frame {
+  background-color: #000;
+  border-radius: 15px;
+  padding: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px; /* Ajusta aún más el tamaño de los marcos */
+  height: 300px; /* Ajusta el tamaño de los marcos */
+  position: absolute;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.phone-frame img {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+}
+
+.phone-frame.center {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+.phone-frame.left {
+  transform: translateX(-100%) scale(0.7); /* Acelera el desplazamiento y reduce la distancia */
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.phone-frame.right {
+  transform: translateX(100%) scale(0.7); /* Acelera el desplazamiento y reduce la distancia */
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.phone-frame.hidden {
+  opacity: 0;
+  z-index: 0;
+}
+
+/* Estilos para pantallas de 768px o menos */
+@media (max-width: 768px) {
+  .header-inicio {
+    flex-direction: column; /* Cambia a una columna en lugar de una fila */
+    padding: 15px;
+  }
+
+  .texto-container {
+    max-width: 100%; /* Deja que el texto ocupe todo el ancho disponible */
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
+
+  .titulo {
+    font-size: 2rem; /* Reduce el tamaño de la fuente */
+    margin-bottom: 10px;
+  }
+
+  .descripcion {
+    font-size: 1rem; /* Reduce el tamaño de la fuente */
+    text-align: center; /* Centra la descripción */
+  }
+
+  .imagenes-container {
+    width: 90%; /* Hace que las imágenes se ajusten al ancho disponible */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin-top: 20px;
+  }
+
+  .phone-frame {
+    width: 100px; /* Ajusta el tamaño de los marcos en pantallas pequeñas */
+    height: 200px;
+  }
+}

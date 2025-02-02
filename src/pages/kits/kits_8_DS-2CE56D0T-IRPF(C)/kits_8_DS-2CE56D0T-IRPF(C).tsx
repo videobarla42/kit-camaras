@@ -66,10 +66,14 @@ const Kits8Camaras: React.FC = () => {
     window.location.href = phoneUri;
   };
 
+ 
   const headerLinks = [
-    { to: '/', text: 'Kit De 8 Camaras de seguridad HIKVISION' },
     { to: '/kit_4-camaras-seguridad', text: 'Kit De 4 Camaras de seguridad HIKVISION' },
+    { to: '/kits_8-camaras-seguridad', text: 'Kit De 8 Camaras de seguridad HIKVISION' },
     { to: '/kit_16-camaras-seguridad', text: 'Kit De 16 Camaras de seguridad HIKVISION' },
+    { to: '/kit_4-camaras-seguridad-bala', text: 'Kit De 4 Camaras de seguridad HIKVISION tipo bala 1080p ' },
+    { to: '/kit_8-camaras-seguridad-bala', text: 'Kit De 8 Camaras de seguridad HIKVISION tipo bala 1080p ' },
+    { to: '/kit_16-camaras-seguridad-bala', text: 'Kit De 16 Camaras de seguridad HIKVISION tipo bala 1080p ' },
   ];
 
  interface ImagenProps {

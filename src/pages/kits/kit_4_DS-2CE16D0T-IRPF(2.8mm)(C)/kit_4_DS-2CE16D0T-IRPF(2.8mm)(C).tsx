@@ -12,36 +12,37 @@ const ModalCompra = lazy(() => import('@/componentes/ModalCompra'));
 const Formulario = lazy(() => import('@/componentes/Formulario'));
 
 // Importar imágenes
-import imagen1 from '@/assets/1.webp';
-import imagen2 from '@/assets/2.webp';
-import imagen3 from '@/assets/3.webp';
-import imagen4 from '@/assets/4.webp';
-import imagen5 from '@/assets/5.webp';
-import imagen6 from '@/assets/6.webp';
-import imagen7 from '@/assets/7.webp';
-import imagen8 from '@/assets/8.webp';
-import imagen9 from '@/assets/9.webp';
-import imagen10 from '@/assets/10.webp';
-import imagen11 from '@/assets/11.webp';
-import imagen12 from '@/assets/12.webp';
-import imagen13 from '@/assets/13.webp';
-import imagen14 from '@/assets/14.webp';
-import imagen15 from '@/assets/15.webp';
-import imagen16 from '@/assets/16.webp';
-import imagen17 from '@/assets/17.webp';
-import imagen18 from '@/assets/18.webp';
-import imagen19 from '@/assets/19.webp';
-import imagen20 from '@/assets/20.webp';
-import imagen21 from '@/assets/21.webp';
-import imagen22 from '@/assets/22.webp';
-import imagen23 from '@/assets/23.webp';
-import imagen24 from '@/assets/24.webp';
-import imagen25 from '@/assets/25.webp';
-import imagen26 from '@/assets/26.webp';
-import imagen27 from '@/assets/27.webp';
-import headerImage from '@/assets/1.webp';
+import imagen1 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
+import imagen2 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)2.webp';
+import imagen3 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)3.webp';
+import imagen4 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)4.webp';
+import imagen5 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)5.webp';
+import imagen6 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)6.webp';
+import imagen7 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)7.webp';
+import imagen8 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)8.webp';
+import imagen9 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)9.webp';
+import imagen10 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)10.webp';
+import imagen11 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)11.webp';
+import imagen12 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)12.webp';
+import imagen13 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)13.webp';
+import imagen14 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)14.webp';
+import imagen15 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)15.webp';
+import imagen16 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)16.webp';
+import imagen17 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)17.webp';
+import imagen18 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)18.webp';
+import imagen19 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)19.webp';
+import imagen20 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)20.webp';
+import imagen21 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)21.webp';
+import imagen22 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)22.webp';
+import imagen23 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)23.webp';
+import imagen24 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)24.webp';
+import imagen25 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)25.webp';
+import imagen26 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)26.webp';
+import imagen27 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)27.webp';
+import headerImage from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
 
-const Kit4Camaras: React.FC = () => {
+
+const Kit4CamarasBala: React.FC = () => {          
   const {
     modalAbierto,
     abrirModal: abrirModalBase,
@@ -61,7 +62,7 @@ const Kit4Camaras: React.FC = () => {
 
   const abrirWhatsApp = () => {
     const phone = '3046615865';
-    const message = 'Hola, estoy interesado en el kit de 4 cámaras.';
+    const message = 'Hola, estoy interesado en el kit de 4 cámaras Tipo bala 1080p de HIKVISION  .';
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -72,7 +73,6 @@ const Kit4Camaras: React.FC = () => {
   };
 
  
-
   const headerLinks = [
     { to: '/kit_4-camaras-seguridad', text: 'Kit De 4 Camaras de seguridad HIKVISION' },
     { to: '/kits_8-camaras-seguridad', text: 'Kit De 8 Camaras de seguridad HIKVISION' },
@@ -423,4 +423,4 @@ const Kit4Camaras: React.FC = () => {
   );
 };
 
-export default Kit4Camaras;
+export default  Kit4CamarasBala;

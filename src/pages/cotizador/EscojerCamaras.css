@@ -1,0 +1,114 @@
+/* Estilo para el botón que abre el modal */
+.button {
+    padding: 12px 25px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    position: relative; /* Posiciona el botón en un lugar fijo en la pantalla */
+    top: -150px; /* Espaciado desde la parte superior */
+    left: 20px; /* Espaciado desde la izquierda */
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo para el modal */
+  .modal {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 0 auto; /* Centrado horizontal */
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative; /* Necesario para el centrado */
+    top: 0%; /* Centrado vertical */
+    transform: translateY(-50%); /* Ajuste para el centrado exacto */
+    overflow-y: auto;
+    z-index: 1001; /* Asegúrate de que el modal esté encima */
+  }
+  
+  /* Estilo para el fondo del overlay */
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Se asegura de que cubra toda la pantalla */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000; /* Fondo detrás del modal */
+  }
+  
+  /* Estilo para el título del modal */
+  .modal h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Estilo para la lista de pasos */
+  .modal ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    line-height: 1.6;
+  }
+  
+  .modal li {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  /* Estilo para el botón de cerrar */
+  .close-button {
+    background-color: #FF0000;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close-button:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .modal {
+      max-width: 90%;
+      padding: 15px;
+    }
+  
+    .button {
+        padding: 0px 25px;
+        background-color: hsl(345, 100%, 50%);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16x;
+        transition: background-color 0.3s ease;
+        position: relative; /* Posiciona el botón en un lugar fijo en la pantalla */
+        top: -375px; /* Espaciado desde la parte superior */
+        left: -100px; /* Espaciado desde la izquierda */
+        max-width: 70%;
+
+      }
+  
+    .close-button {
+      width: 100%;
+    }
+  }
+  

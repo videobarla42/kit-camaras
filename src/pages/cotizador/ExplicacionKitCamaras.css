@@ -1,0 +1,98 @@
+/* Estilos para el botón y el modal */
+.explicacion-kit-camaras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .explicacion-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    position: relative; /* Posiciona el botón en un lugar fijo */
+    top: -390px; /* Espaciado desde la parte superior */
+    left: -150px; /* Espaciado desde la izquierda */
+    max-width: 70%;
+  }
+  
+  .explicacion-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .modal-content li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .close-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .explicacion-btn {
+      padding: 0px 0px;
+      background-color: #007BFF;
+      color: hsl(0, 86%, 58%);
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      position: relative;
+      top: -265px; /* Espaciado desde la parte superior */
+    left:-100px;/* Espaciado desde la izquierda */
+    max-width: 90%;
+    }
+  
+    .close-btn {
+      width: 100%;
+    }
+  }
+  
