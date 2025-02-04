@@ -16,6 +16,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ links, extraMessage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -28,25 +29,18 @@ const Header: React.FC<HeaderProps> = ({ links, extraMessage }) => {
           <span></span>
           <span></span>
         </button>
+
         <ul className={`navList ${isMenuOpen ? 'open' : ''}`}>
           {links.map((link, index) => (
             <li key={index} className="navItem">
               <Link to={link.to} className="link" onClick={toggleMenu}>
-                {link.image && (
-                  <img
-                    src={link.image}
-                    alt={link.text}
-                    onError={(e) => {
-                      e.currentTarget.src = 'Image1500'; // Fallback si la imagen falla
-                    }}
-                    className="linkImage"
-                  />
-                )}
+                {link.image && <img src={link.image} alt={link.text} className="linkImage" />}
                 {link.text}
               </Link>
             </li>
           ))}
         </ul>
+
         {extraMessage && <div className="extraMessage">{extraMessage}</div>}
       </nav>
     </header>
