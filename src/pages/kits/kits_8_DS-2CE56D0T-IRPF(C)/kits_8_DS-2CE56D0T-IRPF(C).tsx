@@ -91,7 +91,7 @@ const Kits8Camaras: React.FC = () => {
   const carruseles = [
     {
       title: '1 Video Grabador DVR de 8 Canales, 4 MPX Lite + IA',
-      description: 'DVR AcuSense de 8 canales, 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
+      description: 'DVR AcuSense de 8 Canales, 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
       images: [
         { src: imagen29, alt: 'Video Grabador DVR de 8 Canales HIKVISION' },
         { src: imagen30, alt: 'DVR AcuSense de 8 canales HIKVISION' },

@@ -45,8 +45,7 @@ const App: React.FC = () => {
       <div className="content">
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
-            <Route path="/" element={<Inicio />} />
-            <Route path="/kit_4-camaras-seguridad" element={<Kit_4_DS_2CE56D0T_IRPF_C />} />
+            <Route path="/" element={<Kit_4_DS_2CE56D0T_IRPF_C />} />
             <Route path="/kits_8-camaras-seguridad" element={<Kits_8_DS_2CE56D0T_IRPF_C />} />
             <Route path="/kit_16-camaras-seguridad" element={<Kit_16_DS_2CE56D0T_IRPF_C />} />
             <Route path="/cotizador" element={<IniciCotizador />} />
