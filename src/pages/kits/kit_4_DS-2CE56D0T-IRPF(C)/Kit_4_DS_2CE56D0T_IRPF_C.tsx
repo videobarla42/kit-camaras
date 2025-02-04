@@ -12,31 +12,34 @@ const ModalCompra = lazy(() => import('@/componentes/ModalCompra'));
 const Formulario = lazy(() => import('@/componentes/Formulario'));
 
 // Importar imágenes
-// Importar imágenes numeradas del 29 al 55
-import imagen29 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)29.webp';
-import imagen30 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)30.webp';
-import imagen31 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)31.webp';
-import imagen32 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)32.webp';
-import imagen33 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)33.webp';
-import imagen34 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)34.webp';
-import imagen35 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)35.webp';
-import imagen27 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)27.webp';
-import imagen11 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)11.webp';
-import imagen12 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)12.webp';
-import imagen13 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)13.webp';
-import imagen14 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)14.webp';
-import imagen15 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)15.webp';
-import imagen16 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)16.webp';
-import imagen17 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)17.webp';
-import imagen18 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)18.webp';
-import imagen19 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)19.webp';
-import imagen20 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)20.webp';
-import imagen21 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)21.webp';
-import imagen22 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)22.webp';
-import imagen23 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)23.webp';
-import imagen44 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)44.webp';
-import imagen28 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)28.webp';
-import headerImage from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)28.webp';
+import imagen1 from '@/assets/1.webp';
+import imagen2 from '@/assets/2.webp';
+import imagen3 from '@/assets/3.webp';
+import imagen4 from '@/assets/4.webp';
+import imagen5 from '@/assets/5.webp';
+import imagen6 from '@/assets/6.webp';
+import imagen7 from '@/assets/7.webp';
+import imagen8 from '@/assets/8.webp';
+import imagen9 from '@/assets/9.webp';
+import imagen10 from '@/assets/10.webp';
+import imagen11 from '@/assets/11.webp';
+import imagen12 from '@/assets/12.webp';
+import imagen13 from '@/assets/13.webp';
+import imagen14 from '@/assets/14.webp';
+import imagen15 from '@/assets/15.webp';
+import imagen16 from '@/assets/16.webp';
+import imagen17 from '@/assets/17.webp';
+import imagen18 from '@/assets/18.webp';
+import imagen19 from '@/assets/19.webp';
+import imagen20 from '@/assets/20.webp';
+import imagen21 from '@/assets/21.webp';
+import imagen22 from '@/assets/22.webp';
+import imagen23 from '@/assets/23.webp';
+import imagen24 from '@/assets/24.webp';
+import imagen25 from '@/assets/25.webp';
+import imagen26 from '@/assets/26.webp';
+import imagen27 from '@/assets/27.webp';
+import headerImage from '@/assets/1.webp';
 
 // Importación de las imágenes
 import Image1500 from '@/assets/1.webp';
@@ -46,8 +49,7 @@ import Image1503 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
 import Image1504 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)28.webp';
 import Image1505 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)36.webp';
 
-
-const Kit4CamarasBala: React.FC = () => {          
+const Kit4Camaras: React.FC = () => {
   const {
     modalAbierto,
     abrirModal: abrirModalBase,
@@ -67,7 +69,7 @@ const Kit4CamarasBala: React.FC = () => {
 
   const abrirWhatsApp = () => {
     const phone = '3046615865';
-    const message = 'Hola, estoy interesado en el kit de 4 cámaras Tipo bala 1080p de HIKVISION  .';
+    const message = 'Hola, estoy interesado en el kit de 4 cámaras.';
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -77,13 +79,15 @@ const Kit4CamarasBala: React.FC = () => {
     window.location.href = phoneUri;
   };
 
+
   const headerLinks = [
-    { to: '/kit_4-camaras-seguridad', text: 'Kit De 4 Camaras de seguridad HIKVISION', image: Image1500 },
+    { to: '/', text: 'Kit De 4 Camaras de seguridad HIKVISION', image: Image1500 },
     { to: '/kits_8-camaras-seguridad', text: 'Kit De 8 Camaras de seguridad HIKVISION', image: Image1501 },
     { to: '/kit_16-camaras-seguridad', text: 'Kit De 16 Camaras de seguridad HIKVISION', image: Image1502 },
     { to: '/kit_4-camaras-seguridad-bala', text: 'Kit De 4 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1503 },
     { to: '/kit_8-camaras-seguridad-bala', text: 'Kit De 8 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1504 },
     { to: '/kit_16-camaras-seguridad-bala', text: 'Kit De 8 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1505 },
+    { to: '/Precios', text: 'Precios', image: Image1505 },
 
   ];
 
@@ -104,10 +108,14 @@ const Kit4CamarasBala: React.FC = () => {
       title: '1 Video Grabador DVR de 4 Canales, 4 MPX Lite + IA',
       description: 'DVR AcuSense mini de 4 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
       images: [
-        { src: imagen29, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
-        { src: imagen30, alt: 'DVR AcuSense mini de 4 canales HIKVISION' },
-        { src: imagen31, alt: 'DVR con detección de movimiento avanzada' },
-        { src: imagen44, alt: 'DVR HIKVISION de 4 canales' }
+        { src: imagen2, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
+        { src: imagen3, alt: 'DVR AcuSense mini de 4 canales HIKVISION' },
+        { src: imagen4, alt: 'DVR con detección de movimiento avanzada' },
+        { src: imagen5, alt: 'DVR HIKVISION con protección perimetral' },
+        { src: imagen6, alt: 'DVR con compresión H.265 Pro+' },
+        { src: imagen7, alt: 'DVR con soporte para cámaras IP' },
+        { src: imagen8, alt: 'DVR con grabación en múltiples resoluciones' },
+        { src: imagen9, alt: 'DVR HIKVISION de 4 canales' }
       ],
       botonTexto: 'Domicilio Gratis!'
     },
@@ -115,7 +123,7 @@ const Kit4CamarasBala: React.FC = () => {
       title: '4 Cámaras de 2 Mpx y 20 MTS de Alcance',
       description: '4 Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
       images: [
-        { src: imagen32, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
+        { src: imagen10, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
         { src: imagen11, alt: 'Cámara de seguridad HIKVISION' },
         { src: imagen12, alt: 'Cámara con visión nocturna HIKVISION' },
         { src: imagen13, alt: 'Cámara Domo TURBOHD 1080p' },
@@ -143,7 +151,7 @@ const Kit4CamarasBala: React.FC = () => {
       title: '4 Fuentes de Energía',
       description: '4 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
       images: [
-        { src: imagen33, alt: 'Fuente de alimentación para cámaras de seguridad' }
+        { src: imagen24, alt: 'Fuente de alimentación para cámaras de seguridad' }
       ],
       botonTexto: 'Comprar!'
     },
@@ -151,7 +159,7 @@ const Kit4CamarasBala: React.FC = () => {
       title: '4 pares de Video Baluns',
       description: '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
       images: [
-        { src: imagen34, alt: 'Video Balun para transmisión de señales de video' }
+        { src: imagen25, alt: 'Video Balun para transmisión de señales de video' }
       ],
       botonTexto: 'Domicilio Gratis!'
     },
@@ -159,7 +167,7 @@ const Kit4CamarasBala: React.FC = () => {
       title: '4 pares de Borneras',
       description: '4 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
       images: [
-        { src: imagen35, alt: 'Borneras eléctricas para cámaras de seguridad' }
+        { src: imagen26, alt: 'Borneras eléctricas para cámaras de seguridad' }
       ],
       botonTexto: 'Obtener!'
     },
@@ -375,29 +383,33 @@ const Kit4CamarasBala: React.FC = () => {
           "@type": "Product",
           "name": "Kit de 4 Cámaras de Seguridad HIKVISION",
           "image": [
-            imagen28, // Header image
-      imagen11,
-      imagen12,
-      imagen13,
-      imagen14,
-      imagen15,
-      imagen16,
-      imagen17,
-      imagen18,
-      imagen19,
-      imagen20,
-      imagen21,
-      imagen22,
-      imagen23,
-      imagen27,
-      imagen29,
-      imagen30,
-      imagen31,
-      imagen32,
-      imagen33,
-      imagen34,
-      imagen35,
-      imagen44
+            imagen1,
+            imagen2,
+            imagen3,
+            imagen4,
+            imagen5,
+            imagen6,
+            imagen7,
+            imagen8,
+            imagen9,
+            imagen10,
+            imagen11,
+            imagen12,
+            imagen13,
+            imagen14,
+            imagen15,
+            imagen16,
+            imagen17,
+            imagen18,
+            imagen19,
+            imagen20,
+            imagen21,
+            imagen22,
+            imagen23,
+            imagen24,
+            imagen25,
+            imagen26,
+            imagen27
           ],
         "description": "Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina.",
         "brand": {
@@ -420,4 +432,4 @@ const Kit4CamarasBala: React.FC = () => {
   );
 };
 
-export default  Kit4CamarasBala;
+export default Kit4Camaras;

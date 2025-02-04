@@ -36,6 +36,16 @@ import imagen17 from '@/assets/17.webp';
 import imagen18 from '@/assets/18.webp';
 import headerImage from '@/assets/28.webp'; // Asegúrate de que la ruta sea correcta
 
+
+// Importación de las imágenes
+import Image1500 from '@/assets/1.webp';
+import Image1501 from '@/assets/28.webp';
+import Image1502 from '@/assets/36.webp';
+import Image1503 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
+import Image1504 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)28.webp';
+import Image1505 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)36.webp';
+
+
 const Kits8Camaras: React.FC = () => {
   const {
     modalAbierto,
@@ -66,14 +76,14 @@ const Kits8Camaras: React.FC = () => {
     window.location.href = phoneUri;
   };
 
- 
   const headerLinks = [
-    { to: '/kit_4-camaras-seguridad', text: 'Kit De 4 Camaras de seguridad HIKVISION' },
-    { to: '/kits_8-camaras-seguridad', text: 'Kit De 8 Camaras de seguridad HIKVISION' },
-    { to: '/kit_16-camaras-seguridad', text: 'Kit De 16 Camaras de seguridad HIKVISION' },
-    { to: '/kit_4-camaras-seguridad-bala', text: 'Kit De 4 Camaras de seguridad HIKVISION tipo bala 1080p ' },
-    { to: '/kit_8-camaras-seguridad-bala', text: 'Kit De 8 Camaras de seguridad HIKVISION tipo bala 1080p ' },
-    { to: '/kit_16-camaras-seguridad-bala', text: 'Kit De 16 Camaras de seguridad HIKVISION tipo bala 1080p ' },
+    { to: '/kit_4-camaras-seguridad', text: 'Kit De 4 Camaras de seguridad HIKVISION', image: Image1500 },
+    { to: '/kits_8-camaras-seguridad', text: 'Kit De 8 Camaras de seguridad HIKVISION', image: Image1501 },
+    { to: '/kit_16-camaras-seguridad', text: 'Kit De 16 Camaras de seguridad HIKVISION', image: Image1502 },
+    { to: '/kit_4-camaras-seguridad-bala', text: 'Kit De 4 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1503 },
+    { to: '/kit_8-camaras-seguridad-bala', text: 'Kit De 8 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1504 },
+    { to: '/kit_16-camaras-seguridad-bala', text: 'Kit De 8 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1505 },
+
   ];
 
  interface ImagenProps {

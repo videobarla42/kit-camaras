@@ -1,5 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import useModalCompra from '@/componentes/useModalCompra';
+import { usePrice } from '@/componentes/PriceContext';
+
 
 // Lazy load de componentes
 const Carrusel = lazy(() => import('@/componentes/Carrusel'));
@@ -41,6 +43,15 @@ import imagen26 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)26.webp';
 import imagen27 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)27.webp';
 import headerImage from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
 
+// Importación de las imágenes
+import Image1500 from '@/assets/1.webp';
+import Image1501 from '@/assets/28.webp';
+import Image1502 from '@/assets/36.webp';
+import Image1503 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
+import Image1504 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)28.webp';
+import Image1505 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)36.webp';
+
+
 
 const Kit4CamarasBala: React.FC = () => {          
   const {
@@ -59,6 +70,7 @@ const Kit4CamarasBala: React.FC = () => {
   } = useModalCompra();
 
   const [carruselSeleccionado, setCarruselSeleccionado] = React.useState<any>(null);
+  const { prices } = usePrice();
 
   const abrirWhatsApp = () => {
     const phone = '3046615865';
@@ -74,18 +86,19 @@ const Kit4CamarasBala: React.FC = () => {
 
  
   const headerLinks = [
-    { to: '/kit_4-camaras-seguridad', text: 'Kit De 4 Camaras de seguridad HIKVISION' },
-    { to: '/kits_8-camaras-seguridad', text: 'Kit De 8 Camaras de seguridad HIKVISION' },
-    { to: '/kit_16-camaras-seguridad', text: 'Kit De 16 Camaras de seguridad HIKVISION' },
-    { to: '/kit_4-camaras-seguridad-bala', text: 'Kit De 4 Camaras de seguridad HIKVISION tipo bala 1080p ' },
-    { to: '/kit_8-camaras-seguridad-bala', text: 'Kit De 8 Camaras de seguridad HIKVISION tipo bala 1080p ' },
-    { to: '/kit_16-camaras-seguridad-bala', text: 'Kit De 16 Camaras de seguridad HIKVISION tipo bala 1080p ' },
-  ];
+    { to: '/', text: 'Kit De 4 Camaras de seguridad HIKVISION', image: Image1500 },
+    { to: '/kits_8-camaras-seguridad', text: 'Kit De 8 Camaras de seguridad HIKVISION', image: Image1501 },
+    { to: '/kit_16-camaras-seguridad', text: 'Kit De 16 Camaras de seguridad HIKVISION', image: Image1502 },
+    { to: '/kit_4-camaras-seguridad-bala', text: 'Kit De 4 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1503 },
+    { to: '/kit_8-camaras-seguridad-bala', text: 'Kit De 8 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1504 },
+    { to: '/kit_16-camaras-seguridad-bala', text: 'Kit De 8 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1505 },
 
+  ];
   interface ImagenProps {
     src: string;
     alt: string;
   }
+
   const Imagen: React.FC<ImagenProps> = ({ src, alt }) => {
     return (
       <Suspense fallback={<div>Cargando imagen...</div>}>
@@ -359,6 +372,11 @@ const Kit4CamarasBala: React.FC = () => {
         />
       </Suspense>
 
+      <div>
+      <h2>Precio del Componente B</h2>
+      <p>${prices['B'] || 'No definido'}</p>
+    </div>
+
       <Suspense fallback={<div>Cargando...</div>}>
         <Formulario
           titulo="Confirme la Compra del kit de 4 cámaras"
@@ -419,7 +437,9 @@ const Kit4CamarasBala: React.FC = () => {
         }
       })}
     </script>
+    
     </div>
+    
   );
 };
 
