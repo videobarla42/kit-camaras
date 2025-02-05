@@ -81,15 +81,13 @@ const Kit4CamarasBala: React.FC = () => {
     window.location.href = phoneUri;
   };
 
- 
   const headerLinks = [
-    { to: '/', text: 'Kit De 4 Camaras de seguridad Domo De HIKVISION', image: Image1500 },
-    { to: '/kits_8-camaras-seguridad', text: 'Kit De 8 Camaras de seguridad HIKVISION', image: Image1501 },
-    { to: '/kit_16-camaras-seguridad', text: 'Kit De 16 Camaras de seguridad HIKVISION', image: Image1502 },
-    { to: '/kit_4-camaras-seguridad-bala', text: 'Kit De 4 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1503 },
-    { to: '/kit_8-camaras-seguridad-bala', text: 'Kit De 8 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1504 },
-    { to: '/kit_16-camaras-seguridad-bala', text: 'Kit De 8 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1505 },
-
+    { to: '/', text: 'Kit 4 Cámaras de seguridad Domo HIKVISION $780,000 COP', image: Image1500 },
+    { to: '/kits_8-camaras-seguridad', text: 'Kit 8 Cámaras de seguridad Domo HIKVISION $1,175,000 COP', image: Image1501 },
+    { to: '/kit_16-camaras-seguridad', text: 'Kit 16 Cámaras de seguridad Domo HIKVISION $1,990,000 COP', image: Image1502 },
+    { to: '/kit_4-camaras-seguridad-bala', text: 'Kit 4 Cámaras de seguridad Bala HIKVISION $860,000 COP', image: Image1503 },
+    { to: '/kit_8-camaras-seguridad-bala', text: 'Kit 8 Cámaras de seguridad Bala HIKVISION $1,370,000 COP', image: Image1504 },
+    { to: '/kit_16-camaras-seguridad-bala', text: 'Kit 16 Cámaras de seguridad HIKVISION $2,340,000 COP', image: Image1505 },
   ];
 
   interface ImagenProps {

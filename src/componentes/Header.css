@@ -131,6 +131,7 @@
     color: hsl(0, 0%, 100%); /* Color del texto "X" */
   }
   
+  
   .navList.open {
     position: relative; /* Para posicionar el botón de cierre */
   }

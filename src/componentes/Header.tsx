@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
+
 // Importación de las imágenes
 import Image51 from '@/assets/1.webp';
 import Image52 from '@/assets/2.webp';
@@ -20,33 +21,19 @@ const Header: React.FC<HeaderProps> = ({ links, extraMessage }) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
   return (
     <header className="header">
       <nav>
-        {/* Botón de hamburguesa para abrir el menú */}
         <button className="hamburger" onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        {/* Menú desplegable */}
         <ul className={`navList ${isMenuOpen ? 'open' : ''}`}>
-          {/* Botón de cierre (X) */}
-          {isMenuOpen && (
-            <button className="closeButton" onClick={closeMenu}>
-              X
-            </button>
-          )}
-
-          {/* Elementos del menú */}
           {links.map((link, index) => (
             <li key={index} className="navItem">
-              <Link to={link.to} className="link" onClick={closeMenu}>
+              <Link to={link.to} className="link" onClick={toggleMenu}>
                 {link.image && <img src={link.image} alt={link.text} className="linkImage" />}
                 {link.text}
               </Link>
@@ -54,7 +41,6 @@ const Header: React.FC<HeaderProps> = ({ links, extraMessage }) => {
           ))}
         </ul>
 
-        {/* Mensaje adicional */}
         {extraMessage && <div className="extraMessage">{extraMessage}</div>}
       </nav>
     </header>
