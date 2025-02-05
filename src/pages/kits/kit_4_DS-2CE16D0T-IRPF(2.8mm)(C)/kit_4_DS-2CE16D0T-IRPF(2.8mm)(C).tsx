@@ -74,7 +74,7 @@ const Kit4CamarasBala: React.FC = () => {
 
   const abrirWhatsApp = () => {
     const phone = '3046615865';
-    const message = 'Hola, estoy interesado en el kit de 4 cámaras Tipo bala 1080p de HIKVISION  .';
+    const message = 'Hola, Me Interesa el kit de 4 cámaras Tipo bala 1080p-2mpx de HIKVISION, Puede Darme Mas Informacion?';
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -86,7 +86,7 @@ const Kit4CamarasBala: React.FC = () => {
 
  
   const headerLinks = [
-    { to: '/', text: 'Kit De 4 Camaras de seguridad HIKVISION', image: Image1500 },
+    { to: '/', text: 'Kit De 4 Camaras de seguridad Domo HIKVISION', image: Image1500 },
     { to: '/kits_8-camaras-seguridad', text: 'Kit De 8 Camaras de seguridad HIKVISION', image: Image1501 },
     { to: '/kit_16-camaras-seguridad', text: 'Kit De 16 Camaras de seguridad HIKVISION', image: Image1502 },
     { to: '/kit_4-camaras-seguridad-bala', text: 'Kit De 4 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1503 },
@@ -109,7 +109,7 @@ const Kit4CamarasBala: React.FC = () => {
 
   const carruseles = [
     {
-      title: '1 Video Grabador DVR de 4 Canales, 4 MPX Lite + IA',
+      title: '1 DVR de 4 Canales',
       description: 'DVR AcuSense mini de 4 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
       images: [
         { src: imagen2, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
@@ -124,8 +124,8 @@ const Kit4CamarasBala: React.FC = () => {
       botonTexto: 'Domicilio Gratis!'
     },
     {
-      title: '4 Cámaras de 2 Mpx y 20 MTS de Alcance',
-      description: '4 Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
+      title: '4 Cámaras Bala de 2 Mpx',
+      description: '4 Cámaras Bala TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
       images: [
         { src: imagen10, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
         { src: imagen11, alt: 'Cámara de seguridad HIKVISION' },
@@ -278,7 +278,7 @@ const Kit4CamarasBala: React.FC = () => {
   Aceptamos pagos en efectivo, Nequi o Bancolombia.`;
 
   const descripcionModal = `Complete el formulario para hacer llegar el pedido a su domicilio.
-  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $780,000 COP. ¡Domicilio gratis!
+  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $860,000 COP. ¡Domicilio gratis!
   Realizamos una llamada de confirmación para verificar la dirección y disponibilidad de los equipos. ¡Entrega inmediata!`;
 
   return (
@@ -292,8 +292,8 @@ const Kit4CamarasBala: React.FC = () => {
           imagen={headerImage}
           titulo="Solo para Bucaramanga y el área metropolitana"
           subtitulo="Tecnología avanzada: detección de humanos y vehículos"
-          descripcion="Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
-          precio="780,000"
+          descripcion="Kit de 4 cámaras Bala Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
+          precio="860,000"
         >
           <BotonCompra
             texto="Compra el Kit de Cámaras!"
@@ -356,7 +356,7 @@ const Kit4CamarasBala: React.FC = () => {
             abrirWhatsApp={abrirWhatsApp}
             hacerLlamada={hacerLlamada}
             horariosEntrega={horariosEntrega}
-            tituloModal="Confirme la Compra del Kit de 4 Cámaras"
+            tituloModal="Confirme la Compra el Kit de 4 cámaras Bala De 2mpx"
             descripcionModal={descripcionModal}
           />
         </Suspense>
@@ -368,7 +368,7 @@ const Kit4CamarasBala: React.FC = () => {
           titulo=""
           subtitulo=""
           descripcion=""
-          precio="780,000"
+          precio="860,000"
         />
       </Suspense>
 
@@ -379,9 +379,9 @@ const Kit4CamarasBala: React.FC = () => {
 
       <Suspense fallback={<div>Cargando...</div>}>
         <Formulario
-          titulo="Confirme la Compra del kit de 4 cámaras"
-          descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $780,000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
-          precio="$780,000"
+          titulo="Compra el Kit de 4 cámaras Bala De 2mpx"
+          descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $860,000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
+          precio="$860,000"
         />
       </Suspense>
 
@@ -427,7 +427,7 @@ const Kit4CamarasBala: React.FC = () => {
         },
         "offers": {
           "@type": "Offer",
-          "price": "780000",
+          "price": "860000",
           "priceCurrency": "COP",
           "availability": "https://schema.org/InStock",
           "seller": {

@@ -3,6 +3,9 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './componentes/Header'; 
 import './App.css';
 import { PriceProvider } from '@/componentes/PriceContext';
+import Prueba from '@/pages/kits/kit_4_DS-2CE16D0T-IRPF(2.8mm)(C)/prueba';
+import PriceContext from '@/pages/kits/kit_4_DS-2CE16D0T-IRPF(2.8mm)(C)/prueba';
+
 
 // Importación de páginas con lazy loading
 const Kits_8_DS_2CE56D0T_IRPF_C = lazy(() => import('./pages/kits/kits_8_DS-2CE56D0T-IRPF(C)/kits_8_DS-2CE56D0T-IRPF(C).tsx'));
@@ -13,7 +16,6 @@ const IniciCotizador = lazy(() => import('./pages/cotizador/IniciCotizador.tsx')
 const Kit_4_DS_2CE16D0T_IRPF_C = lazy(() => import('./pages/kits/kit_4_DS-2CE16D0T-IRPF(2.8mm)(C)/kit_4_DS-2CE16D0T-IRPF(2.8mm)(C).tsx'));
 const Kit_8_DS_2CE16D0T_IRPF_C = lazy(() => import('./pages/kits/kit_8_DS-2CE16D0T-IRPF(2.8mm)(C)/kit_8_DS-2CE16D0T-IRPF(2.8mm)(C).tsx'));
 const Kit_16_DS_2CE16D0T_IRPF_C = lazy(() => import('./pages/kits/kit_16_DS-2CE16D0T-IRPF(2.8mm)(C)/kit_16_DS-2CE16D0T-IRPF(2.8mm)(C).tsx'));
-import Precios from '@/componentes/precios'; // Importa el componente Precios
 
 
 const App: React.FC = () => {
@@ -59,7 +61,11 @@ const App: React.FC = () => {
               <Route path="/kit_4-camaras-seguridad-bala" element={<Kit_4_DS_2CE16D0T_IRPF_C/>} />
               <Route path="/kit_8-camaras-seguridad-bala" element={<Kit_8_DS_2CE16D0T_IRPF_C/>} />
               <Route path="/kit_16-camaras-seguridad-bala" element={<Kit_16_DS_2CE16D0T_IRPF_C/>} />
-              <Route path="/Precios" element={<Precios/>} />
+              <Route path="/prueba" element={<Prueba />} />
+              <Route path="/PriceContext" element={<PriceContext />} />
+
+
+              
             </Routes>
           </Suspense>
         </div>

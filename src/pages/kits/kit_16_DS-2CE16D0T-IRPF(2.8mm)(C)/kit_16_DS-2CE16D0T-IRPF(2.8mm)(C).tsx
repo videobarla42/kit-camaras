@@ -67,7 +67,7 @@ const Kit4CamarasBala: React.FC = () => {
 
   const abrirWhatsApp = () => {
     const phone = '3046615865';
-    const message = 'Hola, estoy interesado en el kit de 4 cámaras Tipo bala 1080p de HIKVISION  .';
+    const message = 'Hola, Me Interesa el kit de 16 cámaras Tipo bala 1080p-2mpx de HIKVISION, Puede Darme Mas Informacion?';
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -78,7 +78,7 @@ const Kit4CamarasBala: React.FC = () => {
   };
 
   const headerLinks = [
-    { to: '/', text: 'Kit De 4 Camaras de seguridad HIKVISION', image: Image1500 },
+    { to: '/', text: 'Kit De 4 Camaras de seguridad Domo HIKVISION', image: Image1500 },
     { to: '/kits_8-camaras-seguridad', text: 'Kit De 8 Camaras de seguridad HIKVISION', image: Image1501 },
     { to: '/kit_16-camaras-seguridad', text: 'Kit De 16 Camaras de seguridad HIKVISION', image: Image1502 },
     { to: '/kit_4-camaras-seguridad-bala', text: 'Kit De 4 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1503 },
@@ -101,19 +101,19 @@ const Kit4CamarasBala: React.FC = () => {
 
   const carruseles = [
     {
-      title: '1 Video Grabador DVR de 4 Canales, 4 MPX Lite + IA',
-      description: 'DVR AcuSense mini de 4 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
+      title: '1 DVR de 16 Canales, 4 MPX',
+      description: 'DVR AcuSense mini de 16 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
       images: [
-        { src: imagen29, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
-        { src: imagen30, alt: 'DVR AcuSense mini de 4 canales HIKVISION' },
+        { src: imagen29, alt: 'Video Grabador DVR de 16 Canales HIKVISION' },
+        { src: imagen30, alt: 'DVR AcuSense mini de 16 canales HIKVISION' },
         { src: imagen31, alt: 'DVR con detección de movimiento avanzada' },
-        { src: imagen44, alt: 'DVR HIKVISION de 4 canales' }
+        { src: imagen44, alt: 'DVR HIKVISION de 16 canales' }
       ],
       botonTexto: 'Domicilio Gratis!'
     },
     {
-      title: '4 Cámaras de 2 Mpx y 20 MTS de Alcance',
-      description: '4 Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
+      title: '16 Cámaras bala de 2 Mpx',
+      description: '16 Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
       images: [
         { src: imagen32, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
         { src: imagen11, alt: 'Cámara de seguridad HIKVISION' },
@@ -140,31 +140,31 @@ const Kit4CamarasBala: React.FC = () => {
       botonTexto: 'Obtenga el Kit!'
     },
     {
-      title: '4 Fuentes de Energía',
-      description: '4 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
+      title: '16 Fuentes de Energía',
+      description: '16 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
       images: [
         { src: imagen33, alt: 'Fuente de alimentación para cámaras de seguridad' }
       ],
       botonTexto: 'Comprar!'
     },
     {
-      title: '4 pares de Video Baluns',
-      description: '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
+      title: '16 pares de Video Baluns',
+      description: '16 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
       images: [
         { src: imagen34, alt: 'Video Balun para transmisión de señales de video' }
       ],
       botonTexto: 'Domicilio Gratis!'
     },
     {
-      title: '4 pares de Borneras',
-      description: '4 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
+      title: '16 pares de Borneras',
+      description: '16 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
       images: [
         { src: imagen35, alt: 'Borneras eléctricas para cámaras de seguridad' }
       ],
       botonTexto: 'Obtener!'
     },
     {
-      title: '100 mts de cable UTP',
+      title: '200 mts de cable UTP',
       description: 'Cable UTP Cat 5e para interior incluido en el kit.',
       images: [
         { src: imagen27, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }
@@ -266,7 +266,7 @@ const Kit4CamarasBala: React.FC = () => {
   Aceptamos pagos en efectivo, Nequi o Bancolombia.`;
 
   const descripcionModal = `Complete el formulario para hacer llegar el pedido a su domicilio.
-  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $780,000 COP. ¡Domicilio gratis!
+  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $2,340.000 COP. ¡Domicilio gratis!
   Realizamos una llamada de confirmación para verificar la dirección y disponibilidad de los equipos. ¡Entrega inmediata!`;
 
   return (
@@ -280,8 +280,8 @@ const Kit4CamarasBala: React.FC = () => {
           imagen={headerImage}
           titulo="Solo para Bucaramanga y el área metropolitana"
           subtitulo="Tecnología avanzada: detección de humanos y vehículos"
-          descripcion="Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
-          precio="780,000"
+          descripcion="Kit de 16 cámaras Bala Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
+          precio="2,340.000"
         >
           <BotonCompra
             texto="Compra el Kit de Cámaras!"

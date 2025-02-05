@@ -69,7 +69,7 @@ const Kit4Camaras: React.FC = () => {
 
   const abrirWhatsApp = () => {
     const phone = '3046615865';
-    const message = 'Hola, estoy interesado en el kit de 4 cámaras.';
+    const message = 'Hola, Me Interesa el kit de 4 cámaras Tipo Domo 1080p-2mpx de HIKVISION, Puede Darme Mas Informacion?';
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -81,7 +81,7 @@ const Kit4Camaras: React.FC = () => {
 
 
   const headerLinks = [
-    { to: '/', text: 'Kit De 4 Camaras de seguridad HIKVISION', image: Image1500 },
+    { to: '/', text: 'Kit De 4 Camaras de seguridad Tipo Domo HIKVISION', image: Image1500 },
     { to: '/kits_8-camaras-seguridad', text: 'Kit De 8 Camaras de seguridad HIKVISION', image: Image1501 },
     { to: '/kit_16-camaras-seguridad', text: 'Kit De 16 Camaras de seguridad HIKVISION', image: Image1502 },
     { to: '/kit_4-camaras-seguridad-bala', text: 'Kit De 4 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1503 },
@@ -104,7 +104,7 @@ const Kit4Camaras: React.FC = () => {
 
   const carruseles = [
     {
-      title: '1 Video Grabador DVR de 4 Canales, 4 MPX Lite + IA',
+      title: '1 DVR de 4 Canales, 4 MPX Lite',
       description: 'DVR AcuSense mini de 4 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
       images: [
         { src: imagen2, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
@@ -119,8 +119,8 @@ const Kit4Camaras: React.FC = () => {
       botonTexto: 'Domicilio Gratis!'
     },
     {
-      title: '4 Cámaras de 2 Mpx y 20 MTS de Alcance',
-      description: '4 Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
+      title: '4 Cámaras Domo de 2 Mpx',
+      description: '4 Cámaras Domo TURBOHD 1080p-2mpx de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
       images: [
         { src: imagen10, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
         { src: imagen11, alt: 'Cámara de seguridad HIKVISION' },

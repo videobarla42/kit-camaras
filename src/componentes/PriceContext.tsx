@@ -11,7 +11,7 @@ const PriceContext = createContext<PriceContextType | undefined>(undefined);
 
 export const PriceProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [prices, setPrices] = useState<{ [key: string]: number }>({
-    B: 0, // Valor predeterminado para 'B'
+    B: 220, // Valor predeterminado para 'B'
   });
 
   const updatePrice = (key: string, newPrice: number) => {
