@@ -1,24 +1,28 @@
+/* =====================================
+   Estilos Generales del Carrusel
+   ===================================== */
+
 /* Contenedor principal del carrusel */
 .carrusel-container {
   position: relative;
   width: 100%;
-  max-width: 800px; /* Ajusta el ancho máximo según tu diseño */
+  max-width: 800px; /* Ancho máximo para pantallas grandes */
   margin: 0 auto;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
-  background-color: #f0f0f0; /* Fondo de respaldo para bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background-color: #f0f0f0; /* Fondo de respaldo */
 }
 
-/* Contenedor de las imágenes */
+/* Contenedor del slider (área visible de las imágenes) */
 .carrusel-slider {
   position: relative;
-  height: 400px; /* Ajusta la altura según tus necesidades */
+  height: 400px; /* Altura para pantallas grandes */
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: inherit;
 }
 
-/* Estilo de cada slide */
+/* Cada slide del carrusel */
 .carrusel-slide {
   position: absolute;
   top: 0;
@@ -27,46 +31,49 @@
   height: 100%;
   opacity: 0;
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-  will-change: opacity, transform; /* Mejora el rendimiento de las animaciones */
+  will-change: opacity, transform;
 }
 
-/* Estilo de la imagen dentro del slide */
+/* Imagen de cada slide */
 .carrusel-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 15px;
-  user-select: none; /* Evita que el usuario seleccione la imagen */
-  cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+  border-radius: inherit;
+  user-select: none;
+  cursor: pointer;
 }
 
-/* Estilo para el slide activo */
+/* Slide activo (visible) */
 .carrusel-slide.active {
   opacity: 1;
-  transform: scale(1.03); /* Efecto de zoom más sutil */
+  transform: scale(1.03); /* Efecto de zoom sutil */
 }
 
-/* Botones de navegación */
+/* =====================================
+   Botones de Navegación del Carrusel
+   ===================================== */
+
 .carrusel-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.6);
   border: none;
-  color: white;
+  color: #fff;
   font-size: 24px;
   padding: 12px;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
   z-index: 10;
-  opacity: 0.8; /* Botones ligeramente transparentes */
+  opacity: 0.8;
 }
 
 .carrusel-button:hover {
   background-color: rgba(0, 0, 0, 0.9);
   transform: translateY(-50%) scale(1.15);
-  opacity: 1; /* Mayor opacidad al hacer hover */
+  opacity: 1;
 }
 
 .carrusel-button.prev {
@@ -77,20 +84,25 @@
   right: 20px;
 }
 
-/* Modal para pantalla completa */
+/* =====================================
+   Modal para Vista en Pantalla Completa
+   ===================================== */
+
+/* Fondo del modal */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+  background-color: rgb(255, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  z-index: 1000;
 }
 
+/* Contenedor del contenido del modal */
 .modal-content {
   position: relative;
   max-width: 90%;
@@ -99,10 +111,11 @@
   overflow: hidden;
 }
 
+/* Imagen dentro del modal */
 .modal-content img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ajusta la imagen sin recortarla */
+  object-fit: contain; /* Se muestra completa sin recorte */
 }
 
 /* Botones de navegación del modal */
@@ -112,20 +125,20 @@
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.6);
   border: none;
-  color: white;
+  color: #fff;
   font-size: 24px;
   padding: 12px;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
   z-index: 10;
-  opacity: 0.8; /* Botones ligeramente transparentes */
+  opacity: 0.8;
 }
 
 .modal-button:hover {
   background-color: rgba(0, 0, 0, 0.9);
   transform: translateY(-50%) scale(1.15);
-  opacity: 1; /* Mayor opacidad al hacer hover */
+  opacity: 1;
 }
 
 .modal-button.prev {
@@ -136,10 +149,15 @@
   right: 20px;
 }
 
-/* Ajustes responsivos */
+/* =====================================
+   Ajustes Responsivos
+   ===================================== */
+
+/* Para pantallas tipo tablet (max-width: 768px) */
 @media (max-width: 768px) {
   .carrusel-container {
     max-width: 90%;
+    border-radius: 10px;
   }
 
   .carrusel-slider {
@@ -150,15 +168,83 @@
     font-size: 20px;
     padding: 10px;
   }
+
+ /* Fondo del modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
+/* Contenedor del contenido del modal */
+.modal-content {
+  top: 150PX;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  margin-left: -18PX;
+  max-height: 100vh; /* Limita la altura del modal */
+  overflow-y: auto; /* Permite scroll dentro del modal si el contenido es largo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Imagen dentro del modal */
+.modal-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Se muestra completa sin recorte */
+}
+}
+
+/* Para dispositivos móviles (max-width: 480px) */
 @media (max-width: 480px) {
   .carrusel-slider {
-    height: 200px; /* Altura reducida para móviles */
+    height: 200px; /* Altura adaptada para móviles */
   }
 
   .carrusel-button {
     font-size: 18px;
     padding: 8px;
+  }
+
+  .carrusel-button.prev {
+    left: 10px;
+  }
+
+  .carrusel-button.next {
+    right: 10px;
+  }
+
+  /* Ajustes en el modal para ocupar la mayor parte de la pantalla */
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-content {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+
+  .modal-button {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .modal-button.prev {
+    left: 10px;
+  }
+
+  .modal-button.next {
+    right: 10px;
   }
 }

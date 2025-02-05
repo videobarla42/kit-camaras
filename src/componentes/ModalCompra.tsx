@@ -45,8 +45,8 @@ const ModalCompra: React.FC<ModalCompraProps> = ({
   }, []); // El array vacío asegura que esto solo se ejecute al montar y desmontar el componente
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-content">
+    <div className="modal-overlay modal-compra">
+  <div className="modal-content2">
         <button className="cerrar-modal" onClick={onClose}>
           &times;
         </button>

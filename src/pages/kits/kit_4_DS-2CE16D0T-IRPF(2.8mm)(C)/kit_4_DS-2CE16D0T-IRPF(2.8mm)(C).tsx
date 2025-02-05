@@ -372,11 +372,7 @@ const Kit4CamarasBala: React.FC = () => {
         />
       </Suspense>
 
-      <div>
-      <h2>Precio del Componente B</h2>
-      <p>${prices['B'] || 'No definido'}</p>
-    </div>
-
+      
       <Suspense fallback={<div>Cargando...</div>}>
         <Formulario
           titulo="Compra el Kit de 4 cámaras Bala De 2mpx"

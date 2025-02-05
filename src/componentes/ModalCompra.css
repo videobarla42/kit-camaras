@@ -1,26 +1,27 @@
 /* Estilos para el fondo oscuro del modal */
-.modal-overlay {
+.modal-compra.modal-overlay {
   position: fixed;
-  top: 0;
+  top: 1PX;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 10, 10, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999; /* Asegúrate de que sea más alto que otros elementos */
   overflow-y: auto; /* Permite scroll en el overlay si es necesario */
+  height: 100vh;
 }
 
 /* Estilos para el contenido del modal */
-.modal-content {
+.modal-content2 {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   width: 90%;
-  max-width: 500px;
-  max-height: 80vh; /* Limita la altura del modal */
+  max-width: 450px;
+  max-height: 70vh; /* Limita la altura del modal */
   overflow-y: auto; /* Permite scroll dentro del modal si el contenido es largo */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -133,10 +134,33 @@
     --gap-medium: 10px;
   }
 
-  .modal-content {
-    padding: var(--padding-medium);
-    width: clamp(280px, 90%, 400px);
-    gap: var(--gap-medium);
+  .modal-compra.modal-overlay {
+    position: fixed;
+    top: 1PX;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 10, 10, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegúrate de que sea más alto que otros elementos */
+    overflow-y: auto; /* Permite scroll en el overlay si es necesario */
+    height: 100vh;
+  }
+  
+  /* Estilos para el contenido del modal */
+  .modal-content2 {
+    top: 10PX;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+    margin-left: -10PX;
+    max-height: 100vh; /* Limita la altura del modal */
+    overflow-y: auto; /* Permite scroll dentro del modal si el contenido es largo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
   }
 
   .cerrar-modal {

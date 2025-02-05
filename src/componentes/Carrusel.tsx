@@ -97,43 +97,47 @@ const Carrusel: React.FC<CarruselProps> = ({ images }) => {
         &rarr;
       </button>
 
-      {isModalOpen && (
-        <div
-          className="modal-overlay"
-          onClick={closeModal}
-        >
-          <div
-            className="modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={images[modalIndex].src}
-              alt={images[modalIndex].alt}
-              loading="lazy"
-            />
-            <button
-              className="modal-button prev"
-              onClick={(e) => {
-                e.stopPropagation();
-                prevModalSlide();
-              }}
-              aria-label="Imagen anterior"
-            >
-              &larr;
-            </button>
-            <button
-              className="modal-button next"
-              onClick={(e) => {
-                e.stopPropagation();
-                nextModalSlide();
-              }}
-              aria-label="Siguiente imagen"
-            >
-              &rarr;
-            </button>
-          </div>
-        </div>
-      )}
+    {isModalOpen && (
+  <div className="modal-overlay" onClick={closeModal}>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-counter">
+        {modalIndex + 1} / {images.length}
+      </div>
+      <button
+        className="modal-close"
+        onClick={closeModal}
+        aria-label="Cerrar modal"
+      >
+        &times;
+      </button>
+      <img
+        src={images[modalIndex].src}
+        alt={images[modalIndex].alt}
+        loading="lazy"
+      />
+      <button
+        className="modal-button prev"
+        onClick={(e) => {
+          e.stopPropagation();
+          prevModalSlide();
+        }}
+        aria-label="Imagen anterior"
+      >
+        &larr;
+      </button>
+      <button
+        className="modal-button next"
+        onClick={(e) => {
+          e.stopPropagation();
+          nextModalSlide();
+        }}
+        aria-label="Siguiente imagen"
+      >
+        &rarr;
+      </button>
+    </div>
+  </div>
+)}
     </div>
   );
 };
