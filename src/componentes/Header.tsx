@@ -23,27 +23,38 @@ const Header: React.FC<HeaderProps> = ({ links, extraMessage }) => {
 
   return (
     <header className="header">
-      <nav>
-        <button className="hamburger" onClick={toggleMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
+  <nav>
+    {/* Botón de hamburguesa */}
+    <button className="hamburger" onClick={toggleMenu}>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    {/* Lista de navegación */}
+    <ul className={`navList ${isMenuOpen ? 'open' : ''}`}>
+      {/* Botón de cerrar */}
+      {isMenuOpen && (
+        <button className="closeButton" onClick={toggleMenu}>
+          &times;
         </button>
+      )}
 
-        <ul className={`navList ${isMenuOpen ? 'open' : ''}`}>
-          {links.map((link, index) => (
-            <li key={index} className="navItem">
-              <Link to={link.to} className="link" onClick={toggleMenu}>
-                {link.image && <img src={link.image} alt={link.text} className="linkImage" />}
-                {link.text}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      {/* Elementos del menú */}
+      {links.map((link, index) => (
+        <li key={index} className="navItem">
+          <Link to={link.to} className="link" onClick={toggleMenu}>
+            {link.image && <img src={link.image} alt={link.text} className="linkImage" />}
+            {link.text}
+          </Link>
+        </li>
+      ))}
+    </ul>
 
-        {extraMessage && <div className="extraMessage">{extraMessage}</div>}
-      </nav>
-    </header>
+    {/* Mensaje adicional */}
+    {extraMessage && <div className="extraMessage">{extraMessage}</div>}
+  </nav>
+</header>
   );
 };
 
