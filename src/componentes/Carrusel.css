@@ -5,7 +5,7 @@
 /* Contenedor principal del carrusel */
 .carrusel-container {
   position: relative;
-  width: 100%;
+  width: 120%;
   max-width: 800px; /* Ancho máximo para pantallas grandes */
   margin: 0 auto;
   overflow: hidden;
@@ -17,7 +17,7 @@
 /* Contenedor del slider (área visible de las imágenes) */
 .carrusel-slider {
   position: relative;
-  height: 400px; /* Altura para pantallas grandes */
+  height: 600px; /* Altura para pantallas grandes */
   overflow: hidden;
   border-radius: inherit;
 }
@@ -155,14 +155,27 @@
 
 /* Para pantallas tipo tablet (max-width: 768px) */
 @media (max-width: 768px) {
-  .carrusel-container {
-    max-width: 90%;
-    border-radius: 10px;
-  }
+ /* Contenedor principal del carrusel */
+.carrusel-container {
+  position: relative;
+  width: 110%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background-color: #f0f0f0; /* Fondo de respaldo */
+  margin-left: -16px;
+}
 
-  .carrusel-slider {
-    height: 300px; /* Altura reducida para tablets */
-  }
+/* Contenedor del slider (área visible de las imágenes) */
+.carrusel-slider {
+  position: relative;
+  height: 450px; /* Altura para pantallas grandes */
+  overflow: hidden;
+  border-radius: inherit;
+}
+
 
   .carrusel-button {
     font-size: 20px;

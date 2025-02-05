@@ -191,7 +191,7 @@
   }
 
   .extraMessage {
-    margin-left: 0; /* Ajusta el margen en móviles */
+    margin-left: -16px; /* Ajusta el margen en móviles */
     text-align: left; /* Centra el mensaje en móviles */
     font-size: clamp(23px, 4vw, 20px); /* Tamaño de fuente responsivo en móviles */
     margin-top: 0px; /* Espacio superior */

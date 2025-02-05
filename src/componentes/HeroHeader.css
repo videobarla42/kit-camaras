@@ -77,8 +77,9 @@
       margin-top: clamp(90px, 10vw, 70px); /* Margen superior más ajustado y responsivo */
       margin-bottom: clamp(20px, 6vw, 40px); /* Margen inferior más ajustado y responsivo */
       padding: 0 clamp(10px, 5vw, 20px); /* Padding lateral responsivo */
-      width: 92%; /* Ocupa todo el ancho de la pantalla */
+      width: 110%; /* Ocupa todo el ancho de la pantalla */
       max-width: none; /* Elimina cualquier límite de ancho */    
+      margin-left: -35px;
     }
   
     .hero-title {
@@ -86,7 +87,7 @@
       margin-bottom: clamp(10px, 3vw, 20px); /* Espacio inferior responsivo */
       line-height: clamp(1.2, 1.4, 1.6); /* Espaciado entre líneas responsivo */
       margin: 0; /* Elimina márgenes automáticos */
-      text-align: left; /* Alinea el texto a la izquierda */
+      text-align: center; /* Alinea el texto a la izquierda */
       color: white;
     }
   
