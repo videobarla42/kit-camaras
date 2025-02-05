@@ -196,6 +196,18 @@
   z-index: 1000;
 }
 
+
+/* Estilos para la descripción dentro del modal */
+.modal-description {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* Contenedor del contenido del modal */
 .modal-content {
   top: 150PX;
@@ -208,6 +220,15 @@
   overflow-y: auto; /* Permite scroll dentro del modal si el contenido es largo */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
 }
 
 /* Imagen dentro del modal */

@@ -71,7 +71,7 @@ const Kit4CamarasBala: React.FC = () => {
 
   const abrirWhatsApp = () => {
     const phone = '3046615865';
-    const message = 'Hola, estoy interesado en el kit de 4 cámaras Tipo bala 1080p de HIKVISION  .';
+    const message = 'Hola, Me Interesa el kit de 4 cámaras bala de 2mpx + 4Mpx Lite de HIKVISION, Puede Brindarme Mas Informacion?';
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -83,7 +83,7 @@ const Kit4CamarasBala: React.FC = () => {
 
  
   const headerLinks = [
-    { to: '/', text: 'Kit De 4 Camaras de seguridad HIKVISION', image: Image1500 },
+    { to: '/', text: 'Kit De 4 Camaras de seguridad Domo De HIKVISION', image: Image1500 },
     { to: '/kits_8-camaras-seguridad', text: 'Kit De 8 Camaras de seguridad HIKVISION', image: Image1501 },
     { to: '/kit_16-camaras-seguridad', text: 'Kit De 16 Camaras de seguridad HIKVISION', image: Image1502 },
     { to: '/kit_4-camaras-seguridad-bala', text: 'Kit De 4 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1503 },

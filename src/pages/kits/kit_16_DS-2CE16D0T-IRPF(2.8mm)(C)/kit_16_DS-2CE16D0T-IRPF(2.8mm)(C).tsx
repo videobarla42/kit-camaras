@@ -67,7 +67,7 @@ const Kit4CamarasBala: React.FC = () => {
 
   const abrirWhatsApp = () => {
     const phone = '3046615865';
-    const message = 'Hola, Me Interesa el kit de 16 cámaras Tipo bala 1080p-2mpx de HIKVISION, Puede Darme Mas Informacion?';
+    const message = 'Hola, Me Interesa el kit de 16 cámaras bala 2Mpx + 4mpx Lite de HIKVISION, Puede Brindarme Mas Informacion?';
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -78,15 +78,14 @@ const Kit4CamarasBala: React.FC = () => {
   };
 
   const headerLinks = [
-    { to: '/', text: 'Kit De 4 Camaras de seguridad Domo HIKVISION', image: Image1500 },
-    { to: '/kits_8-camaras-seguridad', text: 'Kit De 8 Camaras de seguridad HIKVISION', image: Image1501 },
-    { to: '/kit_16-camaras-seguridad', text: 'Kit De 16 Camaras de seguridad HIKVISION', image: Image1502 },
-    { to: '/kit_4-camaras-seguridad-bala', text: 'Kit De 4 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1503 },
-    { to: '/kit_8-camaras-seguridad-bala', text: 'Kit De 8 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1504 },
-    { to: '/kit_16-camaras-seguridad-bala', text: 'Kit De 8 Camaras de seguridad HIKVISION tipo bala 1080p', image: Image1505 },
-
+    { to: '/', text: '4 Cámaras de seguridad Domo HIKVISION $780,000 COP', image: Image1500 },
+    { to: '/kits_8-camaras-seguridad', text: '8 Cámaras de seguridad Domo HIKVISION $1,175,000 COP', image: Image1501 },
+    { to: '/kit_16-camaras-seguridad', text: '16 Cámaras de seguridad Domo HIKVISION $1,990,000 COP', image: Image1502 },
+    { to: '/kit_4-camaras-seguridad-bala', text: '4 Cámaras de seguridad Bala HIKVISION $860,000 COP', image: Image1503 },
+    { to: '/kit_8-camaras-seguridad-bala', text: 'Kit de 8 Cámaras de seguridad HIKVISION $1,370,000 COP', image: Image1504 },
+    { to: '/kit_16-camaras-seguridad-bala', text: 'Kit de 16 Cámaras de seguridad HIKVISION $2,340,000 COP', image: Image1505 },
   ];
-
+  
   interface ImagenProps {
     src: string;
     alt: string;
