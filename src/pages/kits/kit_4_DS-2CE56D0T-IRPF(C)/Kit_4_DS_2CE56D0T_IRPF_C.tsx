@@ -171,7 +171,7 @@ const Kit4Camaras: React.FC = () => {
       botonTexto: 'Obtener!'
     },
     {
-      title: '100 mts de cable UTP',
+      title: '50 mts de cable UTP',
       description: 'Cable UTP Cat 5e para interior incluido en el kit.',
       images: [
         { src: imagen27, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }
