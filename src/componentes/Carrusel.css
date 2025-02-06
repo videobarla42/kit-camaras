@@ -153,92 +153,149 @@
    Ajustes Responsivos
    ===================================== */
 
-/* Para pantallas tipo tablet (max-width: 768px) */
+/* Para pantallas tipo tablet y móviles (max-width: 768px) */
 @media (max-width: 768px) {
- /* Contenedor principal del carrusel */
-.carrusel-container {
-  position: relative;
-  width: 110%;
-  max-width: 600px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  background-color: #f0f0f0; /* Fondo de respaldo */
-  margin-left: -16px;
-}
+  /* Contenedor principal del carrusel */
+  .carrusel-container {
+    position: relative;
+    width: 100%;             /* Ocupa todo el ancho disponible */
+    max-width: 600px;        /* Ancho máximo para evitar exceso en pantallas grandes */
+    margin: 0 auto;          /* Centrado horizontal */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background-color: #f0f0f0; /* Fondo de respaldo */
+  }
 
-/* Contenedor del slider (área visible de las imágenes) */
-.carrusel-slider {
-  position: relative;
-  height: 450px; /* Altura para pantallas grandes */
-  overflow: hidden;
-  border-radius: inherit;
-}
-
+  /* Contenedor del slider (área visible de las imágenes) */
+  .carrusel-slider {
+    position: relative;
+    height: 300px;           /* Altura reducida para dispositivos más pequeños */
+    overflow: hidden;
+    border-radius: inherit;
+  }
 
   .carrusel-button {
     font-size: 20px;
     padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
   }
 
- /* Fondo del modal */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(255, 0, 0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
+  /* Botones de navegación (anterior y siguiente) */
+  .carrusel-button.prev {
+    left: 10px;
+  }
+
+  .carrusel-button.next {
+    right: 10px;
+  }
+
+  /* Fondo del modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;                     /* Se coloca desde el inicio de la pantalla */
+    left: 0;
+    width: 100%;
+    height: 100%;               /* Ocupa toda la pantalla */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto;           /* Permite scroll en caso de contenido extenso */
+    padding: 20px;              /* Espaciado interno para que no pegue al borde */
+  }
+
+  /* Contenedor del contenido del modal */
+  .modal-content {
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 120%;
+    max-width: 900px;
+    max-height: 90vh;           /* Limita la altura del modal */
+    overflow-y: auto;           /* Permite scroll interno si el contenido es largo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;  /* Eliminamos el padding para que los elementos queden pegados */
+    left: 175px;
+    /* Puedes ajustar la posición horizontal del modal si es necesario */
+  }
+
+  /* Imagen dentro del modal */
+  .modal-content img {
+    position: relative; /* Para que 'top' funcione */
+    top: -23px;         /* Ajusta este valor según lo alto que desees subir la imagen */
+    width: 98%;
+    max-height: 90vh;           /* Limita la altura de la imagen */
+    object-fit: contain;        /* Se muestra completa sin recorte */
+    margin: 0;
+    left: 5px;
+  }
+
+  /* Estilos para la descripción dentro del modal */
+  .modal-description {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 90%;
+    margin: 0;                  /* Sin márgenes para pegar el texto a la imagen */
+    padding: 10px;              /* Si se desea un poco de espacio interno */
+  }
+
+  /* Features en la parte inferior del modal */
+  .modal-product-details {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    border-radius: 0 0 8px 8px;
+    box-sizing: border-box;
+    margin-top: -133px;  /* Ajusta este valor según necesites */
+  }
+
+  .modal-product-details h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .modal-product-details ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+
+  .modal-product-details ul li {
+    margin: 5px 0;
+  }
+
+  /* Botón de cerrar: fijo en la esquina superior izquierda */
+  .modal-close {
+    position: fixed;        /* Se mantiene fijo en la pantalla */
+    top: -50px;              /* Distancia desde la parte superior */
+    left: -70px;             /* Distancia desde la parte izquierda */
+    z-index: 1100;          /* Superior a otros elementos del modal */
+    background: transparent;
+    border: none;
+    font-size: 70px;
+    color: #140e0e;
+    cursor: pointer;
+  }
 
 
-/* Estilos para la descripción dentro del modal */
-.modal-description {
-  margin-top: 15px;
-  font-size: 1rem;
-  color: #333;
-  text-align: center;
-  line-height: 1.5;
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-/* Contenedor del contenido del modal */
-.modal-content {
-  top: 150PX;
-  background-color: #fff;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 900px;
-  margin-left: -18PX;
-  max-height: 100vh; /* Limita la altura del modal */
-  overflow-y: auto; /* Permite scroll dentro del modal si el contenido es largo */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
-.modal-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Imagen dentro del modal */
-.modal-content img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* Se muestra completa sin recorte */
-}
-}
-
+  
 /* Para dispositivos móviles (max-width: 480px) */
 @media (max-width: 480px) {
   .carrusel-slider {
@@ -281,4 +338,5 @@
   .modal-button.next {
     right: 10px;
   }
+}
 }

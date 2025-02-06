@@ -1,19 +1,19 @@
 /* Estilos para el overlay del formulario */
 .formulario-overlay {
-  position: absolute;
-  top: auto; /* Ajusta según sea necesario */
-  left: auto; /* Ajusta según sea necesario */
-  width: auto; /* Ajusta para limitar el tamaño */
-  height: auto; /* Ajusta para limitar el tamaño */
-  background-color: rgba(0, 0, 0, 0.5); /* Opcional */
+  position: relative;
+  top: 0;
+  left: -70;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-/* Estilos para el contenido del formulario */
-.formulario-content {
+/* Estilos para el contenedor del formulario */
+.formulario-container {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -23,54 +23,45 @@
   position: relative;
 }
 
-/* Estilos para el botón de cerrar */
-.cerrar-formulario {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #333;
-}
 
-.cerrar-formulario:hover {
-  color: #000;
-}
 
-/* Estilos para el título y el icono */
-.titulo-con-icono h2 {
-  font-size: 24px;
+/* Estilos para el encabezado con icono */
+.header-with-icon h2 {
+  font-size: clamp(20px, 5vw, 24px);
   margin-bottom: 10px;
   color: #333;
 }
 
-.titulo-con-icono p {
-  font-size: 14px;
+.header-with-icon p {
+  font-size: clamp(12px, 3vw, 14px);
   color: #666;
   margin-bottom: 20px;
 }
 
+
 /* Estilos para los inputs del formulario */
-.formulario-input {
+.form-input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: clamp(8px, 2vw, 10px);
+  margin-bottom: clamp(12px, 2.5vw, 15px);
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: clamp(4px, 1vw, 5px);
+  font-size: clamp(14px, 2vw, 16px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
-.formulario-input:focus {
+.form-input:focus {
   border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
   outline: none;
 }
 
+
 /* Estilos para los botones de confirmar, WhatsApp y llamar */
-.confirmar,
+.confirm-button,
 .whatsapp-button,
-.llamar-button {
+.call-button {
   width: 100%;
   padding: 10px 20px;
   margin-bottom: 10px;
@@ -81,12 +72,12 @@
   transition: background-color 0.3s ease;
 }
 
-.confirmar {
+.confirm-button {
   background-color: #28a745;
   color: #fff;
 }
 
-.confirmar:hover {
+.confirm-button:hover {
   background-color: #218838;
 }
 
@@ -99,17 +90,17 @@
   background-color: #1da851;
 }
 
-.llamar-button {
+.call-button {
   background-color: #007bff;
   color: #fff;
 }
 
-.llamar-button:hover {
+.call-button:hover {
   background-color: #0056b3;
 }
 
 /* Estilos para los horarios de entrega */
-.horarios-entrega {
+.delivery-hours {
   margin-top: 20px;
   text-align: center;
   font-size: 14px;
@@ -117,7 +108,7 @@
 }
 
 /* Estilos para el footer del formulario */
-.formulario-footer {
+.form-footer {
   margin-top: 20px;
   padding: 10px;
   background-color: #f0f0f0;
@@ -125,4 +116,168 @@
   font-size: 14px;
   color: #555;
   border-top: 1px solid #ddd;
+}
+
+/* Estilos responsivos para pantallas de hasta 768px */
+@media (max-width: 768px) {
+  /* Ajustes para el overlay */
+  .formulario-overlay {
+    position: relative;
+    top: 0;
+    left: -10;
+    width: 110%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Estilos para el contenedor del formulario */
+  .formulario-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 110%;
+    position: relative;
+    left: -16px;
+  }
+  
+
+/* Estilos para el título dentro del encabezado */
+.header-with-icon h2 {
+  font-size: clamp(24px, 6vw, 36px); /* Tamaño de fuente responsivo */
+  color: #333; /* Color oscuro para mejor contraste */
+  margin: 0; /* Elimina márgenes predeterminados */
+  text-align: center; /* Asegura que el texto esté centrado */
+  line-height: 1.2; /* Espaciado entre líneas para mejorar la legibilidad */
+  font-weight: 700; /* Texto en negrita para mayor impacto */
+  margin-bottom: 10px; /* Espacio inferior para separar del párrafo */
+}
+
+/* Estilos para el párrafo dentro del encabezado */
+.header-with-icon p {
+  font-size: clamp(14px, 3vw, 18px); /* Tamaño de fuente responsivo */
+  color: #666; /* Color gris claro para un tono secundario */
+  margin: 0; /* Elimina márgenes predeterminados */
+  text-align: center; /* Asegura que el texto esté centrado */
+  line-height: 1.5; /* Espaciado entre líneas para mejorar la legibilidad */
+  font-weight: 400; /* Texto normal (no en negrita) */
+  margin-bottom: 20px; /* Espacio inferior para separar del siguiente elemento */
+}
+/* Estilos base para los inputs */
+.form-input {
+  width: 111%;
+  padding: 22px; /* Aumenta el padding para mejorar la comodidad */
+  margin-bottom: 18px;
+  margin-left: -18px; /* Mueve los inputs 20px hacia la izquierda */
+  border: 1px solid #ccc; /* Borde inicial suave */
+  border-radius: 8px; /* Bordes más redondeados para un diseño moderno */
+  font-size: 19px;
+  font-family: inherit; /* Hereda la fuente del sistema para consistencia */
+  color: #333; /* Texto oscuro para mejor contraste */
+  background-color: #f9f9f9; /* Fondo ligeramente claro para diferenciarlo */
+  transition: all 0.3s ease; /* Animación suave para cambios de estado */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05); /* Sombra sutil para profundidad */
+}
+
+/* Cambios al enfocar el input */
+.form-input:focus {
+  border-color: #007bff; /* Color de borde al enfocar */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* Resalta con una sombra azul */
+  background-color: #fff; /* Fondo blanco para indicar que está activo */
+  outline: none; /* Elimina el contorno predeterminado */
+}
+
+/* Estado deshabilitado */
+.form-input:disabled {
+  background-color: #e9ecef; /* Fondo gris claro para inputs deshabilitados */
+  border-color: #ccc; /* Borde más claro */
+  color: #6c757d; /* Texto gris para indicar inactividad */
+  cursor: not-allowed; /* Cursor que indica que no se puede interactuar */
+}
+
+/* Placeholder personalizado */
+.form-input::placeholder {
+  color: #aaa; /* Color más claro para el texto de placeholder */
+  font-size: 14px; /* Tamaño de fuente ligeramente menor */
+  opacity: 1; /* Evita que el placeholder sea demasiado transparente */
+}
+
+/* Efecto hover para mejorar la interacción */
+.form-input:hover {
+  border-color: #b3b3b3; /* Cambia el color del borde al pasar el mouse */
+}
+
+  /* Estilos base compartidos por todos los botones */
+.confirm-button,
+.whatsapp-button,
+.call-button {
+  margin-top: 25px;
+  display: block; /* Se comporta como bloque */
+  width: 100%; /* Ocupa el ancho del contenedor (no usar vw aquí) */
+  padding: clamp(12px, 3vw, 20px); /* Padding responsivo con un rango más equilibrado */
+  margin-bottom: clamp(18px, 5vw, 18px); /* Margen inferior responsivo */
+  border: none;
+  border-radius: clamp(8px, 1.5vw, 16px); /* Bordes redondeados responsivos */
+  font-size: clamp(26px, 6vw, 25px); /* Tamaño de fuente responsivo */
+  font-weight: 600; /* Texto en negrita para mejor visibilidad */
+  text-align: center; /* Asegura que el texto esté centrado */
+  color: #fff; /* Color de texto blanco */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transición suave para cambios de estado */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+}
+
+/* Hover general para todos los botones */
+.confirm-button:hover,
+.whatsapp-button:hover,
+.call-button:hover {
+  transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al elevar */
+}
+
+/* Estilos específicos para cada botón */
+.confirm-button {
+  background-color: #28a745; /* Verde confirmación */
+}
+.confirm-button:hover {
+  background-color: #218838; /* Verde más oscuro al pasar el mouse */
+}
+
+.whatsapp-button {
+  background-color: #25d366; /* Verde WhatsApp */
+}
+.whatsapp-button:hover {
+  background-color: #1da851; /* Verde WhatsApp más oscuro */
+}
+
+.call-button {
+  background-color: #007bff; /* Azul llamada */
+}
+.call-button:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+}
+/* Estilos para el texto de horarios de entrega */
+.delivery-hours {
+  font-size: clamp(12px, 3vw, 16px); /* Tamaño de fuente responsivo */
+  color: #555; /* Color gris oscuro para un tono secundario */
+  margin-top: 20px; /* Espacio superior para separar del contenido anterior */
+  text-align: center; /* Asegura que el texto esté centrado */
+  line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
+}
+
+/* Estilos para el footer del formulario */
+.form-footer {
+  font-size: clamp(12px, 3vw, 14px); /* Tamaño de fuente responsivo */
+  color: #777; /* Color gris claro para un tono secundario */
+  padding: 12px; /* Padding interno para dar espacio al contenido */
+  margin-top: 20px; /* Espacio superior para separar del contenido anterior */
+  background-color: #f9f9f9; /* Fondo claro para diferenciarlo */
+  border-top: 1px solid #ddd; /* Borde superior para separación visual */
+  text-align: center; /* Asegura que el texto esté centrado */
+  line-height: 1.5; /* Espaciado entre líneas para mejorar la legibilidad */
+}
 }

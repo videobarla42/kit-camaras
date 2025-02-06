@@ -15,7 +15,7 @@ const Formulario = lazy(() => import('@/componentes/Formulario'));
 
 // Importar imágenes
 import imagen1 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
-import imagen2 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)2.webp';
+import imagen2 from '@/assets/1.png';
 import imagen3 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)3.webp';
 import imagen4 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)4.webp';
 import imagen5 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)5.webp';
@@ -42,6 +42,25 @@ import imagen25 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)25.webp';
 import imagen26 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)26.webp';
 import imagen27 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)27.webp';
 import headerImage from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
+
+
+// Imágenes VERTICALES (números del 50 al 61)
+import imagen50 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)-VERTICAL/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
+import imagen51 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)-VERTICAL/DS-2CE16D0T-IRPF(2.8mm)(C4.webp';
+import imagen52 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)-VERTICAL/DS-2CE16D0T-IRPF(2.8mm)(C5.webp';
+import imagen53 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)-VERTICAL/DS-2CE16D0T-IRPF(2.8mm)(C6.webp';
+import imagen54 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)-VERTICAL/DS-2CE16D0T-IRPF(2.8mm)(C7.webp';
+import imagen55 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)-VERTICAL/DS-2CE16D0T-IRPF(2.8mm)(C8.webp';
+import imagen56 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)-VERTICAL/DS-2CE16D0T-IRPF(2.8mm)(C9.webp';
+import imagen57 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)-VERTICAL/DS-2CE16D0T-IRPF(2.8mm)(C10.webp';
+import imagen58 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)-VERTICAL/DS-2CE16D0T-IRPF(2.8mm)(C11.webp';
+import imagen59 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)-VERTICAL/DS-2CE16D0T-IRPF(2.8mm)(C12.webp';
+import imagen60 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)-VERTICAL/DS-2CE16D0T-IRPF(2.8mm)(C13.webp';
+import imagen61 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)-VERTICAL/DS-2CE16D0T-IRPF(2.8mm)(C14.webp';
+
+
+
+
 
 // Importación de las imágenes
 import Image1500 from '@/assets/1.webp';
@@ -110,7 +129,13 @@ const Kit4CamarasBala: React.FC = () => {
   const carruseles = [
     {
       title: '1 DVR de 4 Canales',
-      description: 'DVR AcuSense mini de 4 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
+      description:
+        'DVR AcuSense mini de 4 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
+      features: [
+        'Compresión H.265 Pro+',
+        'Soporte para cámaras IP de hasta 6 MP',
+        'Grabación en múltiples resoluciones hasta 4mpx Lite',
+      ],
       images: [
         { src: imagen2, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
         { src: imagen3, alt: 'DVR AcuSense mini de 4 canales HIKVISION' },
@@ -119,91 +144,122 @@ const Kit4CamarasBala: React.FC = () => {
         { src: imagen6, alt: 'DVR con compresión H.265 Pro+' },
         { src: imagen7, alt: 'DVR con soporte para cámaras IP' },
         { src: imagen8, alt: 'DVR con grabación en múltiples resoluciones' },
-        { src: imagen9, alt: 'DVR HIKVISION de 4 canales' }
+        { src: imagen9, alt: 'DVR HIKVISION de 4 canales' },
       ],
-      botonTexto: 'Domicilio Gratis!'
+      botonTexto: 'Domicilio Gratis!',
     },
     {
       title: '4 Cámaras Bala de 2 Mpx',
-      description: '4 Cámaras Bala TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
-      images: [
-        { src: imagen10, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
-        { src: imagen11, alt: 'Cámara de seguridad HIKVISION' },
-        { src: imagen12, alt: 'Cámara con visión nocturna HIKVISION' },
-        { src: imagen13, alt: 'Cámara Domo TURBOHD 1080p' },
-        { src: imagen14, alt: 'Cámara de seguridad con lente de 2.8 mm' },
-        { src: imagen15, alt: 'Cámara con visión nocturna EXIR' },
-        { src: imagen16, alt: 'Cámara de seguridad para exteriores' },
-        { src: imagen17, alt: 'Cámara Domo HIKVISION' },
-        { src: imagen18, alt: 'Cámara de seguridad con visión nocturna' }
+      description:
+        '4 Cámaras Bala TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
+      features: [
+        'Compresión H.265 Pro+',
+        'Soporte para cámaras IP de hasta 6 MP',
+        'Grabación en múltiples resoluciones hasta 4mpx Lite',
       ],
-      botonTexto: 'Pague en casa!'
+      images: [
+        { src: imagen50, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
+        { src: imagen51, alt: 'Cámara de seguridad HIKVISION' },
+        { src: imagen52, alt: 'Cámara con visión nocturna HIKVISION' },
+        { src: imagen53, alt: 'Cámara Domo TURBOHD 1080p' },
+        { src: imagen54, alt: 'Cámara de seguridad con lente de 2.8 mm' },
+        { src: imagen55, alt: 'Cámara con visión nocturna EXIR' },
+        { src: imagen56, alt: 'Cámara de seguridad para exteriores' },
+        { src: imagen57, alt: 'Cámara Domo HIKVISION' },
+        { src: imagen58, alt: 'Cámara de seguridad con visión nocturna' },
+        { src: imagen59, alt: 'Cámara de seguridad con visión nocturna' },
+        { src: imagen60, alt: 'Cámara de seguridad con visión nocturna' },
+        { src: imagen61, alt: 'Cámara de seguridad con visión nocturna' },
+      ],
+      botonTexto: 'Pague en casa!',
     },
     {
       title: '1 Disco duro ideal para videovigilancia',
-      description: 'Disco duro Seagate Skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
+      description:
+        'Disco duro Seagate Skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
+      features: [
+        'Tecnología AllFrame',
+        'Velocidad de 110 MB/s',
+        'Interfaz SATA',
+        'Caché de 64 MB',
+      ],
       images: [
         { src: imagen19, alt: 'Disco duro Seagate Skyhawk 1 TB' },
         { src: imagen20, alt: 'Disco duro para videovigilancia' },
         { src: imagen21, alt: 'Disco duro con tecnología AllFrame' },
         { src: imagen22, alt: 'Disco duro Seagate Skyhawk' },
-        { src: imagen23, alt: 'Disco duro para grabación 24/7' }
+        { src: imagen23, alt: 'Disco duro para grabación 24/7' },
       ],
-      botonTexto: 'Obtenga el Kit!'
+      botonTexto: 'Obtenga el Kit!',
     },
     {
       title: '4 Fuentes de Energía',
-      description: '4 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
-      images: [
-        { src: imagen24, alt: 'Fuente de alimentación para cámaras de seguridad' }
+      description:
+        '4 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
+      features: [
+        'Alta calidad',
+        'Conector de alimentación de 2.1mm',
+        'LED indicador de funcionamiento',
       ],
-      botonTexto: 'Comprar!'
+      images: [{ src: imagen24, alt: 'Fuente de alimentación para cámaras de seguridad' }],
+      botonTexto: 'Comprar!',
     },
     {
       title: '4 pares de Video Baluns',
-      description: '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
-      images: [
-        { src: imagen25, alt: 'Video Balun para transmisión de señales de video' }
+      description:
+        '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
+      features: [
+        'Transmisión de señales de video',
+        'Señal clara y estable',
+        'Larga distancia',
       ],
-      botonTexto: 'Domicilio Gratis!'
+      images: [{ src: imagen25, alt: 'Video Balun para transmisión de señales de video' }],
+      botonTexto: 'Domicilio Gratis!',
     },
     {
       title: '4 pares de Borneras',
-      description: '4 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
-      images: [
-        { src: imagen26, alt: 'Borneras eléctricas para cámaras de seguridad' }
+      description:
+        '4 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
+      features: [
+        'Conexión y distribución de energía',
+        'Ideal para cámaras de seguridad',
       ],
-      botonTexto: 'Obtener!'
+      images: [{ src: imagen26, alt: 'Borneras eléctricas para cámaras de seguridad' }],
+      botonTexto: 'Obtener!',
     },
     {
       title: '50 mts de cable UTP',
       description: 'Cable UTP Cat 5e para interior incluido en el kit.',
-      images: [
-        { src: imagen27, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }
+      features: [
+        'Cable UTP Cat 5e',
+        'Ideal para cámaras de seguridad',
+        'Incluido en el kit',
       ],
-      botonTexto: 'Pídalo Ahora!'
-    }
+      images: [{ src: imagen27, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }],
+      botonTexto: 'Pídalo Ahora!',
+    },
   ];
-
-  function Carruseles() {
+  
+  const Carruseles = () => {
     return (
       <div>
-        {carruseles.map((carrusel, index) => (
-          <div key={index}>
-            <h2>{carrusel.title}</h2>
-            <p>{carrusel.description}</p>
-            <div>
-              {carrusel.images.map((image, idx) => (
-                <Imagen key={idx} src={image.src} alt={image.alt} />
-              ))}
-            </div>
-            <button>{carrusel.botonTexto}</button>
+        {carruseles.map((producto, index) => (
+          <div key={index} className="producto-container">
+            <h2>{producto.title}</h2>
+            <p>{producto.description}</p>
+            {/* Usamos el componente Carrusel pasando imágenes y detalles */}
+            <Carrusel
+              images={producto.images}
+              title={producto.title}
+              description={producto.description}
+              features={producto.features || []} // Si no hay características, pasa un array vacío
+            />
+            <button>{producto.botonTexto}</button>
           </div>
         ))}
       </div>
     );
-  }
-
+  };
 
   const banners = [
     <Banner
@@ -324,7 +380,12 @@ const Kit4CamarasBala: React.FC = () => {
           <section style={{ marginBottom: '40px', textAlign: 'center' }}>
             <h2>{carrusel.title}</h2>
             <Suspense fallback={<div>Cargando...</div>}>
-              <Carrusel images={carrusel.images} />
+              <Carrusel
+                images={carrusel.images}
+                title={carrusel.title}
+                description={carrusel.description}
+                features={carrusel.features}
+              />
             </Suspense>
             <p>{carrusel.description}</p>
             <Suspense fallback={<div>Cargando...</div>}>
@@ -375,8 +436,8 @@ const Kit4CamarasBala: React.FC = () => {
       
       <Suspense fallback={<div>Cargando...</div>}>
         <Formulario
-          titulo="Compra el Kit de 4 cámaras Bala De 2mpx"
-          descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $860,000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
+          titulo="confirma la Compra del kit de 4 cámaras Bala, 2mpx + grabacion a 4mpx lite"
+          descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, ¡Domicilio gratis! Realizamos llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
           precio="$860,000"
         />
       </Suspense>

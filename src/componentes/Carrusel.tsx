@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
 import './Carrusel.css';
 
-// Definimos la interfaz para las imágenes
+
+
+// Interfaz para cada imagen
 interface ImageType {
   src: string;
   alt: string;
 }
 
-// Actualizamos el tipo de las props
 interface CarruselProps {
-  images: ImageType[]; // Array de objetos con src y alt
+  images: { src: string; alt: string }[];
+  title: string;
+  description: string;
+  features: string[];
 }
 
-const Carrusel: React.FC<CarruselProps> = ({ images }) => {
+const Carrusel: React.FC<CarruselProps> = ({ images, title, description, features }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalIndex, setModalIndex] = useState(0);
@@ -80,7 +84,6 @@ const Carrusel: React.FC<CarruselProps> = ({ images }) => {
           </div>
         ))}
       </div>
-
       <button
         onClick={prevSlide}
         className="carrusel-button prev"
@@ -97,47 +100,68 @@ const Carrusel: React.FC<CarruselProps> = ({ images }) => {
         &rarr;
       </button>
 
-    {isModalOpen && (
-  <div className="modal-overlay" onClick={closeModal}>
-    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-      <div className="modal-counter">
-        {modalIndex + 1} / {images.length}
-      </div>
-      <button
-        className="modal-close"
-        onClick={closeModal}
-        aria-label="Cerrar modal"
-      >
-        &times;
-      </button>
-      <img
-        src={images[modalIndex].src}
-        alt={images[modalIndex].alt}
-        loading="lazy"
-      />
-      <button
-        className="modal-button prev"
-        onClick={(e) => {
-          e.stopPropagation();
-          prevModalSlide();
-        }}
-        aria-label="Imagen anterior"
-      >
-        &larr;
-      </button>
-      <button
-        className="modal-button next"
-        onClick={(e) => {
-          e.stopPropagation();
-          nextModalSlide();
-        }}
-        aria-label="Siguiente imagen"
-      >
-        &rarr;
-      </button>
-    </div>
-  </div>
-)}
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-counter">
+              {modalIndex + 1} / {images.length}
+            </div>
+            <button
+              className="modal-close"
+              onClick={closeModal}
+              aria-label="Cerrar modal"
+            >
+              &times;
+            </button>
+            <img
+              src={images[modalIndex].src}
+              alt={images[modalIndex].alt}
+              loading="lazy"
+            />
+            {/* Mostrar información del producto */}
+            <div className="product-info">
+              <ul>
+                {features.map((feature, idx) => (
+                  <li key={idx}>{feature}</li>
+                ))}
+              </ul>
+            </div>
+            <button
+              className="modal-button prev"
+              onClick={(e) => {
+                e.stopPropagation();
+                prevModalSlide();
+              }}
+              aria-label="Imagen anterior"
+            >
+              &larr;
+            </button>
+            <button
+              className="modal-button next"
+              onClick={(e) => {
+                e.stopPropagation();
+                nextModalSlide();
+              }}
+              aria-label="Siguiente imagen"
+            >
+              &rarr;
+            </button>
+
+            {/* Sección de detalles del producto */}
+            {(title || description || features) && (
+              <div className="modal-product-details">
+                {features && features.length > 0 && (
+                  <ul>
+                    {features.map((feature, idx) => (
+                      <li key={idx}>{feature}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

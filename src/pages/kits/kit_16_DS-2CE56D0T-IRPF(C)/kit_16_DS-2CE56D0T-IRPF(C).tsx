@@ -100,79 +100,127 @@ const Kits16Camaras: React.FC = () => {
     };
 
 
-  const carruseles = [
-    {
-      title: '1 Video Grabador DVR de 16 Canales, 4 MPX Lite + IA',
-      description: 'DVR AcuSense mini de 16 canales Y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
-      images: [
-        { src: imagen37, alt: 'Video Grabador DVR de 16 Canales HIKVISION' },
-        { src: imagen38, alt: 'DVR AcuSense mini de 16 canales HIKVISION' },
-        { src: imagen39, alt: 'DVR con detección de movimiento avanzada' },
-        { src: imagen46, alt: 'DVR con compresión H.265 Pro+' },
-      ],
-      botonTexto: 'Domicilio Gratis!'
-    },
-    {
-      title: '16 Cámaras de 2 Mpx y 20 MTS de Alcance',
-      description: 'Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
-      images: [
-        { src: imagen41, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
-        { src: imagen11, alt: 'Cámara de seguridad HIKVISION' },
-        { src: imagen12, alt: 'Cámara con visión nocturna HIKVISION' },
-        { src: imagen13, alt: 'Cámara Domo TURBOHD 1080p' },
-        { src: imagen14, alt: 'Cámara de seguridad con lente de 2.8 mm' },
-        { src: imagen15, alt: 'Cámara con visión nocturna EXIR' },
-        { src: imagen16, alt: 'Cámara de seguridad para exteriores' },
-        { src: imagen17, alt: 'Cámara Domo HIKVISION' },
-        { src: imagen18, alt: 'Cámara de seguridad con visión nocturna' },
-      ],
-      botonTexto: 'Page en casa!'
-    },
-    {
-      title: '1 Disco duro Ideal para videovigilancia',
-      description: 'Disco duro Seagate Skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
-      images: [
-        { src: imagen19, alt: 'Disco duro Seagate Skyhawk 1 TB' },
-        { src: imagen20, alt: 'Disco duro para videovigilancia' },
-        { src: imagen21, alt: 'Disco duro con tecnología AllFrame' },
-        { src: imagen22, alt: 'Disco duro Seagate Skyhawk' },
-        { src: imagen23, alt: 'Disco duro para grabación 24/7' },
-      ],
-      botonTexto: 'Obten el Kit!'
-    },
-    {
-      title: '16 Fuentes De Energía',
-      description: '16 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento. El artículo puede ser ligeramente distinto al de la foto.',
-      images: [
-        { src: imagen42, alt: 'Fuente de alimentación para cámaras de seguridad' },
-      ],
-      botonTexto: 'Comprar!'
-    },
-    {
-      title: '16 pares de Video Baluns',
-      description: '16 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
-      images: [
-        { src: imagen43, alt: 'Video Balun para transmisión de señales de video' },
-      ],
-      botonTexto: 'Domicilio Gratis!'
-    },
-    {
-      title: '16 pares de Borneras',
-      description: '16 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
-      images: [
-        { src: imagen44, alt: 'Borneras eléctricas para cámaras de seguridad' },
-      ],
-      botonTexto: 'Obtener!'
-    },
-    {
-      title: '200 mts de cable UTP',
-      description: 'Cable UTP Cat 5e en aleación para interior incluidos en el kit.',
-      images: [
-        { src: imagen26, alt: 'Cable UTP Cat 5e para cámaras de seguridad' },
-      ],
-      botonTexto: 'Pidelo Ahora!'
-    },
-  ];
+    const carruseles = [
+      {
+        title: '1 Video Grabador DVR de 16 Canales, 4 MPX Lite + IA',
+        description: 'DVR AcuSense mini de 16 canales Y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
+        features: [
+          '16 canales de grabación simultánea',
+          'Resolución de hasta 4 MPX Lite',
+          'Compresión avanzada H.265 Pro+',
+          'Soporte para cámaras IP de hasta 6 MP',
+          'Protección perimetral con IA'
+        ],
+        images: [
+          { src: imagen37, alt: 'Video Grabador DVR de 16 Canales HIKVISION' },
+          { src: imagen38, alt: 'DVR AcuSense mini de 16 canales HIKVISION' },
+          { src: imagen39, alt: 'DVR con detección de movimiento avanzada' },
+          { src: imagen46, alt: 'DVR con compresión H.265 Pro+' },
+        ],
+        botonTexto: 'Domicilio Gratis!'
+      },
+      {
+        title: '16 Cámaras de 2 Mpx y 20 MTS de Alcance',
+        description: 'Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
+        features: [
+          'Resolución 1080p',
+          'Lente de 2.8 mm',
+          'Visión nocturna EXIR hasta 20 mts',
+          'Diseño compacto y resistente',
+          'Compatible con tecnología TURBOHD'
+        ],
+        images: [
+          { src: imagen41, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
+          { src: imagen11, alt: 'Cámara de seguridad HIKVISION' },
+          { src: imagen12, alt: 'Cámara con visión nocturna HIKVISION' },
+          { src: imagen13, alt: 'Cámara Domo TURBOHD 1080p' },
+          { src: imagen14, alt: 'Cámara de seguridad con lente de 2.8 mm' },
+          { src: imagen15, alt: 'Cámara con visión nocturna EXIR' },
+          { src: imagen16, alt: 'Cámara de seguridad para exteriores' },
+          { src: imagen17, alt: 'Cámara Domo HIKVISION' },
+          { src: imagen18, alt: 'Cámara de seguridad con visión nocturna' },
+        ],
+        botonTexto: 'Page en casa!'
+      },
+      {
+        title: '1 Disco duro Ideal para videovigilancia',
+        description: 'Disco duro Seagate Skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
+        features: [
+          'Capacidad de 1 TB',
+          'Tecnología AllFrame para videovigilancia',
+          'Velocidad de transferencia 110 MB/s',
+          'Interfaz SATA',
+          'Caché de 64 MB'
+        ],
+        images: [
+          { src: imagen19, alt: 'Disco duro Seagate Skyhawk 1 TB' },
+          { src: imagen20, alt: 'Disco duro para videovigilancia' },
+          { src: imagen21, alt: 'Disco duro con tecnología AllFrame' },
+          { src: imagen22, alt: 'Disco duro Seagate Skyhawk' },
+          { src: imagen23, alt: 'Disco duro para grabación 24/7' },
+        ],
+        botonTexto: 'Obten el Kit!'
+      },
+      {
+        title: '16 Fuentes De Energía',
+        description: '16 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento. El artículo puede ser ligeramente distinto al de la foto.',
+        features: [
+          'Voltaje de entrada AC 110-240v',
+          'Salida de 12V a 1 amperio',
+          'Conector de alimentación de 2.1mm',
+          'Indicador LED de funcionamiento',
+          'Alta calidad y durabilidad'
+        ],
+        images: [
+          { src: imagen42, alt: 'Fuente de alimentación para cámaras de seguridad' },
+        ],
+        botonTexto: 'Comprar!'
+      },
+      {
+        title: '16 pares de Video Baluns',
+        description: '16 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
+        features: [
+          'Transmisión de señales de video por cable UTP',
+          'Tecnología 4 en 1',
+          'Señal clara y estable a larga distancia',
+          'Fácil instalación'
+        ],
+        images: [
+          { src: imagen43, alt: 'Video Balun para transmisión de señales de video' },
+        ],
+        botonTexto: 'Domicilio Gratis!'
+      },
+      {
+        title: '16 pares de Borneras',
+        description: '16 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
+        features: [
+          'Conexión segura y estable',
+          'Distribución eficiente de energía',
+          'Fácil instalación',
+          'Material resistente'
+        ],
+        images: [
+          { src: imagen44, alt: 'Borneras eléctricas para cámaras de seguridad' },
+        ],
+        botonTexto: 'Obtener!'
+      },
+      {
+        title: '200 mts de cable UTP',
+        description: 'Cable UTP Cat 5e en aleación para interior incluidos en el kit.',
+        features: [
+          'Categoría 5e',
+          'Ideal para transmisión de datos',
+          '200 metros de longitud',
+          'Material de aleación para uso interior',
+          'Alta compatibilidad con sistemas de videovigilancia'
+        ],
+        images: [
+          { src: imagen26, alt: 'Cable UTP Cat 5e para cámaras de seguridad' },
+        ],
+        botonTexto: 'Pidelo Ahora!'
+      }
+    ];
+    
 
   function Carruseles() {
     return (
@@ -303,24 +351,32 @@ const Kits16Camaras: React.FC = () => {
         fontSize="2rem"
         padding="15px 30px"
       />
+{carruseles.map((carrusel, index) => (
+  <React.Fragment key={index}>
+    <section style={{ marginBottom: '40px', textAlign: 'center' }}>
+      <h2>{carrusel.title}</h2>
+      <Suspense fallback={<div>Cargando...</div>}>
+        <Carrusel
+          images={carrusel.images}
+          title={carrusel.title}
+          description={carrusel.description}
+          features={carrusel.features}
+        />
+      </Suspense>
+      <p>{carrusel.description}</p>
+      <Suspense fallback={<div>Cargando...</div>}>
+        <BotonCompra
+          texto={carrusel.botonTexto}
+          onClick={() => abrirModal(index)}
+          color="#007bff"
+          tamaño="mediano"
+        />
+      </Suspense>
+    </section>
+    {index < banners.length && banners[index]}
+  </React.Fragment>
+))}
 
-      {/* Carruseles y Banners Intercalados */}
-      {carruseles.map((carrusel, index) => (
-        <React.Fragment key={index}>
-          <section style={{ marginBottom: '40px', textAlign: 'center' }}>
-            <h2>{carrusel.title}</h2>
-            <Carrusel images={carrusel.images} />
-            <p>{carrusel.description}</p>
-            <BotonCompra
-              texto={carrusel.botonTexto}
-              onClick={() => abrirModal(index)}
-              color="#007bff"
-              tamaño="mediano"
-            />
-          </section>
-          {index < banners.length && banners[index]}
-        </React.Fragment>
-      ))}
 
       {/* Modal de Compra */}
       {modalAbierto && (
@@ -355,8 +411,8 @@ const Kits16Camaras: React.FC = () => {
 
       {/* Formulario de Confirmación */}
       <Formulario
-        titulo="Confirmar Compra, kit de 16 cámaras con inteligencia artificial"
-        descripcion="Complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,990,000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
+        titulo="confirma la Compra del kit de 16 cámaras Domo, 2mpx + grabacion a 4mpx lite"
+        descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, ¡Domicilio gratis! Realizamos llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
         precio="$1,990,000"
       />
 

@@ -106,6 +106,7 @@ const Kit4CamarasBala: React.FC = () => {
     {
       title: '1 Video Grabador DVR de 4 Canales, 4 MPX Lite + IA',
       description: 'DVR AcuSense mini de 4 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
+      features: ['Detección de movimiento avanzada', 'Protección perimetral', 'Compresión H.265 Pro+', 'Soporte para cámaras IP', 'Grabación 4 Mpx Lite'],
       images: [
         { src: imagen2, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
         { src: imagen3, alt: 'DVR AcuSense mini de 4 canales HIKVISION' },
@@ -121,6 +122,7 @@ const Kit4CamarasBala: React.FC = () => {
     {
       title: '4 Cámaras de 2 Mpx y 20 MTS de Alcance',
       description: '4 Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
+      features: ['1080p Full HD', 'Lente de 2.8 mm', 'Visión nocturna inteligente EXIR', 'Alcance de 20 metros', 'Compatibilidad TURBOHD'],
       images: [
         { src: imagen10, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
         { src: imagen11, alt: 'Cámara de seguridad HIKVISION' },
@@ -137,6 +139,7 @@ const Kit4CamarasBala: React.FC = () => {
     {
       title: '1 Disco duro ideal para videovigilancia',
       description: 'Disco duro Seagate Skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
+      features: ['Capacidad de 1 TB', 'Grabación 24/7', 'Tecnología AllFrame', 'Velocidad de 110 MB/s', 'Soporte para 64 cámaras'],
       images: [
         { src: imagen19, alt: 'Disco duro Seagate Skyhawk 1 TB' },
         { src: imagen20, alt: 'Disco duro para videovigilancia' },
@@ -149,36 +152,33 @@ const Kit4CamarasBala: React.FC = () => {
     {
       title: '4 Fuentes de Energía',
       description: '4 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
-      images: [
-        { src: imagen24, alt: 'Fuente de alimentación para cámaras de seguridad' }
-      ],
+      features: ['Alimentación de 12 voltios', 'Compatibilidad con cámaras de seguridad', 'Conector de 2.1mm', 'Indicador LED de funcionamiento'],
+      images: [{ src: imagen24, alt: 'Fuente de alimentación para cámaras de seguridad' }],
       botonTexto: 'Comprar!'
     },
     {
       title: '4 pares de Video Baluns',
       description: '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
-      images: [
-        { src: imagen25, alt: 'Video Balun para transmisión de señales de video' }
-      ],
+      features: ['Transmisión de video por UTP', 'Señal estable a larga distancia', 'Compatible con TURBO 4 EN 1'],
+      images: [{ src: imagen25, alt: 'Video Balun para transmisión de señales de video' }],
       botonTexto: 'Domicilio Gratis!'
     },
     {
       title: '4 pares de Borneras',
       description: '4 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
-      images: [
-        { src: imagen26, alt: 'Borneras eléctricas para cámaras de seguridad' }
-      ],
+      features: ['Distribución de energía', 'Alta compatibilidad con cámaras', 'Conexiones seguras'],
+      images: [{ src: imagen26, alt: 'Borneras eléctricas para cámaras de seguridad' }],
       botonTexto: 'Obtener!'
     },
     {
       title: '50 mts de cable UTP',
       description: 'Cable UTP Cat 5e para interior incluido en el kit.',
-      images: [
-        { src: imagen27, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }
-      ],
+      features: ['Categoría 5e', 'Alta velocidad de transmisión', 'Uso en interiores'],
+      images: [{ src: imagen27, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }],
       botonTexto: 'Pídalo Ahora!'
     }
   ];
+  
 
   function Carruseles() {
     return (
@@ -314,26 +314,31 @@ const Kit4CamarasBala: React.FC = () => {
         />
       </Suspense>
 
-      {carruseles.map((carrusel, index) => (
-        <React.Fragment key={index}>
-          <section style={{ marginBottom: '40px', textAlign: 'center' }}>
-            <h2>{carrusel.title}</h2>
-            <Suspense fallback={<div>Cargando...</div>}>
-              <Carrusel images={carrusel.images} />
-            </Suspense>
-            <p>{carrusel.description}</p>
-            <Suspense fallback={<div>Cargando...</div>}>
-              <BotonCompra
-                texto={carrusel.botonTexto}
-                onClick={() => abrirModal(index)}
-                color="#007bff"
-                tamaño="mediano"
-              />
-            </Suspense>
-          </section>
-          {index < banners.length && banners[index]}
-        </React.Fragment>
-      ))}
+     {carruseles.map((carrusel, index) => (
+       <React.Fragment key={index}>
+         <section style={{ marginBottom: '40px', textAlign: 'center' }}>
+           <h2>{carrusel.title}</h2>
+           <Suspense fallback={<div>Cargando...</div>}>
+             <Carrusel
+               images={carrusel.images}
+               title={carrusel.title}
+               description={carrusel.description}
+               features={carrusel.features}
+             />
+           </Suspense>
+           <p>{carrusel.description}</p>
+           <Suspense fallback={<div>Cargando...</div>}>
+             <BotonCompra
+               texto={carrusel.botonTexto}
+               onClick={() => abrirModal(index)}
+               color="#007bff"
+               tamaño="mediano"
+             />
+           </Suspense>
+         </section>
+         {index < banners.length && banners[index]}
+       </React.Fragment>
+     ))}
 
       {modalAbierto && (
         <Suspense fallback={<div>Cargando...</div>}>
@@ -369,8 +374,8 @@ const Kit4CamarasBala: React.FC = () => {
 
       <Suspense fallback={<div>Cargando...</div>}>
         <Formulario
-          titulo="Confirme la Compra del kit de 4 cámaras"
-          descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $780,000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
+          titulo="confirma la Compra del kit de 4 cámaras Domo, 2mpx + grabacion a 4mpx lite"
+          descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, ¡Domicilio gratis! Realizamos llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
           precio="$780,000"
         />
       </Suspense>

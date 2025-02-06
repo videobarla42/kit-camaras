@@ -102,102 +102,136 @@ const Kit4Camaras: React.FC = () => {
   };
 
   const carruseles = [
-    {
-      title: '1 DVR de 4 Canales, 4 MPX Lite',
-      description: 'DVR AcuSense mini de 4 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
-      images: [
-        { src: imagen2, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
-        { src: imagen3, alt: 'DVR AcuSense mini de 4 canales HIKVISION' },
-        { src: imagen4, alt: 'DVR con detección de movimiento avanzada' },
-        { src: imagen5, alt: 'DVR HIKVISION con protección perimetral' },
-        { src: imagen6, alt: 'DVR con compresión H.265 Pro+' },
-        { src: imagen7, alt: 'DVR con soporte para cámaras IP' },
-        { src: imagen8, alt: 'DVR con grabación en múltiples resoluciones' },
-        { src: imagen9, alt: 'DVR HIKVISION de 4 canales' }
-      ],
-      botonTexto: 'Domicilio Gratis!'
-    },
-    {
-      title: '4 Cámaras Domo de 2 Mpx',
-      description: '4 Cámaras Domo TURBOHD 1080p-2mpx de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
-      images: [
-        { src: imagen10, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
-        { src: imagen11, alt: 'Cámara de seguridad HIKVISION' },
-        { src: imagen12, alt: 'Cámara con visión nocturna HIKVISION' },
-        { src: imagen13, alt: 'Cámara Domo TURBOHD 1080p' },
-        { src: imagen14, alt: 'Cámara de seguridad con lente de 2.8 mm' },
-        { src: imagen15, alt: 'Cámara con visión nocturna EXIR' },
-        { src: imagen16, alt: 'Cámara de seguridad para exteriores' },
-        { src: imagen17, alt: 'Cámara Domo HIKVISION' },
-        { src: imagen18, alt: 'Cámara de seguridad con visión nocturna' }
-      ],
-      botonTexto: 'Pague en casa!'
-    },
-    {
-      title: '1 Disco duro ideal para videovigilancia',
-      description: 'Disco duro Seagate Skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
-      images: [
-        { src: imagen19, alt: 'Disco duro Seagate Skyhawk 1 TB' },
-        { src: imagen20, alt: 'Disco duro para videovigilancia' },
-        { src: imagen21, alt: 'Disco duro con tecnología AllFrame' },
-        { src: imagen22, alt: 'Disco duro Seagate Skyhawk' },
-        { src: imagen23, alt: 'Disco duro para grabación 24/7' }
-      ],
-      botonTexto: 'Obtenga el Kit!'
-    },
-    {
-      title: '4 Fuentes de Energía',
-      description: '4 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
-      images: [
-        { src: imagen24, alt: 'Fuente de alimentación para cámaras de seguridad' }
-      ],
-      botonTexto: 'Comprar!'
-    },
-    {
-      title: '4 pares de Video Baluns',
-      description: '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
-      images: [
-        { src: imagen25, alt: 'Video Balun para transmisión de señales de video' }
-      ],
-      botonTexto: 'Domicilio Gratis!'
-    },
-    {
-      title: '4 pares de Borneras',
-      description: '4 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
-      images: [
-        { src: imagen26, alt: 'Borneras eléctricas para cámaras de seguridad' }
-      ],
-      botonTexto: 'Obtener!'
-    },
-    {
-      title: '50 mts de cable UTP',
-      description: 'Cable UTP Cat 5e para interior incluido en el kit.',
-      images: [
-        { src: imagen27, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }
-      ],
-      botonTexto: 'Pídalo Ahora!'
-    }
-  ];
+  {
+    title: '1 DVR de 4 Canales, 4 MPX Lite',
+    description:
+      'DVR AcuSense mini de 4 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
+    features: [
+      'Compresión H.265 Pro+',
+      'Soporte para cámaras IP de hasta 6 MP',
+      'Grabación en múltiples resoluciones hasta 4mpx Lite',
+    ],
+    images: [
+      { src: imagen2, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
+      { src: imagen3, alt: 'DVR AcuSense mini de 4 canales HIKVISION' },
+      { src: imagen4, alt: 'DVR con detección de movimiento avanzada' },
+      { src: imagen5, alt: 'DVR HIKVISION con protección perimetral' },
+      { src: imagen6, alt: 'DVR con compresión H.265 Pro+' },
+      { src: imagen7, alt: 'DVR con soporte para cámaras IP' },
+      { src: imagen8, alt: 'DVR con grabación en múltiples resoluciones' },
+      { src: imagen9, alt: 'DVR HIKVISION de 4 canales' },
+    ],
+    botonTexto: 'Domicilio Gratis!',
+  },
+  {
+    title: '4 Cámaras Domo de 2 Mpx',
+    description:
+      '4 Cámaras Domo TURBOHD 1080p-2mpx de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
+    features: [
+      'Visión nocturna EXIR',
+      'Lente de 2.8 mm',
+      'Resolución de 1080p',
+    ],
+    images: [
+      { src: imagen10, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
+      { src: imagen11, alt: 'Cámara de seguridad HIKVISION' },
+      { src: imagen12, alt: 'Cámara con visión nocturna HIKVISION' },
+      { src: imagen13, alt: 'Cámara Domo TURBOHD 1080p' },
+      { src: imagen14, alt: 'Cámara de seguridad con lente de 2.8 mm' },
+      { src: imagen15, alt: 'Cámara con visión nocturna EXIR' },
+      { src: imagen16, alt: 'Cámara de seguridad para exteriores' },
+      { src: imagen17, alt: 'Cámara Domo HIKVISION' },
+      { src: imagen18, alt: 'Cámara de seguridad con visión nocturna' },
+    ],
+    botonTexto: 'Pague en casa!',
+  },
+  {
+    title: '1 Disco duro ideal para videovigilancia',
+    description:
+      'Disco duro Seagate Skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
+    features: [
+      'Tecnología AllFrame',
+      'Velocidad de 110 MB/s',
+      'Interfaz SATA',
+      'Caché de 64 MB',
+    ],
+    images: [
+      { src: imagen19, alt: 'Disco duro Seagate Skyhawk 1 TB' },
+      { src: imagen20, alt: 'Disco duro para videovigilancia' },
+      { src: imagen21, alt: 'Disco duro con tecnología AllFrame' },
+      { src: imagen22, alt: 'Disco duro Seagate Skyhawk' },
+      { src: imagen23, alt: 'Disco duro para grabación 24/7' },
+    ],
+    botonTexto: 'Obtenga el Kit!',
+  },
+  {
+    title: '4 Fuentes de Energía',
+    description:
+      '4 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
+    features: [
+      'Alta calidad',
+      'Conector de alimentación de 2.1mm',
+      'LED indicador de funcionamiento',
+    ],
+    images: [{ src: imagen24, alt: 'Fuente de alimentación para cámaras de seguridad' }],
+    botonTexto: 'Comprar!',
+  },
+  {
+    title: '4 pares de Video Baluns',
+    description:
+      '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
+    features: [
+      'Transmisión de señales de video',
+      'Señal clara y estable',
+      'Larga distancia',
+    ],
+    images: [{ src: imagen25, alt: 'Video Balun para transmisión de señales de video' }],
+    botonTexto: 'Domicilio Gratis!',
+  },
+  {
+    title: '4 pares de Borneras',
+    description:
+      '4 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
+    features: [
+      'Conexión y distribución de energía',
+      'Ideal para cámaras de seguridad',
+    ],
+    images: [{ src: imagen26, alt: 'Borneras eléctricas para cámaras de seguridad' }],
+    botonTexto: 'Obtener!',
+  },
+  {
+    title: '50 mts de cable UTP',
+    description: 'Cable UTP Cat 5e para interior incluido en el kit.',
+    features: [
+      'Cable UTP Cat 5e',
+      'Ideal para cámaras de seguridad',
+      'Incluido en el kit',
+    ],
+    images: [{ src: imagen27, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }],
+    botonTexto: 'Pídalo Ahora!',
+  },
+];
 
-  function Carruseles() {
-    return (
-      <div>
-        {carruseles.map((carrusel, index) => (
-          <div key={index}>
-            <h2>{carrusel.title}</h2>
-            <p>{carrusel.description}</p>
-            <div>
-              {carrusel.images.map((image, idx) => (
-                <Imagen key={idx} src={image.src} alt={image.alt} />
-              ))}
-            </div>
-            <button>{carrusel.botonTexto}</button>
-          </div>
-        ))}
-      </div>
-    );
-  }
-
+function Carruseles() {
+  return (
+    <div>
+      {carruseles.map((carrusel, index) => (
+        <div key={index} className="producto-container">
+          <h2>{carrusel.title}</h2>
+          <p>{carrusel.description}</p>
+          {/* Usamos el componente Carrusel pasando imágenes y detalles */}
+          <Carrusel
+            images={carrusel.images}
+            title={carrusel.title}
+            description={carrusel.description}
+            features={carrusel.features || []} // Si no hay características, pasa un array vacío
+          />
+          <button>{carrusel.botonTexto}</button>
+        </div>
+      ))}
+    </div>
+  );
+}
 
   const banners = [
     <Banner
@@ -313,27 +347,32 @@ const Kit4Camaras: React.FC = () => {
         />
       </Suspense>
 
-      {carruseles.map((carrusel, index) => (
-        <React.Fragment key={index}>
-          <section style={{ marginBottom: '40px', textAlign: 'center' }}>
-            <h2>{carrusel.title}</h2>
-            <Suspense fallback={<div>Cargando...</div>}>
-              <Carrusel images={carrusel.images} />
-            </Suspense>
-            <p>{carrusel.description}</p>
-            <Suspense fallback={<div>Cargando...</div>}>
-              <BotonCompra
-                texto={carrusel.botonTexto}
-                onClick={() => abrirModal(index)}
-                color="#007bff"
-                tamaño="mediano"
-              />
-            </Suspense>
-          </section>
-          {index < banners.length && banners[index]}
-        </React.Fragment>
-      ))}
-
+     {carruseles.map((carrusel, index) => (
+       <React.Fragment key={index}>
+         <section style={{ marginBottom: '40px', textAlign: 'center' }}>
+           <h2>{carrusel.title}</h2>
+           <Suspense fallback={<div>Cargando...</div>}>
+             <Carrusel
+               images={carrusel.images}
+               title={carrusel.title}
+               description={carrusel.description}
+               features={carrusel.features}
+             />
+           </Suspense>
+           <p>{carrusel.description}</p>
+           <Suspense fallback={<div>Cargando...</div>}>
+             <BotonCompra
+               texto={carrusel.botonTexto}
+               onClick={() => abrirModal(index)}
+               color="#007bff"
+               tamaño="mediano"
+             />
+           </Suspense>
+         </section>
+         {index < banners.length && banners[index]}
+       </React.Fragment>
+     ))}
+     
       {modalAbierto && (
         <Suspense fallback={<div>Cargando...</div>}>
           <ModalCompra
@@ -368,8 +407,8 @@ const Kit4Camaras: React.FC = () => {
 
       <Suspense fallback={<div>Cargando...</div>}>
         <Formulario
-          titulo="Confirme la Compra del kit de 4 cámaras"
-          descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $780,000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
+          titulo="confirma la Compra del kit de 4 cámaras Domo, 2mpx + grabacion a 4mpx lite"
+          descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, ¡Domicilio gratis! Realizamos llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
           precio="$780,000"
         />
       </Suspense>

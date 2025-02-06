@@ -102,6 +102,14 @@ const Kit4CamarasBala: React.FC = () => {
     {
       title: '1 DVR de 16 Canales, 4 MPX',
       description: 'DVR AcuSense mini de 16 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
+      features: [
+        '16 canales para múltiples cámaras',
+        'Detección avanzada de movimiento (humanos y vehículos)',
+        'Protección perimetral incluida',
+        'Compresión H.265 Pro+ para almacenamiento eficiente',
+        'Soporte para cámaras IP de hasta 6 MP',
+        'Grabación en múltiples resoluciones hasta 4mpx Lite'
+      ],
       images: [
         { src: imagen29, alt: 'Video Grabador DVR de 16 Canales HIKVISION' },
         { src: imagen30, alt: 'DVR AcuSense mini de 16 canales HIKVISION' },
@@ -113,6 +121,13 @@ const Kit4CamarasBala: React.FC = () => {
     {
       title: '16 Cámaras bala de 2 Mpx',
       description: '16 Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
+      features: [
+        'Lente de 2.8 mm para mayor amplitud',
+        'Calidad de imagen 1080p Full HD',
+        'Visión nocturna inteligente EXIR hasta 20 mts',
+        'Diseño resistente para interiores y exteriores',
+        'Compatibilidad con DVRs HIKVISION'
+      ],
       images: [
         { src: imagen32, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
         { src: imagen11, alt: 'Cámara de seguridad HIKVISION' },
@@ -129,6 +144,14 @@ const Kit4CamarasBala: React.FC = () => {
     {
       title: '1 Disco duro ideal para videovigilancia',
       description: 'Disco duro Seagate Skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
+      features: [
+        'Capacidad de 1 TB para almacenamiento extenso',
+        'Optimizado para grabación 24/7',
+        'Tecnología AllFrame para menor pérdida de cuadros',
+        'Velocidad de transferencia de 110 MB/s',
+        'Compatibilidad con múltiples cámaras (hasta 64)',
+        'Interfaz SATA y caché de 64 MB'
+      ],
       images: [
         { src: imagen19, alt: 'Disco duro Seagate Skyhawk 1 TB' },
         { src: imagen20, alt: 'Disco duro para videovigilancia' },
@@ -141,6 +164,13 @@ const Kit4CamarasBala: React.FC = () => {
     {
       title: '16 Fuentes de Energía',
       description: '16 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
+      features: [
+        'Compatible con AC 110-240V',
+        'Salida de 12V a 1 amperio',
+        'Indicador LED de funcionamiento',
+        'Conector de alimentación de 2.1 mm',
+        'Alta eficiencia energética'
+      ],
       images: [
         { src: imagen33, alt: 'Fuente de alimentación para cámaras de seguridad' }
       ],
@@ -149,6 +179,12 @@ const Kit4CamarasBala: React.FC = () => {
     {
       title: '16 pares de Video Baluns',
       description: '16 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
+      features: [
+        'Transmisión de señales de video a través de cables UTP',
+        'Compatibilidad 4 en 1 (HDCVI, HDTVI, AHD y CVBS)',
+        'Señal clara y estable a larga distancia',
+        'Instalación sencilla y eficiente'
+      ],
       images: [
         { src: imagen34, alt: 'Video Balun para transmisión de señales de video' }
       ],
@@ -157,6 +193,12 @@ const Kit4CamarasBala: React.FC = () => {
     {
       title: '16 pares de Borneras',
       description: '16 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
+      features: [
+        'Distribución eficiente de energía',
+        'Fácil instalación y conexión',
+        'Alta durabilidad y resistencia',
+        'Compatibilidad con múltiples dispositivos eléctricos'
+      ],
       images: [
         { src: imagen35, alt: 'Borneras eléctricas para cámaras de seguridad' }
       ],
@@ -165,12 +207,19 @@ const Kit4CamarasBala: React.FC = () => {
     {
       title: '200 mts de cable UTP',
       description: 'Cable UTP Cat 5e para interior incluido en el kit.',
+      features: [
+        'Categoría 5e para transmisión de datos eficiente',
+        '200 metros de cable para instalaciones amplias',
+        'Adecuado para interior',
+        'Compatibilidad con cámaras de seguridad'
+      ],
       images: [
         { src: imagen27, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }
       ],
       botonTexto: 'Pídalo Ahora!'
     }
   ];
+  
 
   function Carruseles() {
     return (
@@ -307,25 +356,30 @@ const Kit4CamarasBala: React.FC = () => {
       </Suspense>
 
       {carruseles.map((carrusel, index) => (
-        <React.Fragment key={index}>
-          <section style={{ marginBottom: '40px', textAlign: 'center' }}>
-            <h2>{carrusel.title}</h2>
-            <Suspense fallback={<div>Cargando...</div>}>
-              <Carrusel images={carrusel.images} />
-            </Suspense>
-            <p>{carrusel.description}</p>
-            <Suspense fallback={<div>Cargando...</div>}>
-              <BotonCompra
-                texto={carrusel.botonTexto}
-                onClick={() => abrirModal(index)}
-                color="#007bff"
-                tamaño="mediano"
-              />
-            </Suspense>
-          </section>
-          {index < banners.length && banners[index]}
-        </React.Fragment>
-      ))}
+  <React.Fragment key={index}>
+    <section style={{ marginBottom: '40px', textAlign: 'center' }}>
+      <h2>{carrusel.title}</h2>
+      <Suspense fallback={<div>Cargando...</div>}>
+        <Carrusel
+          images={carrusel.images}
+          title={carrusel.title}
+          description={carrusel.description}
+          features={carrusel.features}
+        />
+      </Suspense>
+      <p>{carrusel.description}</p>
+      <Suspense fallback={<div>Cargando...</div>}>
+        <BotonCompra
+          texto={carrusel.botonTexto}
+          onClick={() => abrirModal(index)}
+          color="#007bff"
+          tamaño="mediano"
+        />
+      </Suspense>
+    </section>
+    {index < banners.length && banners[index]}
+  </React.Fragment>
+))}
 
       {modalAbierto && (
         <Suspense fallback={<div>Cargando...</div>}>
@@ -361,8 +415,8 @@ const Kit4CamarasBala: React.FC = () => {
 
       <Suspense fallback={<div>Cargando...</div>}>
         <Formulario
-          titulo="Confirme la Compra del kit de 4 cámaras"
-          descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $780,000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
+          titulo="confirma la Compra del kit de 16 cámaras Bala, 2mpx + grabacion a 4mpx lite"
+          descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, ¡Domicilio gratis! Realizamos llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
           precio="$780,000"
         />
       </Suspense>
