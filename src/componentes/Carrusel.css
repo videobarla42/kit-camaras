@@ -149,34 +149,31 @@
   right: 20px;
 }
 
-/* =====================================
-   Ajustes Responsivos
-   ===================================== */
 
-/* Para pantallas tipo tablet y móviles (max-width: 768px) */
 @media (max-width: 768px) {
   /* Contenedor principal del carrusel */
   .carrusel-container {
     position: relative;
-    width: 100%;             /* Ocupa todo el ancho disponible */
-    max-width: 600px;        /* Ancho máximo para evitar exceso en pantallas grandes */
-    margin: 0 auto;          /* Centrado horizontal */
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    background-color: #f0f0f0; /* Fondo de respaldo */
+    background-color: #f9f9f9;
   }
 
-  /* Contenedor del slider (área visible de las imágenes) */
+  /* Slider del carrusel */
   .carrusel-slider {
     position: relative;
-    height: 300px;           /* Altura reducida para dispositivos más pequeños */
+    height: 300px;
     overflow: hidden;
     border-radius: inherit;
   }
 
+  /* Botones de navegación */
   .carrusel-button {
-    font-size: 20px;
+    font-size: 24px;
     padding: 10px;
     background: rgba(0, 0, 0, 0.5);
     color: white;
@@ -186,9 +183,9 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    transition: all 0.3s ease;
   }
 
-  /* Botones de navegación (anterior y siguiente) */
   .carrusel-button.prev {
     left: 10px;
   }
@@ -197,74 +194,68 @@
     right: 10px;
   }
 
-  /* Fondo del modal */
+  .carrusel-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  /* Modal overlay */
   .modal-overlay {
     position: fixed;
-    top: 0;                     /* Se coloca desde el inicio de la pantalla */
+    top: 0;
     left: 0;
     width: 100%;
-    height: 100%;               /* Ocupa toda la pantalla */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    height: 100%;
+    background-color: #4b0bfccc;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    overflow-y: auto;           /* Permite scroll en caso de contenido extenso */
-    padding: 20px;              /* Espaciado interno para que no pegue al borde */
+    overflow-y: auto;
+    padding: 0px;
   }
 
-  /* Contenedor del contenido del modal */
+  /* Contenido del modal */
   .modal-content {
-    background-color: #fff;
-    margin-top: 10px;
+    background-color: #ff0e0e;
     border-radius: 10px;
-    width: 120%;
-    max-width: 900px;
-    max-height: 90vh;           /* Limita la altura del modal */
-    overflow-y: auto;           /* Permite scroll interno si el contenido es largo */
+    padding: 16px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0;  /* Eliminamos el padding para que los elementos queden pegados */
-    left: 175px;
-    /* Puedes ajustar la posición horizontal del modal si es necesario */
+    margin: 0 auto;
+    margin-left: -5px;
+    margin-top: -15px;
   }
 
-  /* Imagen dentro del modal */
+  /* Imagen en el modal */
   .modal-content img {
-    position: relative; /* Para que 'top' funcione */
-    top: -23px;         /* Ajusta este valor según lo alto que desees subir la imagen */
-    width: 98%;
-    max-height: 90vh;           /* Limita la altura de la imagen */
-    object-fit: contain;        /* Se muestra completa sin recorte */
-    margin: 0;
-    left: 5px;
+    width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 7px;
+    transform: translateY(25px);
+
   }
 
-  /* Estilos para la descripción dentro del modal */
-  .modal-description {
-    font-size: 1rem;
-    color: #333;
-    text-align: center;
-    line-height: 1.5;
-    max-width: 90%;
-    margin: 0;                  /* Sin márgenes para pegar el texto a la imagen */
-    padding: 10px;              /* Si se desea un poco de espacio interno */
-  }
+  
 
-  /* Features en la parte inferior del modal */
+  /* Detalles del producto */
   .modal-product-details {
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(214, 191, 191, 0.8);
     color: white;
-    padding: 15px;
+    padding: 10px;
     text-align: left;
     border-radius: 0 0 8px 8px;
     box-sizing: border-box;
-    margin-top: -133px;  /* Ajusta este valor según necesites */
+    margin-top: 10px;
   }
 
   .modal-product-details h3 {
@@ -281,21 +272,63 @@
     margin: 5px 0;
   }
 
-  /* Botón de cerrar: fijo en la esquina superior izquierda */
+  /* Botón de cerrar */
   .modal-close {
-    position: fixed;        /* Se mantiene fijo en la pantalla */
-    top: -50px;              /* Distancia desde la parte superior */
-    left: -70px;             /* Distancia desde la parte izquierda */
-    z-index: 1100;          /* Superior a otros elementos del modal */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1100;
     background: transparent;
     border: none;
-    font-size: 70px;
-    color: #140e0e;
+    font-size: 24px;
+    color: rgb(255, 36, 36);
     cursor: pointer;
+    transition: color 0.3s ease;
   }
 
+  .modal-close:hover {
+    color: #ff4d4d;
+  }
 
-  
+  /* Contador de imágenes */
+  .modal-counter {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+
+  /* Botones de navegación dentro del modal */
+  .modal-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .modal-button.prev {
+    left: 10px;
+  }
+
+  .modal-button.next {
+    right: 10px;
+  }
+
+  .modal-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
 /* Para dispositivos móviles (max-width: 480px) */
 @media (max-width: 480px) {
   .carrusel-slider {
@@ -338,5 +371,4 @@
   .modal-button.next {
     right: 10px;
   }
-}
 }

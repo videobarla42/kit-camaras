@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect,useState } from 'react';
 import './Carrusel.css';
+
 
 
 
@@ -66,6 +67,32 @@ const Carrusel: React.FC<CarruselProps> = ({ images, title, description, feature
     }
   };
 
+
+const [showDetails, setShowDetails] = useState(false);
+let lastScrollY = 0;
+
+useEffect(() => {
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY < lastScrollY) {
+      // Scroll hacia arriba
+      setShowDetails(true);
+    } else {
+      // Scroll hacia abajo
+      setShowDetails(false);
+    }
+    lastScrollY = currentScrollY;
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
+
+
   return (
     <div className="carrusel-container">
       <div className="carrusel-slider">
@@ -118,14 +145,7 @@ const Carrusel: React.FC<CarruselProps> = ({ images, title, description, feature
               alt={images[modalIndex].alt}
               loading="lazy"
             />
-            {/* Mostrar información del producto */}
-            <div className="product-info">
-              <ul>
-                {features.map((feature, idx) => (
-                  <li key={idx}>{feature}</li>
-                ))}
-              </ul>
-            </div>
+            
             <button
               className="modal-button prev"
               onClick={(e) => {
