@@ -155,21 +155,18 @@
   .carrusel-container {
     position: relative;
     width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
+    max-width: 100%; /* Ajustado a pantalla completa */
+    margin: 10px auto; /* Menor margen */
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 10px; /* Bordes más suaves */
     background: linear-gradient(45deg, #0b0f1f, #1a1f33);
-    box-shadow: 0 12px 30px rgba(75, 11, 252, 0.4);
+    box-shadow: 0 8px 25px rgba(75, 11, 252, 0.4); /* Ajuste en la sombra */
   }
-
-
-
 
   /* Slider del carrusel */
   .carrusel-slider {
     position: relative;
-    height: 300px;
+    height: 250px; /* Menor altura */
     overflow: hidden;
     border-radius: inherit;
     transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -177,8 +174,8 @@
 
   /* Botones de navegación */
   .carrusel-button {
-    font-size: 28px;
-    padding: 15px;
+    font-size: 24px; /* Tamaño de fuente reducido */
+    padding: 10px; /* Menos espacio */
     background: linear-gradient(145deg, rgba(75,11,252,0.8), rgba(154,86,255,0.8));
     color: white;
     border: none;
@@ -189,8 +186,8 @@
     z-index: 10;
     transition: all 0.3s ease;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px; /* Menor tamaño */
+    height: 40px; /* Menor tamaño */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -199,11 +196,11 @@
   }
 
   .carrusel-button.prev {
-    left: 10px;
+    left: 5px;
   }
 
   .carrusel-button.next {
-    right: 10px;
+    right: 5px;
   }
 
   .carrusel-button:hover {
@@ -211,31 +208,29 @@
   }
 
   /* Modal overlay */
- /* Modal overlay */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Puedes ajustar el color */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  overflow-y: auto; /* Asegúrate de que se pueda hacer scroll si el contenido es más grande */
-}
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto;
+  }
 
-  /* Contenido del modal */
   /* Animación de entrada */
-.modal-overlay {
-  background: linear-gradient(135deg,
-    rgba(75,11,252,0.95) 0%,
-    rgba(154,86,255,0.95) 50%,
-    rgba(255,14,14,0.95) 100%);
-  backdrop-filter: blur(15px) saturate(180%);
-  animation: hologramEnter 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
+  .modal-overlay {
+    background: linear-gradient(135deg,
+      rgba(46, 10, 46, 0.95) 0%,
+      rgba(28, 18, 43, 0.95) 50%,
+      rgba(255,14,14,0.95) 100%);
+    backdrop-filter: blur(15px) saturate(180%);
+    animation: hologramEnter 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
   @keyframes hologramEnter {
     0% {
@@ -252,39 +247,20 @@
   .modal-content {
     background: rgba(16, 18, 27, 0.95);
     border: 2px solid rgba(75,11,252,0.3);
-    box-shadow: 0 0 40px rgba(75,11,252,0.3),
-                inset 0 0 20px rgba(255,255,255,0.1);
+    box-shadow: 0 0 30px rgba(75,11,252,0.3),
+                inset 0 0 15px rgba(255,255,255,0.1);
     position: relative;
     overflow: hidden;
+    max-width: 150px; /* Ajuste en el tamaño */
   }
 
-
-  .modal-content::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, 
-      transparent 45%,
-      rgba(75,11,252,0.2) 50%,
-      transparent 55%);
-    animation: hologramScan 4s infinite linear;
-    pointer-events: none;
-  }
-
-  @keyframes hologramScan {
-    0% { transform: rotate(45deg) translateY(-100%); }
-    100% { transform: rotate(45deg) translateY(100%); }
-  }
-
-  /* Imagen en el modal */
   .modal-content img {
     transform: translateY(2px) scale(0.98);
     filter: drop-shadow(0 0 10px rgba(75,11,252,0.5));
     transition: transform 0.3s ease;
-    border-radius: 10px;
+    border-radius: 8px; /* Bordes más suaves */
+    max-width: 100%; /* Asegura que no se desborde */
+    height: auto;
   }
 
   .modal-product-details {
@@ -294,20 +270,21 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(75,11,252,0.2);
     box-shadow: 0 -5px 20px rgba(0,0,0,0.3);
+    padding: 15px; /* Más espacio en los detalles */
   }
 
   .modal-product-details h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 16px; /* Tamaño reducido */
+    margin-bottom: 8px;
   }
 
   .modal-product-details ul {
     list-style: disc;
-    padding-left: 20px;
+    padding-left: 15px;
   }
 
   .modal-product-details ul li {
-    margin: 5px 0;
+    margin: 3px 0;
   }
 
   .modal-close {
@@ -315,10 +292,10 @@
     text-shadow: 0 0 10px rgba(255, 5, 5, 0.973);
     transition: all 0.3s ease;
     background-color: #080202;
-    margin-left: 240px;
+    margin-left: 200px;
     position: absolute;
     z-index: 9999;
-    top:25px;
+    top: 25px;
     width: 10px;
     height: 28px;
   }
@@ -336,7 +313,7 @@
     box-shadow: 0 0 10px rgba(75,11,252,0.3);
     margin-top: 10px;
     width: 50%;
-    margin-left: 80px;
+    margin-left: 20px; /* Mejor alineación */
   }
 
   /* Botones de navegación dentro del modal */
@@ -345,10 +322,10 @@
       rgba(75,11,252,0.8), 
       rgba(154,86,255,0.8));
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 35px; /* Tamaño más pequeño */
+    height: 35px; /* Tamaño más pequeño */
     backdrop-filter: blur(5px);
-    box-shadow: 0 0 15px rgba(75,11,252,0.5);
+    box-shadow: 0 0 12px rgba(75,11,252,0.5);
     transition: all 0.3s ease;
   }
 
@@ -356,14 +333,6 @@
     transform: translateY(-50%) scale(1.15);
   }
 
-
-
-  .modal-overlay.fade-out {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0s 0.5s;
-  }
-  
   .modal-button.prev {
     left: 10px;
   }
@@ -375,7 +344,15 @@
   .modal-button:hover {
     background: rgba(0, 0, 0, 0.7);
   }
+
+  /* Ajustar para el cierre del modal */
+  .modal-overlay.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s 0.5s;
+  }
 }
+
 
 /* Para dispositivos móviles (max-width: 480px) */
 @media (max-width: 480px) {
