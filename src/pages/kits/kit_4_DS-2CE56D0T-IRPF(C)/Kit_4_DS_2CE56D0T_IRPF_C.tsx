@@ -41,13 +41,49 @@ import imagen26 from '@/assets/26.webp';
 import imagen27 from '@/assets/27.webp';
 import headerImage from '@/assets/1.webp';
 
+
+
+
+// dvr de 4mpx (números del 65 al 79)
+import imagen65 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S1.webp';
+import imagen66 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S4.webp';
+import imagen67 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S5.webp';
+import imagen68 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S6.webp';
+import imagen69 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S7.webp';
+import imagen70 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S8.webp';
+import imagen71 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S9.webp';
+import imagen72 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S10.webp';
+import imagen73 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S11.webp';
+import imagen74 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S12.webp';
+import imagen75 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S13.webp';
+import imagen76 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S14.webp';
+import imagen77 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S15.webp';
+
+
+// disco duro (números del 65 al 79)
+import imagen78 from '@/assets/SEGATE/ST-1000-VX00-15201.webp';
+import imagen79 from '@/assets/SEGATE/ST-1000-VX00-15201.webp';
+import imagen80 from '@/assets/SEGATE/ST-1000-VX00-15201.webp';
+
+
+// materiales
+import imagen81 from '@/assets/MATERIALES/1.webp';
+import imagen82 from '@/assets/MATERIALES/4.webp';
+import imagen83 from '@/assets/MATERIALES/7.webp';
+import imagen84 from '@/assets/MATERIALES/10.webp';
+
+
+
+
+
+
 // Importación de las imágenes
 import Image1500 from '@/assets/1.webp';
 import Image1501 from '@/assets/28.webp';
 import Image1502 from '@/assets/36.webp';
-import Image1503 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
-import Image1504 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)28.webp';
-import Image1505 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)36.webp';
+import Image1503 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
+import Image1504 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)2.webp';
+import Image1505 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)3.webp';
 
 const Kit4Camaras: React.FC = () => {
   const {
@@ -112,14 +148,19 @@ const Kit4Camaras: React.FC = () => {
       'Grabación en múltiples resoluciones hasta 4mpx Lite',
     ],
     images: [
-      { src: imagen2, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
-      { src: imagen3, alt: 'DVR AcuSense mini de 4 canales HIKVISION' },
-      { src: imagen4, alt: 'DVR con detección de movimiento avanzada' },
-      { src: imagen5, alt: 'DVR HIKVISION con protección perimetral' },
-      { src: imagen6, alt: 'DVR con compresión H.265 Pro+' },
-      { src: imagen7, alt: 'DVR con soporte para cámaras IP' },
-      { src: imagen8, alt: 'DVR con grabación en múltiples resoluciones' },
-      { src: imagen9, alt: 'DVR HIKVISION de 4 canales' },
+      { src: imagen65, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
+        { src: imagen66, alt: 'DVR AcuSense mini de 4 canales HIKVISION' },
+        { src: imagen67, alt: 'DVR con detección de movimiento avanzada' },
+        { src: imagen68, alt: 'DVR HIKVISION con protección perimetral' },
+        { src: imagen69, alt: 'DVR con compresión H.265 Pro+' },
+        { src: imagen70, alt: 'DVR con soporte para cámaras IP' },
+        { src: imagen71, alt: 'DVR con grabación en múltiples resoluciones' },
+        { src: imagen72, alt: 'DVR HIKVISION de 4 canales' },
+        { src: imagen73, alt: 'DVR HIKVISION de 4 canales' },
+        { src: imagen74, alt: 'DVR HIKVISION de 4 canales' },
+        { src: imagen75, alt: 'DVR HIKVISION de 4 canales' },
+        { src: imagen76, alt: 'DVR HIKVISION de 4 canales' },
+        { src: imagen77, alt: 'DVR HIKVISION de 4 canales' },
     ],
     botonTexto: 'Domicilio Gratis!',
   },
@@ -156,11 +197,9 @@ const Kit4Camaras: React.FC = () => {
       'Caché de 64 MB',
     ],
     images: [
-      { src: imagen19, alt: 'Disco duro Seagate Skyhawk 1 TB' },
-      { src: imagen20, alt: 'Disco duro para videovigilancia' },
-      { src: imagen21, alt: 'Disco duro con tecnología AllFrame' },
-      { src: imagen22, alt: 'Disco duro Seagate Skyhawk' },
-      { src: imagen23, alt: 'Disco duro para grabación 24/7' },
+      { src: imagen78, alt: 'Disco duro Seagate Skyhawk 1 TB' },
+      { src: imagen79, alt: 'Disco duro para videovigilancia' },
+      { src: imagen80, alt: 'Disco duro con tecnología AllFrame' },
     ],
     botonTexto: 'Obtenga el Kit!',
   },
@@ -173,7 +212,7 @@ const Kit4Camaras: React.FC = () => {
       'Conector de alimentación de 2.1mm',
       'LED indicador de funcionamiento',
     ],
-    images: [{ src: imagen24, alt: 'Fuente de alimentación para cámaras de seguridad' }],
+    images: [{ src: imagen81, alt: 'Fuente de alimentación para cámaras de seguridad' }],
     botonTexto: 'Comprar!',
   },
   {
@@ -185,7 +224,7 @@ const Kit4Camaras: React.FC = () => {
       'Señal clara y estable',
       'Larga distancia',
     ],
-    images: [{ src: imagen25, alt: 'Video Balun para transmisión de señales de video' }],
+    images: [{ src: imagen82, alt: 'Video Balun para transmisión de señales de video' }],
     botonTexto: 'Domicilio Gratis!',
   },
   {
@@ -196,7 +235,7 @@ const Kit4Camaras: React.FC = () => {
       'Conexión y distribución de energía',
       'Ideal para cámaras de seguridad',
     ],
-    images: [{ src: imagen26, alt: 'Borneras eléctricas para cámaras de seguridad' }],
+    images: [{ src: imagen83, alt: 'Borneras eléctricas para cámaras de seguridad' }],
     botonTexto: 'Obtener!',
   },
   {
@@ -207,7 +246,7 @@ const Kit4Camaras: React.FC = () => {
       'Ideal para cámaras de seguridad',
       'Incluido en el kit',
     ],
-    images: [{ src: imagen27, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }],
+    images: [{ src: imagen84, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }],
     botonTexto: 'Pídalo Ahora!',
   },
 ];
