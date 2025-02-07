@@ -61,6 +61,54 @@ import imagen61 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)-VERTICAL/DS-2CE16D0T-I
 
 
 
+  // camaras bala 2mpx (números del 50 al 64)
+import imagen50 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
+import imagen51 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)4.webp';
+import imagen52 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)7.webp';
+import imagen53 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)8.webp';
+import imagen54 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)9.webp';
+import imagen55 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)10.webp';
+import imagen56 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)11.webp';
+import imagen57 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)12.webp';
+import imagen58 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)13.webp';
+import imagen59 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)14.webp';
+import imagen60 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)15.webp';
+import imagen61 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)16.webp';
+import imagen62 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)17.webp';
+import imagen63 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)18.webp';
+import imagen64 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)19.webp';
+
+
+// dvr de 4mpx (números del 65 al 79)
+import imagen65 from '@/assets/iDS-71HQHI-M1S1/iDS-71HQHI-M1S1.webp';
+import imagen66 from '@/assets/iDS-71HQHI-M1S1/iDS-71HQHI-M1S4.webp';
+import imagen67 from '@/assets/iDS-71HQHI-M1S1/iDS-71HQHI-M1S5.webp';
+import imagen68 from '@/assets/iDS-71HQHI-M1S1/iDS-71HQHI-M1S6.webp';
+import imagen69 from '@/assets/iDS-71HQHI-M1S1/iDS-71HQHI-M1S7.webp';
+import imagen70 from '@/assets/iDS-71HQHI-M1S1/iDS-71HQHI-M1S8.webp';
+import imagen71 from '@/assets/iDS-71HQHI-M1S1/iDS-71HQHI-M1S9.webp';
+import imagen72 from '@/assets/iDS-71HQHI-M1S1/iDS-71HQHI-M1S10.webp';
+import imagen73 from '@/assets/iDS-71HQHI-M1S1/iDS-71HQHI-M1S11.webp';
+import imagen74 from '@/assets/iDS-71HQHI-M1S1/iDS-71HQHI-M1S12.webp';
+import imagen75 from '@/assets/iDS-71HQHI-M1S1/iDS-71HQHI-M1S13.webp';
+import imagen76 from '@/assets/iDS-71HQHI-M1S1/iDS-71HQHI-M1S14.webp';
+
+
+// disco duro (números del 65 al 79)
+import imagen77 from '@/assets/SEGATE/ST-1000-VX00-15201.webp';
+import imagen78 from '@/assets/SEGATE/ST-1000-VX00-15201.webp';
+import imagen79 from '@/assets/SEGATE/ST-1000-VX00-15201.webp';
+
+
+// materiales
+import imagen80 from '@/assets/MATERIALES/1.webp';
+import imagen81 from '@/assets/MATERIALES/4.webp';
+import imagen82 from '@/assets/MATERIALES/7.webp';
+import imagen83 from '@/assets/MATERIALES/10.webp';
+
+
+
+
 
 // Importación de las imágenes
 import Image1500 from '@/assets/1.webp';
