@@ -16,7 +16,7 @@ const PriceManager: React.FC = () => {
 
   return (
     <div className="p-6 bg-gray-100 rounded-xl shadow-lg max-w-md mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Gestión de Precios</h1>
+      <h6 className="text-2xl font-bold mb-4">Gestión de Precios</h6>
 
       {/* Formulario para añadir o actualizar precios */}
       <div className="mb-4">

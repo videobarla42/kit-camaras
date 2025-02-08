@@ -140,19 +140,20 @@ const Kit4Camaras: React.FC = () => {
       'Grabación en múltiples resoluciones hasta 4mpx Lite',
     ],
     images: [
-      { src: imagen65, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
-        { src: imagen66, alt: 'DVR AcuSense mini de 4 canales HIKVISION' },
-        { src: imagen67, alt: 'DVR con detección de movimiento avanzada' },
-        { src: imagen68, alt: 'DVR HIKVISION con protección perimetral' },
-        { src: imagen69, alt: 'DVR con compresión H.265 Pro+' },
-        { src: imagen70, alt: 'DVR con soporte para cámaras IP' },
-        { src: imagen71, alt: 'DVR con grabación en múltiples resoluciones' },
-        { src: imagen72, alt: 'DVR HIKVISION de 4 canales' },
-        { src: imagen73, alt: 'DVR HIKVISION de 4 canales' },
-        { src: imagen74, alt: 'DVR HIKVISION de 4 canales' },
-        { src: imagen75, alt: 'DVR HIKVISION de 4 canales' },
-        { src: imagen76, alt: 'DVR HIKVISION de 4 canales' },
-    ],
+      { src: imagen65, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 de 4 canales con grabación de alta calidad' },
+      { src: imagen66, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 AcuSense mini de 4 canales con análisis inteligente' },
+      { src: imagen67, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 con detección de movimiento avanzada y alerta de seguridad' },
+      { src: imagen68, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 con protección perimetral para sistemas de vigilancia' },
+      { src: imagen69, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 con compresión H.265 Pro+ para optimización de almacenamiento' },
+      { src: imagen70, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 compatible con cámaras IP para monitoreo en red' },
+      { src: imagen71, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 con grabación en múltiples resoluciones para alta calidad visual' },
+      { src: imagen72, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 de 4 canales ideal para instalaciones de seguridad' },
+      { src: imagen73, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 de 4 canales, perfecto para cámaras de seguridad HIKVISION' },
+      { src: imagen74, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 de 4 canales con funciones avanzadas de grabación y monitoreo' },
+      { src: imagen75, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 de 4 canales con confiabilidad para sistemas de vigilancia' },
+      { src: imagen76, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 de 4 canales, solución de grabación eficiente para seguridad' },
+  ],
+  
     botonTexto: 'Domicilio Gratis!',
   },
   {
@@ -165,21 +166,22 @@ const Kit4Camaras: React.FC = () => {
       'Resolución de 1080p',
     ],
     images: [
-      { src: imagen50, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
-        { src: imagen51, alt: 'Cámara de seguridad HIKVISION' },
-        { src: imagen52, alt: 'Cámara con visión nocturna HIKVISION' },
-        { src: imagen53, alt: 'Cámara Domo TURBOHD 1080p' },
-        { src: imagen54, alt: 'Cámara de seguridad con lente de 2.8 mm' },
-        { src: imagen55, alt: 'Cámara con visión nocturna EXIR' },
-        { src: imagen56, alt: 'Cámara de seguridad para exteriores' },
-        { src: imagen57, alt: 'Cámara Domo HIKVISION' },
-        { src: imagen58, alt: 'Cámara de seguridad con visión nocturna' },
-        { src: imagen69, alt: 'Cámara de seguridad con visión nocturna' },
-        { src: imagen60, alt: 'Cámara de seguridad con visión nocturna' },
-        { src: imagen61, alt: 'Cámara de seguridad con visión nocturna' },
-        { src: imagen62, alt: 'Cámara de seguridad con visión nocturna' },
-        { src: imagen63, alt: 'Cámara de seguridad con visión nocturna' },
-    ],
+      { src: imagen50, alt: 'Cámara Domo TURBOHD 1080p HIKVISION con visión nocturna y tecnología Smart IR' },
+      { src: imagen51, alt: 'Cámara de seguridad HIKVISION 1080p con lente de 2.8 mm y visión nocturna Smart IR para exteriores' },
+      { src: imagen52, alt: 'Cámara de seguridad HIKVISION con visión nocturna EXIR, ideal para vigilancia exterior' },
+      { src: imagen53, alt: 'Cámara Domo TURBOHD 1080p HIKVISION con lente de 2.8 mm y visión nocturna Smart IR' },
+      { src: imagen54, alt: 'Cámara de seguridad HIKVISION con lente de 2.8 mm, visión nocturna y tecnología Smart IR' },
+      { src: imagen55, alt: 'Cámara de seguridad con visión nocturna EXIR HIKVISION para exteriores' },
+      { src: imagen56, alt: 'Cámara de seguridad HIKVISION para exteriores con visión nocturna y lente de 2.8 mm' },
+      { src: imagen57, alt: 'Cámara Domo HIKVISION 1080p con visión nocturna Smart IR para vigilancia exterior' },
+      { src: imagen58, alt: 'Cámara de seguridad HIKVISION con visión nocturna de hasta 20 mts y lente de 2.8 mm' },
+      { src: imagen69, alt: 'Cámara de seguridad HIKVISION con visión nocturna EXIR para vigilancia exterior' },
+      { src: imagen60, alt: 'Cámara de seguridad HIKVISION con visión nocturna Smart IR para exteriores y lente de 2.8 mm' },
+      { src: imagen61, alt: 'Cámara de seguridad HIKVISION 1080p con visión nocturna Smart IR y lente de 2.8 mm' },
+      { src: imagen62, alt: 'Cámara de seguridad HIKVISION con visión nocturna Smart IR, ideal para vigilancia nocturna en exteriores' },
+      { src: imagen63, alt: 'Cámara de seguridad HIKVISION con visión nocturna EXIR, perfecta para vigilancia exterior' },
+  ],
+  
     botonTexto: 'Pague en casa!',
   },
   {
@@ -193,10 +195,10 @@ const Kit4Camaras: React.FC = () => {
       'Caché de 64 MB',
     ],
     images: [
-      { src: imagen78, alt: 'Disco duro Seagate Skyhawk 1 TB' },
-      { src: imagen79, alt: 'Disco duro para videovigilancia' },
-      { src: imagen80, alt: 'Disco duro con tecnología AllFrame' },
-    ],
+      { src: imagen78, alt: 'Disco duro Seagate ST1000VX013 1 TB Skyhawk 5400 con tecnología AllFrame para videovigilancia' },
+      { src: imagen79, alt: 'Disco duro Seagate ST1000VX013 1 TB Skyhawk para videovigilancia, con interfaz eSATA y conectividad USB' },
+      { src: imagen80, alt: 'Disco duro Seagate ST1000VX013 1 TB Skyhawk con unidad híbrida, optimizado para grabación 24/7 y compatible con escritorio' },
+  ],
     botonTexto: 'Obtenga el Kit!',
   },
   {
@@ -252,7 +254,7 @@ function Carruseles() {
     <div>
       {carruseles.map((carrusel, index) => (
         <div key={index} className="producto-container">
-          <h2>{carrusel.title}</h2>
+          <h3>{carrusel.title}</h3>
           <p>{carrusel.description}</p>
           {/* Usamos el componente Carrusel pasando imágenes y detalles */}
           <Carrusel

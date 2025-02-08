@@ -10,7 +10,7 @@ const Beneficios: React.FC<BeneficiosProps> = () => {
   return (
     <div className="beneficios-container">
       {/* Título de la sección */}
-      <h1 className="beneficios-titulo">Beneficios del Kit</h1>
+      <h3 className="beneficios-titulo">Beneficios del Kit</h3>
 
       {/* Lista de beneficios */}
       <div className="beneficios-lista">
@@ -18,7 +18,7 @@ const Beneficios: React.FC<BeneficiosProps> = () => {
         <div className="beneficio-item">
           <span className="beneficio-icono">✔️</span>
           <div className="beneficio-contenido">
-            <h3>Tecnología avanzada de detección de movimiento</h3>
+            <h4>Tecnología avanzada de detección de movimiento</h4>
             <p>
               Clasificación precisa basada en aprendizaje profundo e identificación de humanos y vehículos.
             </p>
@@ -29,7 +29,7 @@ const Beneficios: React.FC<BeneficiosProps> = () => {
         <div className="beneficio-item">
           <span className="beneficio-icono">✔️</span>
           <div className="beneficio-contenido">
-            <h3>Protección perimetral mejorada</h3>
+            <h4>Protección perimetral mejorada</h4>
             <p>
               Detección facial con análisis inteligente para monitoreo y seguridad.
             </p>
@@ -40,7 +40,7 @@ const Beneficios: React.FC<BeneficiosProps> = () => {
         <div className="beneficio-item">
           <span className="beneficio-icono">✔️</span>
           <div className="beneficio-contenido">
-            <h3>Eficiencia en grabación y almacenamiento</h3>
+            <h4>Eficiencia en grabación y almacenamiento</h4>
             <p>
               Compresión H.265 Pro+ que reduce espacio de almacenamiento sin comprometer calidad.
             </p>
@@ -51,7 +51,7 @@ const Beneficios: React.FC<BeneficiosProps> = () => {
         <div className="beneficio-item">
           <span className="beneficio-icono">✔️</span>
           <div className="beneficio-contenido">
-            <h3>Flexibilidad en conexiones</h3>
+            <h4>Flexibilidad en conexiones</h4>
             <p>
               Compatibilidad con HDTVI, AHD, HDCVI, CVBS e IP, soportando hasta 6 canales IP.
             </p>
@@ -62,7 +62,7 @@ const Beneficios: React.FC<BeneficiosProps> = () => {
         <div className="beneficio-item">
           <span className="beneficio-icono">✔️</span>
           <div className="beneficio-contenido">
-            <h3>Almacenamiento robusto</h3>
+            <h4>Almacenamiento robusto</h4>
             <p>
               Capacidad de hasta 10 TB por disco y soporte para hasta 32 usuarios remotos simultáneamente.
             </p>
@@ -73,7 +73,7 @@ const Beneficios: React.FC<BeneficiosProps> = () => {
         <div className="beneficio-item">
           <span className="beneficio-icono">✔️</span>
           <div className="beneficio-contenido">
-            <h3>Durabilidad garantizada</h3>
+            <h4>Durabilidad garantizada</h4>
             <p>
               Operación estable en temperaturas extremas y construcción resistente.
             </p>
@@ -84,7 +84,7 @@ const Beneficios: React.FC<BeneficiosProps> = () => {
         <div className="beneficio-item">
           <span className="beneficio-icono">✔️</span>
           <div className="beneficio-contenido">
-            <h3>Alta calidad de imagen</h3>
+            <h4>Alta calidad de imagen</h4>
             <p>
               Resolución Full HD 1080P para detalles precisos en monitoreo y grabación.
             </p>
@@ -95,7 +95,7 @@ const Beneficios: React.FC<BeneficiosProps> = () => {
         <div className="beneficio-item">
           <span className="beneficio-icono">✔️</span>
           <div className="beneficio-contenido">
-            <h3>Visión nocturna infrarroja</h3>
+            <h4>Visión nocturna infrarroja</h4>
             <p>
               Rango IR de hasta 20 m para vigilancia en total oscuridad.
             </p>
@@ -106,7 +106,7 @@ const Beneficios: React.FC<BeneficiosProps> = () => {
         <div className="beneficio-item">
           <span className="beneficio-icono">✔️</span>
           <div className="beneficio-contenido">
-            <h3>Resistencia a condiciones extremas</h3>
+            <h4>Resistencia a condiciones extremas</h4>
             <p>
               Operación estable en temperaturas de -40°C a 60°C y construcción resistente a la humedad.
             </p>
@@ -117,7 +117,7 @@ const Beneficios: React.FC<BeneficiosProps> = () => {
         <div className="beneficio-item">
           <span className="beneficio-icono">✔️</span>
           <div className="beneficio-contenido">
-            <h3>Funciones inteligentes</h3>
+            <h4>Funciones inteligentes</h4>
             <p>
               Ajuste automático de ganancia (AGC) para imágenes claras en condiciones de poca luz.
             </p>

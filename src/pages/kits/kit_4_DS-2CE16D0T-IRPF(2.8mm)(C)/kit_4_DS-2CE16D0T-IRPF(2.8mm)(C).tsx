@@ -143,19 +143,19 @@ const Kit4CamarasBala: React.FC = () => {
         'Grabación en múltiples resoluciones hasta 4mpx Lite',
       ],
       images: [
-        { src: imagen65, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
-        { src: imagen66, alt: 'DVR AcuSense mini de 4 canales HIKVISION' },
-        { src: imagen67, alt: 'DVR con detección de movimiento avanzada' },
-        { src: imagen68, alt: 'DVR HIKVISION con protección perimetral' },
-        { src: imagen69, alt: 'DVR con compresión H.265 Pro+' },
-        { src: imagen70, alt: 'DVR con soporte para cámaras IP' },
-        { src: imagen71, alt: 'DVR con grabación en múltiples resoluciones' },
-        { src: imagen72, alt: 'DVR HIKVISION de 4 canales' },
-        { src: imagen73, alt: 'DVR HIKVISION de 4 canales' },
-        { src: imagen74, alt: 'DVR HIKVISION de 4 canales' },
-        { src: imagen75, alt: 'DVR HIKVISION de 4 canales' },
-        { src: imagen76, alt: 'DVR HIKVISION de 4 canales' },
-      ],
+        { src: imagen65, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 de 4 Canales para grabación en video' },
+        { src: imagen66, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 AcuSense mini de 4 canales con detección avanzada' },
+        { src: imagen67, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 con detección de movimiento avanzada y video grabado' },
+        { src: imagen68, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 con protección perimetral y monitoreo de seguridad' },
+        { src: imagen69, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 con compresión de video H.265 Pro+ para alta calidad' },
+        { src: imagen70, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 con soporte para cámaras IP y grabación en red' },
+        { src: imagen71, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 con grabación en múltiples resoluciones para mejor calidad' },
+        { src: imagen72, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 de 4 canales con tecnología avanzada de grabación' },
+        { src: imagen73, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 de 4 canales, ideal para sistemas de seguridad' },
+        { src: imagen74, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 de 4 canales, fácil integración con cámaras HIKVISION' },
+        { src: imagen75, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 de 4 canales con grabación estable y de alta calidad' },
+        { src: imagen76, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 de 4 canales, solución ideal para vigilancia inteligente' },
+    ],    
       botonTexto: 'Domicilio Gratis!',
     },
     {
@@ -168,21 +168,22 @@ const Kit4CamarasBala: React.FC = () => {
         'Grabación en múltiples resoluciones hasta 4mpx Lite',
       ],
       images: [
-        { src: imagen51, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
-        { src: imagen52, alt: 'Cámara de seguridad HIKVISION' },
-        { src: imagen53, alt: 'Cámara con visión nocturna HIKVISION' },
-        { src: imagen54, alt: 'Cámara Domo TURBOHD 1080p' },
-        { src: imagen55, alt: 'Cámara de seguridad con lente de 2.8 mm' },
-        { src: imagen56, alt: 'Cámara con visión nocturna EXIR' },
-        { src: imagen57, alt: 'Cámara de seguridad para exteriores' },
-        { src: imagen58, alt: 'Cámara Domo HIKVISION' },
-        { src: imagen59, alt: 'Cámara de seguridad con visión nocturna' },
-        { src: imagen60, alt: 'Cámara de seguridad con visión nocturna' },
-        { src: imagen61, alt: 'Cámara de seguridad con visión nocturna' },
-        { src: imagen62, alt: 'Cámara de seguridad con visión nocturna' },
-        { src: imagen63, alt: 'Cámara de seguridad con visión nocturna' },
-        { src: imagen64, alt: 'Cámara de seguridad con visión nocturna' },
-      ],
+        { src: imagen51, alt: 'Cámara Bala TURBOHD 1080p HIKVISION con lente de 2.8mm, visión nocturna Smart IR hasta 20m, protección IP66 y soporte 4 tecnologías' },
+        { src: imagen52, alt: 'Cámara de seguridad Bala HIKVISION DS-2CE16D0T-IRPF(C) con resolución 1080p, lente 2.8mm, visión nocturna Smart IR para exteriores IP66' },
+        { src: imagen53, alt: 'Cámara de seguridad Bala HIKVISION DS-2CE16D0T-IRPF(C) con visión nocturna Smart IR de 20 metros, compatible con TVI, AHD, CVI, CVBS' },
+        { src: imagen54, alt: 'Cámara Bala TURBOHD 1080p HIKVISION con visión nocturna Smart IR, lente de 2.8mm, protección IP66 y alta resolución 2MP' },
+        { src: imagen55, alt: 'Cámara de seguridad Bala HIKVISION DS-2CE16D0T-IRPF(C) con visión nocturna Smart IR, lente fijo de 2.8mm para exteriores IP66' },
+        { src: imagen56, alt: 'Cámara de seguridad Bala HIKVISION DS-2CE16D0T-IRPF(C) con visión nocturna Smart IR hasta 20 metros, lente fijo de 2.8mm' },
+        { src: imagen57, alt: 'Cámara Bala HIKVISION DS-2CE16D0T-IRPF(C) con resolución 1080p y lente 2.8mm para exteriores con visión nocturna Smart IR' },
+        { src: imagen58, alt: 'Cámara Bala HIKVISION DS-2CE16D0T-IRPF(C) con visión nocturna Smart IR y soporte para TVI, AHD, CVI y CVBS' },
+        { src: imagen59, alt: 'Cámara Bala HIKVISION DS-2CE16D0T-IRPF(C) con visión nocturna Smart IR de 20m, protección IP66 y alta calidad de imagen' },
+        { src: imagen60, alt: 'Cámara Bala HIKVISION DS-2CE16D0T-IRPF(C) con lente 2.8mm y visión nocturna Smart IR para exteriores IP66' },
+        { src: imagen61, alt: 'Cámara Bala HIKVISION DS-2CE16D0T-IRPF(C) para exteriores, visión nocturna Smart IR, lente de 2.8mm, IP66, soporta 4 tecnologías' },
+        { src: imagen62, alt: 'Cámara de seguridad Bala HIKVISION DS-2CE16D0T-IRPF(C) con visión nocturna Smart IR, soporte para TVI, AHD, CVI y CVBS' },
+        { src: imagen63, alt: 'Cámara Bala HIKVISION DS-2CE16D0T-IRPF(C) para exteriores, visión nocturna Smart IR, lente de 2.8mm y protección IP66' },
+        { src: imagen64, alt: 'Cámara Bala HIKVISION DS-2CE16D0T-IRPF(C) con lente de 2.8mm, visión nocturna Smart IR y alta resolución 1080p' },
+    ],
+    
       botonTexto: 'Pague en casa!',
     },
     {
@@ -196,10 +197,11 @@ const Kit4CamarasBala: React.FC = () => {
         'Caché de 64 MB',
       ],
       images: [
-        { src: imagen78, alt: 'Disco duro Seagate Skyhawk 1 TB' },
-        { src: imagen79, alt: 'Disco duro para videovigilancia' },
-        { src: imagen80, alt: 'Disco duro con tecnología AllFrame' },
-      ],
+        { src: imagen78, alt: 'Disco duro Seagate ST1000VX013 1 TB Skyhawk 5400 con tecnología AllFrame para videovigilancia' },
+        { src: imagen79, alt: 'Disco duro Seagate ST1000VX013 1 TB Skyhawk para videovigilancia, con interfaz eSATA y conectividad USB' },
+        { src: imagen80, alt: 'Disco duro Seagate ST1000VX013 1 TB Skyhawk con unidad híbrida, optimizado para grabación 24/7 y compatible con escritorio' },
+    ],
+    
       botonTexto: 'Obtenga el Kit!',
     },
     {
@@ -255,7 +257,7 @@ const Kit4CamarasBala: React.FC = () => {
       <div>
         {carruseles.map((producto, index) => (
           <div key={index} className="producto-container">
-            <h2>{producto.title}</h2>
+            <h3>{producto.title}</h3>
             <p>{producto.description}</p>
             {/* Usamos el componente Carrusel pasando imágenes y detalles */}
             <Carrusel

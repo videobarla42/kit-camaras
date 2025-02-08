@@ -44,7 +44,7 @@ const Formulario: React.FC<FormularioProps> = ({ titulo, descripcion, precio }) 
     <div className="formulario-overlay">
       <div className="formulario-container">
         <div className="header-with-icon">
-          <h2>{titulo}</h2> {/* Usar la prop titulo */}
+          <h4>{titulo}</h4> {/* Usar la prop titulo */}
           <p>{descripcion}</p> {/* Usar la prop descripcion */}
           <p>Precio: {precio}</p> {/* Usar la prop precio */}
         </div>

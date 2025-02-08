@@ -1,25 +1,23 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",  // Asegúrate de que baseUrl sea './src'
+    "baseUrl": "./src", // Necesario para que los paths funcionen correctamente
     "paths": {
-      "@/*": ["*"]  // Alias para importar desde la carpeta src
+      "@/*": ["*"] // Alias para importar desde la carpeta src
     },
-    "target": "es5",
+    "target": "es6",
     "lib": ["dom", "es2015"],
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "allowImportingTsExtensions": true,
-    "jsx": "react",
+    "allowImportingTsExtensions": false,
+    "jsx": "react-jsx",
     "skipLibCheck": true,
-    "noEmit": true
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "noEmit": false
   },
   "include": ["src/**/*.d.ts", "src"],
   "exclude": ["node_modules"]
-  
 }
-  
-
-

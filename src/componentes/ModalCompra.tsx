@@ -52,7 +52,7 @@ const ModalCompra: React.FC<ModalCompraProps> = ({
         </button>
 
         <div className="titulo-con-icono">
-          <h2>{tituloModal}</h2>
+          <h4>{tituloModal}</h4>
           <p>{descripcionModal}</p> {/* Mostrar el texto personalizado */}
         </div>
 

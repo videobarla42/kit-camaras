@@ -1,7 +1,7 @@
 import React, { Suspense, lazy, useCallback, useEffect } from 'react';
 import BotonCompra from '@/componentes/BotonCompra';
-import CarruselInicio from './componentes_inicio/CarruselInicio.tsx';
-import HeaderInicio from './componentes_inicio/headerinicio.tsx'; 
+import CarruselInicio from './componentes_inicio/CarruselInicio';
+import HeaderInicio from './componentes_inicio/headerinicio'; 
 
 
 

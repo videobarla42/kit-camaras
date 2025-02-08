@@ -185,7 +185,7 @@ const Kit4CamarasBala: React.FC = () => {
       <div>
         {carruseles.map((carrusel, index) => (
           <div key={index}>
-            <h2>{carrusel.title}</h2>
+            <h3>{carrusel.title}</h3>
             <p>{carrusel.description}</p>
             <div>
               {carrusel.images.map((image, idx) => (
