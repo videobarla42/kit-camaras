@@ -50,12 +50,11 @@ import imagen73 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S11.webp';
 import imagen74 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S12.webp';
 import imagen75 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S13.webp';
 import imagen76 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S14.webp';
-import imagen77 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S15.webp';
 
 
 // disco duro (números del 65 al 79)
-import imagen78 from '@/assets/SEGATE/ST-1000-VX00-15201.webp';
-import imagen79 from '@/assets/SEGATE/ST-1000-VX00-15201.webp';
+import imagen78 from '@/assets/SEGATE/ST-1000-VX00-15203.webp';
+import imagen79 from '@/assets/SEGATE/ST-1000-VX00-15202.webp';
 import imagen80 from '@/assets/SEGATE/ST-1000-VX00-15201.webp';
 
 
@@ -69,13 +68,13 @@ import imagen84 from '@/assets/MATERIALES/10.webp';
 
 
 
-// Importación de las imágenes
-import Image1500 from '@/assets/1.webp';
-import Image1501 from '@/assets/28.webp';
-import Image1502 from '@/assets/36.webp';
-import Image1503 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
-import Image1504 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)2.webp';
-import Image1505 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)3.webp';
+ // Importación de las imágenes
+ import Image1500 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)1.webp';
+ import Image1501 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)2.webp';
+ import Image1502 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)3.webp';
+ import Image1503 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
+ import Image1504 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)2.webp';
+ import Image1505 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)3.webp';
 
 
 
@@ -156,7 +155,6 @@ const Kit4CamarasBala: React.FC = () => {
         { src: imagen74, alt: 'DVR HIKVISION de 4 canales' },
         { src: imagen75, alt: 'DVR HIKVISION de 4 canales' },
         { src: imagen76, alt: 'DVR HIKVISION de 4 canales' },
-        { src: imagen77, alt: 'DVR HIKVISION de 4 canales' },
       ],
       botonTexto: 'Domicilio Gratis!',
     },
@@ -489,7 +487,6 @@ const Kit4CamarasBala: React.FC = () => {
   imagen74,
   imagen75,
   imagen76,
-  imagen77,
   imagen78,
   imagen79,
   imagen80,

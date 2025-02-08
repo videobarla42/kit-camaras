@@ -11,40 +11,74 @@ const Banner = lazy(() => import('@/componentes/Banner'));
 const ModalCompra = lazy(() => import('@/componentes/ModalCompra'));
 const Formulario = lazy(() => import('@/componentes/Formulario'));
 
-// Importar imágenes
-// Importar imágenes numeradas del 29 al 55
-import imagen29 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)29.webp';
-import imagen30 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)30.webp';
-import imagen31 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)31.webp';
-import imagen32 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)32.webp';
-import imagen33 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)33.webp';
-import imagen34 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)34.webp';
-import imagen35 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)35.webp';
-import imagen27 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)27.webp';
-import imagen11 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)11.webp';
-import imagen12 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)12.webp';
-import imagen13 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)13.webp';
-import imagen14 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)14.webp';
-import imagen15 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)15.webp';
-import imagen16 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)16.webp';
-import imagen17 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)17.webp';
-import imagen18 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)18.webp';
-import imagen19 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)19.webp';
-import imagen20 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)20.webp';
-import imagen21 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)21.webp';
-import imagen22 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)22.webp';
-import imagen23 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)23.webp';
-import imagen44 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)44.webp';
-import imagen28 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)28.webp';
-import headerImage from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)28.webp';
 
-// Importación de las imágenes
-import Image1500 from '@/assets/1.webp';
-import Image1501 from '@/assets/28.webp';
-import Image1502 from '@/assets/36.webp';
-import Image1503 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
-import Image1504 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)28.webp';
-import Image1505 from '@/assets/kits-bala/DS-2CE16D0T-IRPF(2.8mm)(C)36.webp';
+
+// Importar imágenes
+import imagen1 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)2.webp';
+
+import headerImage from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)2.webp';
+
+
+
+// Importar imágenes
+  // camaras bala 2mpx (números del 50 al 64)
+  import imagen50 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
+  import imagen51 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)5.webp';
+  import imagen52 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)7.webp';
+  import imagen53 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)8.webp';
+  import imagen54 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)9.webp';
+  import imagen55 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)10.webp';
+  import imagen56 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)11.webp';
+  import imagen57 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)12.webp';
+  import imagen58 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)13.webp';
+  import imagen59 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)14.webp';
+  import imagen60 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)15.webp';
+  import imagen61 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)16.webp';
+  import imagen62 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)17.webp';
+  import imagen63 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)18.webp';
+  import imagen64 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)19.webp';
+  
+  
+  // dvr de 4mpx (números del 65 al 79)
+  import imagen65 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S1.webp';
+  import imagen66 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S4.webp';
+  import imagen67 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S5.webp';
+  import imagen68 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S6.webp';
+  import imagen69 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S7.webp';
+  import imagen70 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S8.webp';
+  import imagen71 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S9.webp';
+  import imagen72 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S10.webp';
+  import imagen73 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S11.webp';
+  import imagen74 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S12.webp';
+  import imagen75 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S13.webp';
+  import imagen76 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S14.webp';
+  import imagen77 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S15.webp';
+  
+  
+  // disco duro (números del 65 al 79)
+  import imagen78 from '@/assets/SEGATE/ST-1000-VX00-15203.webp';
+  import imagen79 from '@/assets/SEGATE/ST-1000-VX00-15202.webp';
+  import imagen80 from '@/assets/SEGATE/ST-1000-VX00-15201.webp';
+  
+  
+  // materiales
+  import imagen81 from '@/assets/MATERIALES/2.webp';
+  import imagen82 from '@/assets/MATERIALES/5.webp';
+  import imagen83 from '@/assets/MATERIALES/8.webp';
+  import imagen84 from '@/assets/MATERIALES/10.webp';
+  
+  
+  
+  
+  
+   // Importación de las imágenes
+   import Image1500 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)1.webp';
+   import Image1501 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)2.webp';
+   import Image1502 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)3.webp';
+   import Image1503 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
+   import Image1504 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)2.webp';
+   import Image1505 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)3.webp';
+
 
 
 const Kit4CamarasBala: React.FC = () => {          
@@ -109,16 +143,25 @@ const Kit4CamarasBala: React.FC = () => {
         'Soporte para cámaras IP de hasta 6 MP'
       ],
       images: [
-        { src: imagen29, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
-        { src: imagen30, alt: 'DVR AcuSense mini de 4 canales HIKVISION' },
-        { src: imagen31, alt: 'DVR con detección de movimiento avanzada' },
-        { src: imagen44, alt: 'DVR HIKVISION de 4 canales' }
+        { src: imagen65, alt: 'Video Grabador DVR de 4 Canales HIKVISION' },
+        { src: imagen66, alt: 'DVR AcuSense mini de 4 canales HIKVISION' },
+        { src: imagen67, alt: 'DVR con detección de movimiento avanzada' },
+        { src: imagen68, alt: 'DVR HIKVISION con protección perimetral' },
+        { src: imagen69, alt: 'DVR con compresión H.265 Pro+' },
+        { src: imagen70, alt: 'DVR con soporte para cámaras IP' },
+        { src: imagen71, alt: 'DVR con grabación en múltiples resoluciones' },
+        { src: imagen72, alt: 'DVR HIKVISION de 4 canales' },
+        { src: imagen73, alt: 'DVR HIKVISION de 4 canales' },
+        { src: imagen74, alt: 'DVR HIKVISION de 4 canales' },
+        { src: imagen75, alt: 'DVR HIKVISION de 4 canales' },
+        { src: imagen76, alt: 'DVR HIKVISION de 4 canales' },
+        { src: imagen77, alt: 'DVR HIKVISION de 4 canales' },
       ],
       botonTexto: 'Domicilio Gratis!'
     },
     {
-      title: '4 Cámaras Bala De 2 Mpx',
-      description: '4 Cámaras Bala TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
+      title: '8 Cámaras Bala De 2 Mpx',
+      description: '8 Cámaras Bala TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
       features: [
         'Resolución Full HD 1080p',
         'Lente de 2.8 mm para amplio campo de visión',
@@ -126,15 +169,20 @@ const Kit4CamarasBala: React.FC = () => {
         'Calidad profesional HIKVISION'
       ],
       images: [
-        { src: imagen32, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
-        { src: imagen11, alt: 'Cámara de seguridad HIKVISION' },
-        { src: imagen12, alt: 'Cámara con visión nocturna HIKVISION' },
-        { src: imagen13, alt: 'Cámara Domo TURBOHD 1080p' },
-        { src: imagen14, alt: 'Cámara de seguridad con lente de 2.8 mm' },
-        { src: imagen15, alt: 'Cámara con visión nocturna EXIR' },
-        { src: imagen16, alt: 'Cámara de seguridad para exteriores' },
-        { src: imagen17, alt: 'Cámara Domo HIKVISION' },
-        { src: imagen18, alt: 'Cámara de seguridad con visión nocturna' }
+        { src: imagen51, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
+        { src: imagen52, alt: 'Cámara de seguridad HIKVISION' },
+        { src: imagen53, alt: 'Cámara con visión nocturna HIKVISION' },
+        { src: imagen54, alt: 'Cámara Domo TURBOHD 1080p' },
+        { src: imagen55, alt: 'Cámara de seguridad con lente de 2.8 mm' },
+        { src: imagen56, alt: 'Cámara con visión nocturna EXIR' },
+        { src: imagen57, alt: 'Cámara de seguridad para exteriores' },
+        { src: imagen58, alt: 'Cámara Domo HIKVISION' },
+        { src: imagen59, alt: 'Cámara de seguridad con visión nocturna' },
+        { src: imagen60, alt: 'Cámara de seguridad con visión nocturna' },
+        { src: imagen61, alt: 'Cámara de seguridad con visión nocturna' },
+        { src: imagen62, alt: 'Cámara de seguridad con visión nocturna' },
+        { src: imagen63, alt: 'Cámara de seguridad con visión nocturna' },
+        { src: imagen64, alt: 'Cámara de seguridad con visión nocturna' },
       ],
       botonTexto: 'Pague en casa!'
     },
@@ -148,11 +196,9 @@ const Kit4CamarasBala: React.FC = () => {
         'Interfaz SATA con velocidad de 110 MB/s'
       ],
       images: [
-        { src: imagen19, alt: 'Disco duro Seagate Skyhawk 1 TB' },
-        { src: imagen20, alt: 'Disco duro para videovigilancia' },
-        { src: imagen21, alt: 'Disco duro con tecnología AllFrame' },
-        { src: imagen22, alt: 'Disco duro Seagate Skyhawk' },
-        { src: imagen23, alt: 'Disco duro para grabación 24/7' }
+        { src: imagen78, alt: 'Disco duro Seagate Skyhawk 1 TB' },
+        { src: imagen79, alt: 'Disco duro para videovigilancia' },
+        { src: imagen80, alt: 'Disco duro con tecnología AllFrame' },
       ],
       botonTexto: 'Obtenga el Kit!'
     },
@@ -166,7 +212,7 @@ const Kit4CamarasBala: React.FC = () => {
         'LED indicador de funcionamiento'
       ],
       images: [
-        { src: imagen33, alt: 'Fuente de alimentación para cámaras de seguridad' }
+        { src: imagen81, alt: 'Fuente de alimentación para cámaras de seguridad' }
       ],
       botonTexto: 'Comprar!'
     },
@@ -180,7 +226,7 @@ const Kit4CamarasBala: React.FC = () => {
         'Tecnología TURBO 4 en 1'
       ],
       images: [
-        { src: imagen34, alt: 'Video Balun para transmisión de señales de video' }
+        { src: imagen82, alt: 'Video Balun para transmisión de señales de video' }
       ],
       botonTexto: 'Domicilio Gratis!'
     },
@@ -194,7 +240,7 @@ const Kit4CamarasBala: React.FC = () => {
         'Fácil instalación'
       ],
       images: [
-        { src: imagen35, alt: 'Borneras eléctricas para cámaras de seguridad' }
+        { src: imagen83, alt: 'Borneras eléctricas para cámaras de seguridad' }
       ],
       botonTexto: 'Obtener!'
     },
@@ -208,7 +254,7 @@ const Kit4CamarasBala: React.FC = () => {
         'Longitud de 100 metros'
       ],
       images: [
-        { src: imagen27, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }
+        { src: imagen84, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }
       ],
       botonTexto: 'Pídalo Ahora!'
     }
@@ -421,29 +467,48 @@ const Kit4CamarasBala: React.FC = () => {
           "@type": "Product",
           "name": "Kit de 8 Cámaras de Seguridad HIKVISION",
           "image": [
-            imagen28, // Header image
-      imagen11,
-      imagen12,
-      imagen13,
-      imagen14,
-      imagen15,
-      imagen16,
-      imagen17,
-      imagen18,
-      imagen19,
-      imagen20,
-      imagen21,
-      imagen22,
-      imagen23,
-      imagen27,
-      imagen29,
-      imagen30,
-      imagen31,
-      imagen32,
-      imagen33,
-      imagen34,
-      imagen35,
-      imagen44
+            imagen1,
+            imagen50,
+            imagen51,
+            imagen52,
+            imagen53,
+            imagen54,
+            imagen55,
+            imagen56,
+            imagen57,
+            imagen58,
+            imagen59,
+            imagen60,
+            imagen61,
+            imagen62,
+            imagen63,
+            imagen64,
+            imagen65,
+            imagen66,
+            imagen67,
+            imagen68,
+            imagen69,
+            imagen70,
+            imagen71,
+            imagen72,
+            imagen73,
+            imagen74,
+            imagen75,
+            imagen76,
+            imagen77,
+            imagen78,
+            imagen79,
+            imagen80,
+            imagen81,
+            imagen82,
+            imagen83,
+            imagen84,
+            Image1500,
+            Image1501,
+            Image1502,
+            Image1503,
+            Image1504,
+            Image1505,
           ],
         "description": "Kit de 4 cámaras Bala Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina.",
         "brand": {

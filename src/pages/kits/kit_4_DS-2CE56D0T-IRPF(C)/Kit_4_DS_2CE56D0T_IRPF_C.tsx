@@ -12,36 +12,29 @@ const ModalCompra = lazy(() => import('@/componentes/ModalCompra'));
 const Formulario = lazy(() => import('@/componentes/Formulario'));
 
 // Importar imágenes
-import imagen1 from '@/assets/1.webp';
-import imagen2 from '@/assets/2.webp';
-import imagen3 from '@/assets/3.webp';
-import imagen4 from '@/assets/4.webp';
-import imagen5 from '@/assets/5.webp';
-import imagen6 from '@/assets/6.webp';
-import imagen7 from '@/assets/7.webp';
-import imagen8 from '@/assets/8.webp';
-import imagen9 from '@/assets/9.webp';
-import imagen10 from '@/assets/10.webp';
-import imagen11 from '@/assets/11.webp';
-import imagen12 from '@/assets/12.webp';
-import imagen13 from '@/assets/13.webp';
-import imagen14 from '@/assets/14.webp';
-import imagen15 from '@/assets/15.webp';
-import imagen16 from '@/assets/16.webp';
-import imagen17 from '@/assets/17.webp';
-import imagen18 from '@/assets/18.webp';
-import imagen19 from '@/assets/19.webp';
-import imagen20 from '@/assets/20.webp';
-import imagen21 from '@/assets/21.webp';
-import imagen22 from '@/assets/22.webp';
-import imagen23 from '@/assets/23.webp';
-import imagen24 from '@/assets/24.webp';
-import imagen25 from '@/assets/25.webp';
-import imagen26 from '@/assets/26.webp';
-import imagen27 from '@/assets/27.webp';
-import headerImage from '@/assets/1.webp';
+import imagen1 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)1.webp';
+
+import headerImage from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)1.webp';
 
 
+
+
+
+  // camaras domo 2mpx (números del 50 al 64)
+  import imagen50 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)4.webp';
+  import imagen51 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)5.webp';
+  import imagen52 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)6.webp';
+  import imagen53 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)7.webp';
+  import imagen54 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)8.webp';
+  import imagen55 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)9.webp';
+  import imagen56 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)10.webp';
+  import imagen57 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)11.webp';
+  import imagen58 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)12.webp';
+  import imagen59 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)13.webp';
+  import imagen60 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)14.webp';
+  import imagen61 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)15.webp';
+  import imagen62 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)16.webp';
+  import imagen63 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)17.webp';
 
 
 // dvr de 4mpx (números del 65 al 79)
@@ -57,12 +50,11 @@ import imagen73 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S11.webp';
 import imagen74 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S12.webp';
 import imagen75 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S13.webp';
 import imagen76 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S14.webp';
-import imagen77 from '@/assets/iDS-71040816HQHI-M1S1/iDS-71HQHI-M1S15.webp';
 
 
 // disco duro (números del 65 al 79)
-import imagen78 from '@/assets/SEGATE/ST-1000-VX00-15201.webp';
-import imagen79 from '@/assets/SEGATE/ST-1000-VX00-15201.webp';
+import imagen78 from '@/assets/SEGATE/ST-1000-VX00-15203.webp';
+import imagen79 from '@/assets/SEGATE/ST-1000-VX00-15202.webp';
 import imagen80 from '@/assets/SEGATE/ST-1000-VX00-15201.webp';
 
 
@@ -77,13 +69,13 @@ import imagen84 from '@/assets/MATERIALES/10.webp';
 
 
 
-// Importación de las imágenes
-import Image1500 from '@/assets/1.webp';
-import Image1501 from '@/assets/28.webp';
-import Image1502 from '@/assets/36.webp';
-import Image1503 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
-import Image1504 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)2.webp';
-import Image1505 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)3.webp';
+ // Importación de las imágenes
+ import Image1500 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)1.webp';
+ import Image1501 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)2.webp';
+ import Image1502 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)3.webp';
+ import Image1503 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
+ import Image1504 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)2.webp';
+ import Image1505 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)3.webp';
 
 const Kit4Camaras: React.FC = () => {
   const {
@@ -160,7 +152,6 @@ const Kit4Camaras: React.FC = () => {
         { src: imagen74, alt: 'DVR HIKVISION de 4 canales' },
         { src: imagen75, alt: 'DVR HIKVISION de 4 canales' },
         { src: imagen76, alt: 'DVR HIKVISION de 4 canales' },
-        { src: imagen77, alt: 'DVR HIKVISION de 4 canales' },
     ],
     botonTexto: 'Domicilio Gratis!',
   },
@@ -174,15 +165,20 @@ const Kit4Camaras: React.FC = () => {
       'Resolución de 1080p',
     ],
     images: [
-      { src: imagen10, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
-      { src: imagen11, alt: 'Cámara de seguridad HIKVISION' },
-      { src: imagen12, alt: 'Cámara con visión nocturna HIKVISION' },
-      { src: imagen13, alt: 'Cámara Domo TURBOHD 1080p' },
-      { src: imagen14, alt: 'Cámara de seguridad con lente de 2.8 mm' },
-      { src: imagen15, alt: 'Cámara con visión nocturna EXIR' },
-      { src: imagen16, alt: 'Cámara de seguridad para exteriores' },
-      { src: imagen17, alt: 'Cámara Domo HIKVISION' },
-      { src: imagen18, alt: 'Cámara de seguridad con visión nocturna' },
+      { src: imagen50, alt: 'Cámara Domo TURBOHD 1080p HIKVISION' },
+        { src: imagen51, alt: 'Cámara de seguridad HIKVISION' },
+        { src: imagen52, alt: 'Cámara con visión nocturna HIKVISION' },
+        { src: imagen53, alt: 'Cámara Domo TURBOHD 1080p' },
+        { src: imagen54, alt: 'Cámara de seguridad con lente de 2.8 mm' },
+        { src: imagen55, alt: 'Cámara con visión nocturna EXIR' },
+        { src: imagen56, alt: 'Cámara de seguridad para exteriores' },
+        { src: imagen57, alt: 'Cámara Domo HIKVISION' },
+        { src: imagen58, alt: 'Cámara de seguridad con visión nocturna' },
+        { src: imagen69, alt: 'Cámara de seguridad con visión nocturna' },
+        { src: imagen60, alt: 'Cámara de seguridad con visión nocturna' },
+        { src: imagen61, alt: 'Cámara de seguridad con visión nocturna' },
+        { src: imagen62, alt: 'Cámara de seguridad con visión nocturna' },
+        { src: imagen63, alt: 'Cámara de seguridad con visión nocturna' },
     ],
     botonTexto: 'Pague en casa!',
   },
@@ -460,32 +456,46 @@ function Carruseles() {
           "name": "Kit de 4 Cámaras de Seguridad HIKVISION",
           "image": [
             imagen1,
-            imagen2,
-            imagen3,
-            imagen4,
-            imagen5,
-            imagen6,
-            imagen7,
-            imagen8,
-            imagen9,
-            imagen10,
-            imagen11,
-            imagen12,
-            imagen13,
-            imagen14,
-            imagen15,
-            imagen16,
-            imagen17,
-            imagen18,
-            imagen19,
-            imagen20,
-            imagen21,
-            imagen22,
-            imagen23,
-            imagen24,
-            imagen25,
-            imagen26,
-            imagen27
+            imagen50,
+            imagen51,
+            imagen52,
+            imagen53,
+            imagen54,
+            imagen55,
+            imagen56,
+            imagen57,
+            imagen58,
+            imagen59,
+            imagen60,
+            imagen61,
+            imagen62,
+            imagen63,
+            imagen65,
+            imagen66,
+            imagen67,
+            imagen68,
+            imagen69,
+            imagen70,
+            imagen71,
+            imagen72,
+            imagen73,
+            imagen74,
+            imagen75,
+            imagen76,
+            
+            imagen78,
+            imagen79,
+            imagen80,
+            imagen81,
+            imagen82,
+            imagen83,
+            imagen84,
+            Image1500,
+            Image1501,
+            Image1502,
+            Image1503,
+            Image1504,
+            Image1505,
           ],
         "description": "Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina.",
         "brand": {
