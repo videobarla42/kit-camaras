@@ -1,55 +1,72 @@
-from PIL import Image, ImageOps
 import os
+import subprocess
 
-# Directorio de entrada y salida con rutas completas
-directorio_entrada = r"/workspaces/kits_camaras/COMPRESOR/imagenes0/gggg"
-directorio_salida = r"/workspaces/kits_camaras/src/assets/DS-2CE56D0T-IRPF(2.8mm)(C)"
+# Directorios de entrada y salida
+directorio_entrada = r"/workspaces/kits_camaras/COMPRESOR/imagenes0/SEGATE"
+directorio_salida = r"/workspaces/kits_camaras/src/assets/SEGATE"
 
-# Obtener lista de archivos en el directorio de entrada
-archivos = os.listdir(directorio_entrada)
+# Crear directorio de salida si no existe
+os.makedirs(directorio_salida, exist_ok=True)
 
-# Lista para almacenar los nombres de los archivos procesados
-nombres_archivos = []
+# Archivo para almacenar los nombres de los archivos procesados
+archivo_nombres = os.path.join(directorio_salida, "nombres_archivos.txt")
 
-for archivo in archivos:
+# Limpiar el archivo si ya existe
+with open(archivo_nombres, "w") as f:
+    pass
+
+# Comprobar si GraphicsMagick (gm) está instalado
+def verificar_instalacion_gm():
     try:
-        # Ruta completa del archivo de entrada
+        subprocess.run(["gm", "-version"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print("GraphicsMagick detectado correctamente.")
+    except FileNotFoundError:
+        print("GraphicsMagick no está instalado. Instálalo antes de ejecutar este script.")
+        exit(1)
+
+# Procesar cada archivo en el directorio de entrada
+def procesar_imagenes():
+    for archivo in os.listdir(directorio_entrada):
         ruta_original = os.path.join(directorio_entrada, archivo)
+        if os.path.isfile(ruta_original):
+            nombre_sin_extension = os.path.splitext(archivo)[0]
+            ruta_guardado = os.path.join(directorio_salida, f"{nombre_sin_extension}.webp")
 
-        # Abrir la imagen original
-        imagen_original = Image.open(ruta_original)
+            # Comando para convertir la imagen con optimizaciones adicionales
+            calidad_inicial = 75  # Inicia con una calidad más baja para reducir iteraciones innecesarias
+            
+            while True:
+                comando_convertir = [
+                    "gm", "convert", ruta_original,
+                    "-resize", "1080x1080^",
+                    "-gravity", "center",
+                    "-extent", "1080x1080",
+                    "-quality", str(calidad_inicial),
+                    ruta_guardado
+                ]
+                try:
+                    subprocess.run(comando_convertir, check=True)
+                except subprocess.CalledProcessError as e:
+                    print(f"Error al convertir '{archivo}': {e}")
+                    break
+                
+                # Verificar el tamaño del archivo (ajusta si es necesario)
+                if os.path.exists(ruta_guardado) and os.path.getsize(ruta_guardado) <= 50 * 1024:
+                    break
 
-        # Convertir la imagen al modo RGB si no está en ese formato
-        if imagen_original.mode != "RGB":
-            imagen_original = imagen_original.convert("RGB")
+                # Si es demasiado grande, reduce la calidad y vuelve a intentarlo
+                if calidad_inicial > 30:
+                    calidad_inicial -= 5  
+                else:
+                    print(f"No se pudo reducir el tamaño de '{ruta_guardado}' a menos de 50 KB.")
+                    break
 
-        # Crear un lienzo cuadrado de 1080x1080 manteniendo la relación de aspecto
-        imagen_nueva = ImageOps.fit(imagen_original, (1080, 1080), Image.LANCZOS)
+            if os.path.exists(ruta_guardado):
+                with open(archivo_nombres, "a") as f:
+                    f.write(nombre_sin_extension + "\n")
+                print(f"¡Imagen '{archivo}' convertida a .webp y guardada con éxito!")
 
-        # Ruta para guardar la nueva imagen con el mismo nombre que la original, pero con extensión .webp
-        nombre_sin_extension = os.path.splitext(archivo)[0]
-        ruta_guardado = os.path.join(directorio_salida, nombre_sin_extension + ".webp")
-
-        # Guardar la nueva imagen con compresión optimizada para webp
-        calidad_predeterminada = 85  # Calidad predeterminada
-        imagen_nueva.save(ruta_guardado, format="WEBP", quality=calidad_predeterminada, method=6)
-
-        # Verificar el tamaño del archivo y reducir la calidad si es necesario
-        while os.path.getsize(ruta_guardado) > 50 * 1024:  # 50 KB en bytes
-            calidad_predeterminada -= 5
-            imagen_nueva.save(ruta_guardado, format="WEBP", quality=calidad_predeterminada, method=6)
-
-        # Agregar el nombre del archivo a la lista
-        nombres_archivos.append(nombre_sin_extension)
-
-        print(f"¡Imagen '{archivo}' convertida a .webp y guardada con éxito!")
-    except Exception as e:
-        print(f"Error al procesar la imagen '{archivo}':", e)
-
-# Guardar los nombres de los archivos en un archivo de texto
-ruta_archivo_txt = os.path.join(directorio_salida, "nombres_archivos.txt")
-with open(ruta_archivo_txt, "w") as archivo_txt:
-    for nombre_archivo in nombres_archivos:
-        archivo_txt.write(nombre_archivo + "\n")
-
-print("¡Nombres de archivos guardados en 'nombres_archivos.txt'!")
+if __name__ == "__main__":
+    verificar_instalacion_gm()
+    procesar_imagenes()
+    print("¡Proceso completado! Nombres de archivos guardados en 'nombres_archivos.txt'")
