@@ -16,7 +16,7 @@ const HeroHeader: React.FC<HeroHeaderProps> = ({
   titulo,
   descripcion,
   subtitulo,
-  precio = "780,000", // Valor por defecto para el precio
+  precio = "", // Valor por defecto para el precio
   children, // Añade children aquí
 }) => {
   return (
