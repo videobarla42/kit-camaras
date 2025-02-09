@@ -1,4 +1,4 @@
-import{j as n,r as F,a as _e,g as Le,b as ke,c as Ue}from"./index-BVyVv8Qj.js";const We=({total:l,onClose:a})=>n.jsx("div",{className:"modal",children:n.jsxs("div",{className:"modal-content",children:[n.jsx("h2",{children:"Total de la compra"}),n.jsxs("p",{children:["El total es: $",l.toFixed(2)]}),n.jsx("button",{onClick:a,children:"Cerrar"})]})});/**
+import{j as n,r as F,a as _e,g as Le,b as ke,c as Ue}from"./index-C-faDwVd.js";const We=({total:l,onClose:a})=>n.jsx("div",{className:"modal",children:n.jsxs("div",{className:"modal-content",children:[n.jsx("h2",{children:"Total de la compra"}),n.jsxs("p",{children:["El total es: $",l.toFixed(2)]}),n.jsx("button",{onClick:a,children:"Cerrar"})]})});/**
  * @license lucide-react v0.474.0 - ISC
  *
  * This source code is licensed under the ISC license.
