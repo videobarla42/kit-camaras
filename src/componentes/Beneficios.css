@@ -1,12 +1,12 @@
 .beneficios-container {
     text-align: center;
-    padding: 20px;
-    max-width: 800px;
+    padding: 0px;
+    max-width: 1000px;
     margin: 0 auto;
   }
   
   .beneficios-titulo {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 20px;
   }
@@ -30,14 +30,14 @@
     margin-top: 5px;
   }
   
-  .beneficio-contenido h3 {
-    font-size: 1.2rem;
+  .beneficio-contenido h4 {
+    font-size: 1rem;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
   }
   
   .beneficio-contenido p {
     font-size: 1rem;
-    color: hsl(0, 20%, 68%);
+    color: hsl(0, 22%, 73%);
     margin: 0;
   }

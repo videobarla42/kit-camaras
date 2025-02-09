@@ -175,8 +175,8 @@
   /* Botones de navegación */
   .carrusel-button {
     font-size: 24px; /* Tamaño de fuente reducido */
-    padding: 10px; /* Menos espacio */
-    background: linear-gradient(145deg, rgba(255, 5, 5, 0.432), rgba(154, 86, 255, 0.411));
+    padding: 1px; /* Menos espacio */
+    background: linear-gradient(145deg, rgba(224, 3, 3, 0.466), rgba(80, 0, 199, 0.877));
     color: white;
     border: none;
     cursor: pointer;
@@ -280,8 +280,14 @@
     border: 1px solid rgba(75,11,252,0.2);
     box-shadow: 0 -5px 20px rgba(0,0,0,0.3);
     padding: 15px; /* Más espacio en los detalles */
-    height: 190px;
-  }
+    min-height: 200px; /* Altura mínima para asegurar que no sea demasiado pequeño */
+    max-width: 100%; /* Asegúrate de que no exceda el ancho del contenedor */
+    overflow-y: auto; /* Agrega scroll si el contenido es demasiado largo */
+    display: flex;
+    flex-direction: column; /* Alinea el contenido verticalmente */
+    justify-content: flex-start; /* Alinea el contenido al inicio */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+}
 
   .modal-product-details h3 {
     font-size: 16px; /* Tamaño reducido */
@@ -302,10 +308,10 @@
     text-shadow: 0 0 10px rgba(255, 5, 5, 0.973);
     transition: all 0.3s ease;
     background-color: #080202;
-    margin-left: 300px;
+    margin-left: 250px;
     position: absolute;
     z-index: 9999;
-    top: 1px;
+    top: 3px;
     width: 10px;
     height: 38px;
   }
@@ -321,22 +327,23 @@
     font-family: 'Courier New', monospace;
     letter-spacing: 2px;
     box-shadow: 0 0 10px rgba(75,11,252,0.3);
-    margin-top: 10px;
+    margin-top: 14px;
     width: 50%;
     margin-left: 1px; /* Mejor alineación */
   }
 
   /* Botones de navegación dentro del modal */
   .modal-button {
-    background: linear-gradient(145deg, 
-      rgba(75,11,252,0.8), 
-      rgba(154,86,255,0.8));
+    background: linear-gradient(14deg, 
+      rgba(248, 25, 55, 0.8), 
+      rgb(22, 0, 100));
     border-radius: 50%;
     width: 35px; /* Tamaño más pequeño */
     height: 35px; /* Tamaño más pequeño */
     backdrop-filter: blur(5px);
     box-shadow: 0 0 12px rgba(75,11,252,0.5);
     transition: all 0.3s ease;
+    margin-top: 90px;
   }
 
   .modal-button:hover {
