@@ -134,26 +134,28 @@ const Kit4CamarasBala: React.FC = () => {
 
   const carruseles = [
     {
-      title: '1 DVR De 8 Canales, 4 MPX',
-      description: 'DVR AcuSense mini de 8 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
+      title: 'DVR de 8 Canales, 4 Mpx Lite - HIKVISION',
+      description: 'DVR AcuSense mini de 8 canales con tecnología avanzada de detección de movimiento (humanos y vehículos) y protección perimetral inteligente. Ofrece grabación de múltiples resoluciones hasta 4 Mpx Lite y soporte para cámaras IP de hasta 6 MP.',
       features: [
-        '8 canales de entrada de video analógico (BNC, 1.0 Vp-p, 75 Ω) con soporte para conexión coaxitron',
-        'Detección de movimiento 2.0 basada en aprendizaje profundo para clasificar humanos y vehículos',
-        'Protección perimetral con análisis de humanos y vehículos hasta 4 canales',
-        'Detección facial y captura de imágenes faciales',
-        'Compresión de video H.265 Pro+/H.265 Pro/H.265 para eficiencia de almacenamiento',
-        'Entradas de video HDTVI, AHD, CVI, CVBS e IP',
-        'Salida de video HDMI y VGA simultáneas en resoluciones 1920×1080/60Hz, 1280×1024/60Hz, 1280×720/60Hz',
-        'Entrada de audio por coaxial y salida de audio RCA (2.0 Vp-p, 1 KΩ)',
-        'Hasta 12 entradas de cámara IP (hasta 6 MP) con capacidad de resolución de hasta 3K/5M Lite a 12 fps',
-        'Soporte para cámaras IP H.265+/H.265/H.264+/H.264',
-        'Reproducción sincrónica de hasta 8 canales',
-        'Codificación de video en resoluciones 3K Lite/5 MP Lite/4 MP Lite/1080p/720p/VGA/WD1/4CIF/CIF',
-        'Conexión remota a través de múltiples protocolos (TCP/IP, PPPoE, Hik-Connect, DNS, DDNS, etc.)',
-        'Consumo de energía de ≤ 12 W sin HDD',
+        'DVR AcuSense Mini de 8 canales 4 Mpx Lite de HIKVISION',
+        '8 canales de entrada de video analógico con soporte para conexión coaxitron',
+        'Detección de movimiento 2.0 basada en Deep Learning para clasificación precisa de humanos y vehículos',
+        'Protección perimetral con análisis de intrusiones en hasta 4 canales',
+        'Captura y detección facial para mayor seguridad',
+        'Compresión de video eficiente H.265 Pro+ que reduce el almacenamiento requerido',
+        'Compatibilidad con múltiples formatos de entrada: HDTVI, AHD, CVI, CVBS e IP',
+        'Salida de video simultánea HDMI y VGA con resoluciones de hasta 1920×1080/60Hz',
+        'Entrada de audio por coaxial y salida RCA para una transmisión de sonido clara',
+        'Hasta 12 entradas de cámara IP con resolución de hasta 6 MP y codificación 3K/5M Lite a 12 fps',
+        'Soporte para cámaras IP con codecs H.265+/H.265/H.264+/H.264',
+        'Reproducción sincrónica de hasta 8 canales para monitoreo eficiente',
+        'Codificación de video en resoluciones 3K Lite, 5 MP Lite, 4 MP Lite y 1080p',
+        'Conexión remota mediante múltiples protocolos: TCP/IP, PPPoE, Hik-Connect, DNS, DDNS, entre otros',
+        'Consumo energético eficiente (≤ 12 W sin HDD)',
         'Temperatura de funcionamiento de -10 °C a +55 °C',
-        'Almacenamiento de hasta 10 TB por disco mediante interfaz SATA',
+        'Capacidad de almacenamiento de hasta 10 TB por disco mediante interfaz SATA'
       ],
+
       images: [
         { src: imagen65, alt: 'DVR HIKVISION iDS-7108HQHI-M1S1 de 8 canales para grabación de video de alta calidad' },
         { src: imagen66, alt: 'DVR HIKVISION iDS-7108HQHI-M1S1 AcuSense mini de 8 canales con análisis inteligente' },
@@ -173,8 +175,8 @@ const Kit4CamarasBala: React.FC = () => {
       botonTexto: 'Domicilio Gratis!'
     },
     {
-      title: '8 Cámaras Bala De 2 Mpx',
-      description: '8 Cámaras Bala TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
+      title: '8 Cámaras de 2 Mpx - HIKVISION',
+      description: 'Cámaras Bala TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
       features: [
         '8 CAMARAS BALA 2 MPX DE HIKVISION',
         'Visión Nocturna Inteligente EXIR hasta 20 mts',
@@ -234,8 +236,8 @@ const Kit4CamarasBala: React.FC = () => {
       botonTexto: 'Obtenga el Kit!'
     },
     {
-      title: '4 Fuentes de Energía',
-      description: '4 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
+      title: '8 Fuentes de Energía',
+      description: 'fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
       features: [
         '8 FUENTES DE ENERGIA',
         'Fuente de alimentación de alta calidad, diseñada para proporcionar un rendimiento estable y confiable',
@@ -254,7 +256,7 @@ const Kit4CamarasBala: React.FC = () => {
     },
     {
       title: '8 pares de Video Baluns',
-      description: '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
+      description: 'VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
       features: [
         '8 PARES DE VIDEO BALUNS',
         'Transmisión eficiente de señales de video a través de cables de par trenzado, eliminando la necesidad de cables coaxiales costosos',
@@ -273,7 +275,7 @@ const Kit4CamarasBala: React.FC = () => {
     },
     {
       title: '4 pares de Borneras',
-      description: '4 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
+      description: 'borneras eléctricas para la conexión y distribución de energía de las cámaras.',
       features: [
         'Conexión y distribución de energía de manera segura y eficiente entre dispositivos eléctricos, como cámaras de seguridad y otros equipos',
         'Diseño compacto y robusto, ideal para entornos de trabajo exigentes, proporcionando fiabilidad en las instalaciones de videovigilancia',
@@ -293,13 +295,13 @@ const Kit4CamarasBala: React.FC = () => {
       title: '100 mts de cable UTP',
       description: 'Cable UTP Cat 5e para interior incluido en el kit.',
       features: [
+        '100 metros de cable utp cat 5e.',
         'Cable UTP Cat 5e de alta calidad, diseñado para garantizar una transmisión de datos rápida y confiable',
         'Ideal para conexiones de cámaras de seguridad, ofreciendo estabilidad y calidad en la señal de video y datos',
-        'Soporta distancias largas de hasta 50 metros, permitiendo flexibilidad en la instalación de equipos de videovigilancia',
+        'Soporta distancias largas de hasta 250mts para la conexion de camaras de seguridad analogicas y 100 metros para trasmision de camaras ip, permitiendo flexibilidad en la instalación de equipos de videovigilancia',
         'Compatible con sistemas de CCTV y otros dispositivos de red, garantizando versatilidad en su uso',
         'Diseño robusto, adecuado para instalaciones interiores, asegurando un rendimiento confiable en entornos controlados',
-        'Fácil de instalar y manejar, con aislamiento que protege contra interferencias electromagnéticas (EMI) y pérdida de señal',
-        'Conductor de cobre de alta calidad que asegura una baja resistencia y mejora la eficiencia de transmisión',
+        'Fácil de instalar y manejar.',
         'Ideal para proyectos de videovigilancia, ofreciendo una opción económica y duradera para conexiones de red'
       ],
       images: [
@@ -333,7 +335,7 @@ const Kit4CamarasBala: React.FC = () => {
   const banners = [
     <Banner
       key="banner1"
-      texto="Garantía de 1 año para cámaras de seguridad y videograbador DVR"
+      texto="Garantía de 1 año para cámaras de seguridad y DVR"
       backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -373,7 +375,7 @@ const Kit4CamarasBala: React.FC = () => {
     />,
     <Banner
       key="banner6"
-      texto="Entrega inmediata para Bucaramanga y su área metropolitana."
+      texto="Envio contra entrega para Bucaramanga y su área metropolitana."
       backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -403,7 +405,7 @@ const Kit4CamarasBala: React.FC = () => {
   Aceptamos pagos en efectivo, Nequi o Bancolombia.`;
 
   const descripcionModal = `Complete el formulario para hacer llegar el pedido a su domicilio.
-  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,370.000 COP. ¡Domicilio gratis!
+  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,390.000 COP. ¡Domicilio gratis!
   Realizamos una llamada de confirmación para verificar la dirección y disponibilidad de los equipos. ¡Entrega inmediata!`;
 
   return (
@@ -417,8 +419,8 @@ const Kit4CamarasBala: React.FC = () => {
           imagen={headerImage}
           titulo="Solo para Bucaramanga y el área metropolitana"
           subtitulo="Tecnología avanzada: detección de humanos y vehículos"
-          descripcion="Kit de 4 cámaras Bala Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
-          precio="1,370.000"
+          descripcion="Kit de 8 cámaras Bala Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, incluye deteccion de rostros."
+          precio="1,390.000"
         >
           <BotonCompra
             texto="Compra el Kit de Cámaras!"
@@ -497,7 +499,7 @@ const Kit4CamarasBala: React.FC = () => {
           titulo=""
           subtitulo=""
           descripcion=""
-          precio="1,370.000"
+          precio="1,390.000"
         />
       </Suspense>
 
@@ -505,7 +507,7 @@ const Kit4CamarasBala: React.FC = () => {
         <Formulario
           titulo="confirma la Compra del kit de 8 cámaras Bala, 2mpx + grabacion a 4mpx lite"
           descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, ¡Domicilio gratis! Realizamos llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
-          precio="$1,370.000"
+          precio="$1,390.000"
         />
       </Suspense>
 

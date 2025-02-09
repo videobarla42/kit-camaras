@@ -133,15 +133,27 @@ const Kits8Camaras: React.FC = () => {
 
     const carruseles = [
       {
-        title: '1 Video Grabador DVR de 8 Canales, 4 MPX Lite + IA',
-        description: 'DVR AcuSense de 8 Canales, 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
+        title: 'DVR de 8 Canales, 4 Mpx Lite - HIKVISION',
+        description: 'DVR AcuSense mini de 8 canales con tecnología avanzada de detección de movimiento (humanos y vehículos) y protección perimetral inteligente. Ofrece grabación de múltiples resoluciones hasta 4 Mpx Lite y soporte para cámaras IP de hasta 6 MP.',
         features: [
-          'DVR de 8 Canales con IA avanzada',
-          'Detección de movimiento humano y de vehículos',
-          'Soporte para cámaras IP de hasta 6 MP',
-          'Compresión de video H.265 Pro+',
-          'Grabación hasta 4MPX Lite',
+          'DVR AcuSense Mini de 8 canales 4 Mpx Lite de HIKVISION',
+          'Detección de movimiento 2.0 basada en Deep Learning para clasificación precisa de humanos y vehículos',
+          'Protección perimetral inteligente en hasta 4 canales',
+          'Detección facial y captura de imágenes para mayor seguridad',
+          'Compresión de video H.265 Pro+ para maximizar eficiencia de almacenamiento',
+          'Compatibilidad con múltiples formatos de entrada: HDTVI, AHD, CVI, CVBS e IP',
+          'Salida de video simultánea HDMI y VGA con resolución de hasta 1920x1080/60Hz',
+          'Entrada de audio por coaxial y salida RCA para transmisión clara',
+          'Hasta 12 entradas IP con resolución de hasta 6 MP y codificación a 3K/5M Lite a 12 fps',
+          'Soporte para cámaras IP con codecs H.265+/H.265/H.264+/H.264',
+          'Reproducción sincrónica de hasta 8 canales',
+          'Codificación de video en resoluciones 3K Lite, 5 MP Lite, 4 MP Lite y 1080p',
+          'Conexión remota mediante múltiples protocolos (TCP/IP, Hik-Connect, DNS, DDNS, etc.)',
+          'Consumo energético eficiente (≤ 12 W sin HDD)',
+          'Rango de temperatura de operación de -10 °C a +55 °C',
+          'Almacenamiento de hasta 10 TB por disco mediante interfaz SATA'
         ],
+    
         images: [
           { src: imagen65, alt: 'DVR HIKVISION iDS-7108HQHI-M1S1 de 8 canales para grabación en alta definición y seguridad avanzada' },
           { src: imagen66, alt: 'DVR HIKVISION iDS-7108HQHI-M1S1 AcuSense mini de 8 canales con tecnología de análisis inteligente' },
@@ -160,27 +172,24 @@ const Kits8Camaras: React.FC = () => {
         botonTexto: 'Domicilio Gratis!',
       },
       {
-        title: '8 Cámaras de 2 Mpx y 20 MTS de Alcance',
-        description: '8 Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
+        title: '8 Cámaras de 2 Mpx - HIKVISION',
+        description: 'Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
         features: [
-          '8 canales de entrada de video analógico (BNC, 1.0 Vp-p, 75 Ω) con soporte para conexión coaxitron',
-          'Detección de movimiento 2.0 basada en aprendizaje profundo para clasificar humanos y vehículos',
-          'Protección perimetral con análisis de humanos y vehículos hasta 4 canales',
-          'Detección facial y captura de imágenes faciales',
-          'Compresión de video H.265 Pro+/H.265 Pro/H.265 para eficiencia de almacenamiento',
-          'Entradas de video HDTVI, AHD, CVI, CVBS e IP',
-          'Salida de video HDMI y VGA simultáneas en resoluciones 1920×1080/60Hz, 1280×1024/60Hz, 1280×720/60Hz',
-          'Entrada de audio por coaxial y salida de audio RCA (2.0 Vp-p, 1 KΩ)',
-          'Hasta 12 entradas de cámara IP (hasta 6 MP) con capacidad de resolución de hasta 3K/5M Lite a 12 fps',
-          'Soporte para cámaras IP H.265+/H.265/H.264+/H.264',
-          'Reproducción sincrónica de hasta 8 canales',
-          'Codificación de video en resoluciones 3K Lite/5 MP Lite/4 MP Lite/1080p/720p/VGA/WD1/4CIF/CIF',
-          'Conexión remota a través de múltiples protocolos (TCP/IP, PPPoE, Hik-Connect, DNS, DDNS, etc.)',
-          'Consumo de energía de ≤ 12 W sin HDD',
-          'Temperatura de funcionamiento de -10 °C a +55 °C',
-          'Almacenamiento de hasta 10 TB por disco mediante interfaz SATA',
+          '8 CAMARAS DOMO 2 MPX DE HIKVISION',
+          'Visión Nocturna Inteligente EXIR hasta 20 mts',
+          'Diseño Resistente a Agua y Polvo (IP67)',
+          '4 Señales Switchable (TVI/AHD/CVI/CVBS)',
+          'Sensor CMOS de 2 MP con resolución máxima de 1920x1080 (Full HD)',
+          'Lente fijo de 2.8 mm (ángulo de visión 101° horizontal, 60° vertical)',
+          'Iluminación mínima de 0.01 Lux @ (F2.0, AGC ON) y 0 Lux con IR',
+          'Rango de temperatura de operación: -40ºC a 60ºC',
+          'Ángulo de ajuste completo (Pan: 0°-360°, Tilt: 0°-90°, Rotation: 0°-360°)',
+          'Alimentación de 12 VDC con consumo máximo de 2.2 W',
+          'Carcasa de policarbonato resistente para uso exterior (IP67)',
+          'Modo día/noche con ICR automático, mejorado con WDR digital',
+          'Garantía de 2 años',
+          'Dimensiones: 70 mm x 137.8 mm, peso 150 g',
         ],
-        
         images: [
           { src: imagen50, alt: 'Cámara de seguridad HIKVISION DS-2CE16D0T-IRPF(2.8mm)(C) con resolución 1080p, visión nocturna Smart IR y lente de 2.8 mm' },
           { src: imagen51, alt: 'Cámara con visión nocturna HIKVISION DS-2CE16D0T-IRPF(2.8mm)(C) con visión nocturna Smart IR, lente de 2.8 mm' },
@@ -224,7 +233,7 @@ const Kits8Camaras: React.FC = () => {
       },
       {
         title: '8 Fuentes De Energía',
-        description: '8 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento. El artículo puede ser ligeramente distinto al de la foto.',
+        description: 'fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento. El artículo puede ser ligeramente distinto al de la foto.',
         features: [
           '8 FUENTES DE ENERGIA',
           'Fuente de alimentación de alta calidad, diseñada para proporcionar un rendimiento estable y confiable',
@@ -243,7 +252,7 @@ const Kits8Camaras: React.FC = () => {
       },
       {
         title: '8 pares de Video Baluns',
-        description: '8 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
+        description: 'VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
         features: [
           '8 PARES DE VIDEO BALUNS',
           'Transmisión eficiente de señales de video a través de cables de par trenzado, eliminando la necesidad de cables coaxiales costosos',
@@ -262,7 +271,7 @@ const Kits8Camaras: React.FC = () => {
       },
       {
         title: '8 pares de Borneras',
-        description: '8 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
+        description: 'borneras eléctricas para la conexión y distribución de energía de las cámaras.',
         features: [
           'Conexión y distribución de energía de manera segura y eficiente entre dispositivos eléctricos, como cámaras de seguridad y otros equipos',
           'Diseño compacto y robusto, ideal para entornos de trabajo exigentes, proporcionando fiabilidad en las instalaciones de videovigilancia',
@@ -282,13 +291,13 @@ const Kits8Camaras: React.FC = () => {
         title: '100 mts de cable UTP',
         description: 'Cable UTP Cat 5e para interior incluido en el kit.',
         features: [
+          '100 metros de cable utp cat 5e.',
           'Cable UTP Cat 5e de alta calidad, diseñado para garantizar una transmisión de datos rápida y confiable',
           'Ideal para conexiones de cámaras de seguridad, ofreciendo estabilidad y calidad en la señal de video y datos',
-          'Soporta distancias largas de hasta 50 metros, permitiendo flexibilidad en la instalación de equipos de videovigilancia',
+          'Soporta distancias largas de hasta 250mts para la conexion de camaras de seguridad analogicas y 100 metros para trasmision de camaras ip, permitiendo flexibilidad en la instalación de equipos de videovigilancia',
           'Compatible con sistemas de CCTV y otros dispositivos de red, garantizando versatilidad en su uso',
           'Diseño robusto, adecuado para instalaciones interiores, asegurando un rendimiento confiable en entornos controlados',
-          'Fácil de instalar y manejar, con aislamiento que protege contra interferencias electromagnéticas (EMI) y pérdida de señal',
-          'Conductor de cobre de alta calidad que asegura una baja resistencia y mejora la eficiencia de transmisión',
+          'Fácil de instalar y manejar.',
           'Ideal para proyectos de videovigilancia, ofreciendo una opción económica y duradera para conexiones de red'
         ],
         images: [
@@ -323,7 +332,7 @@ const Kits8Camaras: React.FC = () => {
   const banners = [
     <Banner
       key="banner1"
-      texto="Garantía de 1 año para cámaras de seguridad y videograbador DVR"
+      texto="Garantía de 1 año para cámaras de seguridad y DVR"
       backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -362,21 +371,22 @@ const Kits8Camaras: React.FC = () => {
       padding="15px 30px"
     />,
     <Banner
-      key="banner6"
-      texto="Entrega inmediata para Bucaramanga y su área metropolitana."
-      backgroundColor="#8B0000"
-      textColor="#FFFFFF"
-      fontSize="2rem"
-      padding="15px 30px"
-    />,
-    <Banner
-      key="banner7"
-      texto="¡Entrega Inmediata!"
-      backgroundColor="#8B0000"
-      textColor="#FFFFFF"
-      fontSize="2rem"
-      padding="15px 30px"
-    />,
+    key="banner6"
+    texto="Envio contra entrega para Bucaramanga y su área metropolitana."
+    backgroundColor="#8B0000"
+    textColor="#FFFFFF"
+    fontSize="2rem"
+    padding="15px 30px"
+  />,
+  <Banner
+    key="banner7"
+    texto="¡Entrega Inmediata!"
+    backgroundColor="#8B0000"
+    textColor="#FFFFFF"
+    fontSize="2rem"
+    padding="15px 30px"
+  />
+
   ];
 
   const abrirModal = (index?: number) => {
@@ -393,7 +403,7 @@ const Kits8Camaras: React.FC = () => {
   Aceptamos pagos en efectivo, Nequi o Bancolombia.`;
 
   const descripcionModal = `Complete el formulario para hacer llegar el pedido a su domicilio.
-  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,175,000 COP. ¡Domicilio gratis!
+  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,270.000 COP. ¡Domicilio gratis!
   Realizamos una llamada de confirmación para verificar la dirección y disponibilidad de los equipos. ¡Entrega inmediata!`;
 
   return (
@@ -406,8 +416,8 @@ const Kits8Camaras: React.FC = () => {
         imagen={headerImage}
         titulo="Solo para Bucaramanga y el área metropolitana"
         subtitulo="Tecnología avanzada: detección de humanos y vehículos"
-        descripcion="Kit de 8 cámaras Domo, Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
-        precio="1,175,000"
+        descripcion="Kit de 8 cámaras Domo, Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, incluye deteccion de rostros."
+        precio="1,270.000"
       >
         <BotonCompra
           texto="Compra el Kit de Cámaras!"
@@ -483,7 +493,7 @@ const Kits8Camaras: React.FC = () => {
         titulo=""
         subtitulo=""
         descripcion=""
-        precio="1175,000"
+        precio="1,270.000"
       >
       </HeroHeader>
 
@@ -491,7 +501,7 @@ const Kits8Camaras: React.FC = () => {
       <Formulario
         titulo="confirma la Compra del kit de 8 cámaras Domo, 2mpx + grabacion a 4mpx lite"
         descripcion="Complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,175,000. ¡Domicilio gratis! Realizamos una llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
-        precio="$1,175,000"
+        precio="$1,270.000"
       />
 
       {/* Schema Markup */}

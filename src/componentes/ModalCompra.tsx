@@ -85,20 +85,21 @@ const ModalCompra: React.FC<ModalCompraProps> = ({
           className="modal-input"
         />
 
-        <div className="modal-botones">
-          <button className="confirmar" onClick={onConfirm}>
-            Confirmar Compra
-          </button>
-        </div>
+    <div className="modal-botones">
+  <button className="confirmar" onClick={onConfirm}>
+    Confirmar Compra
+  </button>
+</div>
 
-        <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
-          <button className="whatsapp-button" onClick={abrirWhatsApp}>
-            WhatsApp
-          </button>
-          <button className="llamar-button" onClick={hacerLlamada}>
-            Llamar
-          </button>
-        </div>
+<div className="secondary-buttons">
+  <button className="whatsapp-button" onClick={abrirWhatsApp}>
+    WhatsApp
+  </button>
+  <button className="llamar-button" onClick={hacerLlamada}>
+    Llamar
+  </button>
+</div>
+
 
         <div className="horarios-entrega">
           <p>{horariosEntrega}</p>

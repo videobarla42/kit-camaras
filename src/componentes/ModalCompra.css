@@ -136,78 +136,159 @@
 
   .modal-compra.modal-overlay {
     position: fixed;
-    top: 1PX;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 10, 10, 0.7);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente oscuro */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Asegúrate de que sea más alto que otros elementos */
-    overflow-y: auto; /* Permite scroll en el overlay si es necesario */
-    height: 100vh;
+    z-index: 9999;
+    overflow-y: auto; /* Permite el scroll si el contenido es muy largo */
   }
   
   /* Estilos para el contenido del modal */
   .modal-content2 {
-    top: 10PX;
-    background-color: #fff;
+    background-color: #c51818;
     border-radius: 10px;
-    width: 90%;
-    max-width: 900px;
-    margin-left: -10PX;
-    max-height: 100vh; /* Limita la altura del modal */
-    overflow-y: auto; /* Permite scroll dentro del modal si el contenido es largo */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /*  Ancho y posición similares al formulario */
+    width: 100%;
+    max-width: 600px;
     position: relative;
+    left: -16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    max-height: 95vh; /* Altura máxima */
+    overflow-y: auto; /* Habilitar scroll si es necesario */
+    padding: 20px; /* Espacio interno */
   }
 
   .cerrar-modal {
-    font-size: clamp(50px, 6vw, 24px);
-    margin-top: -50px;
-    margin-right: -60px;
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    font-size: clamp(46px, 16vw, 39px);
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
   }
 
-  .titulo-con-icono h2 {
-    font-size: var(--font-size-large); /* Tamaño de fuente responsivo */
-    margin-bottom: clamp(10px, 3vw, 15px); /* Espaciado inferior responsivo */
-    margin-top: clamp(10px, 3vw, 15px); /* Espaciado superior responsivo */
-    display: flex; /* Activar flexbox */
-    align-items: center; /* Alinear verticalmente (útil si hay un ícono) */
-    gap: clamp(8px, 2vw, 12px); /* Espacio entre el ícono y el texto (si aplica) */
-    line-height: 1.2; /* Reduce el espacio entre líneas de texto */
+  .titulo-con-icono h4 {
+    font-size: clamp(30px, 6vw, 36px); /* Tamaño de fuente responsivo */
+    color: #f7e9e9; /* Color oscuro para mejor contraste */
+    margin: 0 0 10px 0; /* Margen inferior */
+    text-align: center; /* Centrar el texto */
+    line-height: 1.2;
+    font-weight: 700;
   }
 
   .titulo-con-icono p {
-    font-size: var(--font-size-small);
-    margin-bottom: 20px;
+    font-size: clamp(16px, 3vw, 18px); /* Tamaño de fuente responsivo */
+    color: #c9b7b7; /* Color gris claro para un tono secundario */
+    text-align: center; /* Centrar el texto */
+    line-height: 1.5;
+    margin: 0 0 20px 0; /* Margen inferior */
   }
 
+  /* Estilos para los inputs */
   .modal-input {
-    padding: var(--padding-small);
-    font-size: var(--font-size-medium);
-    margin-bottom: 15px;
+    width: 97%;
+    padding: 22px;
+    margin: 0 0 18px -18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
   }
 
-  .modal-botones {
-    flex-direction: column;
-    gap: var(--gap-small);
-    margin-top: 20px;
+  .modal-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+    background-color: #fff;
+    outline: none;
   }
 
-  .modal-botones button {
-    padding: var(--padding-small) var(--padding-medium);
-    font-size: var(--font-size-medium);
-  }
-
-  .horarios-entrega {
-    font-size: var(--font-size-small);
-    margin-top: 20px;
-  }
+  /* Estilo para el contenedor del botón Confirmar */
+  /* Contenedor principal de botones */
+.modal-botones {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(18px, 5vw, 18px);
+  margin-top: 25px;
 }
 
-/* Estilos para deshabilitar el scroll del body cuando el modal está abierto */
-body.modal-open {
-  overflow: hidden;
+/* Botón Confirmar */
+.modal-botones .confirmar {
+  width: 100%;
+  padding: clamp(12px, 3vw, 20px);
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: clamp(8px, 1.5vw, 16px);
+  font-size: clamp(26px, 4vw, 20px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-botones .confirmar:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor botones secundarios */
+.secondary-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(18px, 5vw, 18px);
+  margin-top: 25px;
+}
+
+/* Estilos comunes para botones secundarios */
+.secondary-buttons button {
+  width: 100%;
+  padding: clamp(12px, 3vw, 20px);
+  border: none;
+  border-radius: clamp(8px, 1.5vw, 16px);
+  font-size: clamp(26px, 4vw, 20px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Botón WhatsApp */
+.secondary-buttons .whatsapp-button {
+  background-color: #25d366;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.secondary-buttons .whatsapp-button:hover {
+  background-color: #20b157;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Botón Llamar */
+.secondary-buttons .llamar-button {
+  background-color: #f39c12;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-buttons .llamar-button:hover {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
 }

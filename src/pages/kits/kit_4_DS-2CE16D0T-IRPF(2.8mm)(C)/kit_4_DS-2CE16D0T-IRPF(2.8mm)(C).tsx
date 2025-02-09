@@ -134,11 +134,10 @@ const Kit4CamarasBala: React.FC = () => {
 
   const carruseles = [
     {
-      title: '1 DVR de 4 Canales',
-      description:
-        'DVR AcuSense mini de 4 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
-        features: [
-          'DVR DE 4 CANALES 4 MPX LITE DE HIKVISION',
+      title: '1 DVR de 4 Canales,  4 Mpx Lite - HIKVISION',
+      description: 'DVR AcuSense mini de 4 canales con tecnología avanzada de detección de movimiento (humanos y vehículos) y protección perimetral inteligente. Ofrece grabación de múltiples resoluciones hasta 4 Mpx Lite y soporte para cámaras IP de hasta 6 MP.',
+      features: [
+          'DVR AcuSense Mini de 4 canales 4 Mpx Lite de HIKVISION',
           'Compresión H.265 Pro+ para eficiencia en la grabación de video',
           'Soporte para cámaras IP de hasta 6 MP, brindando alta resolución',
           'Grabación en múltiples resoluciones hasta 4MP Lite, adaptándose a diferentes necesidades de grabación',
@@ -180,10 +179,8 @@ const Kit4CamarasBala: React.FC = () => {
       botonTexto: 'Domicilio Gratis!',
     },
     {
-      title: '4 Cámaras Bala de 2 Mpx',
-description:
-  '4 Cámaras Bala TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
-features: [
+   title: '4 Cámaras de 2 Mpx - HIKVISION',
+  description: 'Cámaras Bala TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',      features: [
   '4 CAMARAS BALA 2 MPX DE HIKVISION',
   'Visión Nocturna Inteligente EXIR hasta 20 mts',
   'Diseño Resistente a Agua y Polvo (IP67)',
@@ -249,7 +246,7 @@ features: [
     {
       title: '4 Fuentes de Energía',
       description:
-        '4 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
+        'fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
         features: [
           '4 FUENTES DE ENERGIA',
           'Fuente de alimentación de alta calidad, diseñada para proporcionar un rendimiento estable y confiable',
@@ -268,7 +265,7 @@ features: [
     {
       title: '4 pares de Video Baluns',
       description:
-        '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
+        'VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
         features: [
           '4 PARES DE VIDEO BALUNS',
           'Transmisión eficiente de señales de video a través de cables de par trenzado, eliminando la necesidad de cables coaxiales costosos',
@@ -286,7 +283,7 @@ features: [
     },
     {
       title: '4 Pares de Borneras Eléctricas',
-      description: '4 pares de borneras eléctricas para la conexión y distribución eficiente de energía en sistemas de videovigilancia.',
+      description: 'borneras eléctricas para la conexión y distribución eficiente de energía en sistemas de videovigilancia.',
       features: [
         'Conexión y distribución de energía de manera segura y eficiente entre dispositivos eléctricos, como cámaras de seguridad y otros equipos',
         'Diseño compacto y robusto, ideal para entornos de trabajo exigentes, proporcionando fiabilidad en las instalaciones de videovigilancia',
@@ -305,13 +302,13 @@ features: [
       title: '50 mts de Cable UTP Cat 5e',
 description: 'Cable UTP Cat 5e de alta calidad para conexiones de red de cámaras de seguridad y otros dispositivos electrónicos, incluido en el kit.',
 features: [
+  '50 metros de cable utp cat 5e.',
   'Cable UTP Cat 5e de alta calidad, diseñado para garantizar una transmisión de datos rápida y confiable',
   'Ideal para conexiones de cámaras de seguridad, ofreciendo estabilidad y calidad en la señal de video y datos',
-  'Soporta distancias largas de hasta 50 metros, permitiendo flexibilidad en la instalación de equipos de videovigilancia',
+  'Soporta distancias largas de hasta 250mts para la conexion de camaras de seguridad analogicas y 100 metros para trasmision de camaras ip, permitiendo flexibilidad en la instalación de equipos de videovigilancia',
   'Compatible con sistemas de CCTV y otros dispositivos de red, garantizando versatilidad en su uso',
   'Diseño robusto, adecuado para instalaciones interiores, asegurando un rendimiento confiable en entornos controlados',
-  'Fácil de instalar y manejar, con aislamiento que protege contra interferencias electromagnéticas (EMI) y pérdida de señal',
-  'Conductor de cobre de alta calidad que asegura una baja resistencia y mejora la eficiencia de transmisión',
+  'Fácil de instalar y manejar.',
   'Ideal para proyectos de videovigilancia, ofreciendo una opción económica y duradera para conexiones de red'
 ],
 
@@ -344,7 +341,7 @@ features: [
   const banners = [
     <Banner
       key="banner1"
-      texto="Garantía de 1 año para cámaras de seguridad y videograbador DVR"
+      texto="Garantía de 1 año para cámaras de seguridad y DVR"
       backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -384,7 +381,7 @@ features: [
     />,
     <Banner
       key="banner6"
-      texto="Entrega inmediata para Bucaramanga y su área metropolitana."
+      texto="Envio contra entrega para Bucaramanga y su área metropolitana."
       backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -414,7 +411,7 @@ features: [
   Aceptamos pagos en efectivo, Nequi o Bancolombia.`;
 
   const descripcionModal = `Complete el formulario para hacer llegar el pedido a su domicilio.
-  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $860,000 COP. ¡Domicilio gratis!
+  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $870,000 COP. ¡Domicilio gratis!
   Realizamos una llamada de confirmación para verificar la dirección y disponibilidad de los equipos. ¡Entrega inmediata!`;
 
   return (
@@ -428,8 +425,8 @@ features: [
           imagen={headerImage}
           titulo="Solo para Bucaramanga y el área metropolitana"
           subtitulo="Tecnología avanzada: detección de humanos y vehículos"
-          descripcion="Kit de 4 cámaras Bala Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
-          precio="860,000"
+          descripcion="Kit de 4 cámaras Bala Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, incluye deteccion de rostros."
+          precio="870,000"
         >
           <BotonCompra
             texto="Compra el Kit de Cámaras!"
@@ -509,7 +506,7 @@ features: [
           titulo=""
           subtitulo=""
           descripcion=""
-          precio="860,000"
+          precio="870,000"
         />
       </Suspense>
 
@@ -518,7 +515,7 @@ features: [
         <Formulario
           titulo="confirma la Compra del kit de 4 cámaras Bala, 2mpx + grabacion a 4mpx lite"
           descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, ¡Domicilio gratis! Realizamos llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
-          precio="$860,000"
+          precio="$870,000"
         />
       </Suspense>
 

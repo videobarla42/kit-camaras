@@ -130,21 +130,21 @@ const Kits16Camaras: React.FC = () => {
 
     const carruseles = [
       {
-        title: '1 Video Grabador DVR de 16 Canales, 4 MPX Lite + IA',
-        description: 'DVR AcuSense mini de 16 canales Y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
+        title: 'DVR de 16 Canales, 4 Mpx Lite - HIKVISION',
+        description: 'DVR AcuSense mini de 16 canales con tecnología avanzada de detección de movimiento (humanos y vehículos) y protección perimetral inteligente. Ofrece grabación de múltiples resoluciones hasta 4 Mpx Lite y soporte para cámaras IP de hasta 6 MP.',
         features: [
-          'DVR Mini H.265 AcuSense de 16 canales 1080p con alto rendimiento de compresión y optimización de almacenamiento',
-          'Detección de movimiento 2.0 avanzada basada en Deep Learning, mejorando la precisión y reduciendo falsas alarmas',
-          'Protección perimetral inteligente mediante Deep Learning, que ofrece detección de intrusión y cruce de líneas',
-          'Compresión de vídeo eficiente H.265 Pro+/H.265 Pro/H.265, garantizando ahorro de ancho de banda sin sacrificar calidad de imagen',
-          'Compatibilidad con múltiples entradas de vídeo: HDTVI, AHD, CVI, CVBS y IP para flexibilidad en la conexión de cámaras',
-          'Entrada de audio por coaxial para una transmisión de audio clara y estable',
-          'Hasta 24 entradas de cámara IP con resolución de hasta 6 MP, permitiendo la expansión del sistema de vigilancia',
-          'Codificación de vídeo hasta 3K/5M Lite a 12 fps, para imágenes nítidas y detalladas en resolución elevada',
-          'Detección facial con captura de imágenes, mejorando la identificación y seguridad del entorno vigilado',
-          'Análisis avanzado de humanos y vehículos en la detección de movimiento, mejorando la precisión de las alertas',
-          'Diseño de bajo consumo energético con soporte para discos duros de hasta 10 TB, optimizando el almacenamiento de datos',
-          'Conexión de red rápida y estable mediante interfaz RJ45 10/100/1000M, asegurando una transmisión fluida de vídeo'
+          'DVR AcuSense Mini de 16 canales 4 Mpx Lite de HIKVISION',
+          'Compresión de video eficiente H.265 Pro+ para optimización de almacenamiento',
+          'Detección de movimiento 2.0 basada en Deep Learning para mayor precisión',
+          'Protección perimetral inteligente con detección de intrusiones y cruce de líneas',
+          'Compatibilidad con múltiples entradas de video: HDTVI, AHD, CVI, CVBS e IP',
+          'Entrada de audio por coaxial para transmisión clara y estable',
+          'Hasta 24 entradas IP con resolución de hasta 6 MP',
+          'Codificación de video hasta 3K/5M Lite a 12 fps para imágenes nítidas',
+          'Detección facial para captura de imágenes y mayor seguridad',
+          'Análisis avanzado de movimiento para mejorar la precisión de las alertas',
+          'Soporte para discos duros de hasta 10 TB para almacenamiento eficiente',
+          'Conexión de red rápida mediante interfaz RJ45 10/100/1000M'
         ],
         
         images: [
@@ -165,10 +165,10 @@ const Kits16Camaras: React.FC = () => {
         botonTexto: 'Domicilio Gratis!'
       },
       {
-        title: '16 Cámaras de 2 Mpx y 20 MTS de Alcance',
+        title: '16 Cámaras de 2 Mpx - HIKVISION',
         description: 'Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
         features: [
-          '16 CAMARAS DOMO 2 MPX DE HIVISION',
+          '16 CAMARAS DOMO 2 MPX DE HIKVISION',
           'Cámara tipo domo fija para interiores/exteriores',
           'Modelo: DS-2CE56D0T-IRPF(C)',
           'Resolución máxima de 2 Megapíxeles (1920 x 1080)',
@@ -231,7 +231,7 @@ const Kits16Camaras: React.FC = () => {
       },
       {
         title: '16 Fuentes De Energía',
-        description: '16 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento. El artículo puede ser ligeramente distinto al de la foto.',
+        description: 'fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento. El artículo puede ser ligeramente distinto al de la foto.',
         features: [
           '16 FUENTES DE ENERGIA',
           'Fuente de alimentación de alta calidad, diseñada para proporcionar un rendimiento estable y confiable',
@@ -250,7 +250,7 @@ const Kits16Camaras: React.FC = () => {
       },
       {
         title: '16 pares de Video Baluns',
-        description: '16 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
+        description: 'VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
         features: [
           '16 PARES DE VIDEO BALUNS',
           'Transmisión eficiente de señales de video a través de cables de par trenzado, eliminando la necesidad de cables coaxiales costosos',
@@ -269,7 +269,7 @@ const Kits16Camaras: React.FC = () => {
       },
       {
         title: '16 pares de Borneras',
-        description: '16 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
+        description: 'borneras eléctricas para la conexión y distribución de energía de las cámaras.',
         features: [
           'Conexión y distribución de energía de manera segura y eficiente entre dispositivos eléctricos, como cámaras de seguridad y otros equipos',
           'Diseño compacto y robusto, ideal para entornos de trabajo exigentes, proporcionando fiabilidad en las instalaciones de videovigilancia',
@@ -289,13 +289,13 @@ const Kits16Camaras: React.FC = () => {
         title: '200 mts de cable UTP',
         description: 'Cable UTP Cat 5e en aleación para interior incluidos en el kit.',
         features: [
+          '200 metros de cable utp cat 5e.',
           'Cable UTP Cat 5e de alta calidad, diseñado para garantizar una transmisión de datos rápida y confiable',
           'Ideal para conexiones de cámaras de seguridad, ofreciendo estabilidad y calidad en la señal de video y datos',
-          'Soporta distancias largas de hasta 50 metros, permitiendo flexibilidad en la instalación de equipos de videovigilancia',
+          'Soporta distancias largas de hasta 250mts para la conexion de camaras de seguridad analogicas y 100 metros para trasmision de camaras ip, permitiendo flexibilidad en la instalación de equipos de videovigilancia',
           'Compatible con sistemas de CCTV y otros dispositivos de red, garantizando versatilidad en su uso',
           'Diseño robusto, adecuado para instalaciones interiores, asegurando un rendimiento confiable en entornos controlados',
-          'Fácil de instalar y manejar, con aislamiento que protege contra interferencias electromagnéticas (EMI) y pérdida de señal',
-          'Conductor de cobre de alta calidad que asegura una baja resistencia y mejora la eficiencia de transmisión',
+          'Fácil de instalar y manejar.',
           'Ideal para proyectos de videovigilancia, ofreciendo una opción económica y duradera para conexiones de red'
         ],
         images: [
@@ -329,7 +329,7 @@ const Kits16Camaras: React.FC = () => {
   const banners = [
     <Banner
       key="banner1"
-      texto="Garantía de 1 año para cámaras de seguridad y videograbador DVR"
+      texto="Garantía de 1 año para cámaras de seguridad y DVR"
       backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -369,7 +369,7 @@ const Kits16Camaras: React.FC = () => {
     />,
     <Banner
       key="banner6"
-      texto="Entrega inmediata para Bucaramanga y su área metropolitana."
+      texto="Envio contra entrega para Bucaramanga y su área metropolitana."
       backgroundColor="#8B0000"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -382,7 +382,7 @@ const Kits16Camaras: React.FC = () => {
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
-    />,
+    />
   ];
 
   const abrirModal = (index?: number) => {
@@ -399,7 +399,7 @@ const Kits16Camaras: React.FC = () => {
   Aceptamos pagos en efectivo, Nequi o Bancolombia.`;
 
   const descripcionModal = `Complete el formulario para hacer llegar el pedido a su domicilio.
-  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,990,000 COP. ¡Domicilio gratis!
+  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $2,140.000 COP. ¡Domicilio gratis!
   Realizamos una llamada de confirmación para verificar la dirección y disponibilidad de los equipos. ¡Entrega inmediata!`;
 
   return (
@@ -412,8 +412,8 @@ const Kits16Camaras: React.FC = () => {
         imagen={headerImage}
         titulo="Solo para Bucaramanga y el área metropolitana"
         subtitulo="Tecnología avanzada: detección de humanos y vehículos"
-        descripcion="Kit de 16 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina."
-        precio="1,990,000"
+        descripcion="Kit de 16 cámaras Domo Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, incluye deteccion de rostros."
+        precio="2,140.000"
       >
         <BotonCompra
           texto="Compra el Kit de Cámaras!"
@@ -488,7 +488,7 @@ const Kits16Camaras: React.FC = () => {
         titulo=""
         subtitulo=""
         descripcion=""
-        precio="1,990,000"
+        precio="2,140.000"
       >
 
       </HeroHeader>
@@ -497,7 +497,7 @@ const Kits16Camaras: React.FC = () => {
       <Formulario
         titulo="confirma la Compra del kit de 16 cámaras Domo, 2mpx + grabacion a 4mpx lite"
         descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, ¡Domicilio gratis! Realizamos llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
-        precio="$1,990,000"
+        precio="$2,140.000"
       />
 
       
