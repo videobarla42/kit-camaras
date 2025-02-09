@@ -176,7 +176,7 @@
   .carrusel-button {
     font-size: 24px; /* Tamaño de fuente reducido */
     padding: 10px; /* Menos espacio */
-    background: linear-gradient(145deg, rgba(75,11,252,0.8), rgba(154,86,255,0.8));
+    background: linear-gradient(145deg, rgba(255, 5, 5, 0.432), rgba(154, 86, 255, 0.411));
     color: white;
     border: none;
     cursor: pointer;
