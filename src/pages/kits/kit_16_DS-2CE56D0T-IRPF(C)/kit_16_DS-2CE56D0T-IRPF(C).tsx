@@ -133,12 +133,20 @@ const Kits16Camaras: React.FC = () => {
         title: '1 Video Grabador DVR de 16 Canales, 4 MPX Lite + IA',
         description: 'DVR AcuSense mini de 16 canales Y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
         features: [
-          '16 canales de grabación simultánea',
-          'Resolución de hasta 4 MPX Lite',
-          'Compresión avanzada H.265 Pro+',
-          'Soporte para cámaras IP de hasta 6 MP',
-          'Protección perimetral con IA'
+          'DVR Mini H.265 AcuSense de 16 canales 1080p con alto rendimiento de compresión y optimización de almacenamiento',
+          'Detección de movimiento 2.0 avanzada basada en Deep Learning, mejorando la precisión y reduciendo falsas alarmas',
+          'Protección perimetral inteligente mediante Deep Learning, que ofrece detección de intrusión y cruce de líneas',
+          'Compresión de vídeo eficiente H.265 Pro+/H.265 Pro/H.265, garantizando ahorro de ancho de banda sin sacrificar calidad de imagen',
+          'Compatibilidad con múltiples entradas de vídeo: HDTVI, AHD, CVI, CVBS y IP para flexibilidad en la conexión de cámaras',
+          'Entrada de audio por coaxial para una transmisión de audio clara y estable',
+          'Hasta 24 entradas de cámara IP con resolución de hasta 6 MP, permitiendo la expansión del sistema de vigilancia',
+          'Codificación de vídeo hasta 3K/5M Lite a 12 fps, para imágenes nítidas y detalladas en resolución elevada',
+          'Detección facial con captura de imágenes, mejorando la identificación y seguridad del entorno vigilado',
+          'Análisis avanzado de humanos y vehículos en la detección de movimiento, mejorando la precisión de las alertas',
+          'Diseño de bajo consumo energético con soporte para discos duros de hasta 10 TB, optimizando el almacenamiento de datos',
+          'Conexión de red rápida y estable mediante interfaz RJ45 10/100/1000M, asegurando una transmisión fluida de vídeo'
         ],
+        
         images: [
           { src: imagen65, alt: 'DVR HIKVISION 7116HQHI-M1S1 de 16 canales para grabación de video de alta calidad y monitoreo avanzado' },
           { src: imagen66, alt: 'DVR HIKVISION 7116HQHI-M1S1 AcuSense mini de 16 canales con tecnología de análisis inteligente y detección precisa de eventos' },
@@ -160,11 +168,24 @@ const Kits16Camaras: React.FC = () => {
         title: '16 Cámaras de 2 Mpx y 20 MTS de Alcance',
         description: 'Cámaras Domo TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
         features: [
-          'Resolución 1080p',
-          'Lente de 2.8 mm',
-          'Visión nocturna EXIR hasta 20 mts',
-          'Diseño compacto y resistente',
-          'Compatible con tecnología TURBOHD'
+          '16 CAMARAS DOMO 2 MPX DE HIVISION',
+          'Cámara tipo domo fija para interiores/exteriores',
+          'Modelo: DS-2CE56D0T-IRPF(C)',
+          'Resolución máxima de 2 Megapíxeles (1920 x 1080)',
+          'Lente fijo de 2.8 mm (ángulo de visión 106°)',
+          'Visión Nocturna Inteligente EXIR hasta 20 mts',
+          'Soporta las 4 tecnologías del mercado: TVI, AHD, CVI, CVBS',
+          'Tecnología Smart IR para ajuste automático de la iluminación',
+          'Soporta resolución 1080p a 30 fps (TVI, AHD, CVI)',
+          'Wide Dynamic Range (WDR) Digital para imágenes más claras',
+          'Mejoras de imagen: BLC, HLC, 2D DNR',
+          'Modo Día/Noche con ICR automático',
+          'Control automático de ganancia (AGC)',
+          'Temperatura de operación: -40°C a 60°C',
+          'Montura de lente tipo M12',
+          'Dimensiones: 89.9 mm x 70.1 mm, peso 130 g',
+          'Alimentación de 12 VDC ± 25%, consumo máximo de 2.2 W',
+          'Carcasa de plástico resistente para uso interior'
         ],
         images: [
           { src: imagen50, alt: 'Cámara de seguridad HIKVISION DS-2CE16D0T-IRPF(2.8mm)(C) 1080p con visión nocturna Smart IR, lente de 2.8 mm y tecnología avanzada para exteriores' },
@@ -189,11 +210,17 @@ const Kits16Camaras: React.FC = () => {
         title: '1 Disco duro Ideal para videovigilancia',
         description: 'Disco duro Seagate Skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
         features: [
-          'Capacidad de 1 TB',
-          'Tecnología AllFrame para videovigilancia',
-          'Velocidad de transferencia 110 MB/s',
-          'Interfaz SATA',
-          'Caché de 64 MB'
+          'Tecnología AllFrame para un rendimiento de grabación optimizado y sin interrupciones en sistemas de videovigilancia 24/7',
+          'Velocidad de transferencia de datos de hasta 110 MB/s, garantizando una lectura y escritura rápidas',
+          'Interfaz SATA III para una conexión rápida y estable con NVR y DVR',
+          'Caché de 64 MB para mejorar la velocidad de acceso y la eficiencia en la transferencia de datos',
+          'Diseño optimizado para videovigilancia 24/7, soportando hasta 64 cámaras conectadas simultáneamente',
+          'Velocidad de rotación de 5900 RPM, ofreciendo un equilibrio entre rendimiento y eficiencia energética',
+          'Capacidad de 1 TB para almacenar grandes cantidades de vídeo de alta calidad',
+          'Temperatura de funcionamiento de 0 a 75 ºC, adecuado para entornos exigentes y de alta demanda',
+          'Bajo consumo de energía con 5.6W en operación y 0.5W en modo inactivo',
+          'Garantía de 2 años para mayor tranquilidad en la inversión a largo plazo',
+          'Compatible con una amplia gama de sistemas de videovigilancia NVR y DVR'
         ],
         images: [
           { src: imagen78, alt: 'Disco duro Seagate ST1000VX013 1 TB Skyhawk 5400 con tecnología AllFrame para videovigilancia' },
@@ -206,11 +233,15 @@ const Kits16Camaras: React.FC = () => {
         title: '16 Fuentes De Energía',
         description: '16 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento. El artículo puede ser ligeramente distinto al de la foto.',
         features: [
-          'Voltaje de entrada AC 110-240v',
-          'Salida de 12V a 1 amperio',
-          'Conector de alimentación de 2.1mm',
-          'Indicador LED de funcionamiento',
-          'Alta calidad y durabilidad'
+          '16 FUENTES DE ENERGIA',
+          'Fuente de alimentación de alta calidad, diseñada para proporcionar un rendimiento estable y confiable',
+          'Conector de alimentación de 2.1mm, compatible con la mayoría de las cámaras de seguridad en el mercado',
+          'LED indicador de funcionamiento que muestra claramente el estado de la fuente de alimentación',
+          'Salidas de 12V y 1A, ofreciendo la potencia adecuada para cámaras de seguridad y otros dispositivos de bajo consumo',
+          'Protección contra sobrecarga y cortocircuito, garantizando un uso seguro y sin interrupciones',
+          'Diseño compacto y duradero, ideal para instalaciones en interiores y exteriores',
+          'Operación silenciosa y eficiente, asegurando que no interfiera con el entorno de videovigilancia',
+          'Ideal para sistemas de videovigilancia 24/7, proporcionando una fuente de alimentación confiable y continua'
         ],
         images: [
           { src: imagen81, alt: 'Fuente de alimentación para cámaras de seguridad' },
@@ -221,10 +252,15 @@ const Kits16Camaras: React.FC = () => {
         title: '16 pares de Video Baluns',
         description: '16 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
         features: [
-          'Transmisión de señales de video por cable UTP',
-          'Tecnología 4 en 1',
-          'Señal clara y estable a larga distancia',
-          'Fácil instalación'
+          '16 PARES DE VIDEO BALUNS',
+          'Transmisión eficiente de señales de video a través de cables de par trenzado, eliminando la necesidad de cables coaxiales costosos',
+          'Señal clara y estable, sin interferencias, para una calidad de video superior en sistemas de videovigilancia',
+          'Capacidad para transmitir video a largas distancias (hasta 300 metros), ideal para instalaciones en exteriores y grandes propiedades',
+          'Fácil instalación, sin necesidad de ajustes complicados, ahorrando tiempo y esfuerzo en la configuración del sistema',
+          'Compatible con cámaras de seguridad CCTV y NVR/DVR, lo que permite integrarlo a sistemas existentes sin problemas',
+          'Reduce el riesgo de interferencias electromagnéticas (EMI) gracias a su diseño de alta calidad',
+          'Diseño compacto y duradero, resistente a las condiciones ambientales, ideal para instalación en diversas situaciones',
+          'Ahorro de costos al utilizar cables de par trenzado en lugar de cables coaxiales tradicionales'
         ],
         images: [
           { src: imagen82, alt: 'Video Balun para transmisión de señales de video' },
@@ -235,10 +271,14 @@ const Kits16Camaras: React.FC = () => {
         title: '16 pares de Borneras',
         description: '16 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
         features: [
-          'Conexión segura y estable',
-          'Distribución eficiente de energía',
-          'Fácil instalación',
-          'Material resistente'
+          'Conexión y distribución de energía de manera segura y eficiente entre dispositivos eléctricos, como cámaras de seguridad y otros equipos',
+          'Diseño compacto y robusto, ideal para entornos de trabajo exigentes, proporcionando fiabilidad en las instalaciones de videovigilancia',
+          'Compatible con una amplia gama de sistemas de seguridad, permitiendo una integración fácil en instalaciones existentes',
+          'Fabricada con materiales de alta calidad que aseguran una excelente conductividad eléctrica y resistencia a la corrosión',
+          'Fácil instalación y mantenimiento, con terminales que aseguran conexiones firmes y seguras',
+          'Ideal para mantener una distribución ordenada de cables en sistemas de seguridad, evitando enredos y mejorando la estética de la instalación',
+          'Solución económica y duradera para gestionar la alimentación de múltiples cámaras de seguridad sin complicaciones',
+          'Diseño modular que permite adaptarse a diferentes configuraciones de energía y distribución, ofreciendo versatilidad en su uso'
         ],
         images: [
           { src: imagen83, alt: 'Borneras eléctricas para cámaras de seguridad' },
@@ -249,11 +289,14 @@ const Kits16Camaras: React.FC = () => {
         title: '200 mts de cable UTP',
         description: 'Cable UTP Cat 5e en aleación para interior incluidos en el kit.',
         features: [
-          'Categoría 5e',
-          'Ideal para transmisión de datos',
-          '200 metros de longitud',
-          'Material de aleación para uso interior',
-          'Alta compatibilidad con sistemas de videovigilancia'
+          'Cable UTP Cat 5e de alta calidad, diseñado para garantizar una transmisión de datos rápida y confiable',
+          'Ideal para conexiones de cámaras de seguridad, ofreciendo estabilidad y calidad en la señal de video y datos',
+          'Soporta distancias largas de hasta 50 metros, permitiendo flexibilidad en la instalación de equipos de videovigilancia',
+          'Compatible con sistemas de CCTV y otros dispositivos de red, garantizando versatilidad en su uso',
+          'Diseño robusto, adecuado para instalaciones interiores, asegurando un rendimiento confiable en entornos controlados',
+          'Fácil de instalar y manejar, con aislamiento que protege contra interferencias electromagnéticas (EMI) y pérdida de señal',
+          'Conductor de cobre de alta calidad que asegura una baja resistencia y mejora la eficiencia de transmisión',
+          'Ideal para proyectos de videovigilancia, ofreciendo una opción económica y duradera para conexiones de red'
         ],
         images: [
           { src: imagen84, alt: 'Cable UTP Cat 5e para cámaras de seguridad' },

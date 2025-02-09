@@ -137,10 +137,22 @@ const Kit4CamarasBala: React.FC = () => {
       title: '1 DVR De 8 Canales, 4 MPX',
       description: 'DVR AcuSense mini de 8 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
       features: [
-        'Detección avanzada de movimiento: humanos y vehículos',
-        'Protección perimetral de alta precisión',
-        'Compresión H.265 Pro+ para ahorro de almacenamiento',
-        'Soporte para cámaras IP de hasta 6 MP'
+        '8 canales de entrada de video analógico (BNC, 1.0 Vp-p, 75 Ω) con soporte para conexión coaxitron',
+        'Detección de movimiento 2.0 basada en aprendizaje profundo para clasificar humanos y vehículos',
+        'Protección perimetral con análisis de humanos y vehículos hasta 4 canales',
+        'Detección facial y captura de imágenes faciales',
+        'Compresión de video H.265 Pro+/H.265 Pro/H.265 para eficiencia de almacenamiento',
+        'Entradas de video HDTVI, AHD, CVI, CVBS e IP',
+        'Salida de video HDMI y VGA simultáneas en resoluciones 1920×1080/60Hz, 1280×1024/60Hz, 1280×720/60Hz',
+        'Entrada de audio por coaxial y salida de audio RCA (2.0 Vp-p, 1 KΩ)',
+        'Hasta 12 entradas de cámara IP (hasta 6 MP) con capacidad de resolución de hasta 3K/5M Lite a 12 fps',
+        'Soporte para cámaras IP H.265+/H.265/H.264+/H.264',
+        'Reproducción sincrónica de hasta 8 canales',
+        'Codificación de video en resoluciones 3K Lite/5 MP Lite/4 MP Lite/1080p/720p/VGA/WD1/4CIF/CIF',
+        'Conexión remota a través de múltiples protocolos (TCP/IP, PPPoE, Hik-Connect, DNS, DDNS, etc.)',
+        'Consumo de energía de ≤ 12 W sin HDD',
+        'Temperatura de funcionamiento de -10 °C a +55 °C',
+        'Almacenamiento de hasta 10 TB por disco mediante interfaz SATA',
       ],
       images: [
         { src: imagen65, alt: 'DVR HIKVISION iDS-7108HQHI-M1S1 de 8 canales para grabación de video de alta calidad' },
@@ -164,10 +176,20 @@ const Kit4CamarasBala: React.FC = () => {
       title: '8 Cámaras Bala De 2 Mpx',
       description: '8 Cámaras Bala TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
       features: [
-        'Resolución Full HD 1080p',
-        'Lente de 2.8 mm para amplio campo de visión',
-        'Visión nocturna inteligente EXIR de hasta 20 metros',
-        'Calidad profesional HIKVISION'
+        '8 CAMARAS BALA 2 MPX DE HIKVISION',
+        'Visión Nocturna Inteligente EXIR hasta 20 mts',
+        'Diseño Resistente a Agua y Polvo (IP67)',
+        '4 Señales Switchable (TVI/AHD/CVI/CVBS)',
+        'Sensor CMOS de 2 MP con resolución máxima de 1920x1080 (Full HD)',
+        'Lente fijo de 2.8 mm (ángulo de visión 101° horizontal, 60° vertical)',
+        'Iluminación mínima de 0.01 Lux @ (F2.0, AGC ON) y 0 Lux con IR',
+        'Rango de temperatura de operación: -40ºC a 60ºC',
+        'Ángulo de ajuste completo (Pan: 0°-360°, Tilt: 0°-90°, Rotation: 0°-360°)',
+        'Alimentación de 12 VDC con consumo máximo de 2.2 W',
+        'Carcasa de policarbonato resistente para uso exterior (IP67)',
+        'Modo día/noche con ICR automático, mejorado con WDR digital',
+        'Garantía de 2 años',
+        'Dimensiones: 70 mm x 137.8 mm, peso 150 g',
       ],
       images: [
         { src: imagen51, alt: 'Cámara Bala TURBOHD 1080p HIKVISION DS-2CE16D0T-IRPF(2.8mm)(C) con lente de 2.8 mm y visión nocturna Smart IR' },
@@ -192,10 +214,17 @@ const Kit4CamarasBala: React.FC = () => {
       title: '1 Disco duro ideal para videovigilancia',
       description: 'Disco duro Seagate Skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
       features: [
-        'Capacidad de 1 TB para videovigilancia',
-        'Tecnología AllFrame para rendimiento óptimo',
-        'Soporta grabación continua 24/7',
-        'Interfaz SATA con velocidad de 110 MB/s'
+        'Tecnología AllFrame para un rendimiento de grabación optimizado y sin interrupciones en sistemas de videovigilancia 24/7',
+        'Velocidad de transferencia de datos de hasta 110 MB/s, garantizando una lectura y escritura rápidas',
+        'Interfaz SATA III para una conexión rápida y estable con NVR y DVR',
+        'Caché de 64 MB para mejorar la velocidad de acceso y la eficiencia en la transferencia de datos',
+        'Diseño optimizado para videovigilancia 24/7, soportando hasta 64 cámaras conectadas simultáneamente',
+        'Velocidad de rotación de 5900 RPM, ofreciendo un equilibrio entre rendimiento y eficiencia energética',
+        'Capacidad de 1 TB para almacenar grandes cantidades de vídeo de alta calidad',
+        'Temperatura de funcionamiento de 0 a 75 ºC, adecuado para entornos exigentes y de alta demanda',
+        'Bajo consumo de energía con 5.6W en operación y 0.5W en modo inactivo',
+        'Garantía de 2 años para mayor tranquilidad en la inversión a largo plazo',
+        'Compatible con una amplia gama de sistemas de videovigilancia NVR y DVR'
       ],
       images: [
         { src: imagen78, alt: 'Disco duro Seagate ST1000VX013 1 TB Skyhawk 5400 con tecnología AllFrame para videovigilancia' },
@@ -208,10 +237,15 @@ const Kit4CamarasBala: React.FC = () => {
       title: '4 Fuentes de Energía',
       description: '4 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
       features: [
-        'Compatibilidad con AC 110-240v',
-        'Salida de 12 voltios a 1 amperio',
-        'Conector de 2.1 mm para cámaras de seguridad',
-        'LED indicador de funcionamiento'
+        '8 FUENTES DE ENERGIA',
+        'Fuente de alimentación de alta calidad, diseñada para proporcionar un rendimiento estable y confiable',
+        'Conector de alimentación de 2.1mm, compatible con la mayoría de las cámaras de seguridad en el mercado',
+        'LED indicador de funcionamiento que muestra claramente el estado de la fuente de alimentación',
+        'Salidas de 12V y 1A, ofreciendo la potencia adecuada para cámaras de seguridad y otros dispositivos de bajo consumo',
+        'Protección contra sobrecarga y cortocircuito, garantizando un uso seguro y sin interrupciones',
+        'Diseño compacto y duradero, ideal para instalaciones en interiores y exteriores',
+        'Operación silenciosa y eficiente, asegurando que no interfiera con el entorno de videovigilancia',
+        'Ideal para sistemas de videovigilancia 24/7, proporcionando una fuente de alimentación confiable y continua'
       ],
       images: [
         { src: imagen81, alt: 'Fuente de alimentación para cámaras de seguridad' }
@@ -219,13 +253,18 @@ const Kit4CamarasBala: React.FC = () => {
       botonTexto: 'Comprar!'
     },
     {
-      title: '4 pares de Video Baluns',
+      title: '8 pares de Video Baluns',
       description: '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
       features: [
-        'Transmisión de video a larga distancia',
-        'Compatible con cables UTP',
-        'Señal de video clara y estable',
-        'Tecnología TURBO 4 en 1'
+        '8 PARES DE VIDEO BALUNS',
+        'Transmisión eficiente de señales de video a través de cables de par trenzado, eliminando la necesidad de cables coaxiales costosos',
+        'Señal clara y estable, sin interferencias, para una calidad de video superior en sistemas de videovigilancia',
+        'Capacidad para transmitir video a largas distancias (hasta 300 metros), ideal para instalaciones en exteriores y grandes propiedades',
+        'Fácil instalación, sin necesidad de ajustes complicados, ahorrando tiempo y esfuerzo en la configuración del sistema',
+        'Compatible con cámaras de seguridad CCTV y NVR/DVR, lo que permite integrarlo a sistemas existentes sin problemas',
+        'Reduce el riesgo de interferencias electromagnéticas (EMI) gracias a su diseño de alta calidad',
+        'Diseño compacto y duradero, resistente a las condiciones ambientales, ideal para instalación en diversas situaciones',
+        'Ahorro de costos al utilizar cables de par trenzado en lugar de cables coaxiales tradicionales'
       ],
       images: [
         { src: imagen82, alt: 'Video Balun para transmisión de señales de video' }
@@ -236,10 +275,14 @@ const Kit4CamarasBala: React.FC = () => {
       title: '4 pares de Borneras',
       description: '4 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
       features: [
-        'Distribución eficiente de energía',
-        'Conexión segura para cámaras de seguridad',
-        'Alta resistencia eléctrica',
-        'Fácil instalación'
+        'Conexión y distribución de energía de manera segura y eficiente entre dispositivos eléctricos, como cámaras de seguridad y otros equipos',
+        'Diseño compacto y robusto, ideal para entornos de trabajo exigentes, proporcionando fiabilidad en las instalaciones de videovigilancia',
+        'Compatible con una amplia gama de sistemas de seguridad, permitiendo una integración fácil en instalaciones existentes',
+        'Fabricada con materiales de alta calidad que aseguran una excelente conductividad eléctrica y resistencia a la corrosión',
+        'Fácil instalación y mantenimiento, con terminales que aseguran conexiones firmes y seguras',
+        'Ideal para mantener una distribución ordenada de cables en sistemas de seguridad, evitando enredos y mejorando la estética de la instalación',
+        'Solución económica y duradera para gestionar la alimentación de múltiples cámaras de seguridad sin complicaciones',
+        'Diseño modular que permite adaptarse a diferentes configuraciones de energía y distribución, ofreciendo versatilidad en su uso'
       ],
       images: [
         { src: imagen83, alt: 'Borneras eléctricas para cámaras de seguridad' }
@@ -250,10 +293,14 @@ const Kit4CamarasBala: React.FC = () => {
       title: '100 mts de cable UTP',
       description: 'Cable UTP Cat 5e para interior incluido en el kit.',
       features: [
-        'Categoría 5e para transmisión eficiente',
-        'Ideal para sistemas de videovigilancia',
-        'Alta velocidad de transferencia de datos',
-        'Longitud de 100 metros'
+        'Cable UTP Cat 5e de alta calidad, diseñado para garantizar una transmisión de datos rápida y confiable',
+        'Ideal para conexiones de cámaras de seguridad, ofreciendo estabilidad y calidad en la señal de video y datos',
+        'Soporta distancias largas de hasta 50 metros, permitiendo flexibilidad en la instalación de equipos de videovigilancia',
+        'Compatible con sistemas de CCTV y otros dispositivos de red, garantizando versatilidad en su uso',
+        'Diseño robusto, adecuado para instalaciones interiores, asegurando un rendimiento confiable en entornos controlados',
+        'Fácil de instalar y manejar, con aislamiento que protege contra interferencias electromagnéticas (EMI) y pérdida de señal',
+        'Conductor de cobre de alta calidad que asegura una baja resistencia y mejora la eficiencia de transmisión',
+        'Ideal para proyectos de videovigilancia, ofreciendo una opción económica y duradera para conexiones de red'
       ],
       images: [
         { src: imagen84, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }

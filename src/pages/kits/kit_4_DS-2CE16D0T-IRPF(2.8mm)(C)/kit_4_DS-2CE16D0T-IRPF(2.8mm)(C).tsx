@@ -137,11 +137,32 @@ const Kit4CamarasBala: React.FC = () => {
       title: '1 DVR de 4 Canales',
       description:
         'DVR AcuSense mini de 4 canales y 4 Mpx lite de HIKVISION con detección de movimiento avanzada (humanos y vehículos) y protección perimetral. Incluye compresión H.265 Pro+, soporte para cámaras IP de hasta 6 MP, y grabación en múltiples resoluciones hasta 4mpx Lite.',
-      features: [
-        'Compresión H.265 Pro+',
-        'Soporte para cámaras IP de hasta 6 MP',
-        'Grabación en múltiples resoluciones hasta 4mpx Lite',
-      ],
+        features: [
+          'DVR DE 4 CANALES 4 MPX LITE DE HIKVISION',
+          'Compresión H.265 Pro+ para eficiencia en la grabación de video',
+          'Soporte para cámaras IP de hasta 6 MP, brindando alta resolución',
+          'Grabación en múltiples resoluciones hasta 4MP Lite, adaptándose a diferentes necesidades de grabación',
+          'Clasificación de objetivos humanos y vehículos mediante Deep Learning (Detección de Movimiento 2.0)',
+          'Protección perimetral avanzada con análisis humano/vehículo hasta 2 canales',
+          'Detección facial y captura de imágenes de rostro',
+          'Entrada de vídeo IP con soporte para cámaras H.265+/H.265/H.264+/H.264',
+          'Admite hasta 6 cámaras IP con una resolución máxima de 6 MP',
+          'Entradas de video analógico HDTVI, AHD, CVI y CVBS con diversas opciones de resolución',
+          'Salida de video HDMI y VGA simultáneas, con resoluciones de hasta 1080p',
+          'Entrada de audio RCA y soporte para audio bidireccional a través de cable coaxial',
+          'Compresión de video H.265 Pro+/Pro, H.264+/H.264, optimizando el almacenamiento',
+          'Soporta grabación en calidad de hasta 3K/5MP Lite a 12 fps',
+          'Análisis de movimiento y búsqueda rápida de eventos por objeto o tipo de evento',
+          'Análisis de video inteligente para reducir alarmas falsas causadas por objetos no relevantes',
+          'Banda ancha total de 72 Mbps para un rendimiento fluido',
+          'Conexión remota a través de múltiples protocolos como TCP/IP, PPPoE, NTP, y ONVIF',
+          'Conexión Wi-Fi posible mediante adaptador USB',
+          'Capacidad de almacenamiento de hasta 10 TB por disco SATA',
+          'Consumo energético eficiente de ≤ 8 W (sin disco duro)',
+          'Temperatura de trabajo de -10 °C a +55 °C, adecuada para diversas condiciones ambientales',
+          'Diseño compacto con dimensiones de 200 × 200 × 48 mm y peso de ≤ 1 kg (sin HDD)',
+          'Referencia: iDS-7104HQHI-M1/S'
+        ],
       images: [
         { src: imagen65, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 de 4 Canales para grabación en video' },
         { src: imagen66, alt: 'DVR HIKVISION DS-7104HQHI-M1S1 AcuSense mini de 4 canales con detección avanzada' },
@@ -160,13 +181,26 @@ const Kit4CamarasBala: React.FC = () => {
     },
     {
       title: '4 Cámaras Bala de 2 Mpx',
-      description:
-        '4 Cámaras Bala TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
-      features: [
-        'Compresión H.265 Pro+',
-        'Soporte para cámaras IP de hasta 6 MP',
-        'Grabación en múltiples resoluciones hasta 4mpx Lite',
-      ],
+description:
+  '4 Cámaras Bala TURBOHD 1080p de HIKVISION con lente de 2.8 mm y visión nocturna inteligente EXIR de hasta 20 mts.',
+features: [
+  '4 CAMARAS BALA 2 MPX DE HIKVISION',
+  'Visión Nocturna Inteligente EXIR hasta 20 mts',
+  'Diseño Resistente a Agua y Polvo (IP67)',
+  '4 Señales Switchable (TVI/AHD/CVI/CVBS)',
+  'Sensor CMOS de 2 MP con resolución máxima de 1920x1080 (Full HD)',
+  'Lente fijo de 2.8 mm (ángulo de visión 101° horizontal, 60° vertical)',
+  'Iluminación mínima de 0.01 Lux @ (F2.0, AGC ON) y 0 Lux con IR',
+  'Rango de temperatura de operación: -40ºC a 60ºC',
+  'Ángulo de ajuste completo (Pan: 0°-360°, Tilt: 0°-90°, Rotation: 0°-360°)',
+  'Alimentación de 12 VDC con consumo máximo de 2.2 W',
+  'Carcasa de policarbonato resistente para uso exterior (IP67)',
+  'Modo día/noche con ICR automático, mejorado con WDR digital',
+  'Garantía de 2 años',
+  'Dimensiones: 70 mm x 137.8 mm, peso 150 g',
+],
+
+      
       images: [
         { src: imagen51, alt: 'Cámara Bala TURBOHD 1080p HIKVISION con lente de 2.8mm, visión nocturna Smart IR hasta 20m, protección IP66 y soporte 4 tecnologías' },
         { src: imagen52, alt: 'Cámara de seguridad Bala HIKVISION DS-2CE16D0T-IRPF(C) con resolución 1080p, lente 2.8mm, visión nocturna Smart IR para exteriores IP66' },
@@ -190,12 +224,20 @@ const Kit4CamarasBala: React.FC = () => {
       title: '1 Disco duro ideal para videovigilancia',
       description:
         'Disco duro Seagate Skyhawk 1 TB para videovigilancia, grabación 24/7, tecnología AllFrame, velocidad 110 MB/s, interfaz SATA, caché 64 MB, soporta 64 cámaras.',
-      features: [
-        'Tecnología AllFrame',
-        'Velocidad de 110 MB/s',
-        'Interfaz SATA',
-        'Caché de 64 MB',
-      ],
+        features: [
+          'Tecnología AllFrame para un rendimiento de grabación optimizado y sin interrupciones en sistemas de videovigilancia 24/7',
+          'Velocidad de transferencia de datos de hasta 110 MB/s, garantizando una lectura y escritura rápidas',
+          'Interfaz SATA III para una conexión rápida y estable con NVR y DVR',
+          'Caché de 64 MB para mejorar la velocidad de acceso y la eficiencia en la transferencia de datos',
+          'Diseño optimizado para videovigilancia 24/7, soportando hasta 64 cámaras conectadas simultáneamente',
+          'Velocidad de rotación de 5900 RPM, ofreciendo un equilibrio entre rendimiento y eficiencia energética',
+          'Capacidad de 1 TB para almacenar grandes cantidades de vídeo de alta calidad',
+          'Temperatura de funcionamiento de 0 a 75 ºC, adecuado para entornos exigentes y de alta demanda',
+          'Bajo consumo de energía con 5.6W en operación y 0.5W en modo inactivo',
+          'Garantía de 2 años para mayor tranquilidad en la inversión a largo plazo',
+          'Compatible con una amplia gama de sistemas de videovigilancia NVR y DVR'
+        ],
+        
       images: [
         { src: imagen78, alt: 'Disco duro Seagate ST1000VX013 1 TB Skyhawk 5400 con tecnología AllFrame para videovigilancia' },
         { src: imagen79, alt: 'Disco duro Seagate ST1000VX013 1 TB Skyhawk para videovigilancia, con interfaz eSATA y conectividad USB' },
@@ -208,11 +250,18 @@ const Kit4CamarasBala: React.FC = () => {
       title: '4 Fuentes de Energía',
       description:
         '4 fuentes de alimentación de AC 110-240v, 12 voltios a 1 amperio de alta calidad, conector de alimentación de 2.1mm, con LED indicador de funcionamiento.',
-      features: [
-        'Alta calidad',
-        'Conector de alimentación de 2.1mm',
-        'LED indicador de funcionamiento',
-      ],
+        features: [
+          '4 FUENTES DE ENERGIA',
+          'Fuente de alimentación de alta calidad, diseñada para proporcionar un rendimiento estable y confiable',
+          'Conector de alimentación de 2.1mm, compatible con la mayoría de las cámaras de seguridad en el mercado',
+          'LED indicador de funcionamiento que muestra claramente el estado de la fuente de alimentación',
+          'Salidas de 12V y 1A, ofreciendo la potencia adecuada para cámaras de seguridad y otros dispositivos de bajo consumo',
+          'Protección contra sobrecarga y cortocircuito, garantizando un uso seguro y sin interrupciones',
+          'Diseño compacto y duradero, ideal para instalaciones en interiores y exteriores',
+          'Operación silenciosa y eficiente, asegurando que no interfiera con el entorno de videovigilancia',
+          'Ideal para sistemas de videovigilancia 24/7, proporcionando una fuente de alimentación confiable y continua'
+        ],
+        
       images: [{ src: imagen81, alt: 'Fuente de alimentación para cámaras de seguridad' }],
       botonTexto: 'Comprar!',
     },
@@ -220,33 +269,52 @@ const Kit4CamarasBala: React.FC = () => {
       title: '4 pares de Video Baluns',
       description:
         '4 Pares de VIDEO BALUM TURBO 4 EN 1 transmisión de señales de video a través de cables UTP, señal clara y estable a larga distancia.',
-      features: [
-        'Transmisión de señales de video',
-        'Señal clara y estable',
-        'Larga distancia',
-      ],
+        features: [
+          '4 PARES DE VIDEO BALUNS',
+          'Transmisión eficiente de señales de video a través de cables de par trenzado, eliminando la necesidad de cables coaxiales costosos',
+          'Señal clara y estable, sin interferencias, para una calidad de video superior en sistemas de videovigilancia',
+          'Capacidad para transmitir video a largas distancias (hasta 300 metros), ideal para instalaciones en exteriores y grandes propiedades',
+          'Fácil instalación, sin necesidad de ajustes complicados, ahorrando tiempo y esfuerzo en la configuración del sistema',
+          'Compatible con cámaras de seguridad CCTV y NVR/DVR, lo que permite integrarlo a sistemas existentes sin problemas',
+          'Reduce el riesgo de interferencias electromagnéticas (EMI) gracias a su diseño de alta calidad',
+          'Diseño compacto y duradero, resistente a las condiciones ambientales, ideal para instalación en diversas situaciones',
+          'Ahorro de costos al utilizar cables de par trenzado en lugar de cables coaxiales tradicionales'
+        ],
+        
       images: [{ src: imagen82, alt: 'Video Balun para transmisión de señales de video' }],
       botonTexto: 'Domicilio Gratis!',
     },
     {
-      title: '4 pares de Borneras',
-      description:
-        '4 pares de borneras eléctricas para la conexión y distribución de energía de las cámaras.',
+      title: '4 Pares de Borneras Eléctricas',
+      description: '4 pares de borneras eléctricas para la conexión y distribución eficiente de energía en sistemas de videovigilancia.',
       features: [
-        'Conexión y distribución de energía',
-        'Ideal para cámaras de seguridad',
+        'Conexión y distribución de energía de manera segura y eficiente entre dispositivos eléctricos, como cámaras de seguridad y otros equipos',
+        'Diseño compacto y robusto, ideal para entornos de trabajo exigentes, proporcionando fiabilidad en las instalaciones de videovigilancia',
+        'Compatible con una amplia gama de sistemas de seguridad, permitiendo una integración fácil en instalaciones existentes',
+        'Fabricada con materiales de alta calidad que aseguran una excelente conductividad eléctrica y resistencia a la corrosión',
+        'Fácil instalación y mantenimiento, con terminales que aseguran conexiones firmes y seguras',
+        'Ideal para mantener una distribución ordenada de cables en sistemas de seguridad, evitando enredos y mejorando la estética de la instalación',
+        'Solución económica y duradera para gestionar la alimentación de múltiples cámaras de seguridad sin complicaciones',
+        'Diseño modular que permite adaptarse a diferentes configuraciones de energía y distribución, ofreciendo versatilidad en su uso'
       ],
+      
       images: [{ src: imagen83, alt: 'Borneras eléctricas para cámaras de seguridad' }],
       botonTexto: 'Obtener!',
     },
     {
-      title: '50 mts de cable UTP',
-      description: 'Cable UTP Cat 5e para interior incluido en el kit.',
-      features: [
-        'Cable UTP Cat 5e',
-        'Ideal para cámaras de seguridad',
-        'Incluido en el kit',
-      ],
+      title: '50 mts de Cable UTP Cat 5e',
+description: 'Cable UTP Cat 5e de alta calidad para conexiones de red de cámaras de seguridad y otros dispositivos electrónicos, incluido en el kit.',
+features: [
+  'Cable UTP Cat 5e de alta calidad, diseñado para garantizar una transmisión de datos rápida y confiable',
+  'Ideal para conexiones de cámaras de seguridad, ofreciendo estabilidad y calidad en la señal de video y datos',
+  'Soporta distancias largas de hasta 50 metros, permitiendo flexibilidad en la instalación de equipos de videovigilancia',
+  'Compatible con sistemas de CCTV y otros dispositivos de red, garantizando versatilidad en su uso',
+  'Diseño robusto, adecuado para instalaciones interiores, asegurando un rendimiento confiable en entornos controlados',
+  'Fácil de instalar y manejar, con aislamiento que protege contra interferencias electromagnéticas (EMI) y pérdida de señal',
+  'Conductor de cobre de alta calidad que asegura una baja resistencia y mejora la eficiencia de transmisión',
+  'Ideal para proyectos de videovigilancia, ofreciendo una opción económica y duradera para conexiones de red'
+],
+
       images: [{ src: imagen84, alt: 'Cable UTP Cat 5e para cámaras de seguridad' }],
       botonTexto: 'Pídalo Ahora!',
     },
