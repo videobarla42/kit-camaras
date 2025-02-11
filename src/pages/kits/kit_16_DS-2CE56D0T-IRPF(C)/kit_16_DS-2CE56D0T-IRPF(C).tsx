@@ -1,5 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import useModalCompra from '@/componentes/useModalCompra';
+import WhatsAppButton from '@/componentes/WhatsAppButton';
+
 
 // Lazy load de componentes
 const Carrusel = lazy(() => import('@/componentes/Carrusel'));
@@ -325,6 +327,7 @@ const Kits16Camaras: React.FC = () => {
     );
   }
 
+  
 
   const banners = [
     <Banner
@@ -406,7 +409,10 @@ const Kits16Camaras: React.FC = () => {
     <div>
       {/* Encabezado */}
       <Header links={headerLinks} extraMessage="Pago Contraentrega + Envío Gratis!" />
-
+      <WhatsAppButton
+  phoneNumber="3046615865"
+  message="¡Hola! Me gustaría conocer mas del kit de 16 cámaras Tipo Domo 2Mpx + 4Mpx Lite de HIKVISION, Puede Brindarme Mas información.?'"
+/>
       {/* Hero Header */}
       <HeroHeader
         imagen={headerImage}

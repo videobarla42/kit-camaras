@@ -1,0 +1,51 @@
+/* Estilos generales para el contenedor del descuento */
+.descuento-container {
+  position: fixed;
+  width: 30%; /* 30% del ancho de la pantalla */
+  padding: 10px;
+  background-color: rgba(255, 152, 0, 0.8); /* Color naranja con opacidad del 80% */
+  color: #000; /* Texto negro */
+  text-align: left;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Efecto de transición */
+}
+
+/* Posicionamiento dinámico */
+.position-top-left {
+  top: 10px;
+  left: 10px;
+}
+.position-top-right {
+  top: 10px;
+  right: 10px;
+}
+.position-bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+.position-bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Estilos para el ícono de cierre */
+/* Estilos para el ícono de cierre en la parte superior izquierda */
+.close-icon {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+.close-icon:hover {
+  color: #ff0000;
+}

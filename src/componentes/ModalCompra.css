@@ -150,7 +150,7 @@
   
   /* Estilos para el contenido del modal */
   .modal-content2 {
-    background-color: #c51818;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     /*  Ancho y posición similares al formulario */
     width: 100%;
@@ -176,8 +176,8 @@
   }
 
   .titulo-con-icono h4 {
-    font-size: clamp(30px, 6vw, 36px); /* Tamaño de fuente responsivo */
-    color: #f7e9e9; /* Color oscuro para mejor contraste */
+    font-size: clamp(27px, 6vw, 3px); /* Tamaño de fuente responsivo */
+    color: #3a2e2e; /* Color oscuro para mejor contraste */
     margin: 0 0 10px 0; /* Margen inferior */
     text-align: center; /* Centrar el texto */
     line-height: 1.2;
@@ -186,17 +186,17 @@
 
   .titulo-con-icono p {
     font-size: clamp(16px, 3vw, 18px); /* Tamaño de fuente responsivo */
-    color: #c9b7b7; /* Color gris claro para un tono secundario */
+    color: #6d5a5a; /* Color gris claro para un tono secundario */
     text-align: center; /* Centrar el texto */
     line-height: 1.5;
     margin: 0 0 20px 0; /* Margen inferior */
   }
 
-  /* Estilos para los inputs */
   .modal-input {
-    width: 97%;
-    padding: 22px;
-    margin: 0 0 18px -18px;
+    display: block;
+    width: 80%;
+    padding: 9px;
+    margin: 0 auto 18px auto; /* Margin auto para centrar */
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 19px;
@@ -204,6 +204,7 @@
     background-color: #f9f9f9;
     transition: all 0.3s ease;
   }
+  
 
   .modal-input:focus {
     border-color: #007bff;

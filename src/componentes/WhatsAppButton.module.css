@@ -1,0 +1,38 @@
+/* WhatsAppButton.module.css */
+
+/* Estilos base para todas las pantallas */
+.whatsAppButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  z-index: 1000;
+  transition: transform 0.3s ease; /* Agregamos una transición suave */
+}
+
+.whatsAppIcon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Media Query para pantallas móviles (ancho máximo de 768px) */
+@media (max-width: 768px) {
+  .whatsAppButton {
+    bottom: 15px; /* Ajustamos la posición vertical */
+    right: 15px; /* Ajustamos la posición horizontal */
+    padding: 1px; /* Reducimos el padding para que el botón sea más pequeño */
+  }
+
+  .whatsAppIcon {
+    width: 48px; /* Reducimos el tamaño del ícono */
+    height: 48px;
+  }
+}

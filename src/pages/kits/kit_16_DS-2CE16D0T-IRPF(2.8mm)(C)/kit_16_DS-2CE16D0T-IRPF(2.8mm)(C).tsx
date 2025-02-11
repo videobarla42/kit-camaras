@@ -1,5 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import useModalCompra from '@/componentes/useModalCompra';
+import WhatsAppButton from '@/componentes/WhatsAppButton';
+
 
 // Lazy load de componentes
 const Carrusel = lazy(() => import('@/componentes/Carrusel'));
@@ -322,6 +324,7 @@ const Kit4CamarasBala: React.FC = () => {
     );
   }
 
+ 
 
   const banners = [
     <Banner
@@ -404,6 +407,11 @@ const Kit4CamarasBala: React.FC = () => {
       <Suspense fallback={<div>Cargando...</div>}>
         <Header links={headerLinks} extraMessage="Pago Contraentrega + Envío Gratis!" />
       </Suspense>
+
+      <WhatsAppButton
+  phoneNumber="3046615865"
+  message="¡Hola! Me gustaría conocer mas del kit de 16 cámaras Tipo bala 2Mpx + 4Mpx Lite de HIKVISION, Puede Brindarme Mas información.?'"
+/>
 
       <Suspense fallback={<div>Cargando...</div>}>
         <HeroHeader

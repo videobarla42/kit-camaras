@@ -1,6 +1,12 @@
 import React, { Suspense, lazy } from 'react';
 import useModalCompra from '@/componentes/useModalCompra';
 import { usePrice } from '@/componentes/PriceContext';
+import Descuento from '@/componentes/Descuento';
+import WhatsAppButton from '@/componentes/WhatsAppButton';
+import { ArrowRightCircle } from "lucide-react";
+import { FaArrowCircleRight } from "react-icons/fa";
+
+
 
 
 // Lazy load de componentes
@@ -132,6 +138,10 @@ const Kit4CamarasBala: React.FC = () => {
     );
   };
 
+
+  
+
+  
   const carruseles = [
     {
       title: '1 DVR de 4 Canales,  4 Mpx Lite - HIKVISION',
@@ -420,6 +430,13 @@ features: [
         <Header links={headerLinks} extraMessage="Pago Contraentrega + Envío Gratis!" />
       </Suspense>
 
+      <WhatsAppButton
+        phoneNumber="3046615865"
+        message="¡Hola! Me gustaría conocer mas del kit de 4 cámaras Tipo bala 2Mpx + 4Mpx Lite de HIKVISION, Puede Brindarme Mas información.?'"
+      />
+
+
+
       <Suspense fallback={<div>Cargando...</div>}>
         <HeroHeader
           imagen={headerImage}
@@ -437,9 +454,13 @@ features: [
         </HeroHeader>
       </Suspense>
 
+
+
       <Suspense fallback={<div>Cargando...</div>}>
         <Beneficios />
       </Suspense>
+
+
 
       <Suspense fallback={<div>Cargando...</div>}>
         <Banner
@@ -510,7 +531,8 @@ features: [
         />
       </Suspense>
 
-      
+
+
       <Suspense fallback={<div>Cargando...</div>}>
         <Formulario
           titulo="confirma la Compra del kit de 4 cámaras Bala, 2mpx + grabacion a 4mpx lite"
@@ -518,6 +540,9 @@ features: [
           precio="$870,000"
         />
       </Suspense>
+
+
+
 
       {/* Schema Markup */}
       <script type="application/ld+json">
@@ -585,7 +610,20 @@ features: [
         }
       })}
     </script>
-    
+   
+
+    <Descuento
+  text={
+    <>
+      15% de descuento solo llenando el formulario, precio final $790000{" "}
+      <FaArrowCircleRight size={20} />
+    </>
+  }
+  backgroundColor="rgba(255, 152, 0, 0.8)" // Color naranja con opacidad del 50%
+  textColor="#000"
+  position="bottom-left"
+  onClick={abrirModal}
+/>
     </div>
     
   );

@@ -147,9 +147,9 @@
   
 
 /* Estilos para el título dentro del encabezado */
-.header-with-icon h2 {
+.header-with-icon h4 {
   font-size: clamp(24px, 6vw, 36px); /* Tamaño de fuente responsivo */
-  color: #333; /* Color oscuro para mejor contraste */
+  color: #3b3434; /* Color oscuro para mejor contraste */
   margin: 0; /* Elimina márgenes predeterminados */
   text-align: center; /* Asegura que el texto esté centrado */
   line-height: 1.2; /* Espaciado entre líneas para mejorar la legibilidad */

@@ -174,10 +174,10 @@
 
   /* Botones de navegación */
   .carrusel-button {
-    font-size: 24px; /* Tamaño de fuente reducido */
+    font-size: 34px; /* Tamaño de fuente reducido */
     padding: 1px; /* Menos espacio */
-    background: linear-gradient(145deg, rgba(224, 3, 3, 0.466), rgba(80, 0, 199, 0.877));
-    color: white;
+    background: linear-gradient(145deg, #ffffffec, rgba(0, 51, 153, 0.5));
+    color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
     position: absolute;
@@ -192,7 +192,7 @@
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(5px);
-    box-shadow: 0 0 15px rgba(75,11,252,0.5);
+    box-shadow: 0 0 15px rgb(255, 255, 255);
   }
 
   .carrusel-button.prev {
@@ -257,7 +257,7 @@
     padding: 0px;
     margin: 0 auto;
     position: relative; /* Asegúrate de tener esta posición o absolute si ya no lo está */
-    top: 280px; /* Ajusta el valor según lo que necesites para subir el modal */
+    top: 300px; /* Ajusta el valor según lo que necesites para subir el modal */
 }
 
 
@@ -334,16 +334,16 @@
 
   /* Botones de navegación dentro del modal */
   .modal-button {
-    background: linear-gradient(14deg, 
-      rgba(248, 25, 55, 0.8), 
-      rgb(22, 0, 100));
+    background: linear-gradient(145deg, 
+      rgba(0, 0, 255, 0.685), 
+      rgb(0, 0, 0));
     border-radius: 50%;
     width: 35px; /* Tamaño más pequeño */
     height: 35px; /* Tamaño más pequeño */
     backdrop-filter: blur(5px);
-    box-shadow: 0 0 12px rgba(75,11,252,0.5);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
-    margin-top: 90px;
+    margin-top: 60px;
   }
 
   .modal-button:hover {

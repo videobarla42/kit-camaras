@@ -7,6 +7,7 @@ import Prueba from '@/pages/kits/kit_4_DS-2CE16D0T-IRPF(2.8mm)(C)/prueba';
 import PriceContext from '@/pages/kits/kit_4_DS-2CE16D0T-IRPF(2.8mm)(C)/prueba';
 
 
+
 // Importación de páginas con lazy loading
 const Kits_8_DS_2CE56D0T_IRPF_C = lazy(() => import('./pages/kits/kits_8_DS-2CE56D0T-IRPF(C)/kits_8_DS-2CE56D0T-IRPF(C)'));
 const Kit_4_DS_2CE56D0T_IRPF_C = lazy(() => import('./pages/kits/kit_4_DS-2CE56D0T-IRPF(C)/Kit_4_DS_2CE56D0T_IRPF_C'));
