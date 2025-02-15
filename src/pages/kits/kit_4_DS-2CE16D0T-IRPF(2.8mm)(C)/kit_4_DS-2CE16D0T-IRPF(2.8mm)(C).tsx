@@ -3,8 +3,6 @@ import useModalCompra from '@/componentes/useModalCompra';
 import { usePrice } from '@/componentes/PriceContext';
 import Descuento from '@/componentes/Descuento';
 import WhatsAppButton from '@/componentes/WhatsAppButton';
-import { ArrowRightCircle } from "lucide-react";
-import { FaArrowCircleRight } from "react-icons/fa";
 
 
 
@@ -612,18 +610,7 @@ features: [
     </script>
    
 
-    <Descuento
-  text={
-    <>
-      15% de descuento solo llenando el formulario, precio final $790000{" "}
-      <FaArrowCircleRight size={20} />
-    </>
-  }
-  backgroundColor="rgba(255, 152, 0, 0.8)" // Color naranja con opacidad del 50%
-  textColor="#000"
-  position="bottom-left"
-  onClick={abrirModal}
-/>
+  
     </div>
     
   );

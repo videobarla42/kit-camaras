@@ -24,4 +24,7 @@ export default defineConfig({
     target: 'esnext',  // Asegúrate de compatibilidad con el target deseado
     sourcemap: false,  // Evita los mapas de fuente si no los necesitas
   },
+  define: {
+    "process.env": {},
+  },
 });

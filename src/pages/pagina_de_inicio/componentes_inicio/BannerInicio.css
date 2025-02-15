@@ -1,0 +1,28 @@
+/* Estilos generales */
+.banner-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;
+  }
+  
+  .banner-texto h4 {
+    font-size: 64px;
+    font-weight: bold;
+    color: hwb(0 100% 0%);
+  }
+  
+  /* Media Query para pantallas más pequeñas (hasta 768px) */
+  @media (max-width: 768px) {
+    .banner-inicio {
+      padding: 0px; /* Reducir padding en pantallas pequeñas */
+      margin-top: 80px;
+    }
+  
+    .banner-texto h4 {
+      font-size: 26px; /* Reducir tamaño de fuente */
+      text-align: center; /* Centrar el texto */
+    }
+  }
+  

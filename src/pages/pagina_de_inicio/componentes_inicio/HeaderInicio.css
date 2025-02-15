@@ -1,11 +1,18 @@
 .header-inicio {
   display: flex;
-  align-items: center;
-  padding: 20px;
-  background-color: #f0f0f0;
+  flex-direction: column;
+  padding: 15px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  top: 100px;
+  background-image: url('../../../assets/22.webp'); /* Aquí puedes cambiar la imagen */
+  background-size: cover; /* Asegura que la imagen cubra todo el área */
+  background-position: center; /* Centra la imagen */
+  height: 10vh; /* Establece una altura mínima de la pantalla */
 }
+
 
 .texto-container {
   max-width: 350px; /* Reduce el ancho máximo del texto si es necesario */
@@ -79,10 +86,21 @@
 /* Estilos para pantallas de 768px o menos */
 @media (max-width: 768px) {
   .header-inicio {
-    flex-direction: column; /* Cambia a una columna en lugar de una fila */
+    display: flex;
+    flex-direction: column;
     padding: 15px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    top: 80px !important;
+    background-image: url('../../../assets/22.webp'); /* Aquí puedes cambiar la imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    background-position: center; /* Centra la imagen */
+    height: 65vh; /* Establece una altura mínima de la pantalla */
+    left: -15px;
   }
-
+  
   .texto-container {
     max-width: 100%; /* Deja que el texto ocupe todo el ancho disponible */
     text-align: center; /* Centra el texto en pantallas pequeñas */
@@ -91,12 +109,16 @@
   .titulo {
     font-size: 2rem; /* Reduce el tamaño de la fuente */
     margin-bottom: 10px;
+    margin-top: -15px;
   }
 
   .descripcion {
-    font-size: 1rem; /* Reduce el tamaño de la fuente */
-    text-align: center; /* Centra la descripción */
+    font-size: 1.5rem;
+    text-align: left; /* Cambia a left si deseas alinear el texto a la izquierda */
+    margin-top: 40px;
+    margin-left: 5px !important;
   }
+  
 
   .imagenes-container {
     width: 90%; /* Hace que las imágenes se ajusten al ancho disponible */
@@ -107,5 +129,7 @@
   .phone-frame {
     width: 100px; /* Ajusta el tamaño de los marcos en pantallas pequeñas */
     height: 200px;
+    margin-top: 270px;
+    margin-left: 40px;
   }
 }

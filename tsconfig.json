@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src", // Necesario para que los paths funcionen correctamente
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["*"] // Alias para importar desde la carpeta src
+      "@/*": ["*"],
+      "@supabase/*": ["supabase/*"]
     },
+    "allowJs": true,
     "target": "es6",
     "lib": ["dom", "es2015"],
     "module": "esnext",

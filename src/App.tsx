@@ -5,6 +5,10 @@ import './App.css';
 import { PriceProvider } from '@/componentes/PriceContext';
 import Prueba from '@/pages/kits/kit_4_DS-2CE16D0T-IRPF(2.8mm)(C)/prueba';
 import PriceContext from '@/pages/kits/kit_4_DS-2CE16D0T-IRPF(2.8mm)(C)/prueba';
+import Inicio from "./pages/pagina_de_inicio/Inicio";
+
+
+
 
 
 
@@ -43,6 +47,9 @@ const App: React.FC = () => {
     { to: '/kit_8-camaras-seguridad-bala', text: '8 cámaras de seguridad tipo bala 1080p HIKVISION', image: './assets/eye-icon.png' },
     { to: '/kit_16-camaras-seguridad-bala', text: '16 cámaras de seguridad tipo bala 1080p HIKVISION', image: './assets/eye-icon.png' },
     { to: '/cotizador', text: 'Cotizador de Cámaras', image: './assets/calculator-icon.png' },
+    { to: '/inicio', text: 'inicio', image: './assets/calculator-icon.png' },
+
+
   ];
 
   return (
@@ -63,6 +70,7 @@ const App: React.FC = () => {
               <Route path="/kit_16-camaras-seguridad-bala" element={<Kit_16_DS_2CE16D0T_IRPF_C/>} />
               <Route path="/prueba" element={<Prueba />} />
               <Route path="/PriceContext" element={<PriceContext />} />
+              <Route path="/inicio" element={<Inicio />} />
 
 
               
