@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .kitshikvision-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .kitshikvision-slide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    width: min(100%, 1200px);
+  }
+  
+  .kitshikvision-slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    flex: 1 1 clamp(250px, 30vw, 400px);
+  }
+  
+  .kitshikvision-slide:hover img {
+    transform: scale(1.03);
+  }
+  
+  .kitshikvision-slide .text-content {
+    flex: 1 1 300px;
+    padding: 15px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    max-width: 600px;
+  }
+  
+  /* Opcional: Para contener el zoom de la imagen */
+  .kitshikvision-slide .image-container {
+    overflow: hidden;
+    border-radius: 10px;
+    flex: 1 1 clamp(250px, 30vw, 400px);
+    max-width: 100%;
+  }
+  
+  /* Transición suave para todos los elementos flex */
+  .kitshikvision-slide > * {
+    transition: all 0.3s ease;
+  }

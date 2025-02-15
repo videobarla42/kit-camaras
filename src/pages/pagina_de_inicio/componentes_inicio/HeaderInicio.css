@@ -1,3 +1,9 @@
+/* Box-sizing global para un manejo coherente del layout */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Encabezado principal */
 .header-inicio {
   display: flex;
   flex-direction: column;
@@ -7,39 +13,43 @@
   margin: 0 auto;
   position: relative;
   top: 100px;
-  background-image: url('../../../assets/22.webp'); /* Aquí puedes cambiar la imagen */
-  background-size: cover; /* Asegura que la imagen cubra todo el área */
-  background-position: center; /* Centra la imagen */
-  height: 10vh; /* Establece una altura mínima de la pantalla */
+  background-image: url('../../../assets/22.webp'); /* Cambia la imagen según necesites */
+  background-size: cover;
+  background-position: center;
+  height: 10vh;
 }
 
-
+/* Contenedor de texto */
 .texto-container {
-  max-width: 350px; /* Reduce el ancho máximo del texto si es necesario */
+  max-width: 350px; /* Limita el ancho del contenido textual */
 }
 
+/* Título con tamaño de fuente responsivo usando clamp() */
 .titulo {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Mínimo, ideal y máximo */
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
 }
 
+/* Descripción con tamaño de fuente responsivo */
 .descripcion {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: #666;
   line-height: 1.6;
 }
 
+/* Contenedor para las imágenes con flexbox */
 .imagenes-container {
   display: flex;
-  justify-content: flex-start; /* Asegura que las imágenes estén alineadas más cerca entre sí */
+  justify-content: flex-start;
   align-items: center;
   position: relative;
-  width: 400px; /* Ajusta el ancho total de las imágenes */
+  width: 400px;
   height: 400px;
 }
 
+/* Estilos para el marco del teléfono */
 .phone-frame {
   background-color: #000;
   border-radius: 15px;
@@ -48,8 +58,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 140px; /* Ajusta aún más el tamaño de los marcos */
-  height: 300px; /* Ajusta el tamaño de los marcos */
+  width: 140px;
+  height: 300px;
   position: absolute;
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
@@ -60,6 +70,7 @@
   height: auto;
 }
 
+/* Estados para la animación de los marcos */
 .phone-frame.center {
   transform: translateX(0) scale(1);
   opacity: 1;
@@ -67,13 +78,13 @@
 }
 
 .phone-frame.left {
-  transform: translateX(-100%) scale(0.7); /* Acelera el desplazamiento y reduce la distancia */
+  transform: translateX(-100%) scale(0.7);
   opacity: 0.8;
   z-index: 1;
 }
 
 .phone-frame.right {
-  transform: translateX(100%) scale(0.7); /* Acelera el desplazamiento y reduce la distancia */
+  transform: translateX(100%) scale(0.7);
   opacity: 0.8;
   z-index: 1;
 }
@@ -83,7 +94,7 @@
   z-index: 0;
 }
 
-/* Estilos para pantallas de 768px o menos */
+
 @media (max-width: 768px) {
   .header-inicio {
     display: flex;
@@ -94,40 +105,39 @@
     margin: 0 auto;
     position: relative;
     top: 80px !important;
-    background-image: url('../../../assets/22.webp'); /* Aquí puedes cambiar la imagen */
-    background-size: cover; /* Asegura que la imagen cubra todo el área */
-    background-position: center; /* Centra la imagen */
-    height: 65vh; /* Establece una altura mínima de la pantalla */
+    background-image: url('../../../assets/22.webp'); /* Cambia la imagen si es necesario */
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
     left: -15px;
   }
   
   .texto-container {
-    max-width: 100%; /* Deja que el texto ocupe todo el ancho disponible */
-    text-align: center; /* Centra el texto en pantallas pequeñas */
+    max-width: 100%; /* Permite que el texto ocupe todo el ancho disponible */
+    text-align: center;
   }
-
+  
   .titulo {
     font-size: 2rem; /* Reduce el tamaño de la fuente */
     margin-bottom: 10px;
     margin-top: -15px;
   }
-
+  
   .descripcion {
     font-size: 1.5rem;
-    text-align: left; /* Cambia a left si deseas alinear el texto a la izquierda */
+    text-align: left; /* Alinea el texto a la izquierda */
     margin-top: 40px;
     margin-left: 5px !important;
   }
   
-
   .imagenes-container {
-    width: 90%; /* Hace que las imágenes se ajusten al ancho disponible */
-    height: auto; /* Ajusta la altura automáticamente */
+    width: 90%; /* Ajusta el ancho de las imágenes al disponible */
+    height: auto; /* Altura automática */
     margin-top: 20px;
   }
-
+  
   .phone-frame {
-    width: 100px; /* Ajusta el tamaño de los marcos en pantallas pequeñas */
+    width: 100px; /* Tamaño reducido para pantallas pequeñas */
     height: 200px;
     margin-top: 270px;
     margin-left: 40px;

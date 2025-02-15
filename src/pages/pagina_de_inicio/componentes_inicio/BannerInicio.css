@@ -1,28 +1,58 @@
-/* Estilos generales */
+/* Box-sizing global para incluir padding y border en el cálculo del ancho */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ===================== */
+/* Estilos Base          */
+/* ===================== */
+
 .banner-inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #000000;
+  width: 100%;
+  max-width: 1200px; /* Limita el ancho máximo */
+  margin: 0 auto;
+}
+
+.banner-texto h4 {
+  /* Tipografía responsiva: tamaño mínimo 28px, ideal escalado y máximo 64px */
+  font-size: clamp(28px, 8vw, 64px);
+  font-weight: bold;
+  color: hwb(0 100% 0%);
+}
+
+/* ===================== */
+/* Estilos Responsive    */
+/* (Pantallas de 768px o menos) */
+/* ===================== */
+@media (max-width: 768px) {
+  .banner-inicio {
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+    /* Usar flexbox para alinear elementos a la izquierda */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #000000;
+    justify-content: flex-start;
   }
-  
+
+  .banner-texto {
+    display: flex;
+    justify-content: flex-start;  /* Alinea el contenido hacia la izquierda */
+    align-items: center;          /* Centra verticalmente si es necesario */
+    text-align: left;             /* Asegura que el texto esté alineado a la izquierda */
+    width: 100vw;                 /* Ocupa todo el ancho de la pantalla */
+    margin: 0;                    /* Elimina márgenes extra */
+    background-color: red;        /* Fondo rojo */
+    padding: 10px;                /* Espaciado alrededor del contenido */
+  }
+
   .banner-texto h4 {
-    font-size: 64px;
-    font-weight: bold;
-    color: hwb(0 100% 0%);
+    font-size: 28px; /* Tamaño fijo para pantallas pequeñas */
+    margin: 0;       /* Elimina márgenes adicionales */
+    margin-left: 10px;
   }
-  
-  /* Media Query para pantallas más pequeñas (hasta 768px) */
-  @media (max-width: 768px) {
-    .banner-inicio {
-      padding: 0px; /* Reducir padding en pantallas pequeñas */
-      margin-top: 80px;
-    }
-  
-    .banner-texto h4 {
-      font-size: 26px; /* Reducir tamaño de fuente */
-      text-align: center; /* Centrar el texto */
-    }
-  }
-  
+}

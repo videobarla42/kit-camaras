@@ -1,35 +1,52 @@
+/* Box-sizing global para incluir padding y border en el cálculo del ancho */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Estilos generales para el contenido */
 .contenido {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 1200px; /* Limita el ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+.contenido h4 {
+  font-size: clamp(1.8rem, 5vw, 2.25rem); /* Tamaño responsivo: mínimo, ideal y máximo */
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.kitshikvision-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Media Query para pantallas más pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  .contenido {
+    padding: 20px 10px; /* Reducir padding en pantallas pequeñas */
+    margin-left: -10px;
   }
-  
+
   .contenido h4 {
-    font-size: 36px;
+    font-size: clamp(1.8rem, 5vw, 2.25rem); /* Conserva el tamaño responsivo */
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 20px;
+    margin-left: -90px;
   }
-  
-  
-  
-  /* Media Query para pantallas más pequeñas (hasta 768px) */
-  @media (max-width: 768px) {
-    .contenido {
-      padding: 20px 10px; /* Reducir padding en pantallas pequeñas */
-    }
-  
-    .contenido h4 {
-        font-size: 36px;
-        font-weight: bold;
-        color: #ffffff;
-        margin-bottom: 20px;
-      }
-  
-   
+
+  .kitshikvision-wrapper {
+    overflow: hidden;
+    width: 100%;
   }
-  
+}

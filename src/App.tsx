@@ -6,6 +6,8 @@ import { PriceProvider } from '@/componentes/PriceContext';
 import Prueba from '@/pages/kits/kit_4_DS-2CE16D0T-IRPF(2.8mm)(C)/prueba';
 import PriceContext from '@/pages/kits/kit_4_DS-2CE16D0T-IRPF(2.8mm)(C)/prueba';
 import Inicio from "./pages/pagina_de_inicio/Inicio";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 
 
