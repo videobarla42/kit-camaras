@@ -1,1 +1,0 @@
-import{j as x}from"./index-Ce0-BcZV.js";const c=({texto:e,mensaje:r,backgroundColor:n="#4CAF50",textColor:s="#FFFFFF",fontSize:t="1.5rem",padding:a="10px 20px"})=>{const o=r||e||"";return x.jsx("div",{className:"banner-container",style:{backgroundColor:n,color:s,fontSize:t,padding:a},children:o})};export{c as default};
