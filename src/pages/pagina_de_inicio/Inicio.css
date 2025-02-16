@@ -38,11 +38,12 @@
   }
 
   .contenido h4 {
-    font-size: clamp(1.8rem, 5vw, 2.25rem); /* Conserva el tamaño responsivo */
+    font-size: clamp(1.4rem, 5vw, 2.25rem); /* Conserva el tamaño responsivo */
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 20px;
-    margin-left: -90px;
+    margin-bottom: 1px;
+    margin-left: -880px;
+    margin-top: 90px;
   }
 
   .kitshikvision-wrapper {

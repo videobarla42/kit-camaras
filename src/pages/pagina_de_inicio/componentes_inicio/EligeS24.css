@@ -35,10 +35,11 @@
   }
   
   /* Media queries para pantallas pequeñas */
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     .full-width-text {
-      width: 150% !important; /* Asegura que el texto ocupe todo el ancho */
-      padding: 0px !important; /* Reduce el padding en pantallas pequeñas */
+      width: 30% !important; /* Asegura que el texto ocupe todo el ancho */
+      padding: 1px !important; /* Reduce el padding en pantallas pequeñas */
+      margin-left: -20px;
     }
   
     .full-width-text h2 {

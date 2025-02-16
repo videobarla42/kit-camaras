@@ -1,0 +1,36 @@
+/* Estilos generales para el Footer */
+footer {
+    background-color: #343a40; /* bg-dark */
+    color: #ffffff;           /* text-white */
+    text-align: center;       /* text-center */
+    padding: 2rem 0;          /* py-4: 2rem arriba y abajo */
+  }
+  
+  footer p {
+    margin: 0.5rem 0;         /* Equivalente a mb-1 / mb-0 */
+  }
+  
+  footer a {
+    color: #0d6efd;           /* text-primary */
+    margin-left: 0.25rem;     /* ms-1 */
+    text-decoration: none;
+    transition: text-decoration 0.2s;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos responsivos para pantallas menores a 768px */
+  @media (max-width: 768px) {
+    footer {
+      padding: 1rem 0; 
+      margin-left: -900px;       /* Se reduce el padding en dispositivos pequeños */
+    }
+    
+    footer p,
+    footer a {
+      font-size: 1.2rem;      /* Se ajusta el tamaño de fuente para mejorar la legibilidad */
+    }
+  }
+  

@@ -1,3 +1,5 @@
+@import 'reset.css';
+
 /* Box-sizing global para un manejo coherente del layout */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -13,7 +15,7 @@
   margin: 0 auto;
   position: relative;
   top: 100px;
-  background-image: url('../../../assets/22.webp'); /* Cambia la imagen según necesites */
+  background-image: url('../../../assets/22.png'); /* Cambia la imagen según necesites */
   background-size: cover;
   background-position: center;
   height: 10vh;
@@ -95,22 +97,28 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
   .header-inicio {
     display: flex;
     flex-direction: column;
     padding: 15px;
-    width: 100%;
-    max-width: 1200px;
+    width: 60%;
+    max-width: 400px;
     margin: 0 auto;
     position: relative;
     top: 80px !important;
-    background-image: url('../../../assets/22.webp'); /* Cambia la imagen si es necesario */
+    background-image: url('../../../assets/22.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 16 / 9;
+    margin-left: -30px;
     height: 65vh;
-    left: -15px;
+    /* Se elimina height: 65vh para evitar conflictos con el aspect-ratio */
   }
+
+
+
   
   .texto-container {
     max-width: 100%; /* Permite que el texto ocupe todo el ancho disponible */
