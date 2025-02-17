@@ -136,6 +136,29 @@
   background-color: rgba(150, 150, 150, 0.8);
 }
 
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.8);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  z-index: 1000; /* Aseguramos que esté por encima de otros elementos */
+}
+
+/* Posición predeterminada para escritorio */
+.left-arrow {
+  left: 10px;
+}
+.right-arrow {
+  right: 10px;
+}
+
 /* Estilos responsive */
 @media (max-width: 768px) {
   .kit-slider {
@@ -151,23 +174,19 @@
     height: 32px;
     font-size: 16px;
   }
+  .nav-arrow {
+    padding: 8px;
+    font-size: 16px;
+  }
+  .left-arrow {
+    left: 5px;
+  }
+  .right-arrow {
+    position: relative;
+    right: 10px;
+    top: 50%;
+    margin-left: 100px;
+    /* Otros estilos... */
+  }
 }
 
-@media (max-width: 480px) {
-  .kit-slider {
-    height: 150px;
-  }
-  
-  .kit-slide img {
-    width: 120px;
-  }
-  
-  .kit-indicators {
-    gap: 5px;
-  }
-  
-  .kit-indicator {
-    width: 8px;
-    height: 8px;
-  }
-}
