@@ -12,19 +12,22 @@
 /* Slide track - container for all slides */
 .kit-slide-track {
   display: flex;
+  position: relative;
   will-change: transform;
+  width: max-content;
 }
 
 /* Individual slide styling */
 .kit-slide {
   width: 200px;
   height: 150px;
-  flex: 0 0 200px;
-  margin: 0 5px;
+  margin-right: 10px;
+  flex-shrink: 0;
   border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
-
 
 .kit-slide:hover {
   transform: scale(1.05);
@@ -79,10 +82,7 @@
   justify-content: center;
   margin-top: 15px;
   gap: 8px;
-  position: relative; /* Asegúrate de que el contenedor se posicione correctamente */
-  z-index: 10; /* Para que esté por encima de otros elementos */
 }
-
 
 .dot {
   width: 10px;
@@ -107,24 +107,16 @@
 @media (max-width: 768px) {
   .kit-slider {
     padding: 15px 0;
-    overflow: hidden; /* Ocultar el desbordamiento */
-    position: relative;
-    touch-action: pan-x; /* Habilitar el desplazamiento horizontal */
   }
 
   .kit-slide {
-    flex: 0 0 180px; /* Ancho fijo para cada diapositiva */
-    margin-right: 10px; /* Espaciado entre diapositivas */
+    flex: 0 0 180px;
   }
 
   .nav-arrow {
-    display: block; /* Mostrar flechas solo en móvil */
+    display: block; /* Mostrar solo en móvil */
     padding: 12px 15px;
     font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border-radius: 50%;
-    cursor: pointer;
   }
 
   .left-arrow {
@@ -135,25 +127,20 @@
     right: 10px;
   }
 
-  .dot-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    gap: 8px;
-    position: relative;
-    z-index: 10;
-  }
-
   .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #ccc;
-    cursor: pointer;
-  }
-
-  .dot.active {
-    background-color: #666;
-    transform: scale(1.2);
+    width: 10px;
+    height: 10px;
   }
 }
+
+@media (max-width: 480px) {
+  .kit-slide {
+    flex: 0 0 150px;
+  }
+  
+  .nav-arrow {
+    padding: 10px 13px;
+    font-size: 14px;
+  }
+}
+
