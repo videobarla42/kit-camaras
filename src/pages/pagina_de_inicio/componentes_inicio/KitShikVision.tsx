@@ -266,13 +266,7 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
         ))}
       </div>
 
-      {/* Botones de navegación */}
-      <button className="nav-arrow left-arrow" onClick={handlePrev}>
-        ◀
-      </button>
-      <button className="nav-arrow right-arrow" onClick={handleNext}>
-        ▶
-      </button>
+     
 
       {/* Indicadores (puntos) */}
       <div className="dot-indicators">
