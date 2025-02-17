@@ -1,192 +1,156 @@
-/* Estilos para el contenedor principal */
-.kit-slider-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/* KitShikVision.css */
 
-/* Estilos para el carrusel */
+/* Base container styles */
 .kit-slider {
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
+  padding: 20px 0;
   width: 100%;
-  height: 220px;
-  cursor: grab;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.kit-slider:active {
-  cursor: grabbing;
-}
-
-/* Estilos para la pista de diapositivas */
+/* Slide track - container for all slides */
 .kit-slide-track {
   display: flex;
-  align-items: center;
-  transition: transform 0.3s ease-out;
+  will-change: transform;
 }
 
-.kit-slide-track.dragging {
-  animation: none !important;
-  transition: none !important;
-}
-
-/* Estilos para cada diapositiva */
+/* Individual slide styling */
 .kit-slide {
-  flex: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 5px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  width: 200px;
+  height: 150px;
+  flex: 0 0 200px;
+  margin: 0 5px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
+
 
 .kit-slide:hover {
   transform: scale(1.05);
-  z-index: 2;
-  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.kit-slide a {
-  display: block;
-  text-decoration: none;
-}
-
+/* Image styling inside slides */
 .kit-slide img {
-  width: 200px;
-  height: auto;
-  margin-right: 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  object-fit: cover;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.kit-slide img:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Animación para el desplazamiento */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-200px * var(--item-count))); }
-}
-
-/* Estilos para los controles de navegación */
-.kit-navigation-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
-  position: absolute;
-  bottom: -30px;
-  left: 0;
-  z-index: 3;
-  padding: 0 10px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.kit-nav-button {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  z-index: 4;
-}
-
-.kit-nav-button:hover {
-  background-color: rgba(255, 255, 255, 1);
-  transform: scale(1.1);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-}
-
-.kit-indicators {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.kit-indicator {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: rgba(200, 200, 200, 0.5);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.kit-indicator.active {
-  background-color: #007bff;
-  transform: scale(1.2);
-}
-
-.kit-indicator:hover {
-  background-color: rgba(150, 150, 150, 0.8);
-}
-
-
+/* Navigation arrows */
 .nav-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.8);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
   border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 18px;
   border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  z-index: 1000; /* Aseguramos que esté por encima de otros elementos */
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-/* Posición predeterminada para escritorio */
+.nav-arrow:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
 .left-arrow {
-  left: 10px;
-}
-.right-arrow {
-  right: 10px;
+  left: 15px;
 }
 
-/* Estilos responsive */
+.right-arrow {
+  right: 15px;
+}
+
+/* Dot indicators */
+.dot-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 8px;
+  position: relative; /* Asegúrate de que el contenedor se posicione correctamente */
+  z-index: 10; /* Para que esté por encima de otros elementos */
+}
+
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #666;
+  transform: scale(1.2);
+}
+
+/* Disable text selection while dragging */
+.kit-slider.dragging {
+  cursor: grabbing;
+}
+
+/* Responsive styles for screens 768px and below */
 @media (max-width: 768px) {
   .kit-slider {
-    height: 180px;
+    padding: 15px 0;
   }
-  
-  .kit-slide img {
-    width: 150px;
+
+  .kit-slide {
+    flex: 0 0 180px;
   }
-  
-  .kit-nav-button {
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
-  }
+
   .nav-arrow {
-    padding: 8px;
+    display: block; /* Mostrar solo en móvil */
+    padding: 12px 15px;
     font-size: 16px;
   }
+
   .left-arrow {
-    left: 5px;
+    left: 10px;
   }
+
   .right-arrow {
-    position: relative;
     right: 10px;
-    top: 50%;
-    margin-left: 100px;
-    /* Otros estilos... */
   }
+
+  .dot-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: -800px;
+    gap: 8px;
+    position: relative; /* Asegúrate de que el contenedor se posicione correctamente */
+    z-index: 10; /* Para que esté por encima de otros elementos */
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    margin-left: 100px;
+    margin: 15px;
+  }
+  
+  .dot.active {
+    background-color: #666;
+    transform: scale(1.2);
+  }
+
 }
 
