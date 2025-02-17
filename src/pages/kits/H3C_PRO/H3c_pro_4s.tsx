@@ -18,24 +18,21 @@ const ModalCompra = lazy(() => import('@/componentes/ModalCompra'));
 const Formulario = lazy(() => import('@/componentes/Formulario'));
 
 // Importar imágenes
-import imagen1 from '@/assets/CP3_PRO/cp_3_pro_1.webp';
+import imagen1 from '@/assets/H3C_PRO/h3c_pro_1.webp';
 
-import headerImage from '@/assets/CP3_PRO/cp_3_pro_1.webp';
+import headerImage from '@/assets/H3C_PRO/h3c_pro_1.webp';
 
 
   // camaras bala 2mpx (números del 50 al 64)
-import imagen50 from "@/assets/CP3_PRO/cp_3_pro_4.webp";
-import imagen51 from '@/assets/CP3_PRO/cp_3_pro_5.webp';
-import imagen52 from '@/assets/CP3_PRO/cp_3_pro_6.webp';
-import imagen53 from '@/assets/CP3_PRO/cp_3_pro_7.webp';
-import imagen54 from '@/assets/CP3_PRO/cp_3_pro_8.webp';
-import imagen55 from '@/assets/CP3_PRO/cp_3_pro_9.webp';
-import imagen56 from '@/assets/CP3_PRO/cp_3_pro_10.webp';
-import imagen57 from '@/assets/CP3_PRO/cp_3_pro_11.webp';
-import imagen58 from '@/assets/CP3_PRO/cp_3_pro_12.webp';
-import imagen59 from '@/assets/CP3_PRO/cp_3_pro_13.webp';
-import imagen60 from '@/assets/CP3_PRO/cp_3_pro_14.webp';
-import imagen61 from '@/assets/CP3_PRO/cp_3_pro_15.webp';
+import imagen50 from "@/assets/H3C_PRO/h3c_pro_5.webp";
+import imagen51 from '@/assets/H3C_PRO/h3c_pro_6.webp';
+import imagen52 from '@/assets/H3C_PRO/h3c_pro_7.webp';
+import imagen53 from '@/assets/H3C_PRO/h3c_pro_8.webp';
+import imagen54 from '@/assets/H3C_PRO/h3c_pro_9.webp';
+import imagen55 from '@/assets/H3C_PRO/h3c_pro_10.webp';
+import imagen56 from '@/assets/H3C_PRO/h3c_pro_11.webp';
+import imagen57 from '@/assets/H3C_PRO/h3c_pro_12.webp';
+import imagen58 from '@/assets/H3C_PRO/h3c_pro_13.webp';
 
 
 // dvr de 4mpx (números del 65 al 79)
@@ -46,7 +43,7 @@ import imagen78 from '@/assets/micro_sd_imou_64_gb/1.webp';
 import imagen79 from '@/assets/micro_sd_imou_64_gb/5.webp';
 
 // materiales
-import imagen81 from '@/assets/CP3_PRO_FUENTE/fuente_cp3_pro.webp';
+import imagen81 from '@/assets/H3C_PRO FUENTE/fuente h3cpro.webp';
 
  // Importación de las imágenes
  import Image1500 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)1.webp';
@@ -58,7 +55,7 @@ import imagen81 from '@/assets/CP3_PRO_FUENTE/fuente_cp3_pro.webp';
 
 
 
-const Cp_3_pro_1: React.FC = () => {          
+const H3c_pro_4s: React.FC = () => {          
   const {
     modalAbierto,
     abrirModal: abrirModalBase,
@@ -141,9 +138,6 @@ const Cp_3_pro_1: React.FC = () => {
         { src: imagen56, alt: 'Detalle del montaje versátil de la CP3 Pro en escritorio, techo o pared' },
         { src: imagen57, alt: 'Interfaz de la aplicación TDSEE controlando la cámara CP3 Pro' },
         { src: imagen58, alt: 'Cámara CP3 Pro de Tenda mostrando su capacidad panorámica de 360°' },
-        { src: imagen59, alt: 'Vista frontal de la cámara CP3 Pro con diseño moderno' },
-        { src: imagen60, alt: 'Detalle del montaje versátil de la CP3 Pro en escritorio, techo o pared' },
-        { src: imagen61, alt: 'Interfaz de la aplicación TDSEE controlando la cámara CP3 Pro' },
       ],
       botonTexto: 'Pague en casa!',
     },
@@ -417,8 +411,6 @@ const Cp_3_pro_1: React.FC = () => {
   imagen56,
   imagen57,
   imagen58,
-  imagen59,
-  imagen60,
   imagen78,
   imagen79,
   imagen81,
@@ -454,5 +446,5 @@ const Cp_3_pro_1: React.FC = () => {
   );
 };
 
-export default  Cp_3_pro_1;
+export default H3c_pro_4s;
 
