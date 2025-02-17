@@ -9,9 +9,7 @@ import KitShikVision from './componentes_inicio/KitShikVision';
 import Catalogos from '../pagina_de_inicio/componentes_inicio/Catalogos';
 import EligeS24 from '../pagina_de_inicio/componentes_inicio/EligeS24';
 import "../pagina_de_inicio/componentes_inicio/kitshikvision-wrapper.css";
-import "../pagina_de_inicio/componentes_inicio/kitshikvision-wrapper.css";
 import Footer from '../pagina_de_inicio/componentes_inicio/Footer';
-
 
 // Importar imágenes para los distintos carruseles
 import image1 from '../../assets/10.webp';
@@ -28,10 +26,22 @@ import img39 from '../../assets/39.webp';
 import img41 from '../../assets/41.webp';
 
 const Inicio: React.FC = () => {
-  // Definir diferentes conjuntos de imágenes
+  // Definir diferentes conjuntos de imágenes y enlaces
   const kitImages1 = [image1, image2, image3, image4, image5, image6];
+  const kitLinks1 = [
+    "https://organic-space-invention-69v7xvgx69wh4r77-5173.app.github.dev/#/kit_4-camaras-seguridad-bala",
+    "https://organic-space-invention-69v7xvgx69wh4r77-5173.app.github.dev/#/kit_4-camaras-seguridad-bala",
+    "https://organic-space-invention-69v7xvgx69wh4r77-5173.app.github.dev/#/kit_4-camaras-seguridad-bala",
+    "https://organic-space-invention-69v7xvgx69wh4r77-5173.app.github.dev/#/kit_4-camaras-seguridad-bala",
+    "https://organic-space-invention-69v7xvgx69wh4r77-5173.app.github.dev/#/kit_4-camaras-seguridad-bala",
+    "https://organic-space-invention-69v7xvgx69wh4r77-5173.app.github.dev/#/kit_4-camaras-seguridad-bala",
+  ];
+
   const kitImages2 = [img35, img36, img37, img38, img39, img41];
-  const kitImages3 = [image1, img35, image2, img36, image3, img37]; // Ejemplo mixto
+  const kitLinks2 = kitLinks1; // Usando los mismos enlaces de ejemplo
+
+  const kitImages3 = [image1, img35, image2, img36, image3, img37];
+  const kitLinks3 = kitLinks1;
 
   return (
     <div>
@@ -45,10 +55,22 @@ const Inicio: React.FC = () => {
       </div>
       
       <div className="kitshikvision-wrapper">
-        <KitShikVision images={kitImages1} direction="right" />
-        <KitShikVision images={kitImages2} direction="left" />
-        <KitShikVision images={kitImages3} direction="right" />
-      </div>
+  <div className="kitshikvision-section">
+    <h3 className="kit-title">Kits de 4 Cámaras Hikvision</h3>
+    <KitShikVision images={kitImages1} links={kitLinks1} direction="right" />
+  </div>
+
+  <div className="kitshikvision-section">
+    <h3 className="kit-title">Kits de 8 Cámaras Hikvision</h3>
+    <KitShikVision images={kitImages2} links={kitLinks2} direction="left" />
+  </div>
+
+  <div className="kitshikvision-section">
+    <h3 className="kit-title">Kits Variados Hikvision</h3>
+    <KitShikVision images={kitImages3} links={kitLinks3} direction="right" />
+  </div>
+</div>
+
       
       <EligeS24 
         title="Elige S24" 
@@ -56,8 +78,7 @@ const Inicio: React.FC = () => {
         phone="123-456-7890" 
         imageSrc="/images/security.jpg" 
       />
-            <Footer />
-
+      <Footer />
     </div>
   );
 };

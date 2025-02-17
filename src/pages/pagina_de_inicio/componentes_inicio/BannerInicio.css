@@ -33,8 +33,9 @@
   .banner-inicio {
     width: 100%;
     padding: 0;
+    margin: 30px;
     margin-top: 30px;
-    /* Usar flexbox para alinear elementos a la izquierda */
+    margin-left: -20px;
     display: flex;
     justify-content: flex-start;
   }
@@ -43,16 +44,18 @@
     display: flex;
     justify-content: flex-start;  /* Alinea el contenido hacia la izquierda */
     align-items: center;          /* Centra verticalmente si es necesario */
-    text-align: left;             /* Asegura que el texto esté alineado a la izquierda */
+    text-align: center;             /* Asegura que el texto esté alineado a la izquierda */
     width: 100vw;                 /* Ocupa todo el ancho de la pantalla */
     margin: 0;                    /* Elimina márgenes extra */
-    background-color: red;        /* Fondo rojo */
+    background-color: rgb(199, 177, 177);        /* Fondo rojo */
     padding: 10px;                /* Espaciado alrededor del contenido */
+    margin-left: 10px;
   }
 
   .banner-texto h4 {
     font-size: 28px; /* Tamaño fijo para pantallas pequeñas */
     margin: 0;       /* Elimina márgenes adicionales */
-    margin-left: 10px;
+    margin-left: 30px;
+    color: rgb(0, 0, 95);
   }
 }

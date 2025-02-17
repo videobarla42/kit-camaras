@@ -3,22 +3,26 @@ import './KitShikVision.css'; // Aquí puedes tener otros estilos propios del ca
 
 interface KitShikVisionProps {
   images: string[];
+  links?: string[]; // Nuevo prop opcional para enlaces
   direction?: 'left' | 'right';
 }
 
-const KitShikVision: React.FC<KitShikVisionProps> = ({ images, direction = 'left' }) => {
+const KitShikVision: React.FC<KitShikVisionProps> = ({ images, links = [], direction = 'left' }) => {
   return (
-    <div className="kit-slider">
+    <div className="kit-slider" style={direction === 'right' ? { transform: 'scaleX(-1)' } : {}}>
       <div className="kit-slide-track">
         {images.map((img, index) => (
-          <div className="kit-slide" key={index}>
-            <img src={img} alt={`Slide ${index}`} />
+          <div className="kit-slide" key={index} style={direction === 'right' ? { transform: 'scaleX(-1)' } : {}}>
+            <a href={links[index] || '#'} target="_blank" rel="noopener noreferrer">
+              <img src={img} alt={`Slide ${index}`} />
+            </a>
           </div>
         ))}
-        {/* Se puede duplicar el contenido si se requiere efecto de "infinito" */}
         {images.map((img, index) => (
-          <div className="kit-slide" key={`dup-${index}`}>
-            <img src={img} alt={`Slide duplicado ${index}`} />
+          <div className="kit-slide" key={`dup-${index}`} style={direction === 'right' ? { transform: 'scaleX(-1)' } : {}}>
+            <a href={links[index] || '#'} target="_blank" rel="noopener noreferrer">
+              <img src={img} alt={`Slide duplicado ${index}`} />
+            </a>
           </div>
         ))}
       </div>
@@ -32,15 +36,19 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({ images, direction = 'left
         .kit-slide-track {
           display: flex;
           width: calc(210px * ${images.length * 2});
-          animation: scroll 20s linear infinite ${direction === 'right' ? 'reverse' : 'normal'};
+          animation: scroll 350s linear infinite;
         }
         .kit-slide {
           flex: none;
+        }
+        .kit-slide a {
+          display: block;
         }
         .kit-slide img {
           width: 200px;
           height: auto;
           margin-right: 10px;
+          cursor: pointer; /* Indica que la imagen es clickeable */
         }
         @keyframes scroll {
           0% { transform: translateX(0); }
