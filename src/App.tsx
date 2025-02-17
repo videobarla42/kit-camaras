@@ -14,6 +14,8 @@ import 'slick-carousel/slick/slick-theme.css';
 
 
 
+
+
 // Importación de páginas con lazy loading
 const Kits_8_DS_2CE56D0T_IRPF_C = lazy(() => import('./pages/kits/kits_8_DS-2CE56D0T-IRPF(C)/kits_8_DS-2CE56D0T-IRPF(C)'));
 const Kit_4_DS_2CE56D0T_IRPF_C = lazy(() => import('./pages/kits/kit_4_DS-2CE56D0T-IRPF(C)/Kit_4_DS_2CE56D0T_IRPF_C'));
@@ -22,6 +24,10 @@ const IniciCotizador = lazy(() => import('./pages/cotizador/IniciCotizador'));
 const Kit_4_DS_2CE16D0T_IRPF_C = lazy(() => import('./pages/kits/kit_4_DS-2CE16D0T-IRPF(2.8mm)(C)/kit_4_DS-2CE16D0T-IRPF(2.8mm)(C)'));
 const Kit_8_DS_2CE16D0T_IRPF_C = lazy(() => import('./pages/kits/kit_8_DS-2CE16D0T-IRPF(2.8mm)(C)/kit_8_DS-2CE16D0T-IRPF(2.8mm)(C)'));
 const Kit_16_DS_2CE16D0T_IRPF_C = lazy(() => import('./pages/kits/kit_16_DS-2CE16D0T-IRPF(2.8mm)(C)/kit_16_DS-2CE16D0T-IRPF(2.8mm)(C)'));
+const Cp_3_pro_1 = lazy(() => import('./pages/kits/CP3PRO/CP3PRO_1/Cp_3_pro_1'));
+const Cp_3_pro_2 = lazy(() => import('./pages/kits/CP3PRO/CP3PRO_1/Cp_3_pro_1'));
+const Cp_3_pro_4 = lazy(() => import('./pages/kits/CP3PRO/CP3PRO_1/Cp_3_pro_1'));
+const Cp_3_pro_6 = lazy(() => import('./pages/kits/CP3PRO/CP3PRO_1/Cp_3_pro_1'));
 
 
 const App: React.FC = () => {
@@ -51,6 +57,15 @@ const App: React.FC = () => {
     { to: '/cotizador', text: 'Cotizador de Cámaras', image: './assets/calculator-icon.png' },
     { to: '/inicio', text: 'inicio', image: './assets/calculator-icon.png' },
 
+    { to: '/Cp_3_pro_1', text: 'Cp_3_pro_1', image: './assets/calculator-icon.png' },
+    { to: '/Cp_3_pro_2', text: 'Cp_3_pro_2', image: './assets/calculator-icon.png' },
+    { to: '/Cp_3_pro_4', text: 'Cp_3_pro_4', image: './assets/calculator-icon.png' },
+    { to: '/Cp_3_pro_6', text: 'Cp_3_pro_6', image: './assets/calculator-icon.png' },
+
+
+    
+    
+
 
   ];
 
@@ -74,7 +89,14 @@ const App: React.FC = () => {
               <Route path="/PriceContext" element={<PriceContext />} />
               <Route path="/inicio" element={<Inicio />} />
 
+              <Route path="/Cp_3_pro_1" element={<Cp_3_pro_1 />} />
+              <Route path="/Cp_3_pro_2" element={<Cp_3_pro_2 />} />
+              <Route path="/Cp_3_pro_4" element={<Cp_3_pro_4 />} />
+              <Route path="/Cp_3_pro_6" element={<Cp_3_pro_6 />} />
 
+
+
+              
               
             </Routes>
           </Suspense>
