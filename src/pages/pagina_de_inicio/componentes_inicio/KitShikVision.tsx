@@ -19,6 +19,7 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
   /* ---------------------------------------------------------------------------
      Estados y refs para el auto-scroll y la interacción del usuario
   --------------------------------------------------------------------------- */
+  // Para el scroll infinito, usaremos dos copias de las imágenes
   const [offset, setOffset] = useState<number>(direction === 'left' ? 0 : -totalWidth);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -49,9 +50,11 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
     const dt = time - lastFrameTime.current;
     lastFrameTime.current = time;
     
+    // Si no se está arrastrando y el auto-scroll está activo, se actualiza el offset
     if (!isDragging && autoScrollActive.current) {
       setOffset((prev) => {
         let nuevo = prev + scrollDelta * (dt / 1000);
+        // Ajuste para el loop infinito:
         if (direction === 'left') {
           if (nuevo <= -totalWidth) {
             nuevo += totalWidth;
@@ -80,9 +83,11 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
      Handlers para arrastre (drag/touch)
   --------------------------------------------------------------------------- */
   const handlePointerDown = (e: React.MouseEvent | React.TouchEvent) => {
+    // Evitamos comportamientos por defecto (por ejemplo, scrolling de página)
     e.preventDefault();
     setIsDragging(true);
     autoScrollActive.current = false;
+    // Registramos la posición de inicio (soporta mouse o touch)
     if ('touches' in e.nativeEvent) {
       pointerStart.current = e.nativeEvent.touches[0].clientX;
     } else {
@@ -92,33 +97,32 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
     velocity.current = 0;
     lastFrameTime.current = performance.now();
 
+    // Agregamos listeners al documento para poder detectar movimientos fuera del componente
     window.addEventListener('mousemove', handlePointerMove as any);
     window.addEventListener('mouseup', handlePointerUp as any);
     window.addEventListener('touchmove', handlePointerMove as any, { passive: false });
     window.addEventListener('touchend', handlePointerUp as any);
   };
 
-  const handlePointerMove = (e: MouseEvent | TouchEvent) => {
+  const handlePointerMove = (e: React.TouchEvent<HTMLDivElement>) => {
     if (!isDragging) return;
-    let clientX: number;
-    if (e instanceof TouchEvent) {
-      clientX = e.touches[0].clientX;
-    } else {
-      clientX = e.clientX;
-    }
+  
+    const clientX = e.touches[0].clientX;
     const dx = clientX - pointerStart.current;
     const nuevoOffset = offsetStart.current + dx;
+  
     setOffset(() => {
       let ajustado = nuevoOffset;
       if (direction === 'left') {
         while (ajustado > 0) ajustado -= totalWidth;
         while (ajustado <= -totalWidth) ajustado += totalWidth;
       } else {
-        while (ajustado < -totalWidth) ajustado += totalWidth;
         while (ajustado >= 0) ajustado -= totalWidth;
+        while (ajustado < -totalWidth) ajustado += totalWidth;
       }
       return ajustado;
     });
+  
     const now = performance.now();
     const dt = now - lastFrameTime.current;
     if (dt > 0) {
@@ -126,26 +130,28 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
     }
     lastFrameTime.current = now;
   };
-
-  const handlePointerUp = (e: MouseEvent | TouchEvent) => {
+  
+  const handlePointerUp = (e: React.TouchEvent<HTMLDivElement>) => {
     setIsDragging(false);
+  
     window.removeEventListener('mousemove', handlePointerMove as any);
     window.removeEventListener('mouseup', handlePointerUp as any);
     window.removeEventListener('touchmove', handlePointerMove as any);
     window.removeEventListener('touchend', handlePointerUp as any);
-
-    let currentVelocity = velocity.current * 1000; // convertir a px/seg
+  
+    let currentVelocity = velocity.current * 1000; // Convertir a px/s
     const friction = 0.95;
+  
     const inercial = () => {
       if (Math.abs(currentVelocity) > 0.1) {
-        setOffset(prev => {
+        setOffset((prev) => {
           let nuevo = prev + currentVelocity * (16 / 1000);
           if (direction === 'left') {
+            if (nuevo > 0) nuevo -= totalWidth;
             if (nuevo <= -totalWidth) nuevo += totalWidth;
-            else if (nuevo > 0) nuevo -= totalWidth;
           } else {
             if (nuevo >= 0) nuevo -= totalWidth;
-            else if (nuevo < -totalWidth) nuevo += totalWidth;
+            if (nuevo < -totalWidth) nuevo += totalWidth;
           }
           return nuevo;
         });
@@ -166,6 +172,7 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
   --------------------------------------------------------------------------- */
   const handlePrev = () => {
     autoScrollActive.current = false;
+    // Al hacer clic se desplaza un slide (hacia la derecha)
     setOffset(prev => {
       let nuevo = prev + slideWidth;
       if (direction === 'left') {
@@ -183,6 +190,7 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
 
   const handleNext = () => {
     autoScrollActive.current = false;
+    // Desplaza un slide (hacia la izquierda)
     setOffset(prev => {
       let nuevo = prev - slideWidth;
       if (direction === 'left') {
@@ -231,17 +239,20 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
   return (
     <div
       className="kit-slider"
-      onMouseDown={handlePointerDown}
       onTouchStart={handlePointerDown}
+      onTouchMove={handlePointerMove} // Usar la función ajustada
+      onTouchEnd={handlePointerUp}    // Usar la función ajustada
       style={{ userSelect: isDragging ? 'none' : 'auto' }}
     >
       <div
         className="kit-slide-track"
         style={{
           transform: `translateX(${offset}px)`,
+          // Durante el arrastre se deshabilita la transición para mayor control
           transition: isDragging ? 'none' : 'transform 0.3s ease-out'
         }}
       >
+        {/* Se renderizan dos copias para lograr el loop infinito */}
         {[...images, ...images].map((img, index) => (
           <div className="kit-slide" key={index}>
             <a
@@ -255,6 +266,7 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
         ))}
       </div>
 
+      {/* Botones de navegación */}
       <button className="nav-arrow left-arrow" onClick={handlePrev}>
         ◀
       </button>
@@ -262,6 +274,7 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
         ▶
       </button>
 
+      {/* Indicadores (puntos) */}
       <div className="dot-indicators">
         {images.map((_, index) => (
           <span
@@ -271,6 +284,78 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
           ></span>
         ))}
       </div>
+
+      {/* Estilos internos */}
+      <style>{`
+        .kit-slider {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          height: 220px;
+        }
+        .kit-slide-track {
+          display: flex;
+          will-change: transform;
+        }
+        .kit-slide {
+          flex: none;
+        }
+        .kit-slide a {
+          display: block;
+        }
+        .kit-slide img {
+          width: 200px;
+          height: auto;
+          margin-right: 10px;
+          cursor: pointer;
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .kit-slide img:hover {
+          transform: scale(1.05);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .nav-arrow {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgba(255,255,255,0.7);
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+          font-size: 18px;
+          border-radius: 50%;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+          z-index: 10;
+        }
+        .left-arrow {
+          left: 10px;
+        }
+        .right-arrow {
+          right: 10px;
+        }
+        .dot-indicators {
+          position: absolute;
+          bottom: 10px;
+          width: 100%;
+          text-align: center;
+          z-index: 10;
+        }
+        .dot {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          margin: 0 5px;
+          background: rgba(255,255,255,0.7);
+          border-radius: 50%;
+          cursor: pointer;
+          transition: background 0.3s, transform 0.3s;
+        }
+        .dot.active {
+          background: rgba(0,0,0,0.7);
+          transform: scale(1.2);
+        }
+          
+      `}</style>
     </div>
   );
 };

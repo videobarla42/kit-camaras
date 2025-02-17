@@ -107,16 +107,24 @@
 @media (max-width: 768px) {
   .kit-slider {
     padding: 15px 0;
+    overflow: hidden; /* Ocultar el desbordamiento */
+    position: relative;
+    touch-action: pan-x; /* Habilitar el desplazamiento horizontal */
   }
 
   .kit-slide {
-    flex: 0 0 180px;
+    flex: 0 0 180px; /* Ancho fijo para cada diapositiva */
+    margin-right: 10px; /* Espaciado entre diapositivas */
   }
 
   .nav-arrow {
-    display: block; /* Mostrar solo en móvil */
+    display: block; /* Mostrar flechas solo en móvil */
     padding: 12px 15px;
     font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
   }
 
   .left-arrow {
@@ -131,10 +139,9 @@
     display: flex;
     justify-content: center;
     margin-top: 15px;
-    margin-left: -800px;
     gap: 8px;
-    position: relative; /* Asegúrate de que el contenedor se posicione correctamente */
-    z-index: 10; /* Para que esté por encima de otros elementos */
+    position: relative;
+    z-index: 10;
   }
 
   .dot {
@@ -143,14 +150,10 @@
     border-radius: 50%;
     background-color: #ccc;
     cursor: pointer;
-    margin-left: 100px;
-    margin: 15px;
   }
-  
+
   .dot.active {
     background-color: #666;
     transform: scale(1.2);
   }
-
 }
-
