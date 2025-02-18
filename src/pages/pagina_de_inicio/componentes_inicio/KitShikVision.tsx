@@ -5,6 +5,7 @@ interface KitShikVisionProps {
   images: string[];
   links?: string[];
   direction?: 'left' | 'right';
+  dampingFactor?: number; // Nueva propiedad opcional
 }
 
 const KitShikVision: React.FC<KitShikVisionProps> = ({

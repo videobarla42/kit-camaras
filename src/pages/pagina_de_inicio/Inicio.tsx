@@ -56,19 +56,34 @@ const Inicio: React.FC = () => {
       <div className="kitshikvision-wrapper">
   <div className="kitshikvision-section">
     <h3 className="kit-title">Kits de 4 Cámaras Hikvision</h3>
-    <KitShikVision images={kitImages1} links={kitLinks1} direction="right" />
+    <KitShikVision
+      images={kitImages1}
+      links={kitLinks1}
+      direction="right"
+      dampingFactor={0.01} // Movimiento muy suave
+    />
   </div>
-
   <div className="kitshikvision-section">
     <h3 className="kit-title">Kits de 8 Cámaras Hikvision</h3>
-    <KitShikVision images={kitImages2} links={kitLinks2} direction="left" />
+    <KitShikVision
+      images={kitImages2}
+      links={kitLinks2}
+      direction="left"
+      dampingFactor={0.01} // Movimiento muy suave
+    />
   </div>
-
   <div className="kitshikvision-section">
     <h3 className="kit-title">Kits Variados Hikvision</h3>
-    <KitShikVision images={kitImages3} links={kitLinks3} direction="right" />
+    <KitShikVision
+      images={kitImages3}
+      links={kitLinks3}
+      direction="right"
+      dampingFactor={0.01} // Movimiento muy suave
+    />
   </div>
 </div>
+
+
 
 <Catalogos />
 
