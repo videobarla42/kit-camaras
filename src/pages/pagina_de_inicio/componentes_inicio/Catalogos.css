@@ -1,31 +1,34 @@
 @import 'reset.css';
 
-
-
 .catalogo-image {
-    width: 100%; /* Asegúrate de que ocupe todo el ancho */
-    height: auto; /* Mantiene la proporción */
-    max-height: 650px; /* Mantiene la altura máxima */
-    object-fit: cover; /* Asegúrate de que la imagen cubra el área */
-    object-position: 25% center; /* Mueve el contenido un poco hacia la izquierda */
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    object-fit: cover;
+    object-position: 25% center; /* Mueve la imagen hacia la izquierda */
 }
 
 .btn-large {
-    font-size: 2rem; /* Tamaño de fuente para pantallas grandes */
-    padding: 10px 20px; /* Aumenta el padding para un mejor diseño */
+    font-size: 2rem;
+    padding: 10px 20px;
+    position: absolute; /* Posicionamiento absoluto para ajustar la posición */
+    left: 5%; /* Ajusta el porcentaje según cuánto quieras moverlo a la izquierda */
+    transform: translateX(-50%); /* Ajusta la posición exacta si es necesario */
 }
 
 /* Media queries para pantallas pequeñas */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .catalogo-image {
-        height: 300px !important; /* Aumenta la altura de la imagen en pantallas pequeñas */
-        width: 100%; /* Asegúrate de que ocupe todo el ancho */
-        object-fit: cover; /* Asegúrate de que la imagen cubra el área */
-        object-position: 25% center; /* Desplaza el contenido 25% hacia la izquierda */
+        height: 300px !important;
+        width: 90%;
+        object-fit: cover;
+        margin-left: -60px; /* Reseteamos el margin para evitar problemas en pequeño */
     }
     
     .btn-large {
-        font-size: 2rem; /* Reduce el tamaño de la fuente en pantallas pequeñas */
-        padding: 0px 0px; /* Aumenta el padding para mejorar la usabilidad */
+        font-size: 2.5rem; /* Ajustamos el tamaño para pantallas pequeñas */
+        padding: 5px 10px; /* Ajustamos el padding */
+        transform: translateX(1%);
+        margin-top: 90px;
     }
 }
