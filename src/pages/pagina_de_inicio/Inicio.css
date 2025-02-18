@@ -60,8 +60,8 @@
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 1px;
-    margin-left: 0; /* Asegurar que no haya desplazamiento */
-    margin-top: 90px;
+    margin-left: -900px; /* Asegurar que no haya desplazamiento */
+    margin-top: 85px;
   }
 
   .kitshikvision-wrapper {

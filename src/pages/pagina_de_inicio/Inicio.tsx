@@ -48,7 +48,7 @@ const Inicio: React.FC = () => {
       <div className="inicio-container">
         <HeaderInicio />
         <div className="contenido">
-          <h4>Ven a nuestros show rooms!</h4>
+          <h4>Pide Un Tecnico Hoy!</h4>
         </div>
         <BannerInicio texto="kits de camaras hikvision" />   
       </div>
