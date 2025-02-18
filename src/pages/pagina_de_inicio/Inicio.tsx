@@ -50,7 +50,6 @@ const Inicio: React.FC = () => {
         <div className="contenido">
           <h4>Ven a nuestros show rooms!</h4>
         </div>
-        <Catalogos />
         <BannerInicio texto="kits de camaras hikvision" />   
       </div>
       
@@ -71,7 +70,8 @@ const Inicio: React.FC = () => {
   </div>
 </div>
 
-      
+<Catalogos />
+
       <EligeS24 
         title="Elige S24" 
         description="Ofrecemos los mejores sistemas de seguridad para proteger lo que más importa." 

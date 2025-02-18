@@ -42,6 +42,7 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
   const offsetStart = useRef<number>(offset);
   // Se estima la velocidad del arrastre (px/ms)
   const velocity = useRef<number>(0);
+  const lastMovePosition = useRef<number>(0);
   
   /* ---------------------------------------------------------------------------
      Animación continua (auto-scroll)
@@ -90,8 +91,10 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
     // Registramos la posición de inicio (soporta mouse o touch)
     if ('touches' in e.nativeEvent) {
       pointerStart.current = e.nativeEvent.touches[0].clientX;
+      lastMovePosition.current = e.nativeEvent.touches[0].clientX;
     } else {
       pointerStart.current = (e as React.MouseEvent).clientX;
+      lastMovePosition.current = (e as React.MouseEvent).clientX;
     }
     offsetStart.current = offset;
     velocity.current = 0;
@@ -104,10 +107,29 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
     window.addEventListener('touchend', handlePointerUp as any);
   };
 
-  const handlePointerMove = (e: React.TouchEvent<HTMLDivElement>) => {
+  const handlePointerMove = (e: MouseEvent | TouchEvent) => {
     if (!isDragging) return;
-  
-    const clientX = e.touches[0].clientX;
+    
+    // Prevenir el desplazamiento de página
+    e.preventDefault();
+    
+    let clientX: number;
+    if ('touches' in e) {
+      clientX = e.touches[0].clientX;
+    } else {
+      clientX = e.clientX;
+    }
+    
+    const now = performance.now();
+    const dt = now - lastFrameTime.current;
+
+    // Calcular la velocidad solo si ha pasado tiempo suficiente
+    if (dt > 10) { // Evitar divisiones por números muy pequeños
+      velocity.current = (clientX - lastMovePosition.current) / dt;
+      lastFrameTime.current = now;
+      lastMovePosition.current = clientX;
+    }
+    
     const dx = clientX - pointerStart.current;
     const nuevoOffset = offsetStart.current + dx;
   
@@ -122,16 +144,11 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
       }
       return ajustado;
     });
-  
-    const now = performance.now();
-    const dt = now - lastFrameTime.current;
-    if (dt > 0) {
-      velocity.current = dx / dt;
-    }
-    lastFrameTime.current = now;
   };
   
-  const handlePointerUp = (e: React.TouchEvent<HTMLDivElement>) => {
+  const handlePointerUp = (e: MouseEvent | TouchEvent) => {
+    if (!isDragging) return;
+    
     setIsDragging(false);
   
     window.removeEventListener('mousemove', handlePointerMove as any);
@@ -139,7 +156,15 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
     window.removeEventListener('touchmove', handlePointerMove as any);
     window.removeEventListener('touchend', handlePointerUp as any);
   
+    // Utilizamos velocity.current para determinar la dirección y magnitud del movimiento inercial
     let currentVelocity = velocity.current * 1000; // Convertir a px/s
+    
+    // Limitar la velocidad máxima para evitar movimientos extremos
+    const maxVelocity = 2000; // px/s
+    if (Math.abs(currentVelocity) > maxVelocity) {
+      currentVelocity = Math.sign(currentVelocity) * maxVelocity;
+    }
+    
     const friction = 0.95;
   
     const inercial = () => {
@@ -158,6 +183,12 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
         currentVelocity *= friction;
         requestAnimationFrame(inercial);
       } else {
+        // Una vez que la inercia termina, alinear al slide más cercano
+        setOffset(prev => {
+          const slideIndex = Math.round(-prev / slideWidth);
+          return -slideIndex * slideWidth;
+        });
+        
         if (resumeTimeoutId.current) clearTimeout(resumeTimeoutId.current);
         resumeTimeoutId.current = window.setTimeout(() => {
           autoScrollActive.current = true;
@@ -239,9 +270,8 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
   return (
     <div
       className="kit-slider"
-      onTouchStart={handlePointerDown}
-      onTouchMove={handlePointerMove} // Usar la función ajustada
-      onTouchEnd={handlePointerUp}    // Usar la función ajustada
+      onMouseDown={handlePointerDown as any}
+      onTouchStart={handlePointerDown as any}
       style={{ userSelect: isDragging ? 'none' : 'auto' }}
     >
       <div
@@ -266,7 +296,13 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
         ))}
       </div>
 
-     
+      {/* Flechas de navegación */}
+      <button className="nav-arrow left-arrow" onClick={handlePrev}>
+        ❮
+      </button>
+      <button className="nav-arrow right-arrow" onClick={handleNext}>
+        ❯
+      </button>
 
       {/* Indicadores (puntos) */}
       <div className="dot-indicators">
@@ -286,6 +322,7 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
           overflow: hidden;
           width: 100%;
           height: 220px;
+          touch-action: none; /* Previene comportamientos táctiles nativos */
         }
         .kit-slide-track {
           display: flex;
