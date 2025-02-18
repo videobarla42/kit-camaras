@@ -26,15 +26,20 @@ import img39 from '../../assets/39.webp';
 import img41 from '../../assets/41.webp';
 
 const Inicio: React.FC = () => {
+  // Ajusta la base URL dependiendo del entorno
+  const baseUrl = process.env.NODE_ENV === 'production' 
+    ? 'https://www.s24seguridadelectronica.com' 
+    : 'https://organic-space-invention-69v7xvgx69wh4r77-5173.app.github.dev';
+
   // Definir diferentes conjuntos de imágenes y enlaces
   const kitImages1 = [image1, image2, image3, image4, image5, image6];
   const kitLinks1 = [
-    "https://organic-space-invention-69v7xvgx69wh4r77-5173.app.github.dev/#/kit_4-camaras-seguridad-bala",
-    "https://organic-space-invention-69v7xvgx69wh4r77-5173.app.github.dev/#/kit_4-camaras-seguridad-bala",
-    "https://organic-space-invention-69v7xvgx69wh4r77-5173.app.github.dev/#/kit_4-camaras-seguridad-bala",
-    "https://organic-space-invention-69v7xvgx69wh4r77-5173.app.github.dev/#/kit_4-camaras-seguridad-bala",
-    "https://organic-space-invention-69v7xvgx69wh4r77-5173.app.github.dev/#/kit_4-camaras-seguridad-bala",
-    "https://organic-space-invention-69v7xvgx69wh4r77-5173.app.github.dev/#/kit_4-camaras-seguridad-bala",
+    `${baseUrl}/#/kit_4-camaras-seguridad-bala`,
+    `${baseUrl}/#/kit_4-camaras-seguridad-bala`,
+    `${baseUrl}/#/kit_4-camaras-seguridad-bala`,
+    `${baseUrl}/#/kit_4-camaras-seguridad-bala`,
+    `${baseUrl}/#/kit_4-camaras-seguridad-bala`,
+    `${baseUrl}/#/kit_4-camaras-seguridad-bala`,
   ];
 
   const kitImages2 = [img35, img36, img37, img38, img39, img41];
@@ -54,38 +59,36 @@ const Inicio: React.FC = () => {
       </div>
       
       <div className="kitshikvision-wrapper">
-  <div className="kitshikvision-section">
-    <h3 className="kit-title">Kits de 4 Cámaras Hikvision</h3>
-    <KitShikVision
-      images={kitImages1}
-      links={kitLinks1}
-      direction="right"
-      dampingFactor={0.01} // Movimiento muy suave
-    />
-  </div>
-  <div className="kitshikvision-section">
-    <h3 className="kit-title">Kits de 8 Cámaras Hikvision</h3>
-    <KitShikVision
-      images={kitImages2}
-      links={kitLinks2}
-      direction="left"
-      dampingFactor={0.01} // Movimiento muy suave
-    />
-  </div>
-  <div className="kitshikvision-section">
-    <h3 className="kit-title">Kits Variados Hikvision</h3>
-    <KitShikVision
-      images={kitImages3}
-      links={kitLinks3}
-      direction="right"
-      dampingFactor={0.01} // Movimiento muy suave
-    />
-  </div>
-</div>
+        <div className="kitshikvision-section">
+          <h3 className="kit-title">Kits de 4 Cámaras Hikvision</h3>
+          <KitShikVision
+            images={kitImages1}
+            links={kitLinks1}
+            direction="right"
+            dampingFactor={0.01} // Movimiento muy suave
+          />
+        </div>
+        <div className="kitshikvision-section">
+          <h3 className="kit-title">Kits de 8 Cámaras Hikvision</h3>
+          <KitShikVision
+            images={kitImages2}
+            links={kitLinks2}
+            direction="left"
+            dampingFactor={0.01} // Movimiento muy suave
+          />
+        </div>
+        <div className="kitshikvision-section">
+          <h3 className="kit-title">Kits Variados Hikvision</h3>
+          <KitShikVision
+            images={kitImages3}
+            links={kitLinks3}
+            direction="right"
+            dampingFactor={0.01} // Movimiento muy suave
+          />
+        </div>
+      </div>
 
-
-
-<Catalogos />
+      <Catalogos />
 
       <EligeS24 
         title="Elige S24" 
