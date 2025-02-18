@@ -2,8 +2,8 @@ import os
 import subprocess
 
 # Directorios de entrada y salida
-directorio_entrada = r"/workspaces/kit-camaras/COMPRESOR/imagenes0/micro sd imou 64 gb"
-directorio_salida = r"/workspaces/kit-camaras/src/assets/micro sd imou 64 gb"
+directorio_entrada = r"/workspaces/kit-camaras/COMPRESOR/imagenes0/CP3_PRO"
+directorio_salida = r"/workspaces/kit-camaras/src/assets/CP3_PRO"
 
 # Crear directorio de salida si no existe
 os.makedirs(directorio_salida, exist_ok=True)

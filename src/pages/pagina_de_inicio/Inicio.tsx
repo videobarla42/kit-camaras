@@ -12,18 +12,23 @@ import "../pagina_de_inicio/componentes_inicio/kitshikvision-wrapper.css";
 import Footer from '../pagina_de_inicio/componentes_inicio/Footer';
 
 // Importar imágenes para los distintos carruseles
-import image1 from '../../assets/10.webp';
-import image2 from '../../assets/11.webp';
-import image3 from '../../assets/12.webp';
-import image4 from '../../assets/13.webp';
-import image5 from '../../assets/14.webp';
-import image6 from '../../assets/15.webp';
-import img35 from '../../assets/35.webp';
-import img36 from '../../assets/36.webp';
-import img37 from '../../assets/37.webp';
-import img38 from '../../assets/38.webp';
-import img39 from '../../assets/39.webp';
-import img41 from '../../assets/41.webp';
+import image1 from '../../assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)1.webp';
+import image2 from '../../assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)2.webp';
+import image3 from '../../assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)3.webp';
+import image4 from '../../assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
+import image5 from '../../assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)2.webp';
+import image6 from '../../assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)3.webp';
+import image7 from '../../assets/H3C_PRO/h3c_pro_1.webp';
+import image8 from '../../assets/H3C_PRO/h3c_pro_2.webp';
+import image9 from '../../assets/H3C_PRO/h3c_pro_3.webp';
+import image10 from '../../assets/H3C_PRO/h3c_pro_4.webp';
+import image11 from '../../assets/CP3_PRO/cp_3_pro_1.webp';
+import image12 from '../../assets/CP3_PRO/cp_3_pro_2.webp';
+import image13 from '../../assets/CP3_PRO/cp_3_pro_3.webp';
+import image14 from '../../assets/CP3_PRO/cp_3_pro_4.webp';
+
+
+
 
 const Inicio: React.FC = () => {
   // Ajusta la base URL dependiendo del entorno
@@ -35,19 +40,30 @@ const Inicio: React.FC = () => {
   const kitImages1 = [image1, image2, image3, image4, image5, image6];
   const kitLinks1 = [
     `${baseUrl}/#/kit_4-camaras-seguridad-bala`,
+    `${baseUrl}/#/kits_8-camaras-seguridad`,
+    `${baseUrl}/#/kits_16-camaras-seguridad`,
     `${baseUrl}/#/kit_4-camaras-seguridad-bala`,
-    `${baseUrl}/#/kit_4-camaras-seguridad-bala`,
-    `${baseUrl}/#/kit_4-camaras-seguridad-bala`,
-    `${baseUrl}/#/kit_4-camaras-seguridad-bala`,
-    `${baseUrl}/#/kit_4-camaras-seguridad-bala`,
+    `${baseUrl}/#/kit_8-camaras-seguridad-bala`,
+    `${baseUrl}/#/kit_16-camaras-seguridad-bala`,
   ];
 
-  const kitImages2 = [img35, img36, img37, img38, img39, img41];
-  const kitLinks2 = kitLinks1; // Usando los mismos enlaces de ejemplo
-
-  const kitImages3 = [image1, img35, image2, img36, image3, img37];
-  const kitLinks3 = kitLinks1;
-
+  // Definir imágenes para el segundo y tercer carrusel (cada uno con 6 imágenes)
+  const kitImages2 = [image7, image8, image9, image10 ];
+  const kitLinks2 = [
+    `${baseUrl}/#/H3c_pro_1s`,
+    `${baseUrl}/#/H3c_pro_2s`,
+    `${baseUrl}/#/H3c_pro_4s`,
+    `${baseUrl}/#/H3c_pro_6s`,
+  ];
+  
+  const kitImages3 = [image11, image12, image13, image14 ];
+  const kitLinks3 = [
+    `${baseUrl}/#/Cp_3_pro_1`,
+    `${baseUrl}/#/Cp_3_pro_2`,
+    `${baseUrl}/#/Cp_3_pro_4`,
+    `${baseUrl}/#/Cp_3_pro_6`,
+  ];
+  
   return (
     <div>
       <div className="inicio-container">
