@@ -144,10 +144,52 @@
     margin-top: 20px;
   }
   
-  .phone-frame {
-    width: 100px; /* Tamaño reducido para pantallas pequeñas */
-    height: 200px;
-    margin-top: 270px;
-    margin-left: 40px;
-  }
+  
+  /* Estilos para el marco del teléfono */
+.phone-frame {
+  background-color: #000;
+  border-radius: 15px;
+  padding: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30vh;
+  position: absolute;
+  margin-top: 300px;
+  margin-left: 50px;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.phone-frame img {
+  border-radius: 15px;
+  width: 100%;
+  height: 25vh;
+}
+
+/* Estados para la animación de los marcos */
+.phone-frame.center {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+.phone-frame.left {
+  transform: translateX(-100%) scale(0.7);
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.phone-frame.right {
+  transform: translateX(100%) scale(0.8);
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.phone-frame.hidden {
+  opacity: 0;
+  z-index: 0;
+}
+
 }
