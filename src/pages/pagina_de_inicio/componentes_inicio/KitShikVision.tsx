@@ -39,10 +39,13 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
 
   // Para el drag/arrastre
   const pointerStart = useRef<number>(0);
+  const pointerStartY = useRef<number>(0);
   const offsetStart = useRef<number>(offset);
   // Se estima la velocidad del arrastre (px/ms)
   const velocity = useRef<number>(0);
   const lastMovePosition = useRef<number>(0);
+  const isScrolling = useRef<boolean>(false);
+  const isDraggingStarted = useRef<boolean>(false);
   
   /* ---------------------------------------------------------------------------
      Animación continua (auto-scroll)
@@ -84,72 +87,128 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
      Handlers para arrastre (drag/touch)
   --------------------------------------------------------------------------- */
   const handlePointerDown = (e: React.MouseEvent | React.TouchEvent) => {
-    // Evitamos comportamientos por defecto (por ejemplo, scrolling de página)
-    e.preventDefault();
-    setIsDragging(true);
-    autoScrollActive.current = false;
+    // No prevenimos el comportamiento predeterminado aquí para permitir el scroll natural
+    
     // Registramos la posición de inicio (soporta mouse o touch)
     if ('touches' in e.nativeEvent) {
       pointerStart.current = e.nativeEvent.touches[0].clientX;
+      pointerStartY.current = e.nativeEvent.touches[0].clientY;
       lastMovePosition.current = e.nativeEvent.touches[0].clientX;
     } else {
       pointerStart.current = (e as React.MouseEvent).clientX;
+      pointerStartY.current = (e as React.MouseEvent).clientY;
       lastMovePosition.current = (e as React.MouseEvent).clientX;
+      
+      // Para eventos de mouse, iniciamos el arrastre inmediatamente
+      setIsDragging(true);
+      autoScrollActive.current = false;
     }
+    
     offsetStart.current = offset;
     velocity.current = 0;
     lastFrameTime.current = performance.now();
+    isScrolling.current = false;
+    isDraggingStarted.current = false;
 
     // Agregamos listeners al documento para poder detectar movimientos fuera del componente
     window.addEventListener('mousemove', handlePointerMove as any);
     window.addEventListener('mouseup', handlePointerUp as any);
-    window.addEventListener('touchmove', handlePointerMove as any, { passive: false });
+    window.addEventListener('touchmove', handlePointerMove as any, { passive: true });
     window.addEventListener('touchend', handlePointerUp as any);
   };
 
   const handlePointerMove = (e: MouseEvent | TouchEvent) => {
-    if (!isDragging) return;
-    
-    // Prevenir el desplazamiento de página
-    e.preventDefault();
-    
     let clientX: number;
+    let clientY: number;
+    
     if ('touches' in e) {
+      if (e.touches.length === 0) return; // A veces ocurre durante el gesto multitáctil
       clientX = e.touches[0].clientX;
+      clientY = e.touches[0].clientY;
     } else {
       clientX = e.clientX;
+      clientY = e.clientY;
     }
     
-    const now = performance.now();
-    const dt = now - lastFrameTime.current;
-
-    // Calcular la velocidad solo si ha pasado tiempo suficiente
-    if (dt > 10) { // Evitar divisiones por números muy pequeños
-      velocity.current = (clientX - lastMovePosition.current) / dt;
-      lastFrameTime.current = now;
-      lastMovePosition.current = clientX;
-    }
-    
-    const dx = clientX - pointerStart.current;
-    const nuevoOffset = offsetStart.current + dx;
-  
-    setOffset(() => {
-      let ajustado = nuevoOffset;
-      if (direction === 'left') {
-        while (ajustado > 0) ajustado -= totalWidth;
-        while (ajustado <= -totalWidth) ajustado += totalWidth;
-      } else {
-        while (ajustado >= 0) ajustado -= totalWidth;
-        while (ajustado < -totalWidth) ajustado += totalWidth;
+    // Para eventos táctiles, determinamos si es un scroll vertical o un arrastre horizontal
+    if (!isDraggingStarted.current && 'touches' in e) {
+      const deltaX = Math.abs(clientX - pointerStart.current);
+      const deltaY = Math.abs(clientY - pointerStartY.current);
+      
+      // Si el movimiento es más vertical que horizontal, asumimos scroll
+      if (deltaY > deltaX && deltaY > 10) {
+        isScrolling.current = true;
+        return; // Permitimos el scroll vertical nativo
       }
-      return ajustado;
-    });
+      
+      // Si el movimiento es más horizontal y supera un umbral, iniciamos el arrastre
+      if (deltaX > 10 && deltaX > deltaY) {
+        isDraggingStarted.current = true;
+        setIsDragging(true);
+        autoScrollActive.current = false;
+        
+        // Ahora sí prevenimos el comportamiento predeterminado para los toques horizontales
+        if ('touches' in e) {
+          e.preventDefault();
+        }
+      } else {
+        return; // Si no superamos el umbral, no hacemos nada aún
+      }
+    }
+    
+    // Si estamos scrolling verticalmente, no hacemos nada
+    if (isScrolling.current) return;
+    
+    // A partir de aquí es el código normal para el arrastre horizontal
+    if (isDragging || isDraggingStarted.current) {
+      const now = performance.now();
+      const dt = now - lastFrameTime.current;
+
+      // Calcular la velocidad solo si ha pasado tiempo suficiente
+      if (dt > 10) { // Evitar divisiones por números muy pequeños
+        velocity.current = (clientX - lastMovePosition.current) / dt;
+        lastFrameTime.current = now;
+        lastMovePosition.current = clientX;
+      }
+      
+      const dx = clientX - pointerStart.current;
+      const nuevoOffset = offsetStart.current + dx;
+    
+      setOffset(() => {
+        let ajustado = nuevoOffset;
+        if (direction === 'left') {
+          while (ajustado > 0) ajustado -= totalWidth;
+          while (ajustado <= -totalWidth) ajustado += totalWidth;
+        } else {
+          while (ajustado >= 0) ajustado -= totalWidth;
+          while (ajustado < -totalWidth) ajustado += totalWidth;
+        }
+        return ajustado;
+      });
+    }
   };
   
   const handlePointerUp = (e: MouseEvent | TouchEvent) => {
-    if (!isDragging) return;
+    // Si estaba scrolling, simplemente limpiar los listeners
+    if (isScrolling.current) {
+      window.removeEventListener('mousemove', handlePointerMove as any);
+      window.removeEventListener('mouseup', handlePointerUp as any);
+      window.removeEventListener('touchmove', handlePointerMove as any);
+      window.removeEventListener('touchend', handlePointerUp as any);
+      return;
+    }
+    
+    // Si no llegamos a iniciar el arrastre, no hacemos nada más
+    if (!isDragging && !isDraggingStarted.current) {
+      window.removeEventListener('mousemove', handlePointerMove as any);
+      window.removeEventListener('mouseup', handlePointerUp as any);
+      window.removeEventListener('touchmove', handlePointerMove as any);
+      window.removeEventListener('touchend', handlePointerUp as any);
+      return;
+    }
     
     setIsDragging(false);
+    isDraggingStarted.current = false;
   
     window.removeEventListener('mousemove', handlePointerMove as any);
     window.removeEventListener('mouseup', handlePointerUp as any);
@@ -201,7 +260,8 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
   /* ---------------------------------------------------------------------------
      Controles: flechas y puntos
   --------------------------------------------------------------------------- */
-  const handlePrev = () => {
+  const handlePrev = (e: React.MouseEvent) => {
+    e.preventDefault(); // Evitar comportamiento por defecto para botones
     autoScrollActive.current = false;
     // Al hacer clic se desplaza un slide (hacia la derecha)
     setOffset(prev => {
@@ -219,7 +279,8 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
     }, 2000);
   };
 
-  const handleNext = () => {
+  const handleNext = (e: React.MouseEvent) => {
+    e.preventDefault(); // Evitar comportamiento por defecto para botones
     autoScrollActive.current = false;
     // Desplaza un slide (hacia la izquierda)
     setOffset(prev => {
@@ -237,7 +298,8 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
     }, 2000);
   };
 
-  const handleDotClick = (index: number) => {
+  const handleDotClick = (index: number, e: React.MouseEvent) => {
+    e.preventDefault(); // Evitar comportamiento por defecto para botones
     autoScrollActive.current = false;
     if (direction === 'left') {
       setOffset(-index * slideWidth);
@@ -310,7 +372,7 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
           <span
             key={index}
             className={`dot ${index === activeIndex ? 'active' : ''}`}
-            onClick={() => handleDotClick(index)}
+            onClick={(e) => handleDotClick(index, e)}
           ></span>
         ))}
       </div>
@@ -322,7 +384,7 @@ const KitShikVision: React.FC<KitShikVisionProps> = ({
           overflow: hidden;
           width: 100%;
           height: 220px;
-          touch-action: none; /* Previene comportamientos táctiles nativos */
+          touch-action: pan-y; /* Permite scroll vertical pero controla horizontales */
         }
         .kit-slide-track {
           display: flex;
