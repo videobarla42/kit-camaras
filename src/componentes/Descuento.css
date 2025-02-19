@@ -1,9 +1,9 @@
 /* Estilos generales para el contenedor del descuento */
 .descuento-container {
   position: fixed;
-  width: 30%; /* 30% del ancho de la pantalla */
+  width: 30%; /* 30% del ancho de la pantalla en dispositivos grandes */
   padding: 10px;
-  background-color: rgba(255, 152, 0, 0.8); /* Color naranja con opacidad del 80% */
+  background-color: rgba(255, 152, 0, 0.1); /* Color naranja con opacidad del 80% */
   color: #000; /* Texto negro */
   text-align: left;
   border-radius: 8px; /* Bordes redondeados */
@@ -32,7 +32,6 @@
 }
 
 /* Estilos para el ícono de cierre */
-/* Estilos para el ícono de cierre en la parte superior izquierda */
 .close-icon {
   position: absolute;
   top: -5px;
@@ -49,3 +48,30 @@
 .close-icon:hover {
   color: #ff0000;
 }
+
+/* Media Query para pantallas con ancho máximo de 768px */
+@media (max-width: 768px) {
+  .descuento-container {
+    position: fixed;
+    bottom: 0;
+    left: 2px;
+    width: 25vw;   /* 25% del ancho del viewport */
+    height: 25vw;  /* Mismo valor para mantener la forma cuadrada */
+    padding: 10px;
+    background-color: rgba(255, 152, 0, 0.1); /* Color naranja con opacidad del 80% */
+    color: #000;  /* Texto negro */
+    text-align: left;
+    border-radius: 8px;  /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra ligera */
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    margin-top: 67vh;
+  }
+  
+  /* Opcional: si deseas ajustar el ícono de cierre en pantallas pequeñas */
+  .close-icon {
+    font-size: 16px;
+  }
+}
+

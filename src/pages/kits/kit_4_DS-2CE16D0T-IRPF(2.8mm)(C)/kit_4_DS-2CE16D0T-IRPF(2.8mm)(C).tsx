@@ -113,6 +113,12 @@ const Kit4CamarasBala: React.FC = () => {
     window.location.href = phoneUri;
   };
 
+
+  const handleDescuentoClick = () => {
+    console.log("Se hizo clic en el descuento");
+    // Aquí puedes agregar cualquier acción que desees al hacer clic
+  };
+
  
   const headerLinks = [
     { to: '/', text: 'Kit 4 Cámaras de seguridad Domo HIKVISION $780,000 COP', image: Image1500 },
@@ -136,7 +142,66 @@ const Kit4CamarasBala: React.FC = () => {
     );
   };
 
+  interface Beneficio {
+    icon: string;
+    title: string;
+    description: string;
+  }
+  
 
+  const beneficiosData: Beneficio[] = [
+    {
+      icon: '✔️',
+      title: 'Tecnología avanzada de detección de movimiento',
+      description: 'Clasificación precisa basada en aprendizaje profundo e identificación de humanos y vehículos.',
+    },
+    {
+      icon: '✔️',
+      title: 'Protección perimetral mejorada',
+      description: 'Detección facial con análisis inteligente para monitoreo y seguridad.',
+    },
+    {
+      icon: '✔️',
+      title: 'Eficiencia en grabación y almacenamiento',
+      description: 'Compresión H.265 Pro+ que reduce espacio de almacenamiento sin comprometer calidad.',
+    },
+    {
+      icon: '✔️',
+      title: 'Flexibilidad en conexiones',
+      description: 'Compatibilidad con HDTVI, AHD, HDCVI, CVBS e IP, soportando hasta 6 canales IP.',
+    },
+    {
+      icon: '✔️',
+      title: 'Almacenamiento robusto',
+      description: 'Capacidad de hasta 10 TB por disco y soporte para hasta 32 usuarios remotos simultáneamente.',
+    },
+    {
+      icon: '✔️',
+      title: 'Durabilidad garantizada',
+      description: 'Operación estable en temperaturas extremas y construcción resistente.',
+    },
+    {
+      icon: '✔️',
+      title: 'Alta calidad de imagen',
+      description: 'Resolución Full HD 1080P para detalles precisos en monitoreo y grabación.',
+    },
+    {
+      icon: '✔️',
+      title: 'Visión nocturna infrarroja',
+      description: 'Rango IR de hasta 20 m para vigilancia en total oscuridad.',
+    },
+    {
+      icon: '✔️',
+      title: 'Resistencia a condiciones extremas',
+      description: 'Operación estable en temperaturas de -40°C a 60°C y construcción resistente a la humedad.',
+    },
+    {
+      icon: '✔️',
+      title: 'Funciones inteligentes',
+      description: 'Ajuste automático de ganancia (AGC) para imágenes claras en condiciones de poca luz.',
+    },
+  ];
+  
   
 
   
@@ -454,9 +519,22 @@ features: [
 
 
 
+      <Descuento
+  text={
+    <>
+      <p>¡Aprovecha nuestro descuento especial!</p>
+      <p className="descuento-price">$29.99</p>
+    </>
+  }
+  position="top-right"
+  onClick={handleDescuentoClick}
+/>
+
+
+
       <Suspense fallback={<div>Cargando...</div>}>
-        <Beneficios />
-      </Suspense>
+  <Beneficios beneficios={beneficiosData} />
+</Suspense>
 
 
 

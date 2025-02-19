@@ -3,8 +3,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './componentes/Header'; 
 import './App.css';
 import { PriceProvider } from '@/componentes/PriceContext';
-import Prueba from '@/pages/kits/kit_4_DS-2CE16D0T-IRPF(2.8mm)(C)/prueba';
-import PriceContext from '@/pages/kits/kit_4_DS-2CE16D0T-IRPF(2.8mm)(C)/prueba';
 import Inicio from "./pages/pagina_de_inicio/Inicio";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -96,8 +94,6 @@ const App: React.FC = () => {
               <Route path="/kit_4-camaras-seguridad-bala" element={<Kit_4_DS_2CE16D0T_IRPF_C/>} />
               <Route path="/kit_8-camaras-seguridad-bala" element={<Kit_8_DS_2CE16D0T_IRPF_C/>} />
               <Route path="/kit_16-camaras-seguridad-bala" element={<Kit_16_DS_2CE16D0T_IRPF_C/>} />
-              <Route path="/prueba" element={<Prueba />} />
-              <Route path="/PriceContext" element={<PriceContext />} />
               <Route path="/inicio" element={<Inicio />} />
 
               <Route path="/Cp_3_pro_1" element={<Cp_3_pro_1 />} />
