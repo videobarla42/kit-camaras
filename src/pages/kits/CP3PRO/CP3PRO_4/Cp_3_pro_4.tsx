@@ -112,6 +112,68 @@ const Cp_3_pro_4: React.FC = () => {
     );
   };
 
+
+
+  interface Beneficio {
+    icon: string;
+    title: string;
+    description: string;
+  }
+  
+  const beneficiosData: Beneficio[] = [
+    {
+      icon: '✔️',
+      title: 'Cobertura 360° sin zonas ciegas',
+      description: 'Diseño panorámico/inclinable que ofrece 360° horizontal y 155° vertical para una vigilancia completa de tu espacio.',
+    },
+    {
+      icon: '✔️',
+      title: 'Conectividad ultrarrápida con WiFi 6',
+      description: 'Disfruta de una transmisión de video fluida y estable, incluso a través de múltiples paredes, gracias a la tecnología WiFi6.',
+    },
+    {
+      icon: '✔️',
+      title: 'Detección inteligente con IA',
+      description: 'Identifica en tiempo real la presencia de humanos, mascotas y el llanto del bebé, enviando alertas precisas a tu móvil.',
+    },
+    {
+      icon: '✔️',
+      title: 'Seguimiento automático de movimiento',
+      description: 'El algoritmo Smart Tracking sigue de forma automática los movimientos, asegurando que ningún detalle pase desapercibido.',
+    },
+    {
+      icon: '✔️',
+      title: 'Comunicación bidireccional y llamada de un toque',
+      description: 'Interactúa fácilmente con familiares o empleados mediante audio bidireccional y el práctico botón de llamada de un toque.',
+    },
+    {
+      icon: '✔️',
+      title: 'Alarma de luz y sonido',
+      description: 'Disuade intrusos con alarmas visuales y sonoras que se activan al detectar movimientos sospechosos.',
+    },
+    {
+      icon: '✔️',
+      title: 'Opciones de almacenamiento flexibles',
+      description: 'Graba y almacena tus videos en tarjeta Micro SD, en la nube o mediante NVR, garantizando el acceso seguro a tus archivos.',
+    },
+    {
+      icon: '✔️',
+      title: 'Protección avanzada de privacidad',
+      description: 'Transmisión cifrada con AES de 128 bits y obturador de privacidad para asegurar que solo tú tengas control total.',
+    },
+    {
+      icon: '✔️',
+      title: 'Instalación fácil y versátil',
+      description: 'Compatible con montaje en escritorio, pared o techo, facilitando una instalación rápida y adaptada a tus necesidades.',
+    },
+    {
+      icon: '✔️',
+      title: 'Calidad de imagen superior',
+      description: 'Captura imágenes claras y nítidas en resolución 3 MP para un monitoreo detallado y confiable.',
+    },
+  ];
+  
+
   
   const carruseles = [
     {
@@ -312,10 +374,9 @@ const Cp_3_pro_4: React.FC = () => {
 
 
 
-      <Suspense fallback={<div>Cargando...</div>}>
-        <Beneficios />
-      </Suspense>
-
+       <Suspense fallback={<div>Cargando...</div>}>
+      <Beneficios beneficios={beneficiosData} />
+    </Suspense>
 
 
       <Suspense fallback={<div>Cargando...</div>}>
