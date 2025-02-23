@@ -3,6 +3,7 @@ import useModalCompra from '@/componentes/useModalCompra';
 import { usePrice } from '@/componentes/PriceContext';
 import Descuento from '@/componentes/Descuento';
 import WhatsAppButton from '@/componentes/WhatsAppButton';
+import styles from './Cp_3_pro_1.module.css';
 
 
 
@@ -18,13 +19,13 @@ const ModalCompra = lazy(() => import('@/componentes/ModalCompra'));
 const Formulario = lazy(() => import('@/componentes/Formulario'));
 
 // Importar imágenes
-import imagen1 from '@/assets/CP3_PRO/cp_3_pro_1.webp';
+import imagen1 from '@/assets/CP3_PRO/cp_3_pro_2.webp';
 
-import headerImage from '@/assets/CP3_PRO/cp_3_pro_1.webp';
+import headerImage from '@/assets/CP3_PRO/cp_3_pro_2.webp';
 
 
   // camaras bala 2mpx (números del 50 al 64)
-import imagen50 from "@/assets/CP3_PRO/cp_3_pro_4.webp";
+import imagen50 from "@/assets/CP3_PRO/cp_3_pro_15.webp";
 import imagen51 from '@/assets/CP3_PRO/cp_3_pro_5.webp';
 import imagen52 from '@/assets/CP3_PRO/cp_3_pro_6.webp';
 import imagen53 from '@/assets/CP3_PRO/cp_3_pro_7.webp';
@@ -49,12 +50,11 @@ import imagen79 from '@/assets/micro_sd_imou_64_gb/5.webp';
 import imagen81 from '@/assets/CP3_PRO_FUENTE/fuente_cp3_pro.webp';
 
  // Importación de las imágenes
- import Image1500 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)1.webp';
- import Image1501 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)2.webp';
- import Image1502 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)3.webp';
- import Image1503 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
- import Image1504 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)2.webp';
- import Image1505 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)3.webp';
+ import Image1500 from '@/assets/CP3_PRO/cp_3_pro_1.webp';
+ import Image1501 from '@/assets/CP3_PRO/cp_3_pro_2.webp';
+ import Image1502 from '@/assets/CP3_PRO/cp_3_pro_3.webp';
+ import Image1503 from '@/assets/CP3_PRO/cp_3_pro_4.webp';
+ import Image1504 from '@/assets/INICIO/inicio.avif';
 
 
 
@@ -79,7 +79,7 @@ const Cp_3_pro_1: React.FC = () => {
 
   const abrirWhatsApp = () => {
     const phone = '3046615865';
-    const message = 'Hola, Me Interesa el kit de 4 cámaras Tipo bala 2Mpx + 4Mpx Lite de HIKVISION, Puede Brindarme Mas Informacion?';
+    const message = 'Hola, Me Interesa el kit de la camara tenda CP3PRO + Memoria, Puede Brindarme Mas Informacion?';
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -91,12 +91,10 @@ const Cp_3_pro_1: React.FC = () => {
 
  
   const headerLinks = [
-    { to: '/', text: 'Kit 4 Cámaras de seguridad Domo HIKVISION $780,000 COP', image: Image1500 },
-    { to: '/kits_8-camaras-seguridad', text: 'Kit 8 Cámaras de seguridad Domo HIKVISION $1,175,000 COP', image: Image1501 },
-    { to: '/kit_16-camaras-seguridad', text: 'Kit 16 Cámaras de seguridad Domo HIKVISION $1,990,000 COP', image: Image1502 },
-    { to: '/kit_4-camaras-seguridad-bala', text: 'Kit 4 Cámaras de seguridad Bala HIKVISION $860,000 COP', image: Image1503 },
-    { to: '/kit_8-camaras-seguridad-bala', text: 'Kit 8 Cámaras de seguridad Bala HIKVISION $1,370,000 COP', image: Image1504 },
-    { to: '/kit_16-camaras-seguridad-bala', text: 'Kit 16 Cámaras de seguridad HIKVISION $2,340,000 COP', image: Image1505 },
+    { to: '/Cp_3_pro_1', text: 'Kit 1 Cámara de seguridad de 3 MPX TENDA $189,000 COP', image: Image1500 },
+    { to: '/Cp_3_pro_1', text: 'Kit 2 Cámaras de seguridad de 3 MPX TENDA $360,000 COP', image: Image1501 },
+    { to: '/Cp_3_pro_1', text: 'Kit 4 Cámaras de seguridad de 3 MPX TENDA $699,000 COP', image: Image1502 },
+    { to: '/Cp_3_pro_1', text: 'Kit 6 Cámaras de seguridad de 3 MPX TENDA $999,000 COP', image: Image1503 },
   ];
   
   interface ImagenProps {
@@ -120,65 +118,75 @@ const Cp_3_pro_1: React.FC = () => {
     description: string;
   }
   
-  const beneficiosData: Beneficio[] = [
+  const beneficiosData = [
     {
-      icon: '✔️',
-      title: 'Cobertura 360° sin zonas ciegas',
-      description: 'Diseño panorámico/inclinable que ofrece 360° horizontal y 155° vertical para una vigilancia completa de tu espacio.',
+      icon: "✔️",
+      title: "Cobertura 360° sin zonas ciegas",
+      description:
+        "Diseño panorámico/inclinable que ofrece 360° horizontal y 155° vertical para una vigilancia completa de tu espacio.",
     },
     {
-      icon: '✔️',
-      title: 'Conectividad ultrarrápida con WiFi 6',
-      description: 'Disfruta de una transmisión de video fluida y estable, incluso a través de múltiples paredes, gracias a la tecnología WiFi6.',
+      icon: "✔️",
+      title: "Conectividad ultrarrápida con WiFi 6",
+      description:
+        "Disfruta de una transmisión de video fluida y estable, incluso a través de múltiples paredes, gracias a la tecnología WiFi6.",
     },
     {
-      icon: '✔️',
-      title: 'Detección inteligente con IA',
-      description: 'Identifica en tiempo real la presencia de humanos, mascotas y el llanto del bebé, enviando alertas precisas a tu móvil.',
+      icon: "✔️",
+      title: "Detección inteligente con IA",
+      description:
+        "Identifica en tiempo real la presencia de humanos, mascotas y el llanto del bebé, enviando alertas precisas a tu móvil.",
     },
     {
-      icon: '✔️',
-      title: 'Seguimiento automático de movimiento',
-      description: 'El algoritmo Smart Tracking sigue de forma automática los movimientos, asegurando que ningún detalle pase desapercibido.',
+      icon: "✔️",
+      title: "Seguimiento automático de movimiento",
+      description:
+        "El algoritmo Smart Tracking sigue de forma automática los movimientos, asegurando que ningún detalle pase desapercibido.",
     },
     {
-      icon: '✔️',
-      title: 'Comunicación bidireccional y llamada de un toque',
-      description: 'Interactúa fácilmente con familiares o empleados mediante audio bidireccional y el práctico botón de llamada de un toque.',
+      icon: "✔️",
+      title: "Comunicación bidireccional y llamada de un toque",
+      description:
+        "Interactúa fácilmente con familiares o empleados mediante audio bidireccional y el práctico botón de llamada de un toque.",
     },
     {
-      icon: '✔️',
-      title: 'Alarma de luz y sonido',
-      description: 'Disuade intrusos con alarmas visuales y sonoras que se activan al detectar movimientos sospechosos.',
+      icon: "✔️",
+      title: "Alarma de luz y sonido",
+      description:
+        "Disuade intrusos con alarmas visuales y sonoras que se activan al detectar movimientos sospechosos.",
     },
     {
-      icon: '✔️',
-      title: 'Opciones de almacenamiento flexibles',
-      description: 'Graba y almacena tus videos en tarjeta Micro SD, en la nube o mediante NVR, garantizando el acceso seguro a tus archivos.',
+      icon: "✔️",
+      title: "Opciones de almacenamiento flexibles",
+      description:
+        "Graba y almacena tus videos en tarjeta Micro SD, en la nube o mediante NVR, garantizando el acceso seguro a tus archivos.",
     },
     {
-      icon: '✔️',
-      title: 'Protección avanzada de privacidad',
-      description: 'Transmisión cifrada con AES de 128 bits y obturador de privacidad para asegurar que solo tú tengas control total.',
+      icon: "✔️",
+      title: "Protección avanzada de privacidad",
+      description:
+        "Transmisión cifrada con AES de 128 bits y obturador de privacidad para asegurar que solo tú tengas control total.",
     },
     {
-      icon: '✔️',
-      title: 'Instalación fácil y versátil',
-      description: 'Compatible con montaje en escritorio, pared o techo, facilitando una instalación rápida y adaptada a tus necesidades.',
+      icon: "✔️",
+      title: "Instalación fácil y versátil",
+      description:
+        "Compatible con montaje en escritorio, pared o techo, facilitando una instalación rápida y adaptada a tus necesidades.",
     },
     {
-      icon: '✔️',
-      title: 'Calidad de imagen superior',
-      description: 'Captura imágenes claras y nítidas en resolución 3 MP para un monitoreo detallado y confiable.',
+      icon: "✔️",
+      title: "Calidad de imagen superior",
+      description:
+        "Captura imágenes claras y nítidas en resolución 3 MP para un monitoreo detallado y confiable.",
     },
   ];
   
 
   const carruseles = [
     {
-      title: 'CP3 Pro - Cámara de seguridad panorámica/inclinable de 3 MP',
+      title: '1 Cámara de seguridad Robotica de 3 MP',
       description:
-        'La CP3 Pro de Tenda ofrece una cobertura completa gracias a su giro/inclinación de alta velocidad, abarcando 360° horizontalmente y 155° verticalmente (90° arriba y 65° abajo) para eliminar zonas ciegas. Con tecnología Wi-Fi 6 para una conexión ultrarrápida, detección inteligente de humanos, mascotas y llanto, y funciones avanzadas como llamada de un toque, seguimiento automático y alarmas de luz y sonido, esta cámara es la solución integral para hogares, oficinas y tiendas. Además, permite múltiples opciones de almacenamiento y garantiza la seguridad de los datos mediante cifrado avanzado.',
+        'CP3 Pro de Tenda de 3 mpx ofrece una cobertura completa gracias a su giro/inclinación de alta velocidad, abarcando 360° horizontalmente y 155° verticalmente (90° arriba y 65° abajo) para eliminar zonas ciegas. Con tecnología Wi-Fi 6 para una conexión ultrarrápida, detección inteligente de humanos, mascotas y llanto, y funciones avanzadas como llamada de un toque, seguimiento automático y alarmas de luz y sonido, esta cámara es la solución integral para hogares, oficinas y tiendas. Además, permite múltiples opciones de almacenamiento y garantiza la seguridad de los datos mediante cifrado avanzado.',
       features: [
         'Cobertura panorámica: 360° horizontal y 155° vertical (90° arriba, 65° abajo)',
         'Resolución de 3 megapíxeles para imágenes nítidas y detalladas',
@@ -209,15 +217,16 @@ const Cp_3_pro_1: React.FC = () => {
       botonTexto: 'Pague en casa!',
     },
     {
-      title: 'MICROSD IMOU CLASE 10 64GB PARA VIDEOVIGILANCIA',
+      title: 'MICROSD IMOU 64 GB',
       description:
-        'La MicroSD IMOU de 64GB Clase 10 ha sido diseñada específicamente para sistemas de videovigilancia, garantizando una alta velocidad de transferencia y un rendimiento confiable. Ideal para cámaras de seguridad, permite grabaciones en alta definición sin interrupciones y ofrece estabilidad incluso en entornos de uso continuo y condiciones extremas.',
+        'MicroSD IMOU de 64GB Clase 10 diseñada para sistemas de videovigilancia.',
       features: [
         'Capacidad total de 64GB para un amplio almacenamiento de grabaciones',
         'Clase 10: Alta velocidad de lectura y escritura para videovigilancia fluida',
         'Optimizada para sistemas de seguridad y cámaras de videovigilancia',
         'Diseñada para soportar grabación continua sin pérdida de datos',
         'Resistente a condiciones adversas y diseñada para uso prolongado',
+        ', garantiza un rendimiento confiable. Ideal para cámaras de seguridad, permite grabaciones en alta definición sin interrupciones y ofrece estabilidad incluso en entornos de uso continuo y condiciones extremas.',
         'Fácil instalación y compatibilidad con múltiples dispositivos de seguridad'
       ],
       images: [
@@ -227,9 +236,9 @@ const Cp_3_pro_1: React.FC = () => {
       botonTexto: 'Domicilio Gratis!',
     },
     {
-      title: 'Fuente de Energía Tenda 5V 1A para Cámaras de Videovigilancia',
+      title: 'Fuente de Energía Tenda',
       description:
-        'Fuente de energía de la reconocida marca Tenda, diseñada para proporcionar un suministro estable y confiable a cámaras de videovigilancia. Con una salida de 5V a 1A, esta fuente garantiza un rendimiento continuo y seguro para tus dispositivos, facilitando su integración en sistemas de seguridad modernos.',
+        'Fuente de energía 5V 1A marca Tenda, suministro estable y confiable rendimiento continuo y seguro para tus dispositivos.',
       features: [
         'Salida estable de 5V a 1A para un rendimiento óptimo',
         'Marca Tenda, sinónimo de calidad y confiabilidad',
@@ -247,19 +256,18 @@ const Cp_3_pro_1: React.FC = () => {
   const Carruseles = () => {
     return (
       <div>
-        {carruseles.map((producto, index) => (
-          <div key={index} className="producto-container">
-            <h3>{producto.title}</h3>
-            <p>{producto.description}</p>
-            {/* Usamos el componente Carrusel pasando imágenes y detalles */}
+       {carruseles.map((producto, index) => (
+          <div key={index} className={styles.productoContainer}>
+            <h3 className={styles.titulo}>{producto.title}</h3>
+            <p className={styles.descripcion}>{producto.description}</p>
             <Carrusel
               images={producto.images}
               title={producto.title}
               description={producto.description}
-              features={producto.features || []} // Si no hay características, se pasa un array vacío
+              features={producto.features || []}
             />
-            <button>{producto.botonTexto}</button>
-          </div>
+<button className={styles["boton-texto"]}>{producto.botonTexto}</button>
+</div>
         ))}
       </div>
     );
@@ -269,7 +277,7 @@ const Cp_3_pro_1: React.FC = () => {
     <Banner
       key="banner1"
       texto="Garantía de 1 año para cámaras de seguridad y DVR"
-      backgroundColor="#8B0000"
+      backgroundColor="#333333"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
@@ -277,7 +285,7 @@ const Cp_3_pro_1: React.FC = () => {
     <Banner
       key="banner2"
       texto="Garantía de 2 años para disco Seagate Skyhawk de 1 TB"
-      backgroundColor="#8B0000"
+      backgroundColor="#333333"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
@@ -285,7 +293,7 @@ const Cp_3_pro_1: React.FC = () => {
     <Banner
       key="banner3"
       texto="Accesorios del kit de cámaras"
-      backgroundColor="#8B0000"
+      backgroundColor="#333333"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
@@ -293,7 +301,7 @@ const Cp_3_pro_1: React.FC = () => {
     <Banner
       key="banner4"
       texto="Los accesorios del kit no tienen garantía."
-      backgroundColor="#8B0000"
+      backgroundColor="#333333"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
@@ -301,7 +309,7 @@ const Cp_3_pro_1: React.FC = () => {
     <Banner
       key="banner5"
       texto="Domicilios sin costo!"
-      backgroundColor="#8B0000"
+      backgroundColor="#333333"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
@@ -309,7 +317,7 @@ const Cp_3_pro_1: React.FC = () => {
     <Banner
       key="banner6"
       texto="Envio contra entrega para Bucaramanga y su área metropolitana."
-      backgroundColor="#8B0000"
+      backgroundColor="333333"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
@@ -317,7 +325,7 @@ const Cp_3_pro_1: React.FC = () => {
     <Banner
       key="banner7"
       texto="¡Entrega Inmediata!"
-      backgroundColor="#8B0000"
+      backgroundColor="#333333"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
@@ -331,6 +339,12 @@ const Cp_3_pro_1: React.FC = () => {
     abrirModalBase();
   };
 
+  const containerStyle = {
+    backgroundColor: 'orange',
+    padding: '20px' // Puedes ajustar el padding u otros estilos a tu gusto
+  };
+
+
   const horariosEntrega = `Horarios de entrega: De lunes a viernes: de 8:00 a.m. a 6:00 p.m. (jornada continua).
   Sábados: de 8:00 a.m. a 1:00 p.m.
   Domingos y festivos no hacemos entregas.
@@ -338,44 +352,56 @@ const Cp_3_pro_1: React.FC = () => {
   Aceptamos pagos en efectivo, Nequi o Bancolombia.`;
 
   const descripcionModal = `Complete el formulario para hacer llegar el pedido a su domicilio.
-  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $870,000 COP. ¡Domicilio gratis!
+  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $189,000 COP. ¡Domicilio gratis!
   Realizamos una llamada de confirmación para verificar la dirección y disponibilidad de los equipos. ¡Entrega inmediata!`;
 
   return (
-    <div>
-      <Suspense fallback={<div>Cargando...</div>}>
-        <Header links={headerLinks} extraMessage="Pago Contraentrega + Envío Gratis!" />
-      </Suspense>
+    <div className={styles.container}>
+
+  <div>
+  <Suspense fallback={<div>Cargando...</div>}>
+  <Header 
+    links={headerLinks} 
+    extraMessage="Pago Contraentrega + Envío Gratis!" 
+    theme="orange" 
+  />
+</Suspense>
+
 
       <WhatsAppButton
         phoneNumber="3046615865"
-        message="¡Hola! Me gustaría conocer mas del kit de 4 cámaras Tipo bala 2Mpx + 4Mpx Lite de HIKVISION, Puede Brindarme Mas información.?'"
+        message="¡Hola! Me gustaría conocer mas del Kit de una 1 cámara robotica (3mpx) de TENDA + MICRO SD 64 GB IMOU, Puede Brindarme Mas información.?'"
       />
 
 
 
-      <Suspense fallback={<div>Cargando...</div>}>
-        <HeroHeader
-          imagen={headerImage}
-          titulo="Solo para Bucaramanga y el área metropolitana"
-          subtitulo="Tecnología avanzada: detección de humanos y vehículos"
-          descripcion="Kit de 4 cámaras Bala Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, incluye deteccion de rostros."
-          precio="870,000"
-        >
-          <BotonCompra
-            texto="Compra el Kit de Cámaras!"
-            onClick={abrirModal}
-            color="#28a745"
-            tamaño="mediano"
-          />
-        </HeroHeader>
-      </Suspense>
+<Suspense fallback={<div>Cargando...</div>}>
+  <HeroHeader
+    imagen={headerImage}
+    titulo={<span className={styles.heroTitle}>Solo para Bucaramanga y el área metropolitana</span>}
+    subtitulo={<span className={styles.heroSubtitle}>Boton de llamada + detección de llanto, incluye detección de humanos!</span>}
+    descripcion={<span className={styles.heroDescription}>Kit de 1 cámara Robotica 3mpx TENDA + micro sd 64gb.</span>}
+    precio="189,000"
+  >
+    <BotonCompra
+      texto="Compra el Kit!"
+      onClick={abrirModal}
+      color="#FFA500"
+      tamaño="mediano"
+    />
+  </HeroHeader>
+</Suspense>
 
 
 
-         <Suspense fallback={<div>Cargando...</div>}>
-        <Beneficios beneficios={beneficiosData} />
-      </Suspense>
+
+
+<div className={styles.contenedorBeneficios}>
+  <Suspense fallback={<div>Cargando...</div>}>
+    <Beneficios beneficios={beneficiosData} className={styles.customBeneficios} />
+  </Suspense>
+</div>
+
 
 
 
@@ -383,8 +409,8 @@ const Cp_3_pro_1: React.FC = () => {
         <Banner
           key="banner0"
           texto="Descripción del kit!"
-          backgroundColor="#8B0000"
-          textColor="#FFFFFF"
+          backgroundColor="#ffffff"
+          textColor="orange"
           fontSize="2rem"
           padding="15px 30px"
         />
@@ -407,7 +433,7 @@ const Cp_3_pro_1: React.FC = () => {
               <BotonCompra
                 texto={carrusel.botonTexto}
                 onClick={() => abrirModal(index)}
-                color="#007bff"
+                color="#FFA500"
                 tamaño="mediano"
               />
             </Suspense>
@@ -432,29 +458,29 @@ const Cp_3_pro_1: React.FC = () => {
             abrirWhatsApp={abrirWhatsApp}
             hacerLlamada={hacerLlamada}
             horariosEntrega={horariosEntrega}
-            tituloModal="Confirme la Compra el Kit de 4 cámaras Bala De 2mpx"
+            tituloModal="Confirme la Compra del Kit de 1 cámara robotica (3mpx) TENDA + MICRO SD 64 GB IMOU"
             descripcionModal={descripcionModal}
           />
         </Suspense>
       )}
 
-      <Suspense fallback={<div>Cargando...</div>}>
-        <HeroHeader
-          imagen={headerImage}
-          titulo=""
-          subtitulo=""
-          descripcion=""
-          precio="870,000"
-        />
-      </Suspense>
-
+<Suspense fallback={<div>Cargando...</div>}>
+  <HeroHeader
+    imagen={headerImage}
+    titulo={<span className={styles.heroTitle}>Solo para Bucaramanga y el área metropolitana</span>}
+    subtitulo={<span className={styles.heroSubtitle}>boton de llamada + detección de llanto, incluye detección de humanos!</span>}
+    descripcion={<span className={styles.heroDescription}>Kit de 1 cámara Robotica 3mpx TENDA + micro sd 64gb.</span>}
+    precio="189,000"
+  >
+  </HeroHeader>
+</Suspense>
 
 
       <Suspense fallback={<div>Cargando...</div>}>
         <Formulario
-          titulo="confirma la Compra del kit de 4 cámaras Bala, 2mpx + grabacion a 4mpx lite"
+          titulo="confirma la Compra de la cámara tenda cp3 pro 3mpx + memoria sd de 64 gb"
           descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, ¡Domicilio gratis! Realizamos llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
-          precio="$870,000"
+          precio="$189,000"
         />
       </Suspense>
 
@@ -466,7 +492,7 @@ const Cp_3_pro_1: React.FC = () => {
         {JSON.stringify({
           "@context": "https://schema.org/",
           "@type": "Product",
-          "name": "Kit de 4 Cámaras de Seguridad HIKVISION",
+          "name": "Kit de una 1 cámara robotica (3mpx) de TENDA + MICRO SD 64 GB IMOU",
           "image": [
             imagen1,
   imagen50,
@@ -488,16 +514,15 @@ const Cp_3_pro_1: React.FC = () => {
   Image1502,
   Image1503,
   Image1504,
-  Image1505,
           ],
-        "description": "Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina.",
+        "description": "Kit de una 1 cámara robotica (3mpx) TENDA + MICRO SD 64 GB IMOU, ideal para todo tipo de negocio, casa u oficina.",
         "brand": {
           "@type": "Brand",
-          "name": "HIKVISION"
+          "name": "TENDA"
         },
         "offers": {
           "@type": "Offer",
-          "price": "860000",
+          "price": "189,0000",
           "priceCurrency": "COP",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -511,7 +536,8 @@ const Cp_3_pro_1: React.FC = () => {
 
   
     </div>
-    
+    </div>
+
   );
 };
 

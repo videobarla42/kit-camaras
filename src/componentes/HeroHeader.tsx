@@ -4,11 +4,12 @@ import './HeroHeader.css'; // Importa los estilos CSS
 // Definimos las props del HeroHeader
 interface HeroHeaderProps {
   imagen: string; // Ruta de la imagen estática
-  titulo: string; // Título del header
-  descripcion: string; // Descripción del header
-  subtitulo: string; // Subtítulo del header
+  titulo: ReactNode; // Puede ser string o JSX
+  subtitulo: ReactNode; // Puede ser string o JSX
+  descripcion: ReactNode; // Puede ser string o JSX
   precio?: string; // Propiedad opcional para el precio
-  children?: ReactNode; // Añade children como una propiedad opcional
+  children?: ReactNode; // Permite incluir elementos hijos opcionales
+  className?: string; // Clase opcional para estilos personalizados
 }
 
 const HeroHeader: React.FC<HeroHeaderProps> = ({

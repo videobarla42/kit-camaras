@@ -24,9 +24,9 @@ const Kit_8_DS_2CE16D0T_IRPF_C = lazy(() => import('./pages/kits/kit_8_DS-2CE16D
 const Kit_16_DS_2CE16D0T_IRPF_C = lazy(() => import('./pages/kits/kit_16_DS-2CE16D0T-IRPF(2.8mm)(C)/kit_16_DS-2CE16D0T-IRPF(2.8mm)(C)'));
 
 const Cp_3_pro_1 = lazy(() => import('./pages/kits/CP3PRO/CP3PRO_1/Cp_3_pro_1'));
-const Cp_3_pro_2 = lazy(() => import('./pages/kits/CP3PRO/CP3PRO_1/Cp_3_pro_1'));
-const Cp_3_pro_4 = lazy(() => import('./pages/kits/CP3PRO/CP3PRO_1/Cp_3_pro_1'));
-const Cp_3_pro_6 = lazy(() => import('./pages/kits/CP3PRO/CP3PRO_1/Cp_3_pro_1'));
+const Cp_3_pro_2 = lazy(() => import('./pages/kits/CP3PRO/CP3PRO_2/Cp_3_pro_2'));
+const Cp_3_pro_4 = lazy(() => import('./pages/kits/CP3PRO/CP3PRO_4/Cp_3_pro_4'));
+const Cp_3_pro_6 = lazy(() => import('./pages/kits/CP3PRO/CP3PRO_6/Cp_3_pro_6'));
 
 const H3c_pro_1s = lazy(() => import('./pages/kits/H3C_PRO/H3c_pro_1s'));
 const H3c_pro_2s = lazy(() => import('./pages/kits/H3C_PRO/H3c_pro_2s'));

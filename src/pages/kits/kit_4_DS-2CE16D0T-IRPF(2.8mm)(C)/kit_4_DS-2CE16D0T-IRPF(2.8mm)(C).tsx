@@ -128,7 +128,9 @@ const Kit4CamarasBala: React.FC = () => {
     { to: '/kit_8-camaras-seguridad-bala', text: 'Kit 8 Cámaras de seguridad Bala HIKVISION $1,370,000 COP', image: Image1504 },
     { to: '/kit_16-camaras-seguridad-bala', text: 'Kit 16 Cámaras de seguridad HIKVISION $2,340,000 COP', image: Image1505 },
   ];
-  
+
+
+
   interface ImagenProps {
     src: string;
     alt: string;
@@ -504,7 +506,7 @@ features: [
         <HeroHeader
           imagen={headerImage}
           titulo="Solo para Bucaramanga y el área metropolitana"
-          subtitulo="Tecnología avanzada: detección de humanos y vehículos"
+          subtitulo="Con detección de humanos y vehículos"
           descripcion="Kit de 4 cámaras Bala Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, incluye deteccion de rostros."
           precio="870,000"
         >
@@ -522,11 +524,10 @@ features: [
       <Descuento
   text={
     <>
-      <p>¡Aprovecha nuestro descuento especial!</p>
-      <p className="descuento-price">$29.99</p>
+      <h6>¡Aprovecha nuestro descuento especial!</h6>
+      <p>$29.99</p>
     </>
   }
-  position="top-right"
   onClick={handleDescuentoClick}
 />
 

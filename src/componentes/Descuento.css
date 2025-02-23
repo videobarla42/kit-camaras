@@ -51,27 +51,66 @@
 
 /* Media Query para pantallas con ancho máximo de 768px */
 @media (max-width: 768px) {
-  .descuento-container {
-    position: fixed;
-    bottom: 0;
-    left: 2px;
-    width: 25vw;   /* 25% del ancho del viewport */
-    height: 25vw;  /* Mismo valor para mantener la forma cuadrada */
-    padding: 10px;
-    background-color: rgba(255, 152, 0, 0.1); /* Color naranja con opacidad del 80% */
-    color: #000;  /* Texto negro */
-    text-align: left;
-    border-radius: 8px;  /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra ligera */
-    cursor: pointer;
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    margin-top: 67vh;
-  }
-  
-  /* Opcional: si deseas ajustar el ícono de cierre en pantallas pequeñas */
-  .close-icon {
-    font-size: 16px;
-  }
+ /* Descuento.css */
+
+.descuento-container {
+  position: fixed;
+  padding: 16px;
+  border-radius: 8px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Posiciones */
+.position-top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.position-top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.position-bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.position-bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Ícono de cierre */
+.close-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Estilos para el contenido */
+.descuento-container h6 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.descuento-container p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+
+.hidden {
+  display: none;
+}
+
 }
 

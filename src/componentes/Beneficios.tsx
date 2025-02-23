@@ -11,6 +11,7 @@ export interface Beneficio {
 // Definimos las props del componente, que incluyen un arreglo de beneficios
 interface BeneficiosProps {
   beneficios: Beneficio[];
+  className?: string; // Agregar esta prop opcional
 }
 
 const Beneficios: React.FC<BeneficiosProps> = ({ beneficios }) => {

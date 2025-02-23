@@ -17,13 +17,16 @@
         "@fortawesome/free-solid-svg-icons": "^6.7.2",
         "@fortawesome/react-fontawesome": "^0.2.2",
         "@supabase/supabase-js": "^2.48.1",
+        "assert": "^2.1.0",
         "axios": "^1.7.9",
         "bootstrap": "^5.3.3",
         "compression": "^1.7.5",
         "core-js": "^3.40.0",
+        "crypto-browserify": "^3.12.1",
         "express": "^4.21.2",
         "framer-motion": "^12.0.6",
         "lucide-react": "^0.474.0",
+        "path-browserify": "^1.0.1",
         "react": "^18.3.1",
         "react-bootstrap": "^2.10.9",
         "react-dom": "^18.3.1",
@@ -35,7 +38,9 @@
         "react-scripts": "^3.0.1",
         "react-slick": "^0.30.3",
         "regenerator-runtime": "^0.14.1",
-        "slick-carousel": "^1.8.1"
+        "slick-carousel": "^1.8.1",
+        "stream-browserify": "^3.0.0",
+        "util": "^0.12.5"
     },
     "devDependencies": {
         "@babel/core": "^7.26.8",

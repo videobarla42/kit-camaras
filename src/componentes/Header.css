@@ -223,6 +223,44 @@
   
 }
 
+
+
+/* Tema naranja */
+.header-orange {
+  background-color: orange;
+}
+
+/* Tema azul */
+.header-blue {
+  background-color: #007BFF;
+}
+
+/* Tema verde */
+.header-green {
+  background-color: #28a745;
+}
+
+
+
+
+
+/* Tema naranja */
+.header-red {
+  background-color: rgb(255, 0, 0);
+}
+
+/* Tema azul */
+.header-blue {
+  background-color: #d1dce9;
+}
+
+/* Tema verde */
+.header-green {
+  background-color: #28a745;
+}
+
+
+
 /* Estilos para pantallas grandes (escritorio) */
 @media (min-width: 769px) and (pointer: fine) {
   .hamburger {

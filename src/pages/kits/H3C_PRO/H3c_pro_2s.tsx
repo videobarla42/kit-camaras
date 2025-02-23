@@ -18,9 +18,9 @@ const ModalCompra = lazy(() => import('@/componentes/ModalCompra'));
 const Formulario = lazy(() => import('@/componentes/Formulario'));
 
 // Importar imágenes
-import imagen1 from '@/assets/H3C_PRO/h3c_pro_1.webp';
+import imagen1 from '@/assets/H3C_PRO/h3c_pro_2.webp';
 
-import headerImage from '@/assets/H3C_PRO/h3c_pro_1.webp';
+import headerImage from '@/assets/H3C_PRO/h3c_pro_2.webp';
 
 
   // camaras bala 2mpx (números del 50 al 64)

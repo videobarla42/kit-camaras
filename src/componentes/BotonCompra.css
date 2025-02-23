@@ -1,144 +1,84 @@
-/* Variables CSS globales */
-:root {
-    --color-primary: #646cff;
-    --color-text: #e0e0e0;
-    --color-background: #121212;
-    --color-input-background: #1e1e1e;
-    --color-input-border: #444;
-    --color-placeholder: #888;
+.boton-compra {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  /* No se define fondo aquí para respetar el color establecido en línea */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.829), -4px -4px 8px rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: transform 0.1s ease, filter 0.1s ease, box-shadow 0.1s ease;
+  overflow: hidden;
+}
+
+/* Pseudo-elemento para un sutil efecto de brillo */
+.boton-compra::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -90%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 10%, transparent 40%);
+  opacity: 0;
+  transform: translateX(-100%) rotate(45deg);
+  transition: opacity 0.3s ease;
+}
+
+/* Efectos al pasar el cursor */
+.boton-compra:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.05);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4), -6px -6px 12px rgba(255, 255, 255, 0.8);
+}
+
+.boton-compra:hover::before {
+  opacity: 1;
+}
+
+/* Efecto al presionar el botón */
+.boton-compra:active {
+  transform: translateY(2px);
+  filter: brightness(0.95);
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3), inset -2px -2px 4px rgba(255, 255, 255, 0.6);
+}
+
+/* Tamaños personalizados */
+.boton-compra.pequeño {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
+
+.boton-compra.mediano {
+  padding: 18px 29px;
+  font-size: 1.5rem;
+}
+
+.boton-compra.grande {
+  padding: 16px 32px;
+  font-size: 1.2rem;
+}
+
+/* Animación para el efecto "cargado" que destaca el botón */
+.boton-compra.cargado {
+  animation: glow 1.5s infinite alternate;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.7);
   }
-  
-  /* Animación de vibración */
-  @keyframes vibrar {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(-2px);
-    }
-    50% {
-      transform: translateX(2px);
-    }
-    75% {
-      transform: translateX(-2px);
-    }
+  100% {
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4), -6px -6px 12px rgba(255, 255, 255, 0.8);
   }
-  
-  /* Animación de luz brillante */
-  @keyframes luzBrillante {
-    0% {
-      background-position: -100% 0;
-    }
-    100% {
-      background-position: 200% 0;
-    }
-  }
-  
-  /* Contenedor flex para centrar el botón */
-  .contenedor-boton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: var(--color-background);
-  }
-  
-  /* Estilos base del botón */
-  .boton-compra {
-    background-color: var(--color-primary);
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: clamp(18px, 4vw, 24px); /* Ajustable entre dispositivos */
-    position: relative;
-    overflow: hidden;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Efecto de luz brillante */
-  .boton-compra::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.5),
-      transparent
-    );
-    background-size: 200% 100%;
-    animation: luzBrillante 2s linear infinite;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  /* Efectos al cargar y hover */
-  .boton-compra.cargado::after,
-  .boton-compra:hover::after {
-    opacity: 1;
-  }
-  
-  .boton-compra:hover {
-    animation: vibrar 0.s ease-in-out infinite;
-  }
-  
-  /* Estilo para botón deshabilitado */
-  .boton-compra:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  .boton-compra:disabled::after {
-    display: none;
-  }
-  
-  /* Media Queries para móviles */
-/* Media Queries para móviles */
-@media (max-width: 768px) {
-    .boton-compra {
-      padding: 12px 16px; /* Espaciado más compacto para pantallas pequeñas */
-      font-size: clamp(24px, 14vw, 38px); /* Tamaño del texto reducido */
-      border-radius: 8px; /* Bordes más redondeados para una apariencia moderna */
-    }
-  
-    .contenedor-boton {
-      padding: 20px; /* Espacio adicional alrededor del botón */
-    }
-  
-     /* Efecto de luz brillante */
-  .boton-compra::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.5),
-      transparent
-    );
-    background-size: 200% 100%;
-    animation: luzBrillante 15s linear infinite;
-    opacity: 0;
-    transition: opacity 0.1s ease;
-  }
-  
-  /* Efectos al cargar y hover */
-  .boton-compra.cargado::after,
-  .boton-compra:hover::after {
-    opacity: 1;
-  }
-  
-  .boton-compra:hover {
-    animation: vibrar 0.s ease-in-out infinite;
-  }
-  }
-  
-  
+}
+
+/* Estado deshabilitado */
+.boton-compra:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  box-shadow: none;
+  filter: none;
+}
