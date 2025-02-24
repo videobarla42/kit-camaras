@@ -237,11 +237,11 @@ const Cp_3_pro_1: React.FC = () => {
       botonTexto: 'Domicilio Gratis!',
     },
     {
-      title: 'Fuente de Energía Tenda (incluida dentro de la caja original de la camara)',
+      title: '1 Fuente de Energía Tenda',
       description:
         'Fuente de energía 5V 1A marca Tenda, suministro estable y confiable rendimiento continuo y seguro para tus dispositivos.',
       features: [
-        ' 1 Fuente de Energía Tenda (incluida dentro de la caja original de la camara)',
+        ' 1 Fuente de Energía Tenda',
         'Salida estable de 5V a 1A para un rendimiento óptimo',
         'Marca Tenda, sinónimo de calidad y confiabilidad',
         'Diseñada específicamente para la alimentación de cámaras de videovigilancia',

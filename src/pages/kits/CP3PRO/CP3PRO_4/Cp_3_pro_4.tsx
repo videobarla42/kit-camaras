@@ -241,7 +241,7 @@ const Cp_3_pro_4: React.FC = () => {
     {
       title: ' 4 Fuentes de Energía Tenda',
       description:
-        'Fuentes de energía 5V 1A marca Tenda,(incluidas dentro de la caja original de la camara) suministro estable y confiable rendimiento continuo y seguro.',
+        'Fuentes de energía 5V 1A marca Tenda, suministro estable y confiable rendimiento continuo y seguro.',
       features: [
         ' 4 Fuentes de Energía Tenda (incluidas dentro de la caja original de la camara)',
         'Salida estable de 5V a 1A para un rendimiento óptimo',
