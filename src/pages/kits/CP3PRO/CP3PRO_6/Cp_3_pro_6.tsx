@@ -54,7 +54,7 @@ import imagen81 from '@/assets/CP3_PRO_FUENTE/fuente_cp3_pro.webp';
  import Image1501 from '@/assets/CP3_PRO/cp_3_pro_2.webp';
  import Image1502 from '@/assets/CP3_PRO/cp_3_pro_3.webp';
  import Image1503 from '@/assets/CP3_PRO/cp_3_pro_4.webp';
- import Image1504 from '@/assets/INICIO/inicio.avif';
+ import Image1504 from '@/assets/INICIO/inicio.webp';
 
 
 
