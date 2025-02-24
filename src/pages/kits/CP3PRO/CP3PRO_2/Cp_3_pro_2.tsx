@@ -79,7 +79,7 @@ const Cp_3_pro_2: React.FC = () => {
 
   const abrirWhatsApp = () => {
     const phone = '3046615865';
-    const message = 'Hola, Me Interesa el kit de la camara tenda CP3PRO + Memoria, Puede Brindarme Mas Informacion?';
+    const message = 'Hola, Me Interesa el kit de 2 camaras tenda CP3PRO 3mpx + Memorias micro sd, Puede Brindarme Mas Informacion?';
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -184,11 +184,11 @@ const Cp_3_pro_2: React.FC = () => {
 
   const carruseles = [
     {
-      title: '1 Cámara de seguridad Robotica de 3 MP',
+      title: '2 Cámaras de seguridad Roboticas de 3 MP',
       description:
-        'CP3 Pro de Tenda de 3 mpx ofrece una cobertura completa gracias a su giro/inclinación de alta velocidad, abarcando 360° horizontalmente y 155° verticalmente (90° arriba y 65° abajo) para eliminar zonas ciegas. Con tecnología Wi-Fi 6 para una conexión ultrarrápida, detección inteligente de humanos, mascotas y llanto, y funciones avanzadas como llamada de un toque, seguimiento automático y alarmas de luz y sonido, esta cámara es la solución integral para hogares, oficinas y tiendas. Además, permite múltiples opciones de almacenamiento y garantiza la seguridad de los datos mediante cifrado avanzado.',
+        'CP3 Pro de Tenda de 3 mpx con detección inteligente de humanos, mascotas y llanto, y funciones avanzadas como llamada de un toque, seguimiento automático y alarmas de luz y sonido, esta cámara es la solución integral para hogares, oficinas y tiendas. Además, permite múltiples opciones de almacenamiento y garantiza la seguridad de los datos mediante cifrado avanzado.',
       features: [
-        'Cobertura panorámica: 360° horizontal y 155° vertical (90° arriba, 65° abajo)',
+        'El kit consta de 2 Cámaras de seguridad Roboticas de 3 MP + memoria sd 64 gb + Fuentes de energia',
         'Resolución de 3 megapíxeles para imágenes nítidas y detalladas',
         'Tecnología Wi-Fi 6 para conexión estable y baja latencia',
         'Detección inteligente de movimiento, humanos, mascotas y llanto con IA',
@@ -198,7 +198,9 @@ const Cp_3_pro_2: React.FC = () => {
         'Tres opciones de almacenamiento: tarjeta MicroSD, nube (con 3 meses gratuitos) y NVR',
         'Transmisión de datos cifrada con AES de 128 bits y certificado en la nube',
         'Obturador de privacidad para proteger la intimidad',
-        'Fácil instalación con soporte para montaje en escritorio, techo o pared'
+        'Fácil instalación con soporte para montaje en escritorio, techo o pared',
+        'Cobertura panorámica: 360° horizontal y 155° vertical (90° arriba, 65° abajo)',
+       
       ],
       images: [
         { src: imagen50, alt: 'Cámara CP3 Pro de Tenda mostrando su capacidad panorámica de 360°' },
@@ -221,6 +223,7 @@ const Cp_3_pro_2: React.FC = () => {
       description:
         'MicroSD IMOU de 64GB Clase 10 diseñada para sistemas de videovigilancia.',
       features: [
+        '2 microsd de 64 gb marca imou',
         'Capacidad total de 64GB para un amplio almacenamiento de grabaciones',
         'Clase 10: Alta velocidad de lectura y escritura para videovigilancia fluida',
         'Optimizada para sistemas de seguridad y cámaras de videovigilancia',
@@ -236,10 +239,11 @@ const Cp_3_pro_2: React.FC = () => {
       botonTexto: 'Domicilio Gratis!',
     },
     {
-      title: 'Fuente de Energía Tenda',
+      title: ' 2 Fuentes de Energía Tenda',
       description:
-        'Fuente de energía 5V 1A marca Tenda, suministro estable y confiable rendimiento continuo y seguro para tus dispositivos.',
+        'Fuentes de energía 5V 1A marca Tenda,(incluidas dentro de la caja original de la camara) suministro estable y confiable rendimiento continuo y seguro.',
       features: [
+        ' 2 Fuentes de Energía Tenda (incluidas dentro de la caja original de la camara)',
         'Salida estable de 5V a 1A para un rendimiento óptimo',
         'Marca Tenda, sinónimo de calidad y confiabilidad',
         'Diseñada específicamente para la alimentación de cámaras de videovigilancia',
@@ -275,24 +279,25 @@ const Cp_3_pro_2: React.FC = () => {
 
   const banners = [
     <Banner
-      key="banner1"
-      texto="Garantía de 1 año para cámaras de seguridad y DVR"
-      backgroundColor="#333333"
-      textColor="#FFFFFF"
-      fontSize="2rem"
-      padding="15px 30px"
-    />,
-    <Banner
-      key="banner2"
-      texto="Garantía de 2 años para disco Seagate Skyhawk de 1 TB"
-      backgroundColor="#333333"
-      textColor="#FFFFFF"
-      fontSize="2rem"
-      padding="15px 30px"
-    />,
+  key="banner1"
+  texto="Garantía de 1 año para cámara de seguridad y micro SD de 64 GB."
+  backgroundColor="#333333"
+  textColor="#FFFFFF"
+  fontSize="2rem"
+  padding="15px 30px"
+/>,
+<Banner
+  key="banner2"
+  texto="Fuentes de energía incluidas dentro de la caja original de cada cámara."
+  backgroundColor="#333333"
+  textColor="#FFFFFF"
+  fontSize="2rem"
+  padding="15px 30px"
+/>,
+
     <Banner
       key="banner3"
-      texto="Accesorios del kit de cámaras"
+      texto="Los terminos y condiciones de la garantia incluidas en el recibo de compra."
       backgroundColor="#333333"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -300,7 +305,7 @@ const Cp_3_pro_2: React.FC = () => {
     />,
     <Banner
       key="banner4"
-      texto="Los accesorios del kit no tienen garantía."
+      texto="Los terminos y condiciones de la garantia incluidas en el recibo de compra."
       backgroundColor="#333333"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -352,7 +357,7 @@ const Cp_3_pro_2: React.FC = () => {
   Aceptamos pagos en efectivo, Nequi o Bancolombia.`;
 
   const descripcionModal = `Complete el formulario para hacer llegar el pedido a su domicilio.
-  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $189,000 COP. ¡Domicilio gratis!
+  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $360,000 COP. ¡Domicilio gratis!
   Realizamos una llamada de confirmación para verificar la dirección y disponibilidad de los equipos. ¡Entrega inmediata!`;
 
   return (
@@ -370,7 +375,7 @@ const Cp_3_pro_2: React.FC = () => {
 
       <WhatsAppButton
         phoneNumber="3046615865"
-        message="¡Hola! Me gustaría conocer mas del Kit de una 1 cámara robotica (3mpx) de TENDA + MICRO SD 64 GB IMOU, Puede Brindarme Mas información.?'"
+        message="¡Hola! Me gustaría conocer mas del Kit de una 2 cámaras roboticas (3mpx) de TENDA + 2 MICRO SD 64 GB IMOU, Puede Brindarme Mas información.?'"
       />
 
 
@@ -380,8 +385,8 @@ const Cp_3_pro_2: React.FC = () => {
     imagen={headerImage}
     titulo={<span className={styles.heroTitle}>Solo para Bucaramanga y el área metropolitana</span>}
     subtitulo={<span className={styles.heroSubtitle}>Boton de llamada + detección de llanto, incluye detección de humanos!</span>}
-    descripcion={<span className={styles.heroDescription}>Kit de 1 cámara Robotica 3mpx TENDA + micro sd 64gb.</span>}
-    precio="189,000"
+    descripcion={<span className={styles.heroDescription}>Kit de 2 cámaras Roboticas 3mpx TENDA + 2 micro sd 64gb.</span>}
+    precio="360,000"
   >
     <BotonCompra
       texto="Compra el Kit!"
@@ -458,7 +463,7 @@ const Cp_3_pro_2: React.FC = () => {
             abrirWhatsApp={abrirWhatsApp}
             hacerLlamada={hacerLlamada}
             horariosEntrega={horariosEntrega}
-            tituloModal="Confirme la Compra del Kit de 1 cámara robotica (3mpx) TENDA + MICRO SD 64 GB IMOU"
+            tituloModal="Confirme la Compra del Kit de 2 cámaras roboticas (3mpx) TENDA + 2 MICRO SD 64 GB IMOU"
             descripcionModal={descripcionModal}
           />
         </Suspense>
@@ -469,8 +474,8 @@ const Cp_3_pro_2: React.FC = () => {
     imagen={headerImage}
     titulo={<span className={styles.heroTitle}>Solo para Bucaramanga y el área metropolitana</span>}
     subtitulo={<span className={styles.heroSubtitle}>boton de llamada + detección de llanto, incluye detección de humanos!</span>}
-    descripcion={<span className={styles.heroDescription}>Kit de 1 cámara Robotica 3mpx TENDA + micro sd 64gb.</span>}
-    precio="189,000"
+    descripcion={<span className={styles.heroDescription}>Kit de 2 cámaras Roboticas de 3mpx TENDA + 2 micro sd 64gb.</span>}
+    precio="360,000"
   >
   </HeroHeader>
 </Suspense>
@@ -478,9 +483,9 @@ const Cp_3_pro_2: React.FC = () => {
 
       <Suspense fallback={<div>Cargando...</div>}>
         <Formulario
-          titulo="confirma la Compra de la cámara tenda cp3 pro 3mpx + memoria sd de 64 gb"
+          titulo="confirma la Compra de la cámara tenda cp3 pro 3mpx + 2 memorias sd de 64 gb"
           descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, ¡Domicilio gratis! Realizamos llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
-          precio="$189,000"
+          precio="$360,000"
         />
       </Suspense>
 
@@ -492,7 +497,7 @@ const Cp_3_pro_2: React.FC = () => {
         {JSON.stringify({
           "@context": "https://schema.org/",
           "@type": "Product",
-          "name": "Kit de una 1 cámara robotica (3mpx) de TENDA + MICRO SD 64 GB IMOU",
+          "name": "Kit de 2 cámaras Roboticas de 3mpx TENDA + 2 micro sd 64gb imou",
           "image": [
             imagen1,
   imagen50,
@@ -515,14 +520,14 @@ const Cp_3_pro_2: React.FC = () => {
   Image1503,
   Image1504,
           ],
-        "description": "Kit de una 1 cámara robotica (3mpx) TENDA + MICRO SD 64 GB IMOU, ideal para todo tipo de negocio, casa u oficina.",
+        "description": "Kit de una 2 cámaras roboticas de (3mpx) TENDA + 2 MICRO SD 64 GB IMOU, ideal para todo tipo de negocio, casa u oficina.",
         "brand": {
           "@type": "Brand",
           "name": "TENDA"
         },
         "offers": {
           "@type": "Offer",
-          "price": "189,0000",
+          "price": "360,000",
           "priceCurrency": "COP",
           "availability": "https://schema.org/InStock",
           "seller": {

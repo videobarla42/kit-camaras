@@ -217,10 +217,11 @@ const Cp_3_pro_1: React.FC = () => {
       botonTexto: 'Pague en casa!',
     },
     {
-      title: 'MICROSD IMOU 64 GB',
+      title: '1 MICROSD IMOU 64 GB',
       description:
         'MicroSD IMOU de 64GB Clase 10 diseñada para sistemas de videovigilancia.',
       features: [
+        '1 microsd de 64 gb marca imou',
         'Capacidad total de 64GB para un amplio almacenamiento de grabaciones',
         'Clase 10: Alta velocidad de lectura y escritura para videovigilancia fluida',
         'Optimizada para sistemas de seguridad y cámaras de videovigilancia',
@@ -236,10 +237,11 @@ const Cp_3_pro_1: React.FC = () => {
       botonTexto: 'Domicilio Gratis!',
     },
     {
-      title: 'Fuente de Energía Tenda',
+      title: 'Fuente de Energía Tenda (incluida dentro de la caja original de la camara)',
       description:
         'Fuente de energía 5V 1A marca Tenda, suministro estable y confiable rendimiento continuo y seguro para tus dispositivos.',
       features: [
+        ' 1 Fuente de Energía Tenda (incluida dentro de la caja original de la camara)',
         'Salida estable de 5V a 1A para un rendimiento óptimo',
         'Marca Tenda, sinónimo de calidad y confiabilidad',
         'Diseñada específicamente para la alimentación de cámaras de videovigilancia',
@@ -275,24 +277,25 @@ const Cp_3_pro_1: React.FC = () => {
 
   const banners = [
     <Banner
-      key="banner1"
-      texto="Garantía de 1 año para cámaras de seguridad y DVR"
-      backgroundColor="#333333"
-      textColor="#FFFFFF"
-      fontSize="2rem"
-      padding="15px 30px"
-    />,
-    <Banner
-      key="banner2"
-      texto="Garantía de 2 años para disco Seagate Skyhawk de 1 TB"
-      backgroundColor="#333333"
-      textColor="#FFFFFF"
-      fontSize="2rem"
-      padding="15px 30px"
-    />,
+    key="banner1"
+    texto="Garantía de 1 año para cámara de seguridad y micro SD de 64 GB."
+    backgroundColor="#333333"
+    textColor="#FFFFFF"
+    fontSize="2rem"
+    padding="15px 30px"
+  />,
+  <Banner
+    key="banner2"
+    texto="Fuente de energía incluida dentro de la caja original de la cámara."
+    backgroundColor="#333333"
+    textColor="#FFFFFF"
+    fontSize="2rem"
+    padding="15px 30px"
+  />,
+  
     <Banner
       key="banner3"
-      texto="Accesorios del kit de cámaras"
+      texto="terminos y condiciones de la garantia incluidas en el recibo de compra."
       backgroundColor="#333333"
       textColor="#FFFFFF"
       fontSize="2rem"
@@ -300,7 +303,7 @@ const Cp_3_pro_1: React.FC = () => {
     />,
     <Banner
       key="banner4"
-      texto="Los accesorios del kit no tienen garantía."
+      texto="Los terminos y condiciones de la garantia incluidas en el recibo de compra."
       backgroundColor="#333333"
       textColor="#FFFFFF"
       fontSize="2rem"
