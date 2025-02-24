@@ -19,9 +19,9 @@ const ModalCompra = lazy(() => import('@/componentes/ModalCompra'));
 const Formulario = lazy(() => import('@/componentes/Formulario'));
 
 // Importar imágenes
-import imagen1 from '@/assets/CP3_PRO/cp_3_pro_2.webp';
+import imagen1 from '@/assets/CP3_PRO/cp_3_pro_4.webp';
 
-import headerImage from '@/assets/CP3_PRO/cp_3_pro_2.webp';
+import headerImage from '@/assets/CP3_PRO/cp_3_pro_4.webp';
 
 
   // camaras bala 2mpx (números del 50 al 64)
@@ -93,7 +93,7 @@ const Cp_3_pro_6: React.FC = () => {
   const headerLinks = [
     { to: '/Cp_3_pro_1', text: 'Kit 1 Cámara de seguridad de 3 MPX TENDA $189,000 COP', image: Image1500 },
     { to: '/Cp_3_pro_1', text: 'Kit 2 Cámaras de seguridad de 3 MPX TENDA $360,000 COP', image: Image1501 },
-    { to: '/Cp_3_pro_1', text: 'Kit 4 Cámaras de seguridad de 3 MPX TENDA $699,000 COP', image: Image1502 },
+    { to: '/Cp_3_pro_1', text: 'Kit 4 Cámaras de seguridad de 3 MPX TENDA $690,000 COP', image: Image1502 },
     { to: '/Cp_3_pro_1', text: 'Kit 6 Cámaras de seguridad de 3 MPX TENDA $999,000 COP', image: Image1503 },
   ];
   

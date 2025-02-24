@@ -93,7 +93,7 @@ const Cp_3_pro_2: React.FC = () => {
   const headerLinks = [
     { to: '/Cp_3_pro_1', text: 'Kit 1 Cámara de seguridad de 3 MPX TENDA $189,000 COP', image: Image1500 },
     { to: '/Cp_3_pro_1', text: 'Kit 2 Cámaras de seguridad de 3 MPX TENDA $360,000 COP', image: Image1501 },
-    { to: '/Cp_3_pro_1', text: 'Kit 4 Cámaras de seguridad de 3 MPX TENDA $699,000 COP', image: Image1502 },
+    { to: '/Cp_3_pro_1', text: 'Kit 4 Cámaras de seguridad de 3 MPX TENDA $690,000 COP', image: Image1502 },
     { to: '/Cp_3_pro_1', text: 'Kit 6 Cámaras de seguridad de 3 MPX TENDA $999,000 COP', image: Image1503 },
   ];
   
