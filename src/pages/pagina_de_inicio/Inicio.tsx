@@ -10,6 +10,9 @@ import Catalogos from '../pagina_de_inicio/componentes_inicio/Catalogos';
 import EligeS24 from '../pagina_de_inicio/componentes_inicio/EligeS24';
 import "../pagina_de_inicio/componentes_inicio/kitshikvision-wrapper.css";
 import Footer from '../pagina_de_inicio/componentes_inicio/Footer';
+import WhatsAppButton from '@/componentes/WhatsAppButton';
+
+
 
 // Importar imágenes para los distintos carruseles
 import image1 from '../../assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)1.webp';
@@ -71,12 +74,12 @@ const Inicio: React.FC = () => {
         <div className="contenido">
           <h4>Pide Un Tecnico Hoy!</h4>
         </div>
-        <BannerInicio texto="kits de camaras hikvision" />   
+        <BannerInicio texto="kits de camaras" />   
       </div>
       
       <div className="kitshikvision-wrapper">
         <div className="kitshikvision-section">
-          <h3 className="kit-title">Kits de 4 Cámaras Hikvision</h3>
+          <h3 className="kit-title">HIKVISION</h3>
           <KitShikVision
             images={kitImages1}
             links={kitLinks1}
@@ -85,7 +88,7 @@ const Inicio: React.FC = () => {
           />
         </div>
         <div className="kitshikvision-section">
-          <h3 className="kit-title">Kits de 8 Cámaras Hikvision</h3>
+          <h3 className="kit-title">EZVIZ</h3>
           <KitShikVision
             images={kitImages2}
             links={kitLinks2}
@@ -94,7 +97,7 @@ const Inicio: React.FC = () => {
           />
         </div>
         <div className="kitshikvision-section">
-          <h3 className="kit-title">Kits Variados Hikvision</h3>
+          <h3 className="kit-title">TENDA</h3>
           <KitShikVision
             images={kitImages3}
             links={kitLinks3}
@@ -106,14 +109,21 @@ const Inicio: React.FC = () => {
 
       <Catalogos />
 
+
       <EligeS24 
         title="Elige S24" 
-        description="Ofrecemos los mejores sistemas de seguridad para proteger lo que más importa." 
-        phone="123-456-7890" 
+        description="Ofrecemos los mejores sistemas de seguridad para proteger lo que más te importa." 
+        phone="3046615865" 
         imageSrc="/images/security.jpg" 
       />
       <Footer />
+
+      <WhatsAppButton
+        phoneNumber="3046615865"
+        message="¡Hola! Me gustaría conocer mas del kit de 4 cámaras Tipo bala 2Mpx + 4Mpx Lite de HIKVISION, Puede Brindarme Mas información.?'"
+      />
     </div>
+    
   );
 };
 

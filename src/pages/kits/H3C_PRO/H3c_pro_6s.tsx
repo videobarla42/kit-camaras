@@ -46,13 +46,11 @@ import imagen79 from '@/assets/micro_sd_imou_64_gb/5.webp';
 import imagen81 from '@/assets/H3C_PRO FUENTE/fuente h3cpro.webp';
 
  // Importación de las imágenes
- import Image1500 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)1.webp';
- import Image1501 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)2.webp';
- import Image1502 from '@/assets/DS-2CE56D0T-IRPF(2.8mm)(C)/DS-2CE56D0T-IRPF(2.8mm)(C)3.webp';
- import Image1503 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)1.webp';
- import Image1504 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)2.webp';
- import Image1505 from '@/assets/DS-2CE16D0T-IRPF(2.8mm)(C)/DS-2CE16D0T-IRPF(2.8mm)(C)3.webp';
-
+ import Image1500 from '@/assets/H3C_PRO/h3c_pro_1.webp';
+ import Image1501 from '@/assets/H3C_PRO/h3c_pro_2.webp';
+ import Image1502 from '@/assets/H3C_PRO/h3c_pro_3.webp';
+ import Image1503 from '@/assets/H3C_PRO/h3c_pro_4.webp';
+ import Image1504 from '@/assets/H3C_PRO/h3c_pro_1.webp';
 
 
 const H3c_pro_6s: React.FC = () => {          
@@ -88,12 +86,10 @@ const H3c_pro_6s: React.FC = () => {
 
  
   const headerLinks = [
-    { to: '/', text: 'Kit 4 Cámaras de seguridad Domo HIKVISION $780,000 COP', image: Image1500 },
-    { to: '/kits_8-camaras-seguridad', text: 'Kit 8 Cámaras de seguridad Domo HIKVISION $1,175,000 COP', image: Image1501 },
-    { to: '/kit_16-camaras-seguridad', text: 'Kit 16 Cámaras de seguridad Domo HIKVISION $1,990,000 COP', image: Image1502 },
-    { to: '/kit_4-camaras-seguridad-bala', text: 'Kit 4 Cámaras de seguridad Bala HIKVISION $860,000 COP', image: Image1503 },
-    { to: '/kit_8-camaras-seguridad-bala', text: 'Kit 8 Cámaras de seguridad Bala HIKVISION $1,370,000 COP', image: Image1504 },
-    { to: '/kit_16-camaras-seguridad-bala', text: 'Kit 16 Cámaras de seguridad HIKVISION $2,340,000 COP', image: Image1505 },
+    { to: '/H3c_pro_1s', text: 'H3c_pro_1s', image: Image1500 },
+    { to: '/H3c_pro_2s', text: 'H3c_pro_2s', image: Image1501 },
+    { to: '/H3c_pro_4s', text: 'H3c_pro_4s', image: Image1502 },
+    { to: '/H3c_pro_6s', text: 'H3c_pro_6s', image: Image1503 },
   ];
   
   interface ImagenProps {
@@ -120,93 +116,96 @@ const H3c_pro_6s: React.FC = () => {
   const beneficiosData: Beneficio[] = [
     {
       icon: '✔️',
-      title: 'Tecnología avanzada de detección de movimiento',
-      description: 'Clasificación precisa basada en aprendizaje profundo e identificación de humanos y vehículos.',
+      title: 'Resolución 2K+ (4mpx)',
+      description: 'Disfruta de una calidad de video superior en resolución 2K+ para detalles nítidos, tanto de día como de noche.',
     },
     {
       icon: '✔️',
-      title: 'Protección perimetral mejorada',
-      description: 'Detección facial con análisis inteligente para monitoreo y seguridad.',
+      title: 'Visión nocturna a color',
+      description: 'Ve a color incluso en condiciones de baja luz gracias a los focos integrados para una visión nocturna mejorada de hasta 30 metros.',
     },
     {
       icon: '✔️',
-      title: 'Eficiencia en grabación y almacenamiento',
-      description: 'Compresión H.265 Pro+ que reduce espacio de almacenamiento sin comprometer calidad.',
+      title: 'Detección avanzada con IA',
+      description: 'La tecnología de IA identifica de forma precisa a las personas en movimiento y reduce alertas falsas causadas por hojas o insectos.',
     },
     {
       icon: '✔️',
-      title: 'Flexibilidad en conexiones',
-      description: 'Compatibilidad con HDTVI, AHD, HDCVI, CVBS e IP, soportando hasta 6 canales IP.',
+      title: 'Resistencia a condiciones climáticas extremas',
+      description: 'Clasificación IP67 para resistir lluvia, tormentas y nieve, asegurando funcionamiento confiable en cualquier condición meteorológica.',
     },
     {
       icon: '✔️',
-      title: 'Almacenamiento robusto',
-      description: 'Capacidad de hasta 10 TB por disco y soporte para hasta 32 usuarios remotos simultáneamente.',
+      title: 'Almacenamiento flexible y seguro',
+      description: 'Admite tarjetas microSD de hasta 512 GB y almacenamiento en la nube EZVIZ CloudPlay con encriptación total para proteger tus grabaciones.',
     },
     {
       icon: '✔️',
-      title: 'Durabilidad garantizada',
-      description: 'Operación estable en temperaturas extremas y construcción resistente.',
+      title: 'Audio bidireccional',
+      description: 'Comunicación clara con micrófono incorporado y altavoces, permite escuchar y hablar en tiempo real con quienes estén cerca de la cámara.',
     },
     {
       icon: '✔️',
-      title: 'Alta calidad de imagen',
-      description: 'Resolución Full HD 1080P para detalles precisos en monitoreo y grabación.',
+      title: 'Integración con sistemas de hogar inteligente',
+      description: 'Compatible con Alexa, Google Assistant e IFTTT para control por voz y monitoreo fácil desde dispositivos inteligentes.',
     },
     {
       icon: '✔️',
-      title: 'Visión nocturna infrarroja',
-      description: 'Rango IR de hasta 20 m para vigilancia en total oscuridad.',
+      title: 'Tecnología de compresión H.265+',
+      description: 'Reduce el tamaño de los archivos de video hasta un 50% sin sacrificar la calidad, lo que facilita el almacenamiento y la transmisión.',
     },
     {
       icon: '✔️',
-      title: 'Resistencia a condiciones extremas',
-      description: 'Operación estable en temperaturas de -40°C a 60°C y construcción resistente a la humedad.',
+      title: 'Diseño compacto y elegante',
+      description: 'Fácil instalación con un diseño compacto para colocarla en exteriores, debajo de aleros o en paredes exteriores con alta conectividad WiFi.',
     },
     {
       icon: '✔️',
-      title: 'Funciones inteligentes',
-      description: 'Ajuste automático de ganancia (AGC) para imágenes claras en condiciones de poca luz.',
+      title: 'Seguridad mejorada con sirena y luces',
+      description: 'En caso de intrusión, la cámara activa una sirena fuerte y enciende dos focos para disuadir a los intrusos.',
     },
   ];
 
 
   const carruseles = [
     {
-      title: 'CP3 Pro - Cámara de seguridad panorámica/inclinable de 3 MP',
+      title: '6 CÁMARAS EZVIZ H3C WIFI 2K 4MP',
       description:
-        'La CP3 Pro de Tenda ofrece una cobertura completa gracias a su giro/inclinación de alta velocidad, abarcando 360° horizontalmente y 155° verticalmente (90° arriba y 65° abajo) para eliminar zonas ciegas. Con tecnología Wi-Fi 6 para una conexión ultrarrápida, detección inteligente de humanos, mascotas y llanto, y funciones avanzadas como llamada de un toque, seguimiento automático y alarmas de luz y sonido, esta cámara es la solución integral para hogares, oficinas y tiendas. Además, permite múltiples opciones de almacenamiento y garantiza la seguridad de los datos mediante cifrado avanzado.',
+        'EZVIZ H3C 2K⁺ 4MP, visión nocturna a color. funciones avanzadas detección de movimiento humano, reconocimiento de manos, comunicación bidireccional, y defensa activa. almacenamiento local en tarjetas microSD de hasta 512 GB.',
       features: [
-        'Cobertura panorámica: 360° horizontal y 155° vertical (90° arriba, 65° abajo)',
-        'Resolución de 3 megapíxeles para imágenes nítidas y detalladas',
-        'Tecnología Wi-Fi 6 para conexión estable y baja latencia',
-        'Detección inteligente de movimiento, humanos, mascotas y llanto con IA',
-        'Función de llamada de un toque para comunicación directa',
-        'Seguimiento automático (Smart Tracking) para captar movimientos',
-        'Alarmas activas de luz y sonido ante intrusiones',
-        'Tres opciones de almacenamiento: tarjeta MicroSD, nube (con 3 meses gratuitos) y NVR',
-        'Transmisión de datos cifrada con AES de 128 bits y certificado en la nube',
-        'Obturador de privacidad para proteger la intimidad',
-        'Fácil instalación con soporte para montaje en escritorio, techo o pared'
+        '6 Cámaras EZVIZ H3C Wifi 2K 4MP + 6 memorias microsd 64gb',
+        'Resolución 2K⁺ para una claridad excepcional de día y de noche.',
+        'Visión nocturna a color gracias a los focos de luz blanca integrados.',
+        'Detección de movimiento humano.',
+        'Comunicación bidireccional a través de audio en vivo.',
+        'Defensa activa con sirena y focos al detectar intrusos.',
+        ' Diseñada para exteriores, soporta condiciones climáticas adversas',
+        'Clasificación IP67, resistente a lluvia, tormentas y nieve.',
+        'Integración con Alexa y Google Assistant para control por voz.',
+        'Almacenamiento local hasta 512 GB en tarjeta microSD.',
+        'Almacenamiento en la nube con EZVIZ CloudPlay (requiere suscripción).',
+        'Tecnología de compresión H.265+ para conpresion de videos a alta calidad.',
+        'Funciones avanzadas de seguridad: protección de datos y zonas de no grabación.',
       ],
       images: [
-        { src: imagen50, alt: 'Cámara CP3 Pro de Tenda mostrando su capacidad panorámica de 360°' },
-        { src: imagen51, alt: 'Vista frontal de la cámara CP3 Pro con diseño moderno' },
-        { src: imagen52, alt: 'Detalle del montaje versátil de la CP3 Pro en escritorio, techo o pared' },
-        { src: imagen53, alt: 'Interfaz de la aplicación TDSEE controlando la cámara CP3 Pro' },
-        { src: imagen54, alt: 'Cámara CP3 Pro de Tenda mostrando su capacidad panorámica de 360°' },
-        { src: imagen55, alt: 'Vista frontal de la cámara CP3 Pro con diseño moderno' },
-        { src: imagen56, alt: 'Detalle del montaje versátil de la CP3 Pro en escritorio, techo o pared' },
-        { src: imagen57, alt: 'Interfaz de la aplicación TDSEE controlando la cámara CP3 Pro' },
-        { src: imagen58, alt: 'Cámara CP3 Pro de Tenda mostrando su capacidad panorámica de 360°' },
+        { src: imagen50, alt: 'Vista de la cámara EZVIZ H3C Wifi de 2K 4MP desde el frente' },
+        { src: imagen51, alt: 'Cámara EZVIZ H3C instalada en exterior con visión nocturna a color' },
+        { src: imagen52, alt: 'Vista de la interfaz de la aplicación EZVIZ controlando la cámara' },
+        { src: imagen53, alt: 'Cámara EZVIZ H3C Wifi de 2K 4MP mostrando el campo de visión amplio' },
+        { src: imagen54, alt: 'Cámara EZVIZ H3C con visión nocturna activada' },
+        { src: imagen55, alt: 'Vista de la cámara EZVIZ H3C con enfoque en la calidad de imagen 2K⁺' },
+        { src: imagen56, alt: 'Instalación de la cámara EZVIZ H3C en una pared exterior' },
+        { src: imagen57, alt: 'Aplicación EZVIZ mostrando alertas de movimiento humano' },
+        { src: imagen58, alt: 'Vista completa de la cámara EZVIZ H3C con todos sus accesorios' },
       ],
       botonTexto: 'Pague en casa!',
     },
     {
-      title: 'MICROSD IMOU CLASE 10 64GB PARA VIDEOVIGILANCIA',
+      title: '6 MICROSD IMOU CLASE 10 64GB PARA VIDEOVIGILANCIA',
       description:
         'La MicroSD IMOU de 64GB Clase 10 ha sido diseñada específicamente para sistemas de videovigilancia, garantizando una alta velocidad de transferencia y un rendimiento confiable. Ideal para cámaras de seguridad, permite grabaciones en alta definición sin interrupciones y ofrece estabilidad incluso en entornos de uso continuo y condiciones extremas.',
       features: [
+        '6 MICROSD IMOU CLASE 10 64GB PARA VIDEOVIGILANCIA',
         'Capacidad total de 64GB para un amplio almacenamiento de grabaciones',
         'Clase 10: Alta velocidad de lectura y escritura para videovigilancia fluida',
         'Optimizada para sistemas de seguridad y cámaras de videovigilancia',
@@ -221,18 +220,19 @@ const H3c_pro_6s: React.FC = () => {
       botonTexto: 'Domicilio Gratis!',
     },
     {
-      title: 'Fuente de Energía Tenda 5V 1A para Cámaras de Videovigilancia',
+      title: '6 FUENTES DE ENERGÍA EZVIZ',
       description:
-        'Fuente de energía de la reconocida marca Tenda, diseñada para proporcionar un suministro estable y confiable a cámaras de videovigilancia. Con una salida de 5V a 1A, esta fuente garantiza un rendimiento continuo y seguro para tus dispositivos, facilitando su integración en sistemas de seguridad modernos.',
+        'Fuente de energía 12V 1A marca EZVIZ, suministro estable y confiable rendimiento continuo y seguro para tus dispositivos.',
       features: [
-        'Salida estable de 5V a 1A para un rendimiento óptimo',
+        '6 Fuentes de Energía EZVIZ',
+        'Salida estable de 12V a 1A para un rendimiento óptimo',
         'Marca Tenda, sinónimo de calidad y confiabilidad',
         'Diseñada específicamente para la alimentación de cámaras de videovigilancia',
         'Compatible con una amplia gama de dispositivos de seguridad',
         'Fácil instalación y conexión para integrar en sistemas existentes'
       ],
       images: [
-        { src: imagen81, alt: 'Fuente de Energía Tenda 5V 1A conectada a una cámara de videovigilancia' },
+        { src: imagen81, alt: 'Fuente de Energía EZVIZ 12 - 1A conectada a una cámara de videovigilancia' },
       ],
       botonTexto: 'Obtenga el Kit!',
     },
@@ -261,33 +261,34 @@ const H3c_pro_6s: React.FC = () => {
 
   const banners = [
     <Banner
-      key="banner1"
-      texto="Garantía de 1 año para cámaras de seguridad y DVR"
-      backgroundColor="#8B0000"
-      textColor="#FFFFFF"
-      fontSize="2rem"
-      padding="15px 30px"
-    />,
-    <Banner
-      key="banner2"
-      texto="Garantía de 2 años para disco Seagate Skyhawk de 1 TB"
-      backgroundColor="#8B0000"
-      textColor="#FFFFFF"
-      fontSize="2rem"
-      padding="15px 30px"
-    />,
+    key="banner1"
+    texto="Garantía de 1 año para cámara de seguridad y micro SD de 64 GB."
+    backgroundColor="#333333"
+    textColor="#FFFFFF"
+    fontSize="2rem"
+    padding="15px 30px"
+  />,
+  <Banner
+    key="banner2"
+    texto="Fuente de energía incluida dentro de la caja original de la cámara."
+    backgroundColor="#333333"
+    textColor="#FFFFFF"
+    fontSize="2rem"
+    padding="15px 30px"
+  />,
+  
     <Banner
       key="banner3"
-      texto="Accesorios del kit de cámaras"
-      backgroundColor="#8B0000"
+      texto="terminos y condiciones de la garantia incluidas en el recibo de compra."
+      backgroundColor="#333333"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
     />,
     <Banner
       key="banner4"
-      texto="Los accesorios del kit no tienen garantía."
-      backgroundColor="#8B0000"
+      texto="Los terminos y condiciones de la garantia incluidas en el recibo de compra."
+      backgroundColor="#333333"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
@@ -295,7 +296,7 @@ const H3c_pro_6s: React.FC = () => {
     <Banner
       key="banner5"
       texto="Domicilios sin costo!"
-      backgroundColor="#8B0000"
+      backgroundColor="#333333"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
@@ -303,7 +304,7 @@ const H3c_pro_6s: React.FC = () => {
     <Banner
       key="banner6"
       texto="Envio contra entrega para Bucaramanga y su área metropolitana."
-      backgroundColor="#8B0000"
+      backgroundColor="333333"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
@@ -311,7 +312,7 @@ const H3c_pro_6s: React.FC = () => {
     <Banner
       key="banner7"
       texto="¡Entrega Inmediata!"
-      backgroundColor="#8B0000"
+      backgroundColor="#333333"
       textColor="#FFFFFF"
       fontSize="2rem"
       padding="15px 30px"
@@ -332,7 +333,7 @@ const H3c_pro_6s: React.FC = () => {
   Aceptamos pagos en efectivo, Nequi o Bancolombia.`;
 
   const descripcionModal = `Complete el formulario para hacer llegar el pedido a su domicilio.
-  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $870,000 COP. ¡Domicilio gratis!
+  Pago contra entrega solo en Bucaramanga y su área metropolitana, por un valor total de $1,520,000 COP. ¡Domicilio gratis!
   Realizamos una llamada de confirmación para verificar la dirección y disponibilidad de los equipos. ¡Entrega inmediata!`;
 
   return (
@@ -343,7 +344,7 @@ const H3c_pro_6s: React.FC = () => {
 
       <WhatsAppButton
         phoneNumber="3046615865"
-        message="¡Hola! Me gustaría conocer mas del kit de 4 cámaras Tipo bala 2Mpx + 4Mpx Lite de HIKVISION, Puede Brindarme Mas información.?'"
+        message="¡Hola! Me gustaría conocer mas del kit de 6 cámaras bala de 4Mpx de ezviz + memorias micro sd 64gb, Puede Brindarme Mas Informacion?'"
       />
 
 
@@ -479,7 +480,6 @@ const H3c_pro_6s: React.FC = () => {
   Image1502,
   Image1503,
   Image1504,
-  Image1505,
           ],
         "description": "Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina.",
         "brand": {
