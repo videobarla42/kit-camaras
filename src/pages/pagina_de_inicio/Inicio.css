@@ -5,89 +5,140 @@
   box-sizing: border-box;
 }
 
-/* Estilos generales para el contenido */
+/* ===================== */
+/* Contenedor Principal  */
+/* ===================== */
 .contenido {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px 20px;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 2vw, 2rem);
   width: 100%;
-  max-width: 1200px; /* Limita el ancho máximo del contenedor */
-  margin: 0 auto; /* Centra el contenedor en la página */
+  max-width: 1200px; /* Ancho máximo definido */
+  margin: 0 auto;
 }
 
+/* Título dentro del contenido */
 .contenido h4 {
-  font-size: clamp(1.8rem, 5vw, 2.25rem); /* Tamaño responsivo: mínimo, ideal y máximo */
+  font-size: clamp(1.8rem, 5vw, 2.25rem); /* Tamaño mínimo, ideal y máximo */
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: clamp(1rem, 2vw, 2rem);
 }
 
+/* ===================== */
+/* Sección KitShikvision */
+/* ===================== */
 .kitshikvision-wrapper {
   overflow: hidden;
   width: 100%;
-  min-height: 300px; /* Ajusta según el tamaño de tus elementos */
+  min-height: clamp(300px, 40vh, 500px); /* Altura adaptable */
+  position: relative;
 }
-
 
 .kitshikvision-section {
   position: relative;
-  margin-bottom: 30px;
-  z-index: 10;  /* Asegurarse de que la sección esté por encima */
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  z-index: 10; /* Asegura que esté por encima de elementos de fondo */
 }
 
+/* Título del kit: se posiciona de forma relativa al contenedor */
 .kit-title {
-  font-size: 24px; /* Asegúrate de que el tamaño sea adecuado */
-  color: #333; /* Cambia a un color que contraste con el fondo */
-  margin-bottom: 10px;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  padding: clamp(0.5rem, 1vw, 1rem);
+  border-radius: 5px;
+  z-index: 100;
 }
 
+/* ===================== */
+/* Diseño de Contenido con CSS Grid */
+/* ===================== */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: clamp(1rem, 2vw, 2rem);
+  width: 100%;
+  padding: clamp(1rem, 2vw, 2rem);
+}
 
+/* ===================== */
+/* Adaptabilidad de Imágenes y Videos */
+/* ===================== */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
 
+/* ===================== */
+/* Navegación y Menú Hamburguesa */
+/* ===================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: clamp(0.5rem, 1vw, 1rem);
+  background-color: #333;
+}
 
-/* Media Query para pantallas más pequeñas (hasta 768px) */
-/* Media Query para pantallas más pequeñas (hasta 768px) */
+.navbar-logo {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: #fff;
+}
+
+/* Menú principal */
+.navbar-menu {
+  display: flex;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.navbar-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+/* Botón hamburguesa: se oculta en pantallas grandes */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+/* ===================== */
+/* Ajustes Mínimos con Media Query para móviles */
+/* (Solo para casos muy puntuales) */
+/* ===================== */
 @media (max-width: 768px) {
-  .contenido {
-    padding: 20px 10px;
-    margin-left: 0; /* Eliminar margin-left para no desplazar el título */
+  /* En móviles, se oculta el menú principal y se muestra el botón hamburguesa */
+  .navbar-menu {
+    display: none;
   }
-
-  .contenido h4 {
-    font-size: clamp(1.4rem, 5vw, 2.25rem);
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 1px;
-    margin-left: -900px; /* Asegurar que no haya desplazamiento */
-    margin-top: 85px;
+  .hamburger {
+    display: flex;
   }
-
-  .kitshikvision-wrapper {
-    overflow: hidden;
-    width: 100%;
-    min-height: 300px; /* Asegúrate de que el contenedor tenga suficiente altura */
+  /* Ejemplo: cuando se active el menú (usando JavaScript para agregar la clase .active) */
+  .navbar-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    padding: clamp(0.5rem, 1vw, 1rem);
+    width: min(90vw, 300px);
   }
-
-  .kitshikvision-section {
-    position: relative;
-    margin-bottom: 30px;
-    z-index: 10;  /* Asegurarse de que la sección esté por encima */
-  }
-  
-
-  .kit-title {
-    top: -20px;
-    left: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    z-index: 9999;
-    background-color: rgba(255, 0, 0, 0.589);  /* Para ver si el título aparece */
-    margin-left: -900px;
-  }
-  
 }

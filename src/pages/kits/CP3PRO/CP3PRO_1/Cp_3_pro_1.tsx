@@ -186,7 +186,7 @@ const Cp_3_pro_1: React.FC = () => {
     {
       title: '1 Cámara de seguridad Robotica de 3 MP',
       description:
-        'CP3 Pro de Tenda de 3 mpx ofrece una cobertura completa gracias a su giro/inclinación de alta velocidad, abarcando 360° horizontalmente y 155° verticalmente (90° arriba y 65° abajo) para eliminar zonas ciegas. Con tecnología Wi-Fi 6 para una conexión ultrarrápida, detección inteligente de humanos, mascotas y llanto, y funciones avanzadas como llamada de un toque, seguimiento automático y alarmas de luz y sonido, esta cámara es la solución integral para hogares, oficinas y tiendas. Además, permite múltiples opciones de almacenamiento y garantiza la seguridad de los datos mediante cifrado avanzado.',
+      'CP3 Pro de Tenda de 3 mpx con detección inteligente de humanos, mascotas, llanto y funciones avanzadas como llamada de un toque, seguimiento automático, alarmas de luz y sonido, esta cámara es la solución integral para hogares, oficinas y tiendas. Además, permite múltiples opciones de almacenamiento y garantiza la seguridad de los datos mediante cifrado avanzado.',
       features: [
         'Cobertura panorámica: 360° horizontal y 155° vertical (90° arriba, 65° abajo)',
         'Resolución de 3 megapíxeles para imágenes nítidas y detalladas',

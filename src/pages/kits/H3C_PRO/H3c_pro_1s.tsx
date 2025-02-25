@@ -87,10 +87,10 @@ const H3c_pro_1s: React.FC = () => {
 
  
   const headerLinks = [
-    { to: '/H3c_pro_1s', text: 'H3c_pro_1s', image: Image1500 },
-    { to: '/H3c_pro_2s', text: 'H3c_pro_2s', image: Image1501 },
-    { to: '/H3c_pro_4s', text: 'H3c_pro_4s', image: Image1502 },
-    { to: '/H3c_pro_6s', text: 'H3c_pro_6s', image: Image1503 },
+    { to: '/H3c_pro_1s', text: 'kit de 1 cámara bala de 4Mpx de ezviz H3cpro $280,000 COP', image: Image1500 },
+    { to: '/H3c_pro_2s', text: 'kit de 2 cámaras bala de 4Mpx de ezviz H3cpro $530,000 COP', image: Image1501 },
+    { to: '/H3c_pro_4s', text: 'kit de 4 cámaras bala de 4Mpx de ezviz H3cpro $990,000 COP', image: Image1502 },
+    { to: '/H3c_pro_6s', text: 'kit de 6 cámaras bala de 4Mpx de ezviz H3cpro $1,495,000 COP', image: Image1503 },
   ];
   
   interface ImagenProps {
@@ -346,27 +346,27 @@ const H3c_pro_1s: React.FC = () => {
 
       <WhatsAppButton
         phoneNumber="3046615865"
-        message="¡Hola! Me gustaría conocer mas del kit de 4 cámaras Tipo bala 2Mpx + 4Mpx Lite de HIKVISION, Puede Brindarme Mas información.?'"
+        message="¡Hola! Me gustaría conocer mas del kit de 1 cámara bala de 4Mpx de ezviz + memoria micro sd 64gb, Puede Brindarme Mas Informacion?'"
       />
 
 
+<Suspense fallback={<div>Cargando...</div>}>
+  <HeroHeader
+    imagen={headerImage}
+    titulo="Solo para Bucaramanga y el área metropolitana"
+    subtitulo="Visión nocturna a color + detección de humanos"
+    descripcion="Kit de 1 cámara Bala 2K+ (4mpx) de EZVIZ, 1 MicroSD 64GB + 1 Fuente de energía."
+    precio="280,000"
+  >
+    <BotonCompra
+      texto="¡Compra el Kit!"
+      onClick={abrirModal}
+      color="#28a745"
+      tamaño="mediano"
+    />
+  </HeroHeader>
+</Suspense>
 
-      <Suspense fallback={<div>Cargando...</div>}>
-        <HeroHeader
-          imagen={headerImage}
-          titulo="Solo para Bucaramanga y el área metropolitana"
-          subtitulo="Tecnología avanzada: detección de humanos y vehículos"
-          descripcion="Kit de 4 cámaras Bala Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, incluye deteccion de rostros."
-          precio="870,000"
-        >
-          <BotonCompra
-            texto="Compra el Kit de Cámaras!"
-            onClick={abrirModal}
-            color="#28a745"
-            tamaño="mediano"
-          />
-        </HeroHeader>
-      </Suspense>
 
 
 
@@ -429,7 +429,7 @@ const H3c_pro_1s: React.FC = () => {
             abrirWhatsApp={abrirWhatsApp}
             hacerLlamada={hacerLlamada}
             horariosEntrega={horariosEntrega}
-            tituloModal="Confirme la Compra el Kit de 4 cámaras Bala De 2mpx"
+            tituloModal="Confirme la Compra del Kit de 1 cámara Bala 2K+ (4mpx) de EZVIZ, 1 MicroSD 64GB + 1 Fuente de energía."
             descripcionModal={descripcionModal}
           />
         </Suspense>
@@ -441,7 +441,7 @@ const H3c_pro_1s: React.FC = () => {
           titulo=""
           subtitulo=""
           descripcion=""
-          precio="870,000"
+          precio="280,000"
         />
       </Suspense>
 
@@ -449,9 +449,9 @@ const H3c_pro_1s: React.FC = () => {
 
       <Suspense fallback={<div>Cargando...</div>}>
         <Formulario
-          titulo="confirma la Compra del kit de 4 cámaras Bala, 2mpx + grabacion a 4mpx lite"
+          titulo="Confirme la Compra del Kit de 1 cámara Bala 2K+ (4mpx) de EZVIZ, 1 MicroSD 64GB + 1 Fuente de energía."
           descripcion="Por favor, complete el formulario para hacer llegar el pedido a su domicilio. Pago contra entrega solo en Bucaramanga y su área metropolitana, ¡Domicilio gratis! Realizamos llamada de confirmación para verificar la dirección y la disponibilidad de los equipos. ¡Entrega inmediata!"
-          precio="$870,000"
+          precio="$280,000"
         />
       </Suspense>
 
@@ -463,7 +463,7 @@ const H3c_pro_1s: React.FC = () => {
         {JSON.stringify({
           "@context": "https://schema.org/",
           "@type": "Product",
-          "name": "Kit de 4 Cámaras de Seguridad HIKVISION",
+          "name": "Kit de 1 cámara Bala 2K+ (4mpx) de EZVIZ, 1 MicroSD 64GB + 1 Fuente de energía.",
           "image": [
             imagen1,
   imagen50,
@@ -484,14 +484,14 @@ const H3c_pro_1s: React.FC = () => {
   Image1503,
   Image1504,
           ],
-        "description": "Kit de 4 cámaras Full HD 1080p (2mpx) de HIKVISION con grabación a 4 mpx Lite, ideales para todo tipo de negocio, casa u oficina.",
+        "description": "Kit de 1 Cámaras EZVIZ H3C PRO 2K+ (4MPX) ofrece vigilancia de alta definición con visión nocturna a color, detección inteligente de humanos y audio bidireccional, e incluye 1 MicroSD de 64GB y 1 fuente de energía para un almacenamiento seguro y funcionamiento continuo. Diseñado para protección 24/7 en interiores y exteriores, cuenta con resistencia IP67 y control remoto a través de la app EZVIZ.",
         "brand": {
           "@type": "Brand",
           "name": "HIKVISION"
         },
         "offers": {
           "@type": "Offer",
-          "price": "860000",
+          "price": "28000",
           "priceCurrency": "COP",
           "availability": "https://schema.org/InStock",
           "seller": {

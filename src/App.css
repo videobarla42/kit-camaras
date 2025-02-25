@@ -1,4 +1,6 @@
-/* Variables CSS globales */
+/* ===================== */
+/* Variables CSS Globales */
+/* ===================== */
 :root {
   --font-size-small: clamp(12px, 2vw, 14px);
   --font-size-medium: clamp(14px, 3vw, 16px);
@@ -15,7 +17,15 @@
   --color-shadow: rgba(0, 0, 0, 0.5); /* Sombra oscura */
 }
 
-/* Estilos base */
+/* ===================== */
+/* Estilos Base Globales  */
+/* ===================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   font-size: var(--font-size-medium);
@@ -26,21 +36,96 @@ body {
   color: var(--color-text);
 }
 
+/* Global: imágenes y videos adaptables */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Deshabilita el scroll del body cuando el modal está abierto */
 body.modal-open {
   overflow: hidden;
 }
 
+/* Contenedor principal de la aplicación */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: var(--spacing-large);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
 }
 
-/* Estilos para el logo */
+/* ===================== */
+/* Estilos para la Navegación */
+/* ===================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-medium);
+  background-color: var(--color-background);
+  position: relative;
+}
+
+.navbar-logo {
+  font-size: var(--font-size-large);
+  color: var(--color-text);
+}
+
+/* Menú principal */
+.navbar-menu {
+  display: flex;
+  gap: var(--spacing-large);
+}
+
+.navbar-menu a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: var(--font-size-medium);
+}
+
+/* Botón hamburguesa: oculto en pantallas grandes */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-large);
+}
+
+/* ===================== */
+/* Ejemplo de Layout con CSS Grid para Tarjetas */
+/* ===================== */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: var(--spacing-large);
+  width: 100%;
+  padding: var(--spacing-medium);
+}
+
+.card {
+  padding: var(--spacing-large);
+  background-color: var(--color-card-background);
+  border-radius: clamp(8px, 2vw, 12px);
+  box-shadow: 0 4px 8px var(--color-shadow);
+}
+
+/* Texto para "Read the docs" */
+.read-the-docs {
+  color: var(--color-text);
+  font-size: var(--font-size-small);
+}
+
+/* ===================== */
+/* Estilos para el Logo y Modal */
+/* ===================== */
 .logo {
-  height: clamp(4em, 10vw, 6em); /* Altura responsiva */
+  height: clamp(4em, 10vw, 6em);
   padding: var(--spacing-medium);
   will-change: filter;
   transition: filter 300ms;
@@ -54,23 +139,24 @@ body.modal-open {
   filter: drop-shadow(0 0 2em var(--color-secondary));
 }
 
-/* App.css */
 .modal-content {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  padding: var(--spacing-medium);
+  border-radius: clamp(5px, 2vw, 10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .close {
   cursor: pointer;
 }
 
-/* Animación del logo */
+/* ===================== */
+/* Animación del Logo */
+/* ===================== */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -86,22 +172,9 @@ body.modal-open {
   }
 }
 
-/* Estilos para las tarjetas */
-.card {
-  padding: var(--spacing-large);
-  background-color: var(--color-card-background); /* Fondo oscuro para tarjetas */
-  border-radius: clamp(8px, 2vw, 12px);
-  box-shadow: 0 4px 8px var(--color-shadow); /* Sombra oscura */
-  margin-bottom: var(--spacing-medium);
-}
-
-/* Estilos para el texto "Read the docs" */
-.read-the-docs {
-  color: var(--color-text);
-  font-size: var(--font-size-small);
-}
-
-/* Ajustes para el carrusel */
+/* ===================== */
+/* Estilos para el Carrusel */
+/* ===================== */
 .slick-slide img {
   width: 100%;
   height: auto;
@@ -120,14 +193,15 @@ body.modal-open {
 }
 
 .slick-dots li button:before {
-  color: var(--color-text); /* Color de los puntos */
+  color: var(--color-text);
   font-size: var(--font-size-small);
 }
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
   z-index: 1;
   font-size: var(--font-size-large);
-  color: var(--color-text); /* Color de las flechas */
+  color: var(--color-text);
 }
 
 .slick-prev {
@@ -136,4 +210,31 @@ body.modal-open {
 
 .slick-next {
   right: clamp(10px, 2vw, 20px);
+}
+
+/* ===================== */
+/* Ajustes Específicos para Móviles */
+/* (Usamos media queries solo para casos puntuales) */
+/* ===================== */
+@media (max-width: 768px) {
+  /* En móviles, se oculta el menú principal y se muestra el botón hamburguesa */
+  .navbar-menu {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  /* Ejemplo: menú activo al hacer clic (controlado con JavaScript) */
+  .navbar-menu.active {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-background);
+    padding: var(--spacing-medium);
+    border-radius: clamp(8px, 2vw, 12px);
+    z-index: 100;
+  }
 }

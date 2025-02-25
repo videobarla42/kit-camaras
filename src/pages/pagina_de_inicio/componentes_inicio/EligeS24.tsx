@@ -20,18 +20,16 @@ const EligeS24: React.FC<EligeS24Props> = ({ title, description, phone, imageSrc
           <p className="lead">{description}</p>
           <p className="fs-5">
             Ofrecemos garantía en todos nuestros trabajos y llevamos un registro de cada producto y servicio que adquiere con nosotros. 
-            Respondemos rápidamente a cualquier solicitud de garantía, cubrimos todos los costos de operación y transporte de los equipos que requieren revisión desde el lugar donde están instalados. 
-            Este respaldo incluye sistemas centrales como videograbadores y su disco duro, paneles de alarma y controladores de acceso.
+            Respondemos rápidamente a cualquier solicitud de garantía, cubrimos todos los costos de operación y transporte de los equipos que requieren revisión desde el lugar donde están instalados.
           </p>
           <p className="fs-5">
             Ofrecemos una amplia gama de sistemas de seguridad de alta calidad. Todos nuestros productos son escogidos directamente en distribución, sin pasar por almacenamiento, lo que nos permite ofrecer equipos siempre actualizados, con fechas de fabricación recientes y lo último en tecnología, para brindar el mayor nivel de protección en su hogar o negocio.
           </p>
           <p className="fs-5">
-            Garantizamos una instalación segura y discreta. 
-            Si ya compró sus equipos de seguridad, cuente con nosotros para la instalación. Aseguramos que todo funcione de manera óptima.
+            Garantizamos una instalación segura y discreta y aseguramos que todo funcione de manera óptima.
           </p>
           <p className="fs-5">
-            <strong>¡Somos expertos en ángulos de visión y movimiento!</strong>
+            <strong>¡Tenemos experiencia en ángulos de visión y movimiento!</strong>
           </p>
           <p className="fs-5">
             Personalizamos nuestras soluciones de seguridad a su medida. Formulamos sus equipos de seguridad.  

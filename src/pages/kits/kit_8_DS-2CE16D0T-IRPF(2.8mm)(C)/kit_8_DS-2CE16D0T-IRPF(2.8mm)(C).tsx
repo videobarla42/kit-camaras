@@ -340,7 +340,7 @@ const Kit4CamarasBala: React.FC = () => {
       botonTexto: 'Domicilio Gratis!'
     },
     {
-      title: '4 pares de Borneras',
+      title: '8 pares de Borneras',
       description: 'borneras eléctricas para la conexión y distribución de energía de las cámaras.',
       features: [
         'Conexión y distribución de energía de manera segura y eficiente entre dispositivos eléctricos, como cámaras de seguridad y otros equipos',

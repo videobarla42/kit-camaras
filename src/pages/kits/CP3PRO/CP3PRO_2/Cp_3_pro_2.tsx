@@ -186,7 +186,7 @@ const Cp_3_pro_2: React.FC = () => {
     {
       title: '2 Cámaras de seguridad Roboticas de 3 MP',
       description:
-        'CP3 Pro de Tenda de 3 mpx con detección inteligente de humanos, mascotas y llanto, y funciones avanzadas como llamada de un toque, seguimiento automático y alarmas de luz y sonido, esta cámara es la solución integral para hogares, oficinas y tiendas. Además, permite múltiples opciones de almacenamiento y garantiza la seguridad de los datos mediante cifrado avanzado.',
+      'CP3 Pro de Tenda de 3 mpx con detección inteligente de humanos, mascotas, llanto y funciones avanzadas como llamada de un toque, seguimiento automático, alarmas de luz y sonido, esta cámara es la solución integral para hogares, oficinas y tiendas. Además, permite múltiples opciones de almacenamiento y garantiza la seguridad de los datos mediante cifrado avanzado.',
       features: [
         'El kit consta de 2 Cámaras de seguridad Roboticas de 3 MP + memoria sd 64 gb + Fuentes de energia',
         'Resolución de 3 megapíxeles para imágenes nítidas y detalladas',
