@@ -99,6 +99,7 @@
   left: 13%; /* Centra el contenedor en el eje horizontal */
   transform: translateX(-50%); /* Ajusta para que quede perfectamente centrado */
   z-index: 10; /* Para que esté por encima de otros elementos */
+  
 }
 
 
@@ -109,16 +110,19 @@
   background-color: #ccc;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  
 }
 
 .dot.active {
   background-color: #666;
   transform: scale(1.2);
+  
 }
 
 /* Disable text selection while dragging */
 .kit-slider.dragging {
   cursor: grabbing;
+  
 }
  
   

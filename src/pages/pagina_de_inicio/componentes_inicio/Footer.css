@@ -25,7 +25,7 @@ footer {
   @media (max-width: 768px) {
     footer {
       padding: 1rem 0; 
-      margin-left: -900px;       /* Se reduce el padding en dispositivos pequeños */
+      margin-left: -165vh;       /* Se reduce el padding en dispositivos pequeños */
     }
     
     footer p,

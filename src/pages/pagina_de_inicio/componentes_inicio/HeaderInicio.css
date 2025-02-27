@@ -123,7 +123,7 @@
     background-position: center;
     background-repeat: no-repeat;
     aspect-ratio: 16 / 9;
-    margin-left: -30px;
+    margin-left: -10px;
     height: 65vh;
     /* Se elimina height: 65vh para evitar conflictos con el aspect-ratio */
   }
@@ -137,9 +137,10 @@
   }
   
   .titulo {
-    font-size: 2rem; /* Reduce el tamaño de la fuente */
+    font-size: 1.6rem; /* Reduce el tamaño de la fuente */
     margin-bottom: 10px;
     margin-top: -15px;
+    margin-left: -9vh;
   }
   
   .descripcion {
@@ -150,7 +151,7 @@
   }
   
   .imagenes-container {
-    width: 90%; /* Ajusta el ancho de las imágenes al disponible */
+    width: 85%; /* Ajusta el ancho de las imágenes al disponible */
     height: auto; /* Altura automática */
     margin-top: 20px;
   }
@@ -165,8 +166,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 30vh;
+  width: 90px;
+  height: 33vh;
   position: absolute;
   margin-top: 300px;
   margin-left: 50px;
@@ -178,7 +179,7 @@
   margin-top: 8px; /* Espacio entre la imagen y el texto */
   text-align: center;
   font-size: 14px;
-  color: #ece6e6;
+  color: #e7e2e2;
   /* Aplica la animación al aparecer */
   animation: fadeInUp 0.5s ease-out;
 }
