@@ -6,14 +6,14 @@
 
 .container {
   position: relative;
-  width: 64.5vh;
+  width: 50.5vh;
   max-width: 1200vh;
   margin: 0;
-  padding: 1vh 7vw;
+  padding: 0vh 7.5vw;
   background-color: #f8f9fa;
   margin-bottom: 0.1vh;
   top: -3vh;
-  margin-left: -6vw;
+  margin-left: -5.5vw;
 }
 
 

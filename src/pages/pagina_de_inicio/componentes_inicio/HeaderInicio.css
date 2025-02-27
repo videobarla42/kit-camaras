@@ -64,7 +64,18 @@
   height: 300px;
   position: absolute;
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  flex-direction: column;
+
 }
+
+
+.descripcion-imagen {
+  margin-top: 8px; /* Espacio entre la imagen y el texto */
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
 
 .phone-frame img {
   border-radius: 15px;
@@ -162,6 +173,30 @@
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
+
+.descripcion-imagen {
+  margin-top: 8px; /* Espacio entre la imagen y el texto */
+  text-align: center;
+  font-size: 14px;
+  color: #ece6e6;
+  /* Aplica la animación al aparecer */
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
 .phone-frame img {
   border-radius: 15px;
   width: 100%;
@@ -193,3 +228,12 @@
 }
 
 }
+
+
+
+
+
+
+
+
+

@@ -12,7 +12,20 @@ import imagen9 from '../../../assets/INICIO_VERTICAL/4.webp';
 
 const HeaderInicio: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9]; // Ahora tienes más imágenes
+  const images = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9];
+
+  // Array con textos descriptivos para cada imagen
+  const descriptions = [
+    "Camaras ip",
+    "Camaras analogas",
+    "Alarmas cableadas",
+    "Control de acceso",
+    "Camras Roboticas",
+    "Camaras Inalambricas",
+    "Video porteros",
+    "Alarmas inalambricas",
+    "Alarmas Cableadas",
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,15 +37,11 @@ const HeaderInicio: React.FC = () => {
 
   return (
     <div className="header-inicio">
-      {/* Contenedor para el texto */}
       <div className="texto-container">
-        <h1 className="titulo">camaras de seguridad en bucaramanga y santander</h1>
-        <p className="descripcion">
-          venta e instalacion.
-        </p>
+        <h1 className="titulo">Cámaras de seguridad en Bucaramanga y Santander</h1>
+        <p className="descripcion">Venta e instalación.</p>
       </div>
 
-      {/* Contenedor para las imágenes */}
       <div className="imagenes-container">
         {images.map((image, index) => {
           let className = 'phone-frame';
@@ -49,6 +58,11 @@ const HeaderInicio: React.FC = () => {
           return (
             <div key={index} className={className}>
               <img src={image} alt={`Imagen ${index + 1}`} />
+              {index === currentIndex && (
+                <div className="descripcion-imagen">
+                  <p>{descriptions[index]}</p>
+                </div>
+              )}
             </div>
           );
         })}

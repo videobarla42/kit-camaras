@@ -24,22 +24,30 @@
     .row {
         flex-direction: column;
         align-items: center;
+        margin-left: 0vh;
     }
 
+    .catalogo-container {
+        position: relative;
+        overflow: hidden; /* Evita que el contenido se salga */
+        margin-left: 10vh;
+      }
+
     .catalogo-image {
-        max-width: 28%;
+        max-width: 32%;
         margin-bottom: 0rem;
-        margin-left: -165vh;
+        margin-left: -163vh;
     }
 
     .btn-large {
-        position: relative;
         top: -6px;
-        padding: 0.8rem 1.5rem;
-        font-size: 2rem;
-        margin-left: -65vh;
+        padding: 0.8rem 0.5rem;
+        font-size: 1.8rem;
+        margin-left: -60vh;
         word-wrap: break-word;    /* Rompe palabras largas si es necesario */
         white-space: normal;      /* Permite que el texto se ajuste en múltiples líneas */
+        z-index: 2;
+
 
 
     }
