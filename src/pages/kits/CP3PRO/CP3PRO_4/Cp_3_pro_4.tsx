@@ -25,7 +25,7 @@ import headerImage from '@/assets/CP3_PRO/cp_3_pro_3.webp';
 
 
   // camaras bala 2mpx (números del 50 al 64)
-import imagen50 from "@/assets/CP3_PRO/cp_3_pro_15.webp";
+import imagen50 from "@/assets/CP3_PRO/cp_3_pro_17.webp";
 import imagen51 from '@/assets/CP3_PRO/cp_3_pro_5.webp';
 import imagen52 from '@/assets/CP3_PRO/cp_3_pro_6.webp';
 import imagen53 from '@/assets/CP3_PRO/cp_3_pro_7.webp';
@@ -36,14 +36,14 @@ import imagen57 from '@/assets/CP3_PRO/cp_3_pro_11.webp';
 import imagen58 from '@/assets/CP3_PRO/cp_3_pro_12.webp';
 import imagen59 from '@/assets/CP3_PRO/cp_3_pro_13.webp';
 import imagen60 from '@/assets/CP3_PRO/cp_3_pro_14.webp';
-import imagen61 from '@/assets/CP3_PRO/cp_3_pro_15.webp';
+import imagen61 from '@/assets/CP3_PRO/cp_3_pro_17.webp';
 
 
 // dvr de 4mpx (números del 65 al 79)
 
 
 // micro sd imou 64 gb (números del 65 al 79)
-import imagen78 from '@/assets/micro_sd_imou_64_gb/1.webp';
+import imagen78 from '@/assets/micro_sd_imou_64_gb/3.webp';
 import imagen79 from '@/assets/micro_sd_imou_64_gb/5.webp';
 
 // materiales

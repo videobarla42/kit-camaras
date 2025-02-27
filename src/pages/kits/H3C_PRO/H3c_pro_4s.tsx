@@ -24,7 +24,7 @@ import headerImage from '@/assets/H3C_PRO/h3c_pro_3.webp';
 
 
   // camaras bala 2mpx (números del 50 al 64)
-import imagen50 from "@/assets/H3C_PRO/h3c_pro_5.webp";
+import imagen50 from "@/assets/H3C_PRO/h3c_pro_16.webp";
 import imagen51 from '@/assets/H3C_PRO/h3c_pro_6.webp';
 import imagen52 from '@/assets/H3C_PRO/h3c_pro_7.webp';
 import imagen53 from '@/assets/H3C_PRO/h3c_pro_8.webp';
@@ -39,7 +39,7 @@ import imagen58 from '@/assets/H3C_PRO/h3c_pro_13.webp';
 
 
 // micro sd imou 64 gb (números del 65 al 79)
-import imagen78 from '@/assets/micro_sd_imou_64_gb/1.webp';
+import imagen78 from '@/assets/micro_sd_imou_64_gb/3.webp';
 import imagen79 from '@/assets/micro_sd_imou_64_gb/5.webp';
 
 // materiales

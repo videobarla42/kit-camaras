@@ -24,7 +24,7 @@ import headerImage from '@/assets/H3C_PRO/h3c_pro_1.webp';
 
 
   // camaras bala 2mpx (números del 50 al 64)
-import imagen50 from "@/assets/H3C_PRO/h3c_pro_5.webp";
+import imagen50 from "@/assets/H3C_PRO/h3c_pro_14.webp";
 import imagen51 from '@/assets/H3C_PRO/h3c_pro_6.webp';
 import imagen52 from '@/assets/H3C_PRO/h3c_pro_7.webp';
 import imagen53 from '@/assets/H3C_PRO/h3c_pro_8.webp';
@@ -33,6 +33,7 @@ import imagen55 from '@/assets/H3C_PRO/h3c_pro_10.webp';
 import imagen56 from '@/assets/H3C_PRO/h3c_pro_11.webp';
 import imagen57 from '@/assets/H3C_PRO/h3c_pro_12.webp';
 import imagen58 from '@/assets/H3C_PRO/h3c_pro_13.webp';
+
 
 
 // dvr de 4mpx (números del 65 al 79)

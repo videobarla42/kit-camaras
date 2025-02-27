@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './HeaderInicio.css';
-import imagen1 from '../../../assets/22.webp';
-import imagen2 from '../../../assets/23.webp';
-import imagen3 from '../../../assets/24.webp';
-import imagen4 from '../../../assets/25.webp';
-import imagen5 from '../../../assets/26.webp';
-import imagen6 from '../../../assets/27.webp';
-import imagen7 from '../../../assets/28.webp';
-import imagen8 from '../../../assets/29.webp';
-import imagen9 from '../../../assets/30.webp';
+import imagen1 from '../../../assets/INICIO_VERTICAL/2.webp';
+import imagen2 from '../../../assets/INICIO_VERTICAL/3.webp';
+import imagen3 from '../../../assets/INICIO_VERTICAL/4.webp';
+import imagen4 from '../../../assets/INICIO_VERTICAL/5.webp';
+import imagen5 from '../../../assets/INICIO_VERTICAL/6.webp';
+import imagen6 from '../../../assets/INICIO_VERTICAL/7.webp';
+import imagen7 from '../../../assets/INICIO_VERTICAL/8.webp';
+import imagen8 from '../../../assets/INICIO_VERTICAL/9.webp';
+import imagen9 from '../../../assets/INICIO_VERTICAL/4.webp';
 
 const HeaderInicio: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
