@@ -1,34 +1,49 @@
 @import 'reset.css';
 
+/* Ajusta la imagen para que ocupe el 100% del ancho del contenedor */
 .catalogo-image {
     width: 100%;
     height: auto;
-    max-height: 650px;
-    object-fit: cover;
-    object-position: 25% center; /* Mueve la imagen hacia la izquierda */
 }
 
+/* Estilos personalizados para los botones grandes */
 .btn-large {
-    font-size: 2rem;
-    padding: 10px 20px;
-    position: absolute; /* Posicionamiento absoluto para ajustar la posición */
-    left: 5%; /* Ajusta el porcentaje según cuánto quieras moverlo a la izquierda */
-    transform: translateX(-50%); /* Ajusta la posición exacta si es necesario */
+    position: relative;
+    top: -96px;
+    padding: 0.8rem 1.5rem;
+    font-size: 4rem;
+    margin-left: -65vh;
+    word-wrap: break-word;    /* Rompe palabras largas si es necesario */
+    white-space: normal;      /* Permite que el texto se ajuste en múltiples líneas */
+
 }
 
-/* Media queries para pantallas pequeñas */
+/* Estilos responsivos para pantallas de hasta 768px */
 @media (max-width: 768px) {
+    /* Asegurar que las columnas se apilen en dispositivos pequeños */
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .catalogo-image {
-        height: 300px !important;
-        width: 90%;
-        object-fit: cover;
-        margin-left: -60px; /* Reseteamos el margin para evitar problemas en pequeño */
+        max-width: 28%;
+        margin-bottom: 0rem;
+        margin-left: -165vh;
     }
-    
+
     .btn-large {
-        font-size: 2.5rem; /* Ajustamos el tamaño para pantallas pequeñas */
-        padding: 5px 10px; /* Ajustamos el padding */
-        transform: translateX(1%);
-        margin-top: 90px;
+        position: relative;
+        top: -6px;
+        padding: 0.8rem 1.5rem;
+        font-size: 2rem;
+        margin-left: -65vh;
+        word-wrap: break-word;    /* Rompe palabras largas si es necesario */
+        white-space: normal;      /* Permite que el texto se ajuste en múltiples líneas */
+
+
     }
+
+
+      
 }

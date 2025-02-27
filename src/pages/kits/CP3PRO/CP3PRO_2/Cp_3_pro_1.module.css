@@ -1,75 +1,78 @@
 /* styles.css */
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .container {
-    position: relative;
-    max-width: 1200px;
-    width: 112%;
-    margin: 0;
-    padding: 30px;
-    background-color: #f8f9fa;
-    margin-bottom: 1px;
-    margin-left: -30px; /* Asegura que no haya margen desde la izquierda */
-    top: -30px;
-  }
-    
-    section {
-      margin-bottom: 40px;
-      text-align: center;
-      left: -30px;
-    }
-    
-    h2 {
-      font-size: 2rem;
-      color: #443232;
-      margin-bottom: 10px;
-    }
+  position: relative;
+  width: 64.5vh;
+  max-width: 1200vh;
+  margin: 0;
+  padding: 1vh 7vw;
+  background-color: #f8f9fa;
+  margin-bottom: 0.1vh;
+  top: -3vh;
+  margin-left: -6vw;
+}
+
+
   
-    p {
-      font-size: 1rem;
-      color: #b18e8e;
-      margin-bottom: 10px;
-    }
+section {
+  margin-bottom: 5vh;
+  text-align: center;
+  left: -3vw;
+}
   
-    h3 {
-      font-size: 2rem;
-      color: #d4c4c4;
-      margin-bottom: 10px;
-    }
-    h4 {
-      font-size: 2rem;
-      color: #d3c1c1;
-      margin-bottom: 10px;
-    }
-    .heroTitle {
-      position: relative;
-      top: -8px;
-      color: rgb(65, 59, 59);
-      margin-top: -10px;
-    }
-    
-    .heroSubtitle {
-      color: rgb(53, 52, 52);
-    }
+h2 {
+  font-size: 5vh;
+  color: #443232;
+  margin-bottom: 1.5vh;
+}
+
+p {
+  font-size: 2.5vh;
+  color: #b18e8e;
+  margin-bottom: 1.5vh;
+}
+
+h3 {
+  font-size: 4.5vh;
+  color: #d4c4c4;
+  margin-bottom: 1.5vh;
+}
+
+h4 {
+  font-size: 4vh;
+  color: #d3c1c1;
+  margin-bottom: 1.5vh;
+}
+
+.heroTitle {
+  position: relative;
+  top: -1vh;
+  color: rgb(65, 59, 59);
+  margin-top: -1.2vh;
+}
   
-    
-    
-    .heroDescription {
-      color: rgb(65, 63, 63);
-      font-size: 3vh;
-      font-weight: bold; /* Hace el texto más grueso */
+.heroSubtitle {
+  color: rgb(53, 52, 52);
+}
   
-    }
-    
-    .contenedorBeneficios {
-      background-color: #383030;
-      margin-top: 60px;
-    }
-    
-    .description {
-      font-size: 16px;
-      color: #333;
-      text-align: center;
-      margin-top: 10px;
-    }
-    
-    
+.heroDescription {
+  color: rgb(65, 63, 63);
+  font-size: 3vh;
+  font-weight: bold;
+}
+  
+.contenedorBeneficios {
+  background-color: #383030;
+  margin-top: 7vh;
+}
+  
+.description {
+  font-size: 2.5vh;
+  color: #333;
+  text-align: center;
+  margin-top: 1.5vh;
+}

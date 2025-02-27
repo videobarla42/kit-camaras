@@ -1,10 +1,10 @@
-import React from 'react'; 
+import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import './Catalogos.css'; 
+import './Catalogos.css';
 
 // Importa las imágenes desde la carpeta src/assets
-import imgServicios from "../../../assets/2.webp";
-import imgProductos from '../../../assets/16.webp';
+import imgServicios from "../../../assets/INICIO/2.webp";
+import imgProductos from '../../../assets/INICIO/1.webp';
 
 const Catalogos = () => {
   const telefono = "3046615865";

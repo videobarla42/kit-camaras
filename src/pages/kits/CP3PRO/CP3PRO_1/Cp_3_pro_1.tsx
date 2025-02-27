@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import useModalCompra from '@/componentes/useModalCompra';
 import { usePrice } from '@/componentes/PriceContext';
-import Descuento from '@/componentes/Descuento';
 import WhatsAppButton from '@/componentes/WhatsAppButton';
 import styles from './Cp_3_pro_1.module.css';
 
