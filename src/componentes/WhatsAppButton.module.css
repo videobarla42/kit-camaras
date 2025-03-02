@@ -27,7 +27,7 @@
 @media (max-width: 768px) {
   .whatsAppButton {
     bottom: 15px; /* Ajustamos la posición vertical */
-    right: 15px; /* Ajustamos la posición horizontal */
+    right: 0px; /* Ajustamos la posición horizontal */
     padding: 1px; /* Reducimos el padding para que el botón sea más pequeño */
   }
 

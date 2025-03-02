@@ -7,6 +7,7 @@ interface BotonCompraProps {
   color?: string;
   tamaño?: 'pequeño' | 'mediano' | 'grande';
   deshabilitado?: boolean;
+  className?: string; // ✅ Agregar className opcionalmente
 }
 
 const BotonCompra: React.FC<BotonCompraProps> = ({ texto, onClick, color, tamaño, deshabilitado }) => {

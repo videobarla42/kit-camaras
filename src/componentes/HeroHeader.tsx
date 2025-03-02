@@ -10,6 +10,7 @@ interface HeroHeaderProps {
   precio?: string; // Propiedad opcional para el precio
   children?: ReactNode; // Permite incluir elementos hijos opcionales
   className?: string; // Clase opcional para estilos personalizados
+  imagenClassName?: string; // <--- Agregar esta línea
 }
 
 const HeroHeader: React.FC<HeroHeaderProps> = ({
