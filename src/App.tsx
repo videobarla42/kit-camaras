@@ -33,6 +33,13 @@ const H3c_pro_2s = lazy(() => import('./pages/kits/H3C_PRO/H3c_pro_2s'));
 const H3c_pro_4s = lazy(() => import('./pages/kits/H3C_PRO/H3c_pro_4s'));
 const H3c_pro_6s = lazy(() => import('./pages/kits/H3C_PRO/H3c_pro_6s'));
 
+  // vendedor 2
+const Cp_3_pro_1_vn = lazy(() => import('./pages/kits_vn/CP3PRO/CP3PRO_1/Cp_3_pro_1'));
+const Cp_3_pro_2_vn = lazy(() => import('./pages/kits_vn/CP3PRO/CP3PRO_1/Cp_3_pro_1'));
+const Cp_3_pro_4_vn = lazy(() => import('./pages/kits_vn/CP3PRO/CP3PRO_1/Cp_3_pro_1'));
+const Cp_3_pro_6_vn = lazy(() => import('./pages/kits_vn/CP3PRO/CP3PRO_1/Cp_3_pro_1'));
+
+
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -72,7 +79,11 @@ const App: React.FC = () => {
     { to: '/H3c_pro_6s', text: 'H3c_pro_6s', image: './assets/calculator-icon.png' },
 
     
-    
+    { to: '/Cp_3_pro_1_vn', text: 'Cp_3_pro_1 VN', image: './assets/calculator-icon.png' },
+    { to: '/Cp_3_pro_2_vn', text: 'Cp_3_pro_1 VN', image: './assets/calculator-icon.png' },
+    { to: '/Cp_3_pro_4_vn', text: 'Cp_3_pro_1 VN', image: './assets/calculator-icon.png' },
+    { to: '/Cp_3_pro_6_vn', text: 'Cp_3_pro_1 VN', image: './assets/calculator-icon.png' },
+
     
 
 
@@ -108,6 +119,11 @@ const App: React.FC = () => {
 
 
 
+
+              <Route path="/Cp_3_pro_1_vn" element={<Cp_3_pro_1_vn />} />
+              <Route path="/Cp_3_pro_2_vn" element={<Cp_3_pro_1_vn />} />
+              <Route path="/Cp_3_pro_4_vn" element={<Cp_3_pro_1_vn />} />
+              <Route path="/Cp_3_pro_6_vn" element={<Cp_3_pro_1_vn />} />
 
 
               

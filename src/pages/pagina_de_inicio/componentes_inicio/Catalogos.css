@@ -39,11 +39,11 @@
     .btn-large {
         position: relative;
         top: -30vh;
-        background-color: #00bcd4;  /* Un tono de azul/verde más moderno */
+        background-color: #3d0ab6;  /* Un tono de azul/verde más moderno */
         color: #fff;                /* Texto en blanco para buen contraste */
         padding: 1rem 1.5rem;       /* Más espacio interno para mayor legibilidad */
         font-size: 1.8rem;
-        left: 10vh;
+        left: 15vh;
         
         border: none;
         border-radius: 5px;         /* Bordes suavizados */
@@ -58,16 +58,29 @@
         transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     }
     
-    .btn-large:hover {
-        background-color: #0097a7;  /* Oscurece un poco al pasar el cursor */
-        transform: translateY(-2px);  /* Efecto de "elevación" */
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    }
-    
-    .btn-large:active {
-        transform: translateY(0); /* Regresa a su posición original al hacer clic */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+    .btn-large {
+        display: inline-block;
+        background: linear-gradient(180deg, #00bcd4, #3504e7);
+        color: #fff;
+        padding: 1rem 1.5rem;
+        font-size: 1.8rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      
+      .btn-large:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3);
+      }
+      
+      .btn-large:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+      }
+      
     
 
       

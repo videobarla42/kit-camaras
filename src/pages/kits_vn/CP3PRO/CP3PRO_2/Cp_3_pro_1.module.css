@@ -1,0 +1,81 @@
+/* styles.css */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  width: 56vh;
+  max-width: 1200vh;
+  margin: 0;
+  padding: 0vh 9.5vw;
+  background-color: #f8f9fa;
+  margin-bottom: 0.1vh;
+  top: -3vh;
+  margin-left: -6.5vw;
+}
+
+
+  
+section {
+  margin-bottom: 5vh;
+  text-align: center;
+  left: -16vh;
+}
+  
+h2 {
+  font-size: 5vh;
+  color: #443232;
+  margin-bottom: 1.5vh;
+}
+
+p {
+  font-size: 2.5vh;
+  color: #b18e8e;
+  margin-bottom: 1.5vh;
+}
+
+h3 {
+  font-size: 4.5vh;
+  color: #d4c4c4;
+  margin-bottom: 1.5vh;
+}
+
+h4 {
+  font-size: 4vh;
+  color: #d3c1c1;
+  margin-bottom: 1.5vh;
+}
+
+.heroTitle {
+  position: relative;
+  top: -1vh;
+  color: rgb(65, 59, 59);
+  margin-top: -1.2vh;
+}
+  
+.heroSubtitle {
+  color: rgb(53, 52, 52);
+}
+  
+.heroDescription {
+  color: rgb(65, 63, 63);
+  font-size: 3vh;
+  font-weight: bold;
+}
+  
+.contenedorBeneficios {
+  padding: 1vh;
+  background-color: #383030;
+  margin-top: 7vh;
+  margin-left: -3vh;
+}
+  
+.description {
+  font-size: 2.5vh;
+  color: #333;
+  text-align: center;
+  margin-top: 1.5vh;
+}
+
